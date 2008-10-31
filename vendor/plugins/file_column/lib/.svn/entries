@@ -1,0 +1,65 @@
+8
+
+dir
+0
+https://neurolab-webadmin.googlecode.com/svn/trunk/webadmin/vendor/plugins/file_column/lib
+https://neurolab-webadmin.googlecode.com/svn
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+validations.rb
+file
+
+
+
+add
+
+file_compat.rb
+file
+
+
+
+add
+
+rails_file_column.rb
+file
+
+
+
+add
+
+magick_file_column.rb
+file
+
+
+
+add
+
+test_case.rb
+file
+
+
+
+add
+
+file_column_helper.rb
+file
+
+
+
+add
+
+file_column.rb
+file
+
+
+
+add
+

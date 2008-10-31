@@ -1,0 +1,26 @@
+<h1>Listing pagos</h1>
+
+<table>
+  <tr>
+    <th>Factura</th>
+    <th>Folio factura</th>
+    <th>Total</th>
+	<th>Forma de Pago</th>
+  </tr>
+
+<% for pago in @pagos %>
+  <tr>
+    <td><%=h pago.factura %></td>
+    <td><%=h pago.folio_factura %></td>
+    <td><%=h pago.total %></td>
+    <td><%=h pago.forma_pago %></td>
+    <td><%= link_to 'Show', pago %></td>
+    <td><%= link_to 'Edit', edit_pago_path(pago) %></td>
+    <td><%= link_to 'Destroy', pago, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New pago', new_pago_path %>

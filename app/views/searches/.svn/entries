@@ -1,0 +1,44 @@
+8
+
+dir
+0
+https://neurolab-webadmin.googlecode.com/svn/trunk/webadmin/app/views/searches
+https://neurolab-webadmin.googlecode.com/svn
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+edit.html.erb
+file
+
+
+
+add
+
+index.html.erb
+file
+
+
+
+add
+
+new.html.erb
+file
+
+
+
+add
+
+show.html.erb
+file
+
+
+
+add
+

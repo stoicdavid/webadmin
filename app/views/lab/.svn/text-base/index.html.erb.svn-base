@@ -1,0 +1,29 @@
+<h1>Consultas</h1> 
+<% for consulta in @consultas -%> 
+<div class="entry"> 
+	<h4>Paciente: <%=h consulta.paciente.nombre_completo %></h4> 
+	Edad: 	<%= consulta.paciente.edad %> <br />
+	Diagnóstico: <%= consulta.diagnostico %><br />
+	<br>
+	Doctor que referencia: 	<%= consulta.doctor.nombre_completo %> <br />
+	
+	<hr>
+
+
+	<% if Paciente.find(consulta.paciente.id).citas.size==0%>
+	<td><%= button_to 'Crea Cita', {:action => "crea_cita", :id => consulta.paciente.id } %></td>
+</div>
+	<% else  %>
+	<% @citas = Paciente.find(consulta.paciente.id).citas -%>
+	<% for date in @citas -%>
+		Fecha Cita: <%= date.fecha_hora %><br />
+		Status: <%= date.status %><br />
+		<% if date.status == 'Confirmada' %>
+		Acompañante: <%= date.acompana %>	
+		<% else %>
+		<td><%= button_to 'Confirma Cita', {:action => "confirma_cita", :id => date.id } %></td>
+		<% end %>
+	<% end %>
+	<hr>
+	<% end %> 
+<% end %> 

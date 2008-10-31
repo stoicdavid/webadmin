@@ -1,0 +1,102 @@
+	<table id="mothertable" width="100%" cellpadding="0" cellspacing="0">
+	<tbody>
+	<% inicial=Timex.parse('7:00')
+		ini=Timex.parse('9:00')
+	   final = Timex.parse('20:30')%>
+	<% count=0 %>
+	<tr>
+	<% for column in ["Horas","Cubículo 1","Cubículo 2","Cubículo 3","Cubículo 4","Cubículo 5","Cubículo 6"] %>
+    		<th id="chead_<%= count %>"><%= column %><% count+=1 %></th>
+  	<% end %>
+	</tr>
+		<% count=0 %>
+		<% count_2=0 %>
+		<% celda="" %>
+		<% drag="" %>
+		<% inicial.step(final,60*90) {|x| %>
+
+	<tr>
+		<td id="rowheadcell" >
+			<div id="rowheaders" style="height:35px;">
+				<div class="rhead" id="rhead0" style="height:35px;top:0ex">
+					<div class="rheadtext">
+						<%= x.strftime('%H:%M - ') %>
+						<%  y=x + (60*90) %>
+						<%= y.strftime('%H:%M') %>
+					</div>
+				</div>
+			</div>
+		</td>
+		<% for cub in (1...7) %>
+
+			<% celda ="celda_#{count+=1}" %>
+			<% drag = "drag_#{count_2+=1}"%>
+	
+
+		<td id='<%= celda %>' class='cita' 
+			onclick="
+			<%= remote_function(
+					:url => {:action => 'muestra_tab',
+					:id => params[:id],
+					:locals =>{	:drag => drag,
+							   	:tiempo_i => x.strftime('%H:%M'),
+							   	:tiempo_f => y.strftime('%H:%M'),
+								:consulta_id => params[:id_cons],
+								:cubiculo => cub,
+								:fecha_hora => Time.parse(x.strftime('%H:%M'))  } } )
+			%>">
+				<div class="chip" id="<%= drag %>" style="position:relative;width=100%" onclick="" ondblclick="">
+			<% unless @citas == nil %>
+			<% @citas.each{|cita| %>
+		
+					<%if cita.fecha_hora!=nil 
+					if cita.fecha_hora.to_s(:short) == Time.parse(x.strftime('%H:%M')).to_s(:short) and cita.cubiculo==cub %>	
+							<div class="t1" style="background-color:#A32929"> </div>
+						<div class="t2" style="background-color:#A32929"> </div>
+						<div class="chipbody edit" style="background-color:#d96666">
+							<dl style="border-color:#a32929;height:36.41666666666666px">
+								<dt style="background-color:#A32929">  <b unselectable="on" style="">
+									<span class="timelabel"> <%= x.strftime('%H:%M') + "-"+ y.strftime('%H:%M') %> </span> 
+
+								</dt>
+								<dd>
+									<div>
+										<span style="cursor:pointer;" onmouseover="" onmouseout="" onclick="">
+											<%= link_to_prototype_window(Paciente.find(cita.paciente_id).nombre_medio, @drag) %>
+											<%= link_to image_tag("delete.png", :size => "16x16", :border => 0, :title => "borrar"),
+										 			cita,
+										 			:confirm => 'Estás seguro de querer borrar la cita?',
+										 			:method => :delete %>
+										</span>
+									</div>
+								</dd> 
+								<dd class="resize" style="left:40px;" unselectable="on" ></dd> 
+
+							</dl>
+						</div>
+						<div class="b2" style="background-color:#D96666;border-color:#A32929"> </div>
+						<div class="b1" style="background-color:#A32929"> </div>
+					<% end %>
+					<% end %>
+				</div>
+				<% } %>
+				<% end %>
+				<%= draggable_element(drag, :ghosting=>true, :revert=>true) %>
+
+		</td>
+
+		<%= drop_receiving_element(celda, 
+		:accept => 'chip', 
+		:complete => "$('spinner').hide();", 
+		:before => "$('spinner').show();", 
+		:hoverclass => 'hover',
+		:with => "'cita=' + encodeURIComponent(element.id.split('_').last())", 
+		:url => {:controller => 'citas',:action=>'update', :id=>params[:id]})%>
+
+		<% end %>
+
+	</tr>
+
+	<% } %>	
+		</tbody>
+	</table>

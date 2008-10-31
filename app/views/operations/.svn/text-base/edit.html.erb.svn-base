@@ -1,0 +1,69 @@
+<h1>Editing operation</h1>
+
+<% form_for(@operation) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+	Paciente:<br />
+    <%= @operation.cita.paciente.nombre_completo %>
+  </p>
+
+  <p>
+	<% if @operation.hora_llegada == nil %>
+	<%= link_to "Hora de Llegada", :controller => "operations", :action => "h_llegada", :id => params[:id]    %>
+	<%else %>
+	<%= @operation.hora_llegada %>
+
+  </p>
+
+  <p>
+	<% if @operation.ini_conexion == nil %>
+	<%= link_to "Inicio de Conexión", :controller => "operations", :action => "ini_con", :id => params[:id]    %>
+	<%else %>
+	<%= @operation.ini_conexion %>
+
+  </p>
+
+  <p>
+	<% if @operation.fin_conexion == nil %>
+	<%= link_to "Fin de Conexión", :controller => "operations", :action => "fin_con", :id => params[:id]    %>
+	<%else %>
+	<%= @operation.fin_conexion %>
+
+  </p>
+
+  <p>
+	<% if @operation.ini_estudio == nil %>
+	<%= link_to "Inicio de Estudio", :controller => "operations", :action => "ini_est", :id => params[:id]    %>
+	<%else %>
+	<%= @operation.ini_estudio %>
+
+  </p>
+
+  <p>
+	<% if @operation.fin_estudio == nil %>
+	<%= link_to "Fin de Estudio", :controller => "operations", :action => "fin_est", :id => params[:id]    %>
+	<%else %>
+	<%= @operation.fin_estudio %>
+	<% end %>
+		<% end %>
+			<% end %>
+				<% end %>
+					<% end %>
+  </p>
+
+  <p>
+    <%= f.label :fecha_interpretacion %><br />
+    <%= f.date_select :fecha_interpretacion %>
+  </p>
+  <p>
+    <%= f.label :fecha_entrega %><br />
+    <%= f.date_select :fecha_entrega %>
+  </p>
+  <p>
+    <% f.submit "Update" %>
+  </p>
+<% end %>
+
+<% link_to 'Show', @operation %> |
+<%= link_to 'Back', operations_path %>

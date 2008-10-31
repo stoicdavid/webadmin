@@ -1,0 +1,44 @@
+8
+
+dir
+3
+https://neurolab-webadmin.googlecode.com/svn/trunk/webadmin/db
+https://neurolab-webadmin.googlecode.com/svn
+
+
+
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+
+svn:special svn:externals svn:needs-lock
+
+schema.rb
+file
+6
+
+
+
+2008-09-18T16:41:33.000000Z
+c065f3f0b79ff77c66e824043636e392
+2008-09-18T19:20:05.794724Z
+6
+stoicdavid
+
+development.sqlite3
+file
+6
+
+
+
+2008-09-18T19:12:27.000000Z
+02819712dc4f35867db32987453bef61
+2008-09-18T19:20:05.794724Z
+6
+stoicdavid
+has-props
+
+migrate
+dir
+

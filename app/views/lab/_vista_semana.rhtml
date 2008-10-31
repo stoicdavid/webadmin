@@ -1,0 +1,15 @@
+<h1>Consultas en la Semana</h1> 
+<div>
+	<% @consulta_dias.each do |dia, consultas| %>
+	<h4><%= dia.strftime('%A') %></h4>
+		<% for consulta in consultas %>
+			<tr>
+			<td><%=h consulta.paciente.nombre_completo %></td><br/>
+			<td><%=h consulta.diagnostico %></td><br/>
+			<td><%=h consulta.fecha_consulta.to_s(:short) %></td><br/><br/>
+			<td><%= link_to 'Detalle', consulta %></td>
+			</tr>
+			<hr>
+		<% end %>
+	<% end %>
+</div>

@@ -1,0 +1,5 @@
+page.insert_html :bottom, :registros, :partial => 'registro', :object => @consulta
+page.replace_html :registros_count, pluralize(@consulta.paciente.consultas.size, 'Registro')
+page[:reg_form].reset
+page.replace_html :notice, flash[:notice]
+flash.discard

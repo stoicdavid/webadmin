@@ -1,0 +1,33 @@
+<%= debug params %>
+<% unless @horarios.empty? %>
+
+<table class="ordenada">
+<tr>
+
+  <th>Cubículo</th>
+  <th>Horario</th>
+
+</tr>
+<% @horarios.each do |h| %>
+<tr class="pequeno">
+  <td class="separado"><%= h.cubiculo %></td>
+  <td class="separado"><%= h.horas %></td>
+  <td class="separado">
+  <%= hidden_field :fec_cita, :value  => params[:fecha_cita] %>	
+<%= params[:fecha_cita] %>
+<%= params[:paciente_id] %>
+  <%= link_to_remote image_tag("show.png", :size => "20x20", :border => 0),
+ 	  :url => {:action => 'list_horarios', :id => params[:paciente_id] }  %>
+  </td>
+<tr >
+
+<td id="cubiculo"></td>
+</tr>
+</tr>
+
+<% end %>
+</table>
+  <div id="de" class="centrada"></div>
+<% else %>
+	<p class="ordenada"> No se encontraron cubículos que cumplan los parámetros ingresados. </p>
+<% end %>

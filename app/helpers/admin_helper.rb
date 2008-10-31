@@ -1,0 +1,12 @@
+module AdminHelper
+  def principal
+    usuario = Usuario.find_by_id(session[:usuario_id])
+    menu= link_to( "Pacientes", :controller => "pacientes") +"<br />"
+    if usuario.nombre=='admin'
+      menu+= link_to( "Doctores", :controller => "doctors") + "<br />"
+      menu+= link_to( "Consultas", :controller => "lab") + "<br />"
+    end
+    menu+=link_to('Logout', :controller => :admin, :action => 'logout') +"</br>" 
+  end
+  
+end

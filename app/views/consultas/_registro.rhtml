@@ -1,0 +1,52 @@
+
+<% usuario=Usuario.find_by_id(session[:usuario_id]) %>
+
+<p>
+  <b>Doctor:</b>
+	<% if registro.doctor_id!=nil %>
+  		<%=h registro.doctor.nombre_completo %>
+	<% end %>
+</p>
+<% if usuario.nombre=="admin" %>
+<p>
+  <b>Fecha consulta:</b>
+  <%=h registro.fecha_consulta %>
+</p>
+<% end %>
+<p>
+<% unless registro.cita==nil %>
+<% if registro.cita.status == 'Pagada' %>	
+  <b>Fecha de estudio:</b>
+  <%=h Pago.find(registro.cita.operation.pago_id).created_at.strftime('%d-%B-%Y') %>
+</p>
+<% end %>
+<% end %>
+<p>
+  <b>Diagnostico:</b>
+  <%=h registro.diagnostico %>
+</p>
+
+<p>
+  <b>Estudio:</b>
+  <%= Estudio.find(registro.estudio_id).tipo_estudio %>
+</p>
+
+<p>
+<% unless registro.cita==nil %>
+  <b>Status:</b>
+  <%=h status =registro.cita.status %>
+<% end %>
+</p>
+<p>
+
+</p>
+<% if usuario.nombre=="admin" %>
+<% if status == 'Sin Cita' %>
+<%= button_to 'Crea Cita', {:controller => "lab",:action => "crea_cita", :id => registro.cita.id } %> 
+<% end %>
+</p>
+
+<%= link_to 'Detalle', registro %>
+<%= link_to 'Eliminar', registro, :confirm => 'Are you sure?', :method => :delete, :paciente_id => registro.paciente_id %>
+
+<% end %>

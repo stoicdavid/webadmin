@@ -1,0 +1,24 @@
+<h1>Editing pago</h1>
+
+<% form_for(@pago) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :factura %><br />
+    <%= f.check_box :factura %>
+  </p>
+  <p>
+    <%= f.label :folio_factura %><br />
+    <%= f.text_field :folio_factura %>
+  </p>
+  <p>
+    <%= f.label :total %><br />
+    <%= f.text_field :total %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @pago %> |
+<%= link_to 'Back', pagos_path %>

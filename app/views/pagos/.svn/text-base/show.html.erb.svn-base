@@ -1,0 +1,18 @@
+<p>
+  <b>Factura:</b>
+  <%=h @pago.factura %>
+</p>
+
+<p>
+  <b>Folio factura:</b>
+  <%=h @pago.folio_factura %>
+</p>
+
+<p>
+  <b>Total:</b>
+  <%=h @pago.total %>
+</p>
+
+
+<%= link_to 'Edit', edit_pago_path(@pago) %> |
+<%= link_to 'Back', pagos_path %>

@@ -1,0 +1,18 @@
+<p>
+  <b>Horas:</b>
+  <%=h @horario.horas %>
+</p>
+
+<p>
+  <b>Cubiculo:</b>
+  <%=h @horario.cubiculo %>
+</p>
+
+<p>
+  <b>Cita:</b>
+  <%=h @horario.cita_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_horario_path(@horario) %> |
+<%= link_to 'Back', horarios_path %>

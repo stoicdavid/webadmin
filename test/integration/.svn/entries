@@ -1,0 +1,16 @@
+8
+
+dir
+3
+https://neurolab-webadmin.googlecode.com/svn/trunk/webadmin/test/integration
+https://neurolab-webadmin.googlecode.com/svn
+
+
+
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+
+svn:special svn:externals svn:needs-lock
+

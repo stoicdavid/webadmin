@@ -1,0 +1,24 @@
+<h1>Listing usuarios</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Hashed password</th>
+    <th>Salt</th>
+  </tr>
+
+<% for usuario in @usuarios %>
+  <tr>
+    <td><%=h usuario.nombre %></td>
+    <td><%=h usuario.hashed_password %></td>
+    <td><%=h usuario.salt %></td>
+    <td><%= link_to 'Show', usuario %></td>
+    <td><%= link_to 'Edit', edit_usuario_path(usuario) %></td>
+    <td><%= link_to 'Destroy', usuario, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New usuario', new_usuario_path %>

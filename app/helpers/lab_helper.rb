@@ -1,0 +1,3 @@
+module LabHelper
+
+end

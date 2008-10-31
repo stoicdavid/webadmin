@@ -1,0 +1,40 @@
+<!--<div id="vista">
+	<h3>Escoge una vista:</h3><br />
+	
+	<%= link_to 'Por Dia', :action => "vista_dia" %><br />
+	<%= link_to 'Por Semana', :action => "vista_semana" %><br />
+	<%= link_to 'Por Mes', :action => "vista_mes" %><br />
+	
+</div>!-->
+
+<div id="primario"> 
+
+     <div id='principal'> 
+          <h1>Citas para hoy</h1> 
+		
+			<%= render :partial => 'recepcion', :collection => @consultas   %>
+		
+     </div> 
+
+<div id='barra-der'> 
+     <div class="barra-citas"> 
+         <h1>Citas para confirmar hoy </h1> 
+		    <ul id="todo-list"> 
+	               <li>recepcion</li> 
+	               <li>recepcion</li>  
+	          </ul>
+    </div> 
+     <div class="barra-citas"> 
+        <h1>Citas sin confirmar</h1> 
+    </div> 
+</div>
+
+
+<%# <h1>Consultas</h1>  %>
+<%# form_tag :action => "index" , :method => 'get'  do %>
+	<p>
+		<%#text_field_tag :search, params[:search] %>
+		<%# submit_tag "Buscar" %>
+	</p>
+
+<%# end %>

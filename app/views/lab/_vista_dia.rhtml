@@ -1,0 +1,15 @@
+
+<div id="dia">
+	<% @cita_horas.each do |hora,citas| %>
+		<h4><%= hora %></h4>	
+		<% for cita in citas %>
+			<tr>
+			<td><%=h cita.paciente.nombre_completo %></td><br/>
+			<td><%=h cita.diagnostico %></td><br/>
+			<td><%=h cita.fecha_consulta.to_s(:short) %></td><br/><br/>
+			<td><%= link_to 'Detalle', cita %></td>
+			</tr>
+			<hr>	
+		<% end %>
+	<% end %>
+</div>

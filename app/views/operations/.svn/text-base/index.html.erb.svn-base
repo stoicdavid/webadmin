@@ -1,0 +1,35 @@
+<h1>Listing operations</h1>
+
+<table>
+  <tr>
+    <th>Tipo de Estudio</th>
+    <th>Hora llegada</th>
+    <th>Ini conexion</th>
+    <th>Fin conexion</th>
+    <th>Ini estudio</th>
+    <th>Fin estudio</th>
+    <th>Fecha interpretacion</th>
+    <th>Fecha entrega</th>
+  </tr>
+
+<% for operation in @operations %>
+  <tr>
+    <td><%=h operation.tipo.estudio.tipo_estudio %></td>
+    <td><%=h operation.hora_llegada %></td>
+    <td><%=h operation.ini_conexion %></td>
+    <td><%=h operation.fin_conexion %></td>
+    <td><%=h operation.ini_estudio %></td>
+    <td><%=h operation.fin_estudio %></td>
+    <td><%=h operation.fecha_interpretacion %></td>
+    <td><%=h operation.fecha_entrega %></td>
+	<td><%= button_to 'Pago', {:action => "genera_orden", :id => operation.id } %></td>
+    <td><%= link_to 'Show', operation %></td>
+    <td><%= link_to 'Edit', edit_operation_path(operation) %></td>
+    <td><%= link_to 'Destroy', operation, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New operation', new_operation_path %>

@@ -1,0 +1,51 @@
+8
+
+dir
+0
+https://neurolab-webadmin.googlecode.com/svn/trunk/webadmin/public/javascripts/calendar_date_select/locale
+https://neurolab-webadmin.googlecode.com/svn
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+fr.js
+file
+
+
+
+add
+
+de.js
+file
+
+
+
+add
+
+pl.js
+file
+
+
+
+add
+
+fi.js
+file
+
+
+
+add
+
+pt.js
+file
+
+
+
+add
+

@@ -1,0 +1,33 @@
+
+
+<p>
+  <b>Doctor:</b>
+	<% if @consulta.doctor_id!=nil %>
+  		<%=h @consulta.doctor.nombre_completo %>
+	<% end %>
+</p>
+
+<p>
+  <b>Fecha consulta:</b>
+  <%=h @consulta.fecha_consulta %>
+</p>
+
+<p>
+  <b>Diagnostico:</b>
+  <%=h @consulta.diagnostico %>
+</p>
+
+<p>
+  <b>Fecha in sintomas:</b>
+  <%=h @consulta.fecha_in_sintomas %>
+</p>
+
+<p>
+  <b>Fármacos previos:</b>
+  <%=h @consulta.medicina_anterior %>
+</p>
+
+<p>
+  <b>Fármaco actual:</b>
+  <%=h @consulta.medicina_actual %>
+</p>

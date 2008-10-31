@@ -1,0 +1,23 @@
+<h1>Confirma cita</h1>
+<% form_for(@cita) do |f| %>
+  <p>
+    <%= f.label 'Persona que confirma cita' %><br />
+    <%= f.text_field :persona_conf %>
+  </p>
+  <p>
+    <%= f.label 'Recibió documentación?' %><br />
+    <%= f.check_box :confirma_doc %>
+  </p>
+  <p>
+    <%= f.label 'Servicio valet parking?' %><br />
+    <%= f.check_box :confirma_valet %>
+  </p>
+  <p>
+    <%= f.label 'Persona que acompaña' %><br />
+    <%= f.text_field :acompana %>
+  </p>
+<%= f.submit "Update" %>
+<% end %>
+
+<%= link_to 'Edit', edit_cita_path(@cita) %> |
+<%= link_to "Consultas", :controller => "lab" %> </a><br />

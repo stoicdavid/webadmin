@@ -1,0 +1,84 @@
+<p>
+  <b>Nombre:</b>
+  <%=h @paciente.nombre %>
+</p>
+
+<p>
+  <b>2 nombre:</b>
+  <%=h @paciente.nombre_2 %>
+</p>
+
+<p>
+  <b>App pat:</b>
+  <%=h @paciente.app_pat %>
+</p>
+
+<p>
+  <b>App mat:</b>
+  <%=h @paciente.app_mat %>
+</p>
+
+<p>
+  <b>Rfc:</b>
+  <%=h @paciente.rfc %>
+</p>
+
+<p>
+  <b>Direccion fiscal:</b>
+  <%=h @paciente.direccion_fiscal %>
+</p>
+
+<p>
+  <b>Domicilio:</b>
+  <%=h @paciente.domicilio %>
+</p>
+
+<p>
+  <b>Celular:</b>
+  <%=h @paciente.celular %>
+</p>
+
+<p>
+  <b>Casa:</b>
+  <%=h @paciente.casa %>
+</p>
+
+<p>
+  <b>Oficina:</b>
+  <%=h @paciente.oficina %>
+</p>
+
+<p>
+  <b>Recados:</b>
+  <%=h @paciente.recados %>
+</p>
+
+<p>
+  <b>Fax:</b>
+  <%=h @paciente.fax %>
+</p>
+
+<p>
+  <b>Correo:</b>
+  <%=h @paciente.correo %>
+</p>
+
+<p>
+  <b>Pagina web:</b>
+  <%=h @paciente.pagina_web %>
+</p>
+
+<p>
+  <b>Fecha nac:</b>
+  <%=h @paciente.fecha_nac %>
+</p>
+
+<p>
+  <b>Genero:</b>
+  <%=h @paciente.genero %>
+</p>
+
+
+<td><%= button_to 'Consulta', {:action => "crea_consulta", :id => @paciente.id } %></td>
+<%= link_to 'Edit', edit_paciente_path(@paciente) %> |
+<%= link_to 'Back', pacientes_path %>

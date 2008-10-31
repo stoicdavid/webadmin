@@ -1,0 +1,38 @@
+<h2>Paso 1</h2>
+
+<h1>Captura paciente</h1>
+
+<% form_for(@paciente) do |f| %>
+  <%= f.error_messages %>
+
+
+  <p>	
+    <%= f.label 'Nombres' %><br />
+    <%= f.text_field :nombres -%>
+  </p>
+  <p>
+    <%= f.label 'Apellido Paterno' %><br />
+    <%= f.text_field :app_pat %>
+  </p>
+  <p>
+    <%= f.label 'Apellido Materno' %><br />
+    <%= f.text_field :app_mat %>
+  </p>
+
+  <p>
+    <%= f.label 'Fecha de nacimiento' %><br />
+	<%= calendar_date_select_tag :fecha_nac,Time.now.strftime('%d-%m-%Y'), :year_range => 30.years.ago..0.years.ago  %>
+    
+  </p>
+  <p>
+	<%= f.select :genero, Paciente::GENERO, :prompt => "Selecciona el genero"  %>
+  </p>
+
+	<%= render :partial => 'consulta', @collection => @paciente.consultas %>
+
+  <p>
+	<%= submit_tag "Crear" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', pacientes_path %>

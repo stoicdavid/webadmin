@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>Neurolab Corp Webadmin</title>
+<!-- START:stylesheet -->
+  <%= stylesheet_link_tag "webadmin", :media => "all" %><!-- <label id="code.slt"/> -->
+<!-- END:stylesheet -->
+</head>
+<body id="store">
+
+  <div id="banner">
+	<%= image_tag("Logo ANL Inc.jpg",:size => "50x50") %> 
+
+    <%= @page_title || "AMERICAN NEUROLAB INC" %><!-- <label id="code.depot.e.title"/> -->
+  </div>
+<div id="columns"> 
+	<div id="side"> 
+		<%= link_to "Home", :controller => "admin" %> </a><br />
+		<% if session[:usuario_id] %> 
+		<%= link_to "Administracion", :controller => "doctors" %> </a><br />
+  		<%= link_to "Pacientes", :controller => "pacientes" %> </a><br />
+		<%= link_to "Consultas", :controller => "lab" %> </a><br />
+		<%= link_to "Citas", :controller => "citas" %> </a><br />
+		<%= link_to "Estudios", :controller => "operations" %> </a><br />
+		<%= link_to "Pagos", :controller => "pagos" %> </a><br />
+		<%= link_to 'Logout', :controller => :admin, :action => 'logout' %>
+		<% end %>
+	</div>
+    <div id="main">
+      <%= yield :layout %><!-- <label id="code.depot.e.include"/> -->
+    </div>
+  </div>
+
+</body>
+
+</html>

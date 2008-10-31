@@ -1,0 +1,72 @@
+8
+
+dir
+0
+https://neurolab-webadmin.googlecode.com/svn/trunk/webadmin/vendor/plugins/calendariffic/rdoc
+https://neurolab-webadmin.googlecode.com/svn
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+fr_file_index.html
+file
+
+
+
+add
+
+fr_method_index.html
+file
+
+
+
+add
+
+files
+dir
+
+
+
+add
+
+created.rid
+file
+
+
+
+add
+
+fr_class_index.html
+file
+
+
+
+add
+
+index.html
+file
+
+
+
+add
+
+rdoc-style.css
+file
+
+
+
+add
+
+classes
+dir
+
+
+
+add
+

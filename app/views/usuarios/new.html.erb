@@ -1,0 +1,33 @@
+<div class="depot-form">
+
+<%= error_messages_for :usuario %>
+<h3>Crear usuario para: </h3>
+ <p><%=  @doctor.nombre_completo%></p>
+<% form_for(@usuario) do |f| %>
+
+  <fieldset>
+  <legend>Captura los datos del usuario</legend>
+
+  <p>
+    <label for="user_name">Usuario:</label>
+    <%= f.text_field :nombre, :size => 40 %>
+  </p>
+
+  <p>
+    <label for="user_password">Password:</label>
+    <%= f.password_field :password, :size => 40 %>
+  </p>
+
+  <p>
+    <label for="user_password_confirmation">Confirma:</label>
+    <%= f.password_field :password_confirmation, :size => 40 %>
+  </p>
+	<%= f.hidden_field :doctor_id, :value => @doctor.id  %>
+  <p>
+    <%= f.submit "Agrega Usuario", :class => "submit" %>
+  </p>
+
+  </fieldset>
+<% end %>
+
+</div>

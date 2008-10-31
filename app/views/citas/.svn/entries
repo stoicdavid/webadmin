@@ -1,0 +1,109 @@
+8
+
+dir
+3
+https://neurolab-webadmin.googlecode.com/svn/trunk/webadmin/app/views/citas
+https://neurolab-webadmin.googlecode.com/svn
+
+
+
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+
+svn:special svn:externals svn:needs-lock
+
+edit.html.erb
+file
+
+
+
+
+2008-09-11T10:43:18.000000Z
+95339be55803942c6ed74261f8684f79
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+index.html.erb
+file
+6
+
+
+
+2008-09-18T05:55:30.000000Z
+3302ce0d43a5c557b46251b25853c6c0
+2008-09-18T19:20:05.794724Z
+6
+stoicdavid
+
+_por_dia.rhtml
+file
+0
+
+
+add
+
+_confirma.rhtml
+file
+
+
+
+
+2008-09-18T19:10:26.000000Z
+8b1efadaf9d7c38d57f3ebbd7f12776f
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+new.html.erb
+file
+
+
+
+
+2008-09-10T18:29:30.000000Z
+7e10be6cbe4c3020217dbec5ccf36949
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+_por_mes.rhtml
+file
+0
+
+
+add
+
+_por_semana.rhtml
+file
+0
+
+
+add
+
+show.html.erb
+file
+
+
+
+
+2008-09-11T10:29:10.000000Z
+ef32a460686d1cb7ec55041fbd3b077f
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+_crea_cita.rhtml
+file
+6
+
+
+
+2008-10-30T14:09:49.000000Z
+8d42ade62af6c6d87a48f76899920c94
+2008-09-18T19:20:05.794724Z
+6
+stoicdavid
+

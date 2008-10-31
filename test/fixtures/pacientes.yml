@@ -1,0 +1,41 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nombre: MyString
+  2_nombre: MyString
+  app_pat: MyString
+  app_mat: MyString
+  rfc: MyString
+  direccion_fiscal: MyString
+  domicilio: MyString
+  celular: MyString
+  casa: MyString
+  oficina: MyString
+  recados: MyString
+  fax: MyString
+  correo: MyString
+  pagina_web: MyString
+  fecha_nac: 2008-09-06
+  genero: MyString
+  diagnostico: MyText
+  fecha_inicio_sintomas: 2008-09-06
+
+two:
+  nombre: MyString
+  2_nombre: MyString
+  app_pat: MyString
+  app_mat: MyString
+  rfc: MyString
+  direccion_fiscal: MyString
+  domicilio: MyString
+  celular: MyString
+  casa: MyString
+  oficina: MyString
+  recados: MyString
+  fax: MyString
+  correo: MyString
+  pagina_web: MyString
+  fecha_nac: 2008-09-06
+  genero: MyString
+  diagnostico: MyText
+  fecha_inicio_sintomas: 2008-09-06

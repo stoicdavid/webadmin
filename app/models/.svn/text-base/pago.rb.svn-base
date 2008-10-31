@@ -1,0 +1,19 @@
+class Pago < ActiveRecord::Base
+    has_one :operation, :through => :generates
+    
+    def self.importe(id)
+      @importe = Operation.find(id).tipo.estudio.precio
+    end
+    
+    def self.descuento(id)
+      
+        @descuento = Operation.find(id).tipo.estudio.descuento
+      if @descuento > 0
+        desc = @importe * @descuento
+      elsif
+        desc = 0
+      end
+      desc
+    end
+    
+end

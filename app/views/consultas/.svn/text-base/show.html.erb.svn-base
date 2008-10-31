@@ -1,0 +1,28 @@
+<p>
+  <b>Fecha consulta:</b>
+  <%=h @consulta.fecha_consulta %>
+</p>
+
+<p>
+  <b>Diagnostico:</b>
+  <%=h @consulta.diagnostico %>
+</p>
+
+<p>
+  <b>Fecha in sintomas:</b>
+  <%=h @consulta.fecha_in_sintomas %>
+</p>
+
+<p>
+  <b>Medicina anterior:</b>
+  <%=h @consulta.medicina_anterior %>
+</p>
+
+<p>
+  <b>Medicina actual:</b>
+  <%=h @consulta.medicina_actual %>
+</p>
+
+
+<%= link_to 'Edit', edit_consulta_path(@consulta) %> |
+<%= link_to 'Back', consultas_path %>

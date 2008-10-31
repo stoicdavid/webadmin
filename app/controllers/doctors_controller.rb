@@ -1,0 +1,108 @@
+class DoctorsController < ApplicationController
+  # GET /doctors
+  # GET /doctors.xml
+  def index
+    if params[:search]
+      values = {}
+      a = "%#{params[:search]}%".split(/\s+/)
+      a.each { |x| values[:str] = x}
+
+      @doctors = Doctor.find(:all, :conditions => ['nombre LIKE :str OR app_pat LIKE :str OR app_mat LIKE :str', values ])
+    else
+      @doctors = Doctor.find(:all)
+    end
+    
+
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @doctors }
+    end
+  end
+
+  # GET /doctors/1
+  # GET /doctors/1.xml
+  def show
+    @doctor = Doctor.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @doctor }
+    end
+  end
+
+  # GET /doctors/new
+  # GET /doctors/new.xml
+  def new
+    @doctor = Doctor.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.xml  { render :xml => @doctor }
+    end
+  end
+
+  # GET /doctors/1/edit
+  def edit
+    @doctor = Doctor.find(params[:id])
+  end
+
+  # POST /doctors
+  # POST /doctors.xml
+  def create
+    @doctor = Doctor.new(params[:doctor])
+    
+    respond_to do |format|
+      if @doctor.save 
+        doc_esp = Specialization.new
+        doc_esp.doctor_id = @doctor.id
+        doc_esp.especialidad_id = params[:especialidad][:doctor]
+        doc_esp.save  
+        flash[:notice] = 'Doctor was successfully created.'
+        format.html { redirect_to(@doctor) }
+        format.xml  { render :xml => @doctor, :status => :created, :location => @doctor }
+      else
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @doctor.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
+  # PUT /doctors/1
+  # PUT /doctors/1.xml
+  def update
+    @doctor = Doctor.find(params[:id])
+    Specialization.update_all("especialidad_id = #{params[:especialidad][:doctor]}","doctor_id=#{@doctor.id}" )
+    respond_to do |format|
+      if @doctor.update_attributes(params[:doctor])
+        flash[:notice] = 'Doctor was successfully updated.'
+        format.html { redirect_to(@doctor) }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @doctor.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+  
+
+
+  # DELETE /doctors/1
+  # DELETE /doctors/1.xml
+  def destroy
+    @doctor = Doctor.find(params[:id])
+    Specialization.delete_all "doctor_id = #{@doctor.id}"
+    @doctor.destroy
+    
+
+    respond_to do |format|
+      format.html { redirect_to(doctors_url) }
+      format.xml  { head :ok }
+    end
+  end
+  
+  protected 
+  def authorize 
+  end
+  
+end

@@ -1,0 +1,32 @@
+<h1 >Doctores</h1>
+<% form_tag doctors_path, :method => 'get'  do %>
+	<p>
+		<%= text_field_tag :search %>
+		<%= submit_tag "Buscar" %>
+	</p>
+
+<% end %>
+
+<% for doctor in @doctors %>
+  <tr>
+	<td><%= link_to "#{h doctor.nombre_completo}",doctor %></td> <br />
+
+
+	<td><%=h doctor.specialization.especialidad[:especialidad] %></td>
+
+
+    <td><%=h doctor.telefono_consultorio %></td>
+
+
+    <td><%=h doctor.celular %></td><br />
+
+
+    
+    <td><%= link_to 'Editar', edit_doctor_path(doctor) %></td>
+    <td><%= link_to 'Eliminar', doctor, :confirm => 'Are you sure?', :method => :delete %></td><br /><br />
+  </tr>
+<% end %>
+</table>
+
+
+

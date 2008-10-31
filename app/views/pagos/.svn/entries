@@ -1,0 +1,64 @@
+8
+
+dir
+7
+https://neurolab-webadmin.googlecode.com/svn/trunk/webadmin/app/views/pagos
+https://neurolab-webadmin.googlecode.com/svn
+
+
+
+2008-09-18T19:24:34.214232Z
+7
+stoicdavid
+
+
+svn:special svn:externals svn:needs-lock
+
+edit.html.erb
+file
+
+
+
+
+2008-09-18T14:53:35.000000Z
+0c7000744c7c104b649830f29a468b8d
+2008-09-18T19:24:34.214232Z
+7
+stoicdavid
+
+index.html.erb
+file
+
+
+
+
+2008-09-18T15:16:51.000000Z
+a973d1f8bc541788af91897316ff8575
+2008-09-18T19:24:34.214232Z
+7
+stoicdavid
+
+new.html.erb
+file
+
+
+
+
+2008-09-18T17:31:49.000000Z
+b091dba5d0ae6b99d08a169ecc137ac2
+2008-09-18T19:24:34.214232Z
+7
+stoicdavid
+
+show.html.erb
+file
+
+
+
+
+2008-10-30T14:09:49.000000Z
+1a8d3352db8ade109c18a01865e6ad06
+2008-09-18T19:24:34.214232Z
+7
+stoicdavid
+

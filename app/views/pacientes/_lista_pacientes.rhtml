@@ -1,0 +1,28 @@
+<% unless @pacientes==nil %>
+<h1>Pacientes con Consulta</h1>
+<% form_tag pacientes_path, :method => 'get'  do %>
+	<p>
+		<%= text_field_tag :search, params[:search] %>
+		<%= submit_tag "Buscar" %>
+	</p>
+
+<% end %>
+    <br />
+<% for paciente in @pacientes %>
+  <tr>
+	<td><%= link_to "#{h paciente.nombre_completo}",paciente %></td> 
+
+
+
+    <%if @usuario.nombre=='admin' %>
+    <td><%= link_to 'Edit', edit_paciente_path(paciente)    %></td>
+
+    <td><%= link_to 'Destroy', paciente, :confirm => 'Are you sure?', :method => :delete %></td><br /><br />
+<% end %>
+    <br />
+  </tr>
+<% end %>
+</table>
+<% else %>
+<p>No hay pacientes registrados contigo</p>
+<% end %>

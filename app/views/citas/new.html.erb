@@ -1,0 +1,39 @@
+<h1>New cita</h1>
+
+<% form_for(@cita) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :paciente_id %><br />
+    <%= f.text_field :paciente_id %>
+  </p>
+  <p>
+    <%= f.label :fecha_hora %><br />
+    <%= f.datetime_select :fecha_hora %>
+  </p>
+  <p>
+    <%= f.label :cubiculo %><br />
+    <%= f.text_field :cubiculo %>
+  </p>
+  <p>
+    <%= f.label :persona_conf %><br />
+    <%= f.text_field :persona_conf %>
+  </p>
+  <p>
+    <%= f.label :confirma_doc %><br />
+    <%= f.check_box :confirma_doc %>
+  </p>
+  <p>
+    <%= f.label :confirma_valet %><br />
+    <%= f.check_box :confirma_valet %>
+  </p>
+  <p>
+    <%= f.label :acompana %><br />
+    <%= f.text_field :acompana %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', citas_path %>

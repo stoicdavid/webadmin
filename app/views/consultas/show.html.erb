@@ -1,0 +1,37 @@
+<p>
+  <b>Paciente:</b>
+  <%=h @consulta.paciente.nombre_completo %>
+</p>
+
+<%= render :partial => 'lista' %>
+
+<p>
+  <b>Citas:</b>
+<% for cita in @consulta.paciente.citas %><br/ >
+	Fecha y Hora: <br / >
+	<% if cita.fecha_hora!=nil%>
+	<%= cita.fecha_hora.strftime('%d -%B- %y Hora: %H:%M')  %><br / >
+	<% end %>
+	
+	<% if cita.status == 'Confirmada' || cita.status == 'Pagada' %>
+		Estudio a Realizar: <%= Estudio.find(cita.operation.tipo_id).tipo_estudio  %><br / >
+		Estatus Cita: <%= cita.status %><br / >
+		<%= link_to 'Estudio', :controller  => "operations",:action => "edit",:id  => cita.operation.id %> |
+	<% if cita.status == 'Pagada' and cita.operation.pago_id != nil %>	
+		<%= link_to 'Imprimir Factura', :controller => 'pagos' ,:action => 'imprime', :id => cita.operation.pago_id,:paciente_id => cita.paciente.id,:operation_id => cita.operation.id  %> 
+	<% end %>
+
+
+	<% else %>		
+		<td><%= button_to 'Confirma Cita', {:controller => "lab",:action => "confirma_cita", :id => cita.id } %></td>
+		<td><%= button_to 'Cancela', {:controller => "lab",:action => "cancela_cita", :id => cita.id } %></td>
+		<% end %>
+<% end %>
+
+</p>
+<hr>
+<% if @consulta.cita == nil %>
+<%= button_to 'Crea Cita', {:controller => "lab", :action => "crea_cita", :id => @consulta.paciente_id,:id_cons => @consulta.id } %>
+<% end %>
+<%= link_to 'Edit', edit_consulta_path(@consulta) %> |
+<%= link_to 'Back', consultas_path %>

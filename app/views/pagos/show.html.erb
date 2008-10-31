@@ -1,0 +1,29 @@
+<p>
+  <b>Paciente:</b>
+  <%=h @paciente.nombre_completo %>
+</p>
+
+<p>
+  <b>Folio factura:</b>
+  <%=h @pago.folio_factura %>
+</p>
+
+<p>
+  <b>Precio:</b>
+  <%=h @pago.precio %>
+</p>
+
+<p>
+  <b>Descuento:</b>
+  <%=h @pago.descuento %>
+</p>
+
+<p>
+  <b>Total a pagar:</b>
+  <%=h @pago.total %>
+</p>
+
+
+
+<%= link_to 'Imprimir Factura', :action => 'imprime', :id => @pago.id,:paciente_id => @paciente.id,:operation_id => @operation.id  %> 
+

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  horas: MyString
+  cubiculo: 1
+  cita_id: 1
+
+two:
+  horas: MyString
+  cubiculo: 1
+  cita_id: 1

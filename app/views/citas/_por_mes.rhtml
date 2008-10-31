@@ -1,0 +1,20 @@
+<h1>Citas en el mes</h1> 
+<div>
+
+	<%=calendar(:year => Time.now.year, :month => Time.now.month,:show_today => true ) %>
+	
+	<% @cita_dias.each do |dia, citas| %>
+	<h4><%= dia.strftime('%d') %></h4>
+	<% for cita in citas %>
+
+		<tr>
+		<td><%=h cita.paciente.nombre_completo %></td><br/>
+		<td><%=h cita.status %></td><br/>
+		<td><%=h cita.fecha_hora.to_s(:short) %></td><br/><br/>
+		</tr>
+		<hr>	
+	<% end %>
+<% end %>
+
+
+</div>

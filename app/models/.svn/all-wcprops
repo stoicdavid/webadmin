@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/3/trunk/webadmin/app/models
+END
+specialization.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/3/trunk/webadmin/app/models/specialization.rb
+END
+agenda.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/3/trunk/webadmin/app/models/agenda.rb
+END
+cita.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/6/trunk/webadmin/app/models/cita.rb
+END
+operation.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/7/trunk/webadmin/app/models/operation.rb
+END
+pago.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/7/trunk/webadmin/app/models/pago.rb
+END
+especialidad.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/3/trunk/webadmin/app/models/especialidad.rb
+END
+usuario.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/3/trunk/webadmin/app/models/usuario.rb
+END
+consulta.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/3/trunk/webadmin/app/models/consulta.rb
+END
+paciente.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/6/trunk/webadmin/app/models/paciente.rb
+END
+doctor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/6/trunk/webadmin/app/models/doctor.rb
+END
+generate.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/7/trunk/webadmin/app/models/generate.rb
+END
+tipo.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/7/trunk/webadmin/app/models/tipo.rb
+END
+estudio.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/6/trunk/webadmin/app/models/estudio.rb
+END

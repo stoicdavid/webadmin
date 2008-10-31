@@ -1,0 +1,43 @@
+<p>
+  <b>Id cita:</b>
+  <%=h @operation.cita_id %>
+</p>
+
+<p>
+  <b>Hora llegada:</b>
+  <%=h @operation.hora_llegada %>
+</p>
+
+<p>
+  <b>Ini conexion:</b>
+  <%=h @operation.ini_conexion %>
+</p>
+
+<p>
+  <b>Fin conexion:</b>
+  <%=h @operation.fin_conexion %>
+</p>
+
+<p>
+  <b>Ini estudio:</b>
+  <%=h @operation.ini_estudio %>
+</p>
+
+<p>
+  <b>Fin estudio:</b>
+  <%=h @operation.fin_estudio %>
+</p>
+
+<p>
+  <b>Fecha interpretacion:</b>
+  <%=h @operation.fecha_interpretacion %>
+</p>
+
+<p>
+  <b>Fecha entrega:</b>
+  <%=h @operation.fecha_entrega %>
+</p>
+
+
+<%= link_to 'Edit', edit_operation_path(@operation) %> |
+<%= link_to 'Back', operations_path %>

@@ -1,0 +1,30 @@
+8
+
+dir
+0
+https://neurolab-webadmin.googlecode.com/svn/trunk/webadmin/vendor/plugins/calendar_date_select/js_test/functional
+https://neurolab-webadmin.googlecode.com/svn
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+.tmp_cds_test.html
+file
+
+
+
+add
+
+cds_test.html
+file
+
+
+
+add
+

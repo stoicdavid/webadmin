@@ -1,0 +1,14 @@
+class Doctor < ActiveRecord::Base
+  has_one :specialization
+  has_many :consultas
+  has_many :pacientes, :through => :consultas
+  
+  def self.find_all
+    find(:all).collect { |p| [p.nombre_completo, p.id] }
+  end
+  
+  def nombre_completo
+  	self.nombre + " " + self.app_pat + " " + self.app_mat
+  end
+  
+end

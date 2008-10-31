@@ -1,0 +1,28 @@
+<h1>Pacientes con Consulta</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>nombre 2</th>
+    <th>App pat</th>
+    <th>App mat</th>
+
+
+
+  </tr>
+
+<% for paciente in @pacientes %>
+  <tr>
+    <td><%=h paciente.nombre %></td>
+    <td><%=h paciente.nombre_2 %></td>
+    <td><%=h paciente.app_pat %></td>
+    <td><%=h paciente.app_mat %></td>
+
+
+    <td><%= link_to 'Show', paciente %></td>
+    <td><%= link_to 'Edit', edit_paciente_path(paciente) %></td>
+    <td><%= link_to 'Destroy', paciente, :confirm => 'Are you sure?', :method => :delete %></td>
+
+  </tr>
+<% end %>
+</table>

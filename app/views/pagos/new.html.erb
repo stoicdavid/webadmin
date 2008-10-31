@@ -1,0 +1,56 @@
+<h1>Genera Pago</h1>
+
+<% form_for(@pago) do |f| %>
+  	<%= f.error_messages %>	
+	<%= f.hidden_field :paciente_id,:value => @operation.cita.paciente.id  %>
+	<%= f.hidden_field :tipo_id, :value => @operation.tipo_id %>
+	<%= f.hidden_field :operation_id, :value => @operation.id %>
+	<p>
+	     Nombre del Paciente: <br />
+	    <%= @operation.cita.paciente.nombre_completo  %>
+	  </p>
+	<p>
+	     Estudio Realizado: <br />
+	    <%= Estudio.find(@operation.tipo_id).tipo_estudio  %>
+	  </p>
+	
+	
+  <p>
+    <%= f.label :factura %><br />
+    <%= f.check_box :factura %>
+  </p>
+
+  <p>
+    Folio sugerido:
+	<%= @pago.folio %><br />
+    
+  </p>
+
+  <p>
+    <%= f.label :folio_factura %><br />
+    <%= f.text_field :folio_factura %>
+  </p>
+  <p>
+    Aplica descuento?<br />
+    <%= check_box_tag :descuento_b %>
+  </p>
+
+  <p>
+	Precio<br />
+    <%=  number_to_currency(importe =Pago.importe(params[:id])) %>
+    <%= f.hidden_field :precio,:value => importe %>
+  </p>
+
+
+
+  <p>
+	<%= f.select :forma_pago, Pago::FORMAS, :prompt => "Selecciona la forma de pago"  %>
+  </p>
+
+
+  <p>
+    <%= f.submit "Crear",:id => params[:id]  %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', pagos_path %>

@@ -1,0 +1,34 @@
+<h1>Edita cita</h1>
+
+<% form_for(@cita) do |f| %>
+  <%= f.error_messages %>
+   <p>
+     Nombre del Paciente: <br />
+    <%= @cita.paciente.nombre_completo %>
+  </p>
+   <p>
+     Doctor que atendió: <br />
+    <%= Consulta.find_by_paciente_id(@cita.paciente.id).doctor.nombre_completo %>
+  </p>	
+
+   <p>
+     Estudio a realizar: <br />
+    <%= select :tipo_estudio, :estudio, Estudio.find_all(), :prompt => "Selecciona el estudio" %>
+  </p>
+
+  <p>
+    <%= f.label :fecha_hora %><br />
+    <%= f.datetime_select :fecha_hora %>
+  </p>
+  <p>
+    <%= f.label :cubiculo %><br />
+    <%= f.text_field :cubiculo %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @cita %> |
+<%= link_to 'Back', citas_path %>

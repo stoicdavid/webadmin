@@ -1,0 +1,35 @@
+<table cellspacing='30'>
+	<tr>
+		<td>
+			<table>
+				<tr><th span='2'>Días</th></tr>
+				<% i = 0
+				for day in @Dias do i = i + 1%>
+				<tr>
+					<td><%= day %></td>
+					<% checked = @checkbox[day] unless !@checkbox %>
+					<td><%= check_box_tag "checkbox[#{day}]", i, checked %></td>
+				</tr>
+				<% end %>
+			</table>
+		</td>
+		<td>
+			<table>
+				<%= hidden_field_tag "rule", @rule %>
+				<%= hidden_field_tag "cubiculo", @horario.cubiculo %>
+				<tr><th>De:</th><th>A:</th></tr>
+				<tr>
+					<td>
+						<%= select_hour @date_from, :field_name => 'from_hour' %>
+						<%= select_minute @date_from, :minute_step => 30, :field_name => 'from_minutes'%> -
+					</td>
+					<td>
+						<%= select_hour @date_to, :field_name => 'to_hour' %>
+						<%= select_minute @date_to, :minute_step => 30, :field_name => 'to_minutes' %>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<%= debug params %>

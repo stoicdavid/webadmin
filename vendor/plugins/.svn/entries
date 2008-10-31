@@ -1,0 +1,45 @@
+8
+
+dir
+3
+https://neurolab-webadmin.googlecode.com/svn/trunk/webadmin/vendor/plugins
+https://neurolab-webadmin.googlecode.com/svn
+
+
+
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+has-props
+has-prop-mods
+svn:special svn:externals svn:needs-lock
+svn:externals
+
+calendar_date_select
+dir
+
+
+
+add
+
+calendar_helper
+dir
+
+
+
+add
+
+calendariffic
+dir
+
+
+
+add
+
+file_column
+dir
+
+
+
+add
+

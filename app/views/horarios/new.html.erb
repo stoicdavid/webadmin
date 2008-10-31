@@ -1,0 +1,23 @@
+<h1>New horario</h1>
+
+<% form_for(@horario) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :horas %><br />
+    <%= f.text_field :horas %>
+  </p>
+  <p>
+    <%= f.label :cubiculo %><br />
+    <%= f.text_field :cubiculo %>
+  </p>
+  <p>
+    <%= f.label :cita_id %><br />
+    <%= f.text_field :cita_id %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', horarios_path %>

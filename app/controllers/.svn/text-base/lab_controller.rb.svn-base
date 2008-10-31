@@ -1,0 +1,38 @@
+class LabController < ApplicationController
+  
+  
+  def index
+    @consultas = Consulta.find(:all)
+
+  end
+
+  def crea_cita
+    
+    cita= Cita.new
+    cita.save
+    agenda = Agenda.new
+    agenda.paciente_id = params[:id]
+    agenda.cita_id = cita.id
+    agenda.save
+    operacion = Operation.new
+    operacion.cita_id=cita.id
+    operacion.save
+    redirect_to :controller => "citas", :id => cita.id, :action => 'edit' 
+  end
+  
+  def confirma_cita
+    cit = Cita.find params[:id]
+    cit.save
+    redirect_to :controller => "citas", :id => cit.id, :action  => 'confirma'
+  end
+  
+  
+
+  
+  
+  protected
+
+    def authorize
+    end
+
+end

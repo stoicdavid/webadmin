@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/3/trunk/webadmin/app/controllers
+END
+usuarios_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/3/trunk/webadmin/app/controllers/usuarios_controller.rb
+END
+consultas_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/3/trunk/webadmin/app/controllers/consultas_controller.rb
+END
+pacientes_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/3/trunk/webadmin/app/controllers/pacientes_controller.rb
+END
+doctors_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/3/trunk/webadmin/app/controllers/doctors_controller.rb
+END
+lab_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/6/trunk/webadmin/app/controllers/lab_controller.rb
+END
+application.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/3/trunk/webadmin/app/controllers/application.rb
+END
+citas_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/6/trunk/webadmin/app/controllers/citas_controller.rb
+END
+operations_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/7/trunk/webadmin/app/controllers/operations_controller.rb
+END
+admin_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/3/trunk/webadmin/app/controllers/admin_controller.rb
+END
+pagos_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/7/trunk/webadmin/app/controllers/pagos_controller.rb
+END

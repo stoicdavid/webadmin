@@ -1,0 +1,15 @@
+<div class='top'>
+	<h1>Nueva Regla</h1>
+</div>
+<div class='body'>
+<div class='center'>
+	
+<% form_tag :action => 'add_regla' do %>
+Cubiculo: <%=h @horario.cubiculo %>	
+<%= render :partial => 'rule_form' %>
+
+<div align='center'><%= submit_tag "Agregar" %></div>
+<% end %>
+<%= debug params %>
+</div>
+</div>

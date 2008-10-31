@@ -1,0 +1,324 @@
+8
+
+dir
+0
+https://neurolab-webadmin.googlecode.com/svn/trunk/webadmin/vendor/plugins/calendariffic/assets/javascripts/calendariffic/lang
+https://neurolab-webadmin.googlecode.com/svn
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+calendar-ko-utf8.js
+file
+
+
+
+add
+
+calendar-fi.js
+file
+
+
+
+add
+
+cn_utf8.js
+file
+
+
+
+add
+
+calendar-ru_win_.js
+file
+
+
+
+add
+
+calendar-es.js
+file
+
+
+
+add
+
+calendar-du.js
+file
+
+
+
+add
+
+calendar-ko.js
+file
+
+
+
+add
+
+calendar-big5-utf8.js
+file
+
+
+
+add
+
+calendar-si.js
+file
+
+
+
+add
+
+calendar-no.js
+file
+
+
+
+add
+
+calendar-hu.js
+file
+
+
+
+add
+
+calendar-sk.js
+file
+
+
+
+add
+
+calendar-he-utf8.js
+file
+
+
+
+add
+
+calendar-ro.js
+file
+
+
+
+add
+
+calendar-af.js
+file
+
+
+
+add
+
+calendar-ru.js
+file
+
+
+
+add
+
+calendar-al.js
+file
+
+
+
+add
+
+calendar-hr-utf8.js
+file
+
+
+
+add
+
+calendar-pl-utf8.js
+file
+
+
+
+add
+
+calendar-cs-win.js
+file
+
+
+
+add
+
+calendar-el.js
+file
+
+
+
+add
+
+calendar-en.js
+file
+
+
+
+add
+
+calendar-lt-utf8.js
+file
+
+
+
+add
+
+calendar-br.js
+file
+
+
+
+add
+
+calendar-fr.js
+file
+
+
+
+add
+
+calendar-nl.js
+file
+
+
+
+add
+
+calendar-jp.js
+file
+
+
+
+add
+
+calendar-hr.js
+file
+
+
+
+add
+
+
+
+
+
+has-props
+has-prop-mods
+
+calendar-pl.js
+file
+
+
+
+add
+
+calendar-it.js
+file
+
+
+
+add
+
+calendar-lt.js
+file
+
+
+
+add
+
+calendar-lv.js
+file
+
+
+
+add
+
+calendar-zh.js
+file
+
+
+
+add
+
+calendar-sp.js
+file
+
+
+
+add
+
+calendar-ca.js
+file
+
+
+
+add
+
+calendar-pt.js
+file
+
+
+
+add
+
+calendar-da.js
+file
+
+
+
+add
+
+calendar-tr.js
+file
+
+
+
+add
+
+calendar-big5.js
+file
+
+
+
+add
+
+calendar-bg.js
+file
+
+
+
+add
+
+calendar-de.js
+file
+
+
+
+add
+
+calendar-sv.js
+file
+
+
+
+add
+
+calendar-cs-utf8.js
+file
+
+
+
+add
+

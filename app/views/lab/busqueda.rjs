@@ -1,0 +1,2 @@
+page['resultados'].replace_html
+page.alert('La cita no se puede crear')

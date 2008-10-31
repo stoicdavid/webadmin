@@ -1,0 +1,26 @@
+<h1>Listing searches</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Nombre 2</th>
+    <th>Ap pat</th>
+    <th>Ap mat</th>
+  </tr>
+
+<% for search in @searches %>
+  <tr>
+    <td><%=h search.nombre %></td>
+    <td><%=h search.nombre_2 %></td>
+    <td><%=h search.ap_pat %></td>
+    <td><%=h search.ap_mat %></td>
+    <td><%= link_to 'Show', search %></td>
+    <td><%= link_to 'Edit', edit_search_path(search) %></td>
+    <td><%= link_to 'Destroy', search, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New search', new_search_path %>

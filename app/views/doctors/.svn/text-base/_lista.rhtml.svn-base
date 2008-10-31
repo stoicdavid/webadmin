@@ -1,0 +1,32 @@
+<h1 >Listing doctors</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Nombre 2</th>
+    <th>App pat</th>
+    <th>App mat</th>
+    <th>Especialidad</th>
+    <th>Telefono consultorio</th>
+    <th>Celular</th>
+
+  </tr>
+
+<% for doctor in @doctors %>
+  <tr>
+    <td><%=h doctor.nombre %></td>
+    <td><%=h doctor.nombre_2 %></td>
+    <td><%=h doctor.app_pat %></td>
+    <td><%=h doctor.app_mat %></td>
+	<td><%=h doctor.specialization.especialidad[:especialidad] %></td>
+    <td><%=h doctor.telefono_consultorio %></td>
+    <td><%=h doctor.celular %></td>
+    <td><%= link_to 'Show', doctor %></td>
+    <td><%= link_to 'Edit', edit_doctor_path(doctor) %></td>
+    <td><%= link_to 'Destroy', doctor, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+
+

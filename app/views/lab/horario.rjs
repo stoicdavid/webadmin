@@ -1,0 +1,4 @@
+
+    page.replace_html 'tablas',:partial => 'tabla_dia'
+    page.visual_effect :slide_down,'tablas'
+

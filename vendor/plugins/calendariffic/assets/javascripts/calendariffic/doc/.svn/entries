@@ -1,0 +1,30 @@
+8
+
+dir
+0
+https://neurolab-webadmin.googlecode.com/svn/trunk/webadmin/vendor/plugins/calendariffic/assets/javascripts/calendariffic/doc
+https://neurolab-webadmin.googlecode.com/svn
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+html
+dir
+
+
+
+add
+
+reference.pdf
+file
+
+
+
+add
+

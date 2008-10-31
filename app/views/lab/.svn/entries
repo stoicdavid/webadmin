@@ -1,0 +1,203 @@
+8
+
+dir
+3
+https://neurolab-webadmin.googlecode.com/svn/trunk/webadmin/app/views/lab
+https://neurolab-webadmin.googlecode.com/svn
+
+
+
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+
+svn:special svn:externals svn:needs-lock
+
+_horario_busqueda.rhtml
+file
+0
+
+
+add
+
+index.html.erb
+file
+6
+
+
+
+2008-09-18T18:17:17.000000Z
+bd4588979b93bf2f669ca57beb2f94bc
+2008-09-18T19:20:05.794724Z
+6
+stoicdavid
+
+edit_regla.rhtml
+file
+0
+
+
+add
+
+_tabla_dia.rhtml
+file
+0
+
+
+add
+
+_horario.rhtml
+file
+0
+
+
+add
+
+_vista_dia.rhtml
+file
+0
+
+
+add
+
+show_horario.rhtml
+file
+0
+
+
+add
+
+new_regla.rhtml
+file
+0
+
+
+add
+
+_recepcion.rhtml
+file
+0
+
+
+add
+
+_celda.rhtml
+file
+0
+
+
+add
+
+_busqueda.rhtml
+file
+0
+
+
+add
+
+_crea_cita.rhtml
+file
+0
+
+
+add
+
+_pago_semana.rhtml
+file
+0
+
+
+add
+
+_vista_semana.rhtml
+file
+0
+
+
+add
+
+_consultas.rhtml
+file
+0
+
+
+add
+
+horario.rjs
+file
+0
+
+
+add
+
+vista_dia.rjs
+file
+0
+
+
+add
+
+_edit_regla.html
+file
+0
+
+
+add
+
+borra.rjs
+file
+0
+
+
+add
+
+busqueda.rjs
+file
+0
+
+
+add
+
+_cubiculo_listado.rhtml
+file
+0
+
+
+add
+
+_cubiculo_horario.rhtml
+file
+0
+
+
+add
+
+muestra.rjs
+file
+0
+
+
+add
+
+_vista_mes.rhtml
+file
+0
+
+
+add
+
+_rule_form.rhtml
+file
+0
+
+
+add
+
+_pago_mes.rhtml
+file
+0
+
+
+add
+

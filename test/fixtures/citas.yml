@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  paciente_id: 1
+  fecha_hora: 2008-09-10 13:29:30
+  cubiculo: 1
+  persona_conf: MyString
+  confirma_doc: false
+  confirma_valet: false
+  acompana: MyString
+
+two:
+  paciente_id: 1
+  fecha_hora: 2008-09-10 13:29:30
+  cubiculo: 1
+  persona_conf: MyString
+  confirma_doc: false
+  confirma_valet: false
+  acompana: MyString

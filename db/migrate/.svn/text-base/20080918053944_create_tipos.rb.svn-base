@@ -1,0 +1,16 @@
+class CreateTipos < ActiveRecord::Migration
+  def self.up
+       create_table :tipos, :id => false do |t|
+          t.integer :estudio_id, :null => false, :options =>
+          "CONSTRAINT fk_tipos_estudios REFERENCES estudios(id)"
+          t.integer :operation_id, :null => false, :options =>
+          "CONSTRAINT fk_tipos_operations REFERENCES operations(id)"
+
+      t.timestamps
+    end
+  end
+
+  def self.down
+    drop_table :tipos
+  end
+end

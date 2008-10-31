@@ -1,0 +1,5 @@
+<%= render :partial => 'lista' %>
+
+<br />
+
+<%= link_to 'New doctor', new_doctor_path %>

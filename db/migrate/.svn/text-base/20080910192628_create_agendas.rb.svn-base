@@ -1,0 +1,16 @@
+class CreateAgendas < ActiveRecord::Migration
+  def self.up
+    create_table :agendas, :id => false do |t|
+    t.integer :paciente_id, :null => false, :options =>
+    "CONSTRAINT fk_agendas_pacientes REFERENCES pacientes(id)"
+    t.integer :cita_id, :null => false, :options =>
+    "CONSTRAINT fk_agendas_citas REFERENCES citas(id)"
+
+      t.timestamps
+    end
+  end
+
+  def self.down
+    drop_table :agendas
+  end
+end

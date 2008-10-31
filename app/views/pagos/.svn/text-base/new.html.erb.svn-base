@@ -1,0 +1,61 @@
+<h1>New pago</h1>
+
+<% form_for(@pago) do |f| %>
+  <%= f.error_messages %>	
+	<p>
+	     Nombre del Paciente: <br />
+	    <%= Operation.find(params[:id]).cita.paciente.nombre  %>
+	  </p>
+	<p>
+	     Estudio Realizado: <br />
+	    <%= Operation.find(params[:id]).tipo.estudio.tipo_estudio  %>
+	  </p>
+	
+	
+  <p>
+    <%= f.label :factura %><br />
+    <%= f.check_box :factura %>
+  </p>
+  <p>
+    <%= f.label :folio_factura %><br />
+    <%= f.text_field :folio_factura %>
+  </p>
+
+  <p>
+		Precio<br />
+    <%=   number_to_currency(importe =Pago.importe(params[:id])) %>
+    <%#number_to_currency(p_sin_iva=importe * (1-0.15)) %>
+  </p>
+
+  <p>
+		Descuento<br />
+    <%= number_to_currency(descuento = Pago.descuento(params[:id]))  %>
+    <% subtotal=importe - descuento   %>
+  </p>
+
+  <p>
+		IVA<br />
+    <%=  number_to_currency(iva =subtotal * (0.15))  %>
+  </p>
+
+  <p>
+		SubTotal<br />
+
+	<%= number_to_currency(subtotal - iva) %>
+  </p>
+
+
+
+
+  <p>
+    Total<br />
+    <%= number_to_currency(subtotal=importe - descuento) %>
+  </p>
+
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', pagos_path %>

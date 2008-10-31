@@ -1,0 +1,8 @@
+
+
+It's <%= Time.now %>
+
+<%= link_to 'Logout', :controller => :admin, :action => 'logout' %> 
+<br>Se tienen <%= pluralize (@pacientes.size, "paciente") %></br>
+
+

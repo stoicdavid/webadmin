@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id_cita: 1
+  hora_llegada: 2008-09-18 00:24:50
+  ini_conexion: 2008-09-18 00:24:50
+  fin_conexion: 2008-09-18 00:24:50
+  ini_estudio: 2008-09-18 00:24:50
+  fin_estudio: 2008-09-18 00:24:50
+  fecha_interpretacion: 2008-09-18
+  fecha_entrega: 2008-09-18
+
+two:
+  id_cita: 1
+  hora_llegada: 2008-09-18 00:24:50
+  ini_conexion: 2008-09-18 00:24:50
+  fin_conexion: 2008-09-18 00:24:50
+  ini_estudio: 2008-09-18 00:24:50
+  fin_estudio: 2008-09-18 00:24:50
+  fecha_interpretacion: 2008-09-18
+  fecha_entrega: 2008-09-18

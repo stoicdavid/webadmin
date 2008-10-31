@@ -1,0 +1,109 @@
+8
+
+dir
+3
+https://neurolab-webadmin.googlecode.com/svn/trunk/webadmin/app/views/consultas
+https://neurolab-webadmin.googlecode.com/svn
+
+
+
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+
+svn:special svn:externals svn:needs-lock
+
+_form_consulta.rhtml
+file
+
+
+
+
+2008-09-09T08:40:59.000000Z
+49f3d8de70bbc039a1af32dab5a92104
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+edit.html.erb
+file
+
+
+
+
+2008-09-09T18:25:11.000000Z
+70982187fdd940d2c2dc07480624a14d
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+_lista.rhtml
+file
+0
+
+
+add
+
+create.rjs
+file
+0
+
+
+add
+
+index.html.erb
+file
+6
+
+
+
+2008-09-18T18:15:55.000000Z
+604901ffcd89b4b5a61796f3619460b7
+2008-09-18T19:20:05.794724Z
+6
+stoicdavid
+
+_edita_consulta.rhtml
+file
+
+
+
+
+2008-09-09T18:48:55.000000Z
+177b30d98ac1cff243d8dcb0ad1d62c5
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+_registro.rhtml
+file
+0
+
+
+add
+
+new.html.erb
+file
+
+
+
+
+2008-09-09T08:33:40.000000Z
+ef4d4dc3b92780673193b5ceb503d7a8
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+show.html.erb
+file
+
+
+
+
+2008-09-08T05:10:13.000000Z
+82f3602935f3f20359364ab7fd1ae47c
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+

@@ -1,0 +1,15 @@
+<div>
+
+<%= form_remote_tag :method => 'get',:url => {:action => :realizar_busqueda}%>
+     <p><b>Fecha y Hora:</b></p>
+     <%# t = Time.now %>
+	<%# calendar_date_select_tag "cita", @cita.fecha_hora %>
+	<% inicial=Time.now.beginning_of_year.strftime('%Y') %>
+	<% final=Time.now.beginning_of_year.years_since(3).strftime('%Y') %>
+	<%= calendar_date_select_tag "fecha_cita", Time.now, :time => true  %>
+	<%= hidden_field :paciente, :value => @cita.paciente.id  %>	
+     <p><b>Cubículo:</b></p>
+     <p><%= text_field_tag 'cubiculo'%></p>
+   <%= submit_tag "Buscar" %>
+
+</div>

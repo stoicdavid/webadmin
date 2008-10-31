@@ -1,0 +1,43 @@
+<h1>Crea consulta</h1>
+
+<% form_for(@consul) do |f| %>
+  <%= f.error_messages %>
+
+<p>
+     Paciente: <br />
+<%=    Paciente.find(params[:id]).nombre_completo %>
+  </p>
+	
+
+    <%= f.label 'Fecha de Referencia'%><br />
+    <%= f.datetime_select :fecha_envio %>
+  </p>
+
+
+  <p>
+    <%= f.label 'Fecha de Consulta' %><br />
+    <%= f.datetime_select :fecha_consulta %>
+  </p>
+  <p>
+    <%= f.label :diagnostico %><br />
+    <%= f.text_area :diagnostico %>
+  </p>
+  <p>
+    <%= f.label :fecha_in_sintomas %><br />
+    <%= f.date_select :fecha_in_sintomas %>
+  </p>
+  <p>
+    <%= f.label 'Fármacos anteriores' %><br />
+    <%= f.text_area :medicina_anterior %>
+  </p>
+  <p>
+    <%= f.label 'Fármacos actuales' %><br />
+    <%= f.text_area :medicina_actual %>
+  </p>
+  <p>
+
+    <%= f.submit "Crear" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', consultas_path %>

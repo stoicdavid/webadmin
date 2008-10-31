@@ -1,0 +1,10 @@
+<tr id=<%= record.id %> class="pequeno">
+    <td class="separado"><%=h record.send(:fecha).strftime("%d/%m/%Y - %H:%M") %></td>
+    <td class="separado"><%=h record.send(:profesor || :alumno).human_name %></td>
+		<td id=<%= record.id.to_s + ":cambio"%> class="separado">
+			<%= render :partial => "estado_cita", :locals => {:record => record} %>
+		</td>
+    <td>
+			<%= link_to image_tag("show.png", :size => "35x35", :border => 0), :action => 'show_cita', :id => record %>
+    </td>
+  </tr>

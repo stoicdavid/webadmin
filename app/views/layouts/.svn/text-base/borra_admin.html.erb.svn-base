@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html> 
+<head> 
+	<title>Bienvenida</title> 
+	<%= stylesheet_link_tag "webadmin", :media => "all" %> 
+</head> 
+<body id="store"> 
+	<div id="banner"> 
+
+	<%= @page_title || "Bienvenido" %> 
+	
+</div> 
+
+
+	<div id="main"> 
+	<%= yield :layout %> 
+</div> 
+</div> 
+</body> 
+</html> 

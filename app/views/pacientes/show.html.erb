@@ -1,0 +1,59 @@
+<h2>Paciente</h2>
+
+<p>
+  <b>Nombre:</b>
+  <%=h @paciente.nombre_completo %>
+</p>
+
+<p>
+	<b>Doctor que atendió:</b>
+	<% if Consulta.find_by_paciente_id(@paciente.id)!=nil %>
+  <%=h Consulta.find_by_paciente_id(@paciente.id).doctor.nombre_completo %>
+	<% end %>
+</p>
+
+<p>
+  <b>Genero:</b>
+<% if @paciente.genero == 'f' %>
+<%= 'Femenino'  %>
+<% else %>
+<%= 'Masculino' %>
+<% end %>
+</p>
+<p>
+  <b>Fecha de nacimiento:</b>
+  <%=h @paciente.fecha_nac %>
+</p>
+
+<% if Usuario.find_by_id(session[:usuario_id]).nombre=="admin" %>
+<%= link_to 'Edit', edit_paciente_path(@paciente) %> 
+<% end %>
+<% unless @paciente.consultas ==nil %>
+<h3 id="registros_count"><%= pluralize(@paciente.consultas.size, 'Registro') %></h3>
+
+<hr>
+
+<div id="registros">
+	<%= render :partial => 'consultas/registro', :collection => @paciente.consultas, :id => @paciente.id %>
+</div>
+<% end %>
+
+<% if Usuario.find_by_id(session[:usuario_id]).nombre=="admin" %>
+<br />
+<div id="link">
+<%= link_to_function "Agrega un registro..." do |page| 
+	page.insert_html :bottom, :agrega, :partial => 'record', :object => @paciente.consultas.build ,:id => @paciente.id
+	page.visual_effect :blind_down, 'agrega',:duration => 5
+	page.hide('link')
+end %>
+
+</div>
+
+
+
+
+<div id="agrega">
+
+</div>
+<% end %>
+

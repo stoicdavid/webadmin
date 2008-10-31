@@ -1,0 +1,53 @@
+<h2>Paso 2</h2>
+
+<h1>Captura Consulta</h1>
+
+<% form_for(@consulta) do |f| %>
+  <%= f.error_messages %>
+<p>
+     Paciente: <br />
+<%=    @consulta.paciente.nombre_completo %>
+  </p>
+<p>
+     Doctor que atendio: <br />
+<%=  @consulta.doctor.nombre_completo %><br />
+<%= @consulta.doctor.specialization.especialidad.especialidad %>
+  </p>
+
+  <p>
+    <%= f.label 'Fecha de consulta' %><br />
+    <%= f.datetime_select :fecha_consulta %>
+  </p>
+  <p>
+    <%= f.label 'Fecha de Referencia' %><br />
+    <%= f.datetime_select :fecha_envio %>
+  </p>
+  <p>
+    <%= f.label 'Diagnóstico' %><br />
+    <%= f.text_area :diagnostico %>
+  </p>
+  <p>
+    Estudio a realizar: <br />
+   <%= select :tipo_estudio, :estudio, Estudio.find_all(), :prompt => "Selecciona el estudio" %>
+
+ </p>
+
+  <p>
+    <%= f.label 'Fecha de inicio de síntomas' %><br />
+    <%= f.date_select :fecha_in_sintomas %>
+  </p>
+  <p>
+    <%= f.label 'Fármacos anteriores' %><br />
+    <%= f.text_area :medicina_anterior %>
+  </p>
+  <p>
+    <%= f.label 'Fármacos actuales' %><br />
+    <%= f.text_area :medicina_actual %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @consulta %> |
+<%= link_to 'Back', consultas_path %>

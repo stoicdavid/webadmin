@@ -1,0 +1,24 @@
+<h1>Listing tipo_estudios</h1>
+
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>Descripcion</th>
+    <th>Precio</th>
+  </tr>
+
+<% for tipo_estudio in @tipo_estudios %>
+  <tr>
+    <td><%=h tipo_estudio.titulo %></td>
+    <td><%=h tipo_estudio.descripcion %></td>
+    <td><%=h tipo_estudio.precio %></td>
+    <td><%= link_to 'Show', tipo_estudio %></td>
+    <td><%= link_to 'Edit', edit_tipo_estudio_path(tipo_estudio) %></td>
+    <td><%= link_to 'Destroy', tipo_estudio, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New tipo_estudio', new_tipo_estudio_path %>

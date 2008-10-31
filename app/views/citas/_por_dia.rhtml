@@ -1,0 +1,85 @@
+<h1>Citas en el día</h1> 
+<div>
+	<% @cita_horas.each do |hora, citas| %>
+	<h4><%= hora %></h4>	
+	<% for cita in @citas %>
+		<tr>
+		<td><%=h cita.paciente.nombre_completo %></td><br/>
+		<td><%=h cita.status %></td><br/>
+		<td><%=h cita.fecha_hora.to_s(:short) %></td><br/><br/>
+		 <td><%= link_to 'Estudio', :controller  => "operations",:action  => "edit",:id  => cita.operation.id %></td>
+		</tr>
+		<hr>	
+	<% end %>
+	<% end %>
+</div>
+
+<div>
+	<table width="780" height="405" border="1" cellpadding="0" cellspacing="0" bordercolor="#E1E1E1"  id='cub_dia'>
+
+
+	<%# if cub.cubiculo.even? %>
+		<% inicial=Timex.parse('7:00')
+			ini=Timex.parse('9:00')
+		   final = Timex.parse('20:30')%>
+	<%# else %>
+		<%# inicial=Time.parse('7:00')
+		   final=Time.parse('19:00')%>
+	<%# end %>
+
+			  <tr>
+			  <% for column in ["Hora", "Cubículo 1","Cubículo 2","Cubículo 3","Cubículo 4","Cubículo 5","Cubículo 6"] %>
+			    <th><%= column %></th>
+			  <% end %>
+			  </tr>
+
+			<% count=0 %>
+			<% count_2=0 %>
+			<% celda="" %>
+			<% drag="" %>
+
+			<% inicial.step(final,60*30) {|x| %>
+				<tr>
+			<td><%= x.strftime('%H:%M') %></td>
+			<% for cub in (0...6) %>
+			<% celda ="celda_#{count+=1}" %>
+			<% drag = "drag_#{count_2+=1}"%>
+
+			<td id='<%= drag %>' onclick="<%= remote_function (:update => celda,
+			:url => {:action => 'muestra_tab',:controller => 'lab',:id => drag } ) %>">
+			
+			
+					<div class="cita" id='<%= celda %>'>
+			
+
+					</div> 	
+
+			</td>		
+			<%= drop_receiving_element(drag, 
+			:accept => 'cita', 
+			:complete => "$('spinner').hide();", 
+			:before => "$('spinner').show();", 
+			:hoverclass => 'hover',
+			:with => "'cita=' + encodeURIComponent(element.id.split('_').last())", 
+			:url => {:action=>"update", :id=>cub})%>
+			<% end %>
+		</tr>
+
+				<% } %>
+		</table>
+
+
+	<style>
+				.hover { 
+				background-color: #888888; 
+				} 
+				#drag div { 
+
+				cursor: _moz_grab; 
+				}
+				#drag { 
+				border: 1px solid gray; 
+				} 
+
+	</style>
+</div>

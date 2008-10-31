@@ -1,0 +1,16 @@
+<div class='top'>
+	<h1>Editando Regla</h1>
+	<%= display_menu %>
+</div>
+<div class='body'>
+<div class='center'>
+	
+<% form_tag :action => 'update_regla' do %>
+	
+<%= render :partial => 'rule_form' %>
+
+<div align='center'><%= submit_tag "Actualizar" %></div>
+<% end %>
+
+</div>
+</div>

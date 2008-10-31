@@ -1,0 +1,36 @@
+<h1>Consultas Médicas</h1>
+
+<table>
+  <tr>
+	<th>Nombre Paciente</th>
+	<th>Doctor que refiere</th>
+    <th>Fecha consulta</th>
+    <th>Diagnostico</th>
+    <th>Fecha in sintomas</th>
+    <th>Fármacos previos</th>
+    <th>Fármaco actual</th>
+  </tr>
+
+<% for consulta in @consultas %>
+  <tr>
+	<td><%=h consulta.paciente.nombre_completo %></td>
+	<% if consulta.doctor_id!=nil%>
+		<td><%=h consulta.doctor.nombre_completo %></td>
+	<% else %>
+	<td>Sin doctor de referencia</td>
+	<% end %>
+    <td><%=h consulta.fecha_consulta %></td>
+    <td><%=h consulta.diagnostico %></td>
+    <td><%=h consulta.fecha_in_sintomas %></td>
+    <td><%=h consulta.medicina_anterior %></td>
+    <td><%=h consulta.medicina_actual %></td>
+    <td><%= link_to 'Show', consulta %></td>
+    <td><%= link_to 'Edit', edit_consulta_path(consulta) %></td>
+    <td><%= link_to 'Destroy', consulta, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New consulta', new_consulta_path %>

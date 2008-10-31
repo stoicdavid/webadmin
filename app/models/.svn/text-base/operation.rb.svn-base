@@ -1,0 +1,5 @@
+class Operation < ActiveRecord::Base
+  belongs_to :cita
+  has_one :tipo
+  has_one :pago, :through => :generates
+end

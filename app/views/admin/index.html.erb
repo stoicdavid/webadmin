@@ -1,0 +1,21 @@
+<%= calendar({:year => Time.now.year, :month => Time.now.month, :table_class =>
+"calendar_helper"}) do |d|
+  #if @tasks.include?(d)
+    [d.mday, {:class => "specialDay"}]
+  #else  
+   # [d.mday, {:class => "day"}]
+  #end
+end %>
+<br />
+<div>
+<%= link_to_prototype_window('Link', 'Hola') %>
+<%# link_to_function "link",'Dialog.confirm({url:"Hola", options: {method: "get"}}, 
+                     {top: 10, width:250, className: "alphacube", okLabel: "Yes", cancelLabel:"No"});' %>
+</div>
+Son las <%= Time.now%><br />
+
+
+<%= principal %>
+
+
+<br>Se tienen <%= pluralize (@pacientes.size, "paciente") %></br>

@@ -1,0 +1,41 @@
+<h1>Agrega un registro</h1>
+<% fields_for "paciente[consulta_atributos]", consulta do |c_form| %>
+
+
+	<p>
+    	 Doctor que atendio: <br />
+	    <%= c_form.select :doctor_id, Doctor.find_all, :prompt => "Selecciona el doctor" %>
+  	</p>
+
+ <p>
+   Estudio a realizar: <br />
+  <%= c_form.select :estudio_id, Estudio.find_all, :prompt => "Selecciona el estudio" %>
+</p>
+<p>
+   <%= c_form.label 'Fecha de consulta' %><br />
+   <%= c_form.datetime_select :fecha_consulta %>
+ </p>
+ <p>
+   <%= c_form.label 'Fecha de Referencia' %><br />
+   <%= c_form.datetime_select :fecha_envio %>
+ </p>
+ <p>
+   <%= c_form.label 'Diagnóstico' %><br />
+   <%= c_form.text_area :diagnostico %>
+ </p>
+ <p>
+    <%= c_form.label 'Fecha de inicio de síntomas' %><br />
+    <%= c_form.date_select :fecha_in_sintomas, :start_year => 1950 %>
+  </p>
+  <p>
+    <%= c_form.label 'Fármacos anteriores' %><br />
+    <%= c_form.text_area :medicina_anterior %>
+  </p>
+  <p>
+    <%= c_form.label 'Fármacos actuales' %><br />
+    <%= c_form.text_area :medicina_actual %>
+  </p>
+
+<% end %>
+
+

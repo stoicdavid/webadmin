@@ -1,0 +1,34 @@
+
+
+<p>
+  <b>Fecha hora:</b>
+  <%=h @cita.fecha_hora %>
+</p>
+
+<p>
+  <b>Cubiculo:</b>
+  <%=h @cita.cubiculo %>
+</p>
+<% if @cita.status == 'Confirmada' %>
+<p>
+  <b>Persona conf:</b>
+  <%=h @cita.persona_conf %>
+</p>
+
+<p>
+  <b>Confirma doc:</b>
+  <%=h @cita.confirma_doc %>
+</p>
+
+<p>
+  <b>Confirma valet:</b>
+  <%=h @cita.confirma_valet %>
+</p>
+
+<p>
+  <b>Acompana:</b>
+  <%=h @cita.acompana %>
+</p>
+<% end %>
+<%= link_to 'Edit', edit_cita_path(@cita) %> |
+<%= link_to "Consultas", :controller => "lab" %> </a><br />

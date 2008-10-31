@@ -1,0 +1,48 @@
+<div class="avatar">
+	
+<%= image_tag url_for_file_column(@doctor, "imagen") if @doctor.imagen!=nil%>	
+</div>
+
+<p>
+  <b>Nombre:</b>
+  <%=h @doctor.nombre_completo %>
+</p>
+
+
+<p>
+  <b>Especialidad:</b>
+  <%=h @doctor.specialization.especialidad[:especialidad] %>
+  
+</p>
+
+<p>
+  <b>Direccion:</b>
+  <%=h @doctor.direccion_completa %>
+</p>
+
+<p>
+  <b>Telefono consultorio:</b>
+  <%=h @doctor.telefono_consultorio %>
+</p>
+
+<p>
+  <b>Celular:</b>
+  <%=h @doctor.celular %>
+</p>
+
+<p>
+  <b>Correo:</b>
+  <%=h @doctor.correo %>
+</p>
+
+<p>
+  <b>Fax:</b>
+  <%=h @doctor.fax %>
+</p>
+<% if Usuario.find_by_id(session[:usuario_id]).nombre =="admin" && @doctor.usuario==nil %>
+<%= button_to 'Crea Usuario', {:controller => "usuarios", :action => "new", :id => @doctor.id } %>
+<%= link_to 'Edit', edit_doctor_path(@doctor) %> |
+<%= link_to 'Back', doctors_path %>
+<% end %>
+
+

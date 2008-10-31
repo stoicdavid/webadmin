@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/3/trunk/webadmin/test/fixtures
+END
+operations.yml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/7/trunk/webadmin/test/fixtures/operations.yml
+END
+operation_pagos.yml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/7/trunk/webadmin/test/fixtures/operation_pagos.yml
+END
+tipo_estudios.yml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/7/trunk/webadmin/test/fixtures/tipo_estudios.yml
+END
+especialidads.yml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/3/trunk/webadmin/test/fixtures/especialidads.yml
+END
+tipos.yml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/7/trunk/webadmin/test/fixtures/tipos.yml
+END
+estudios.yml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/3/trunk/webadmin/test/fixtures/estudios.yml
+END
+agendas.yml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/3/trunk/webadmin/test/fixtures/agendas.yml
+END
+citas.yml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/3/trunk/webadmin/test/fixtures/citas.yml
+END
+pagos.yml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/7/trunk/webadmin/test/fixtures/pagos.yml
+END
+usuarios.yml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/3/trunk/webadmin/test/fixtures/usuarios.yml
+END
+pacientes.yml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/trunk/webadmin/test/fixtures/pacientes.yml
+END
+consultas.yml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/trunk/webadmin/test/fixtures/consultas.yml
+END
+generates.yml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/7/trunk/webadmin/test/fixtures/generates.yml
+END
+doctors.yml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/3/trunk/webadmin/test/fixtures/doctors.yml
+END
+tiene_especialidads.yml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/3/trunk/webadmin/test/fixtures/tiene_especialidads.yml
+END

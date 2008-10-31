@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  factura: false
+  folio_factura: 1
+  total: 9.99
+
+two:
+  factura: false
+  folio_factura: 1
+  total: 9.99

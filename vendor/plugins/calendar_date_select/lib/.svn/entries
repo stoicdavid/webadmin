@@ -1,0 +1,44 @@
+8
+
+dir
+0
+https://neurolab-webadmin.googlecode.com/svn/trunk/webadmin/vendor/plugins/calendar_date_select/lib
+https://neurolab-webadmin.googlecode.com/svn
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+calendar_date_select.rb
+file
+
+
+
+add
+
+includes_helper.rb
+file
+
+
+
+add
+
+
+
+
+
+has-props
+has-prop-mods
+
+gem_init.rb
+file
+
+
+
+add
+

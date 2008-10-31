@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nombre: MyString
+  nombre_2: MyString
+  ap_pat: MyString
+  ap_mat: MyString
+
+two:
+  nombre: MyString
+  nombre_2: MyString
+  ap_pat: MyString
+  ap_mat: MyString

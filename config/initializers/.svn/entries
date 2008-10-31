@@ -1,0 +1,52 @@
+8
+
+dir
+3
+https://neurolab-webadmin.googlecode.com/svn/trunk/webadmin/config/initializers
+https://neurolab-webadmin.googlecode.com/svn
+
+
+
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+
+svn:special svn:externals svn:needs-lock
+
+inflections.rb
+file
+
+
+
+
+2008-09-07T01:18:27.000000Z
+46b85f9044d69b3d813d0957dae1b026
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+new_rails_defaults.rb
+file
+
+
+
+
+2008-09-07T01:18:27.000000Z
+c286e04f2aa51a60494afa62fa17291d
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+mime_types.rb
+file
+
+
+
+
+2008-09-07T01:18:27.000000Z
+53b1216a09d1bbd2863d09a5db5318f0
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+

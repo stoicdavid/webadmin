@@ -1,0 +1,63 @@
+8
+
+dir
+3
+https://neurolab-webadmin.googlecode.com/svn/trunk/webadmin/app/views
+https://neurolab-webadmin.googlecode.com/svn
+
+
+
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+
+svn:special svn:externals svn:needs-lock
+
+layouts
+dir
+
+citas
+dir
+
+operations
+dir
+
+horarios
+dir
+
+
+
+add
+
+admin
+dir
+
+pagos
+dir
+
+usuarios
+dir
+
+tipo_estudios
+dir
+
+consultas
+dir
+
+pacientes
+dir
+
+doctors
+dir
+
+searches
+dir
+
+
+
+add
+
+lab
+dir
+

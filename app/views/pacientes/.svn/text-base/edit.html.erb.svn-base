@@ -1,0 +1,77 @@
+<h1>Editar Paciente</h1>
+
+<% form_for(@paciente) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </p>
+  <p>
+    <%= f.label :nombre_2 %><br />
+    <%= f.text_field :nombre_2 %>
+  </p>
+  <p>
+    <%= f.label :app_pat %><br />
+    <%= f.text_field :app_pat %>
+  </p>
+  <p>
+    <%= f.label :app_mat %><br />
+    <%= f.text_field :app_mat %>
+  </p>
+  <p>
+    <%= f.label :rfc %><br />
+    <%= f.text_field :rfc %>
+  </p>
+  <p>
+    <%= f.label :direccion_fiscal %><br />
+    <%= f.text_field :direccion_fiscal %>
+  </p>
+  <p>
+    <%= f.label :domicilio %><br />
+    <%= f.text_field :domicilio %>
+  </p>
+  <p>
+    <%= f.label :celular %><br />
+    <%= f.text_field :celular %>
+  </p>
+  <p>
+    <%= f.label :casa %><br />
+    <%= f.text_field :casa %>
+  </p>
+  <p>
+    <%= f.label :oficina %><br />
+    <%= f.text_field :oficina %>
+  </p>
+  <p>
+    <%= f.label :recados %><br />
+    <%= f.text_field :recados %>
+  </p>
+  <p>
+    <%= f.label :fax %><br />
+    <%= f.text_field :fax %>
+  </p>
+  <p>
+    <%= f.label :correo %><br />
+    <%= f.text_field :correo %>
+  </p>
+  <p>
+    <%= f.label :pagina_web %><br />
+    <%= f.text_field :pagina_web %>
+  </p>
+  <p>
+    <%= f.label :fecha_nac %><br />
+    <%= f.date_select :fecha_nac %>
+  </p>
+  <p>
+    <%= f.label :genero %><br />
+    <%= f.text_field :genero %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @paciente %> |
+<%= link_to 'Back', pacientes_path %>

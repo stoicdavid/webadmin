@@ -1,0 +1,52 @@
+<h1>Editing doctor</h1>
+
+<% form_for(@doctor) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </p>
+  <p>
+    <%= f.label :nombre_2 %><br />
+    <%= f.text_field :nombre_2 %>
+  </p>
+  <p>
+    <%= f.label :app_pat %><br />
+    <%= f.text_field :app_pat %>
+  </p>
+  <p>
+    <%= f.label :app_mat %><br />
+    <%= f.text_field :app_mat %>
+  </p>
+  <p>
+     Especialidad <br />
+    <%= select :especialidad,:doctor, Especialidad.find_all, :prompt => "Selecciona la especialidad" %>
+  </p>
+  <p>
+    <%= f.label :direccion %><br />
+    <%= f.text_field :direccion %>
+  </p>
+  <p>
+    <%= f.label :telefono_consultorio %><br />
+    <%= f.text_field :telefono_consultorio %>
+  </p>
+  <p>
+    <%= f.label :celular %><br />
+    <%= f.text_field :celular %>
+  </p>
+  <p>
+    <%= f.label :correo %><br />
+    <%= f.text_field :correo %>
+  </p>
+  <p>
+    <%= f.label :fax %><br />
+    <%= f.text_field :fax %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @doctor %> |
+<%= link_to 'Back', doctors_path %>

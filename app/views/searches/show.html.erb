@@ -1,0 +1,23 @@
+<p>
+  <b>Nombre:</b>
+  <%=h @search.nombre %>
+</p>
+
+<p>
+  <b>Nombre 2:</b>
+  <%=h @search.nombre_2 %>
+</p>
+
+<p>
+  <b>Ap pat:</b>
+  <%=h @search.ap_pat %>
+</p>
+
+<p>
+  <b>Ap mat:</b>
+  <%=h @search.ap_mat %>
+</p>
+
+
+<%= link_to 'Edit', edit_search_path(@search) %> |
+<%= link_to 'Back', searches_path %>

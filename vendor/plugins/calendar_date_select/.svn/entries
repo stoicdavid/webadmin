@@ -1,0 +1,79 @@
+8
+
+dir
+0
+https://neurolab-webadmin.googlecode.com/svn/trunk/webadmin/vendor/plugins/calendar_date_select
+https://neurolab-webadmin.googlecode.com/svn
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+test
+dir
+
+
+
+add
+
+Rakefile
+file
+
+
+
+add
+
+init.rb
+file
+
+
+
+add
+
+lib
+dir
+
+
+
+add
+
+CHANGELOG
+file
+
+
+
+add
+
+MIT-LICENSE
+file
+
+
+
+add
+
+README.textile
+file
+
+
+
+add
+
+js_test
+dir
+
+
+
+add
+
+public
+dir
+
+
+
+add
+

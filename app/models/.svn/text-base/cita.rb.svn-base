@@ -1,0 +1,6 @@
+class Cita < ActiveRecord::Base
+  has_many :agendas
+  has_one :paciente, :through => :agendas
+  has_one :operation
+  
+end

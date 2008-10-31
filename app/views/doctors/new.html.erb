@@ -1,0 +1,57 @@
+<h1>Información del Doctor</h1>
+
+<% form_for(@doctor,:html => {:multipart => true } ) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label 'Nombre' %><br />
+    <%= f.text_field :nombre %>
+  </p>
+  <p>
+    <%= f.label 'Segundo Nombre' %><br />
+    <%= f.text_field :nombre_2 %>
+  </p>
+  <p>
+    <%= f.label 'Apellido Paterno' %><br />
+    <%= f.text_field :app_pat %>
+  </p>
+  <p>
+    <%= f.label 'Apellido Materno' %><br />
+    <%= f.text_field :app_mat %>
+  </p>
+
+	<p><%= file_column_field "doctor", "imagen" %></p>
+
+  <p>
+     Especialidad <br />
+    <%= select :especialidad,:doctor, Especialidad.find_all, :prompt => "Selecciona la especialidad" %>
+  </p>
+  <p>
+    <%= f.label 'Direccion' %><br />
+    Calle: <br /><%= f.text_field :calle %><br />
+    Colonia: <br /><%= f.text_field :colonia %><br />
+    Estado:<br /><%= f.text_field :estado %><br />
+    Código Postal:<br /><%= f.text_field :cp %><br />
+  </p>
+  <p>
+<br />    <%= f.label 'Teléfono Consultorio' %><br />
+    <%= f.text_field :telefono_consultorio %>
+  </p>
+  <p>
+    <%= f.label 'Celular' %><br />
+    <%= f.text_field :celular %>
+  </p>
+  <p>
+    <%= f.label 'Correo' %><br />
+    <%= f.text_field :correo %>
+  </p>
+  <p>
+    <%= f.label 'Fax' %><br />
+    <%= f.text_field :fax %>
+  </p>
+  <p>
+    <%= f.submit "Crear" %>
+  </p>
+<% end %>
+
+<%= link_to 'Regresar', doctors_path %>

@@ -1,0 +1,12 @@
+class AddEstudio < ActiveRecord::Migration
+  def self.up
+    Estudio.create(:tipo_estudio => 'Electroencefalograma' )
+    Estudio.create(:tipo_estudio => 'Video Electroencefalograma' )
+    Estudio.create(:tipo_estudio => 'Poligráfico de sueño' )
+    Estudio.create(:tipo_estudio => 'Potenciales evocados' )
+    Estudio.create(:tipo_estudio => 'Electromiografías' )
+  end
+
+  def self.down
+  end
+end

@@ -1,0 +1,40 @@
+8
+
+dir
+3
+https://neurolab-webadmin.googlecode.com/svn/trunk/webadmin/test
+https://neurolab-webadmin.googlecode.com/svn
+
+
+
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+
+svn:special svn:externals svn:needs-lock
+
+unit
+dir
+
+test_helper.rb
+file
+
+
+
+
+2008-09-07T01:18:27.000000Z
+30478106e9df8977e79fc045df799e29
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+functional
+dir
+
+integration
+dir
+
+fixtures
+dir
+

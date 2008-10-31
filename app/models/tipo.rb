@@ -1,0 +1,5 @@
+class Tipo < ActiveRecord::Base
+  belongs_to :operation
+  belongs_to :estudio
+
+end

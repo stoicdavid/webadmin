@@ -1,0 +1,54 @@
+<p>
+  <b>Nombre:</b>
+  <%=h @doctor.nombre %>
+</p>
+
+<p>
+  <b>Nombre 2:</b>
+  <%=h @doctor.nombre_2 %>
+</p>
+
+<p>
+  <b>App pat:</b>
+  <%=h @doctor.app_pat %>
+</p>
+
+<p>
+  <b>App mat:</b>
+  <%=h @doctor.app_mat %>
+</p>
+
+<p>
+  <b>Especialidad:</b>
+  <%=h @doctor.specialization.especialidad[:especialidad] %>
+  
+</p>
+
+<p>
+  <b>Direccion:</b>
+  <%=h @doctor.direccion %>
+</p>
+
+<p>
+  <b>Telefono consultorio:</b>
+  <%=h @doctor.telefono_consultorio %>
+</p>
+
+<p>
+  <b>Celular:</b>
+  <%=h @doctor.celular %>
+</p>
+
+<p>
+  <b>Correo:</b>
+  <%=h @doctor.correo %>
+</p>
+
+<p>
+  <b>Fax:</b>
+  <%=h @doctor.fax %>
+</p>
+
+
+<%= link_to 'Edit', edit_doctor_path(@doctor) %> |
+<%= link_to 'Back', doctors_path %>

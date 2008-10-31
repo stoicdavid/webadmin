@@ -1,0 +1,32 @@
+<h1>Listing citas</h1>
+
+<table>
+  <tr>
+    <th>Paciente</th>
+    <th>Cubiculo</th>
+    <th>Fecha hora</th>
+    <th>Persona conf</th>
+    <th>Confirma doc</th>
+    <th>Confirma valet</th>
+    <th>Acompana</th>
+  </tr>
+
+<% for cita in @citas %>
+  <tr>
+
+    <td><%=h cita.paciente.nombre %></td>
+    <td><%=h cita.cubiculo %></td>
+    <td><%=h cita.fecha_hora %></td>
+    <td><%=h cita.confirma_doc %></td>
+    <td><%=h cita.confirma_valet %></td>
+    <td><%=h cita.acompana %></td>
+    <td><%= link_to 'Show', cita %></td>
+    <td><%= link_to 'Edit', edit_cita_path(cita) %></td>
+    <td><%= link_to 'Destroy', cita, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New cita', new_cita_path %>

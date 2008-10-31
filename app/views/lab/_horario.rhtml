@@ -1,0 +1,13 @@
+
+<div>
+<% unless @cubiculos.empty? %>
+<%= render :partial => 'cubiculo_horario',:locals => {:paciente_id => params[:id]}  %>
+
+ 
+
+
+
+<% else %>
+<%= render :partial => 'cubiculo_horario',:locals => {:paciente_id => params[:id]}   %>
+<% end %>
+</div>

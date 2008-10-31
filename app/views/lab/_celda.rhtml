@@ -1,0 +1,28 @@
+<% cita=Cita.find_by_paciente_id(@paciente) %>
+			<div class="t1" style="background-color:#A32929"> </div>
+		<div class="t2" style="background-color:#A32929"> </div>
+		<div class="chipbody edit" style="background-color:#d96666">
+			<dl style="border-color:#a32929;height:36.41666666666666px">
+				<dt style="background-color:#A32929">  <b unselectable="on" style="">
+					<span class="timelabel"> <%= params[:locals][:tiempo_i] + "-"+ params[:locals][:tiempo_f] %> </span> 
+
+				</dt>
+				<dd>
+					<div>
+						<span style="cursor:pointer;" onmouseover="" onmouseout="" onclick="">
+							<%= link_to_prototype_window(Paciente.find(@paciente).nombre_medio,@drag ) %>
+								<%= link_to image_tag("delete.png", :size => "16x16", :border => 0, :title => "borrar"),
+							 			cita,
+							 			:confirm => 'Estás seguro de querer borrar la cita?',
+							 			:method => :delete %>
+						</span>
+					</div>
+				</dd> 
+				<dd class="resize" style="left:40px;" unselectable="on" ></dd> 
+
+			</dl>
+		</div>
+		<div class="b2" style="background-color:#D96666;border-color:#A32929"> </div>
+		<div class="b1" style="background-color:#A32929"> </div>
+	
+

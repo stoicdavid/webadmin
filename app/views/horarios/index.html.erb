@@ -1,0 +1,24 @@
+<h1>Listing horarios</h1>
+
+<table>
+  <tr>
+    <th>Horas</th>
+    <th>Cubiculo</th>
+    <th>Cita</th>
+  </tr>
+
+<% for horario in @horarios %>
+  <tr>
+    <td><%=h horario.horas %></td>
+    <td><%=h horario.cubiculo %></td>
+    <td><%=h horario.cita_id %></td>
+    <td><%= link_to 'Show', horario %></td>
+    <td><%= link_to 'Edit', edit_horario_path(horario) %></td>
+    <td><%= link_to 'Destroy', horario, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New horario', new_horario_path %>

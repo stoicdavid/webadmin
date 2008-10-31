@@ -1,0 +1,90 @@
+8
+
+dir
+3
+https://neurolab-webadmin.googlecode.com/svn/trunk/webadmin/app/views/pacientes
+https://neurolab-webadmin.googlecode.com/svn
+
+
+
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+
+svn:special svn:externals svn:needs-lock
+
+edit.html.erb
+file
+
+
+
+
+2008-09-11T09:04:21.000000Z
+f475272e7c194a4890144b3558d25851
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+index.html.erb
+file
+
+
+
+
+2008-09-09T07:44:04.000000Z
+3aa77ce7d188733a97c87ffa6fee50ce
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+_record.rhtml
+file
+0
+
+
+add
+
+new.html.erb
+file
+
+
+
+
+2008-09-09T18:14:38.000000Z
+683957ba0d4f9f32ea1fb2c47e04f4f5
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+show.html.erb
+file
+
+
+
+
+2008-09-11T09:56:47.000000Z
+681870ac421b8a7830c439ab7fb400aa
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+_lista_pacientes.rhtml
+file
+
+
+
+
+2008-09-11T09:58:45.000000Z
+ce8e68667a1b9f95c569c0fc8a88cb1f
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+_consulta.rhtml
+file
+0
+
+
+add
+

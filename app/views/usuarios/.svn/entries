@@ -1,0 +1,76 @@
+8
+
+dir
+3
+https://neurolab-webadmin.googlecode.com/svn/trunk/webadmin/app/views/usuarios
+https://neurolab-webadmin.googlecode.com/svn
+
+
+
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+
+svn:special svn:externals svn:needs-lock
+
+edit.html.erb
+file
+
+
+
+
+2008-09-08T07:20:07.000000Z
+5e1a2189c454bd9b3b2a27d4e9a2761a
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+index.html.erb
+file
+
+
+
+
+2008-09-09T07:28:26.000000Z
+601e44396940034a93f80e296859fc2f
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+new.html.erb
+file
+
+
+
+
+2008-09-10T17:38:27.000000Z
+072166f6d33643fa89f2e5d008c79da0
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+_lista_usuario.rhtml
+file
+
+
+
+
+2008-10-30T14:09:49.000000Z
+64dbe8e4c9e8d82667f95cc6ca2f4927
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
+show.html.erb
+file
+
+
+
+
+2008-09-08T07:20:07.000000Z
+4e477163939ec3c15a0242f15d7d6022
+2008-09-11T16:24:56.661633Z
+3
+stoicdavid
+
