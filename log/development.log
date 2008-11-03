@@ -16,3 +16,1658 @@
   [4;36;1mOperation Load (0.000245)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 36) LIMIT 1[0m
   [4;35;1mCita Load (0.000228)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 38) [0m
   [4;36;1mOperation Load (0.000244)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 38) LIMIT 1[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-03 08:06:25) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+Rendering template within layouts/lab
+Rendering admin/login
+  [4;36;1mUsuario Load (0.000243)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" IS NULL) LIMIT 1[0m
+Completed in 0.06196 (16 reqs/sec) | Rendering: 0.05839 (94%) | DB: 0.00049 (0%) | 200 OK [http://localhost/admin/login]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-03 08:06:39) [POST]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"commit"=>"Login", "nombre"=>"carlos ", "authenticity_token"=>"fbfa07b376535db7cbaea0c0ea25ef0cd66abcca", "action"=>"login", "controller"=>"admin", "password"=>"loredo"}
+  [4;35;1mUsuario Load (0.000145)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."nombre" = 'carlos ') LIMIT 1[0m
+Rendering template within layouts/lab
+Rendering admin/login
+  [4;36;1mUsuario Load (0.000131)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" IS NULL) LIMIT 1[0m
+Completed in 0.01119 (89 reqs/sec) | Rendering: 0.00233 (20%) | DB: 0.00112 (9%) | 200 OK [http://localhost/admin/login]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-03 08:06:46) [POST]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"commit"=>"Login", "nombre"=>"carlos ", "authenticity_token"=>"fbfa07b376535db7cbaea0c0ea25ef0cd66abcca", "action"=>"login", "controller"=>"admin", "password"=>"loredo"}
+  [4;35;1mUsuario Load (0.000138)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."nombre" = 'carlos ') LIMIT 1[0m
+Rendering template within layouts/lab
+Rendering admin/login
+  [4;36;1mUsuario Load (0.000139)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" IS NULL) LIMIT 1[0m
+Completed in 0.01098 (91 reqs/sec) | Rendering: 0.00225 (20%) | DB: 0.00115 (10%) | 200 OK [http://localhost/admin/login]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-03 08:06:52) [POST]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"commit"=>"Login", "nombre"=>"carlos ", "authenticity_token"=>"fbfa07b376535db7cbaea0c0ea25ef0cd66abcca", "action"=>"login", "controller"=>"admin", "password"=>"loredo"}
+  [4;35;1mUsuario Load (0.000147)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."nombre" = 'carlos ') LIMIT 1[0m
+Rendering template within layouts/lab
+Rendering admin/login
+  [4;36;1mUsuario Load (0.000124)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" IS NULL) LIMIT 1[0m
+Completed in 0.01096 (91 reqs/sec) | Rendering: 0.00228 (20%) | DB: 0.00109 (9%) | 200 OK [http://localhost/admin/login]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-03 08:06:58) [POST]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"commit"=>"Login", "nombre"=>"admin", "authenticity_token"=>"fbfa07b376535db7cbaea0c0ea25ef0cd66abcca", "action"=>"login", "controller"=>"admin", "password"=>"123"}
+  [4;35;1mUsuario Load (0.000227)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."nombre" = 'admin') LIMIT 1[0m
+Redirected to http://localhost:3000/admin
+Completed in 0.00990 (100 reqs/sec) | DB: 0.00104 (10%) | 302 Found [http://localhost/admin/login]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-11-03 08:06:58) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;36;1mUsuario Load (0.000270)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mPaciente Load (0.018679)[0m   [0mSELECT * FROM "pacientes" [0m
+Rendering template within layouts/lab
+Rendering admin/index
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 1.00988 (0 reqs/sec) | Rendering: 0.96233 (95%) | DB: 0.01982 (1%) | 200 OK [http://localhost/admin]
+
+
+Processing UsuariosController#index (for 127.0.0.1 at 2008-11-03 08:07:15) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"index", "controller"=>"usuarios"}
+  [4;36;1mUsuario Load (0.000328)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mUsuario Load (0.000726)[0m   [0mSELECT * FROM "usuarios" ORDER BY nombre[0m
+Rendering template within layouts/usuarios
+Rendering usuarios/index
+Completed in 0.05090 (19 reqs/sec) | Rendering: 0.03500 (68%) | DB: 0.00243 (4%) | 200 OK [http://localhost/usuarios]
+
+
+Processing UsuariosController#show (for 127.0.0.1 at 2008-11-03 08:07:20) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"show", "id"=>"list", "controller"=>"usuarios"}
+  [4;36;1mUsuario Load (0.000232)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mUsuario Load (0.000106)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 0) [0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Usuario with ID=list):
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/base.rb:1383:in `find_one'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/base.rb:1366:in `find_from_ids'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/base.rb:541:in `find'
+    /app/controllers/usuarios_controller.rb:16:in `show'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing AdminController#logout (for 127.0.0.1 at 2008-11-03 08:07:32) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"logout", "controller"=>"admin"}
+  [4;36;1mUsuario Load (0.000218)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Redirected to http://localhost:3000/admin/login
+Completed in 0.00869 (115 reqs/sec) | DB: 0.00103 (11%) | 302 Found [http://localhost/admin/logout]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-03 08:07:32) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+Rendering template within layouts/lab
+Rendering admin/login
+  [4;35;1mUsuario Load (0.000177)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" IS NULL) LIMIT 1[0m
+Completed in 0.01157 (86 reqs/sec) | Rendering: 0.00937 (80%) | DB: 0.00105 (9%) | 200 OK [http://localhost/admin/login]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-03 08:07:37) [POST]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"commit"=>"Login", "nombre"=>"carlos", "authenticity_token"=>"fbfa07b376535db7cbaea0c0ea25ef0cd66abcca", "action"=>"login", "controller"=>"admin", "password"=>"loredo"}
+  [4;36;1mUsuario Load (0.000229)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."nombre" = 'carlos') LIMIT 1[0m
+Redirected to http://localhost:3000/admin
+Completed in 0.00976 (102 reqs/sec) | DB: 0.00110 (11%) | 302 Found [http://localhost/admin/login]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-11-03 08:07:38) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;35;1mUsuario Load (0.000221)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;36;1mPaciente Load (0.001347)[0m   [0;1mSELECT * FROM "pacientes" [0m
+Rendering template within layouts/lab
+Rendering admin/index
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;35;1mDoctor Load (0.000326)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 1) [0m
+Completed in 0.10160 (9 reqs/sec) | Rendering: 0.02003 (19%) | DB: 0.00273 (2%) | 200 OK [http://localhost/admin]
+
+
+Processing LabController#lista_honorarios (for 127.0.0.1 at 2008-11-03 08:07:41) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"lista_honorarios", "id"=>"1", "controller"=>"lab"}
+  [4;36;1mUsuario Load (0.000223)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;35;1mDoctor Load (0.000316)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/lab
+Rendered lab/_consultas (0.00151)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;35;1mDoctor Load (0.000532)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 1) [0m
+Completed in 0.04159 (24 reqs/sec) | Rendering: 0.02364 (56%) | DB: 0.00191 (4%) | 200 OK [http://localhost/lab/lista_honorarios/1]
+
+
+Processing LabController#pago_semana (for 127.0.0.1 at 2008-11-03 08:07:42) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"pago_semana", "id"=>"1", "controller"=>"lab"}
+  [4;36;1mUsuario Load (0.000266)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;35;1mConsulta Load (0.000988)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."doctor_id" = '1') [0m
+  [4;36;1mCita Load (0.000301)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;35;1mOperation Load (0.000372)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 31) LIMIT 1[0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Pago without an ID):
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/base.rb:1364:in `find_from_ids'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/base.rb:541:in `find'
+    /app/controllers/lab_controller.rb:268:in `pago_semana'
+    /app/controllers/lab_controller.rb:267:in `each'
+    /app/controllers/lab_controller.rb:267:in `pago_semana'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (not_found)
+  [4;36;1mConsulta Load (0.000772)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."doctor_id" = 1) [0m
+  [4;36;1mConsulta Load (0.000751)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."doctor_id" = 1) [0m
+  [4;35;1mCita Load (0.000347)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;36;1mOperation Load (0.000304)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 31) LIMIT 1[0m
+  [4;35;1mCita Load (0.000267)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;36;1mOperation Load (0.000250)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 32) LIMIT 1[0m
+  [4;35;1mCita Load (0.000228)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;36;1mOperation Load (0.000250)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 33) LIMIT 1[0m
+  [4;35;1mCita Load (0.000229)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;36;1mOperation Load (0.000243)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 34) LIMIT 1[0m
+  [4;35;1mCita Load (0.000230)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;36;1mOperation Load (0.000245)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 35) LIMIT 1[0m
+  [4;35;1mCita Load (0.000226)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 36) [0m
+  [4;36;1mOperation Load (0.000244)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 36) LIMIT 1[0m
+
+
+Processing LabController#pago_semana (for 127.0.0.1 at 2008-11-03 08:15:09) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"pago_semana", "id"=>"1", "controller"=>"lab"}
+  [4;36;1mUsuario Load (0.000229)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;35;1mConsulta Load (0.000751)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."doctor_id" = '1') [0m
+  [4;36;1mCita Load (0.000264)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;35;1mOperation Load (0.000296)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 31) LIMIT 1[0m
+  [4;36;1mPago Load (0.000227)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 13) [0m
+  [4;35;1mCita Load (0.000233)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;36;1mOperation Load (0.000254)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 32) LIMIT 1[0m
+  [4;35;1mPago Load (0.000224)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 16) [0m
+  [4;36;1mCita Load (0.000227)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;35;1mOperation Load (0.000250)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 33) LIMIT 1[0m
+  [4;36;1mPago Load (0.000205)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 17) [0m
+  [4;35;1mCita Load (0.000220)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;36;1mOperation Load (0.000256)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 34) LIMIT 1[0m
+  [4;35;1mPago Load (0.000205)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 23) [0m
+  [4;36;1mCita Load (0.000249)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;35;1mOperation Load (0.000242)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 35) LIMIT 1[0m
+  [4;36;1mPago Load (0.000206)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 34) [0m
+  [4;35;1mCita Load (0.000227)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 36) [0m
+  [4;36;1mOperation Load (0.000249)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 36) LIMIT 1[0m
+  [4;35;1mPago Load (0.000214)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 35) [0m
+Rendering template within layouts/lab
+  [4;36;1mGenerate Load (0.000352)[0m   [0;1mSELECT * FROM "generates" WHERE ("generates"."pago_id" = 13) LIMIT 1[0m
+  [4;35;1mOperation Load (0.000438)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."id" = 29) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;35;1mPaciente Load (0.000506)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 13) [0m
+  [4;36;1mTipo Load (0.000257)[0m   [0;1mSELECT * FROM "tipos" WHERE ("tipos".operation_id = 29) LIMIT 1[0m
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.estudio) on line #11 of lab/_pago_semana.rhtml:
+8: 		<% g=Generate.find_by_pago_id(consulta.id) %>
+9: 			<tr>
+10: 			<td><%=h g.operation.cita.paciente.nombre_completo %></td><br/>	
+11: 			<td><%=h honorarios+=g.operation.tipo.estudio.comision_doctor.to_f %></td><br/>
+12: 			<td><%=h honorarios_isr+=g.operation.tipo.estudio.comision_isr.to_f %></td><br/>
+13: 			<td><%=h consulta.created_at.to_s(:short) %></td><br/><br/>
+14: 
+
+    app/views/lab/_pago_semana.rhtml:11:in `_run_erb_47app47views47lab47_pago_semana46rhtml'
+    app/views/lab/_pago_semana.rhtml:7:in `each'
+    app/views/lab/_pago_semana.rhtml:7:in `_run_erb_47app47views47lab47_pago_semana46rhtml'
+    app/views/lab/_pago_semana.rhtml:5:in `each'
+    app/views/lab/_pago_semana.rhtml:5:in `_run_erb_47app47views47lab47_pago_semana46rhtml'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `execute'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/partial_template.rb:20:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/partial_template.rb:19:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/partials.rb:110:in `render_partial'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:908:in `send!'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:908:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/lab_controller.rb:272:in `pago_semana'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing LabController#pago_semana (for 127.0.0.1 at 2008-11-03 08:16:48) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"pago_semana", "id"=>"1", "controller"=>"lab"}
+  [4;35;1mUsuario Load (0.000234)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;36;1mConsulta Load (0.000786)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."doctor_id" = '1') [0m
+  [4;35;1mCita Load (0.000268)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;36;1mOperation Load (0.000310)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 31) LIMIT 1[0m
+  [4;35;1mPago Load (0.000218)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 13) [0m
+  [4;36;1mCita Load (0.000234)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;35;1mOperation Load (0.000244)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 32) LIMIT 1[0m
+  [4;36;1mPago Load (0.000200)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 16) [0m
+  [4;35;1mCita Load (0.000221)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;36;1mOperation Load (0.000243)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 33) LIMIT 1[0m
+  [4;35;1mPago Load (0.000202)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 17) [0m
+  [4;36;1mCita Load (0.000221)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;35;1mOperation Load (0.000242)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 34) LIMIT 1[0m
+  [4;36;1mPago Load (0.000201)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 23) [0m
+  [4;35;1mCita Load (0.000225)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;36;1mOperation Load (0.000244)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 35) LIMIT 1[0m
+  [4;35;1mPago Load (0.000199)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 34) [0m
+  [4;36;1mCita Load (0.000221)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 36) [0m
+  [4;35;1mOperation Load (0.000242)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 36) LIMIT 1[0m
+  [4;36;1mPago Load (0.000200)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 35) [0m
+Rendering template within layouts/lab
+  [4;35;1mGenerate Load (0.000213)[0m   [0mSELECT * FROM "generates" WHERE ("generates"."pago_id" = 13) LIMIT 1[0m
+  [4;36;1mOperation Load (0.000242)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."id" = 29) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;36;1mPaciente Load (0.000502)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 13) [0m
+  [4;35;1mEstudio Load (0.000400)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mGenerate Load (0.000277)[0m   [0mSELECT * FROM "generates" WHERE ("generates"."pago_id" = 16) LIMIT 1[0m
+  [4;36;1mOperation Load (0.000402)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."id" = 30) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;36;1mPaciente Load (0.000561)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 14) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mGenerate Load (0.000235)[0m   [0mSELECT * FROM "generates" WHERE ("generates"."pago_id" = 17) LIMIT 1[0m
+  [4;36;1mOperation Load (0.000336)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."id" = 31) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;36;1mPaciente Load (0.000502)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 15) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mGenerate Load (0.000225)[0m   [0mSELECT * FROM "generates" WHERE ("generates"."pago_id" = 23) LIMIT 1[0m
+  [4;36;1mOperation Load (0.000316)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."id" = 32) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;36;1mPaciente Load (0.000456)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 16) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mGenerate Load (0.000122)[0m   [0mSELECT * FROM "generates" WHERE ("generates"."pago_id" = 34) LIMIT 1[0m
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.operation) on line #10 of lab/_pago_semana.rhtml:
+7: 		<% for consulta in consultas %>
+8: 		<% g=Generate.find_by_pago_id(consulta.id) %>
+9: 			<tr>
+10: 			<td><%=h g.operation.cita.paciente.nombre_completo %></td><br/>	
+11: 			<td><%=h honorarios+=Estudio.find(g.operation.tipo_id).comision_doctor.to_f %></td><br/>
+12: 			<td><%=h honorarios_isr+=Estudio.find(g.operation.tipo_id).comision_isr.to_f %></td><br/>
+13: 			<td><%=h consulta.created_at.to_s(:short) %></td><br/><br/>
+
+    app/views/lab/_pago_semana.rhtml:10:in `_run_erb_47app47views47lab47_pago_semana46rhtml'
+    app/views/lab/_pago_semana.rhtml:7:in `each'
+    app/views/lab/_pago_semana.rhtml:7:in `_run_erb_47app47views47lab47_pago_semana46rhtml'
+    app/views/lab/_pago_semana.rhtml:5:in `each'
+    app/views/lab/_pago_semana.rhtml:5:in `_run_erb_47app47views47lab47_pago_semana46rhtml'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `execute'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/partial_template.rb:20:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/partial_template.rb:19:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/partials.rb:110:in `render_partial'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:908:in `send!'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:908:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/lab_controller.rb:272:in `pago_semana'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing LabController#pago_semana (for 127.0.0.1 at 2008-11-03 08:19:01) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"pago_semana", "id"=>"1", "controller"=>"lab"}
+  [4;36;1mUsuario Load (0.000224)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;35;1mConsulta Load (0.000764)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."doctor_id" = '1') [0m
+  [4;36;1mCita Load (0.000266)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;35;1mOperation Load (0.000294)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 31) LIMIT 1[0m
+  [4;36;1mPago Load (0.000217)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 13) [0m
+  [4;35;1mCita Load (0.000221)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;36;1mOperation Load (0.000244)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 32) LIMIT 1[0m
+  [4;35;1mPago Load (0.000199)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 16) [0m
+  [4;36;1mCita Load (0.000230)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;35;1mOperation Load (0.000244)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 33) LIMIT 1[0m
+  [4;36;1mPago Load (0.000226)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 17) [0m
+  [4;35;1mCita Load (0.000223)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;36;1mOperation Load (0.000245)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 34) LIMIT 1[0m
+  [4;35;1mPago Load (0.000199)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 23) [0m
+  [4;36;1mCita Load (0.000220)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;35;1mOperation Load (0.000243)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 35) LIMIT 1[0m
+  [4;36;1mPago Load (0.000200)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 34) [0m
+  [4;35;1mCita Load (0.000218)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 36) [0m
+  [4;36;1mOperation Load (0.000242)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 36) LIMIT 1[0m
+  [4;35;1mPago Load (0.000198)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 35) [0m
+Rendering template within layouts/lab
+  [4;36;1mGenerate Load (0.000206)[0m   [0;1mSELECT * FROM "generates" WHERE ("generates"."pago_id" = 13) LIMIT 1[0m
+
+
+ActionView::TemplateError (undefined method `paciente' for #<Pago:0x20d95b0>) on line #10 of lab/_pago_semana.rhtml:
+7: 		<% for consulta in consultas %>
+8: 		<% g=Generate.find_by_pago_id(consulta.id) %>
+9: 			<tr>
+10: 			<td><%=h consulta.paciente.nombre_completo %></td><br/>	
+11: 			<td><%=h honorarios+=Estudio.find(consulta.cita.operation.tipo_id).comision_doctor.to_f %></td><br/>
+12: 			<td><%=h honorarios_isr+=Estudio.find(consulta.operation.tipo_id).comision_isr.to_f %></td><br/>
+13: 			<td><%=h consulta.created_at.to_s(:short) %></td><br/><br/>
+
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/attribute_methods.rb:256:in `method_missing'
+    app/views/lab/_pago_semana.rhtml:10:in `_run_erb_47app47views47lab47_pago_semana46rhtml'
+    app/views/lab/_pago_semana.rhtml:7:in `each'
+    app/views/lab/_pago_semana.rhtml:7:in `_run_erb_47app47views47lab47_pago_semana46rhtml'
+    app/views/lab/_pago_semana.rhtml:5:in `each'
+    app/views/lab/_pago_semana.rhtml:5:in `_run_erb_47app47views47lab47_pago_semana46rhtml'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `execute'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/partial_template.rb:20:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/partial_template.rb:19:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/partials.rb:110:in `render_partial'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:908:in `send!'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:908:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/lab_controller.rb:272:in `pago_semana'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;35;1mOperation Load (0.000534)[0m   [0mSELECT * FROM "operations" LIMIT 1[0m
+  [4;36;1mCita Load (0.000499)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;35;1mPaciente Load (0.000549)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 13) [0m
+
+
+Processing LabController#pago_semana (for 127.0.0.1 at 2008-11-03 08:21:26) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"pago_semana", "id"=>"1", "controller"=>"lab"}
+  [4;35;1mUsuario Load (0.000225)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;36;1mConsulta Load (0.000722)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."doctor_id" = '1') [0m
+  [4;35;1mCita Load (0.000262)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;36;1mOperation Load (0.000289)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 31) LIMIT 1[0m
+  [4;35;1mPago Load (0.000216)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 13) [0m
+  [4;36;1mCita Load (0.000222)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;35;1mOperation Load (0.000244)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 32) LIMIT 1[0m
+  [4;36;1mPago Load (0.000199)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 16) [0m
+  [4;35;1mCita Load (0.000218)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;36;1mOperation Load (0.000257)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 33) LIMIT 1[0m
+  [4;35;1mPago Load (0.000200)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 17) [0m
+  [4;36;1mCita Load (0.000218)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;35;1mOperation Load (0.000240)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 34) LIMIT 1[0m
+  [4;36;1mPago Load (0.000199)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 23) [0m
+  [4;35;1mCita Load (0.000218)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;36;1mOperation Load (0.000244)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 35) LIMIT 1[0m
+  [4;35;1mPago Load (0.000198)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 34) [0m
+  [4;36;1mCita Load (0.000218)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 36) [0m
+  [4;35;1mOperation Load (0.000242)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 36) LIMIT 1[0m
+  [4;36;1mPago Load (0.000206)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 35) [0m
+Rendering template within layouts/lab
+  [4;35;1mOperation Load (0.000282)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 13) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;35;1mPaciente Load (0.000446)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 13) [0m
+  [4;36;1mEstudio Load (0.000269)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000269)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 16) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;36;1mPaciente Load (0.000391)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 14) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mOperation Load (0.000246)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 17) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;35;1mPaciente Load (0.000374)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 15) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000251)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 23) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;36;1mPaciente Load (0.000378)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 16) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mOperation Load (0.000250)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 34) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;35;1mPaciente Load (0.000386)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 17) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000253)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 35) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 36) [0m
+  [4;36;1mPaciente Load (0.000386)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 18) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+Rendered lab/_pago_semana (0.09354)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;36;1mDoctor Load (0.000323)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 1) [0m
+Completed in 0.14665 (6 reqs/sec) | Rendering: 0.10398 (70%) | DB: 0.01036 (7%) | 200 OK [http://localhost/lab/pago_semana/1]
+
+
+Processing LabController#pago_semana (for 127.0.0.1 at 2008-11-03 08:22:48) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"pago_semana", "id"=>"1", "controller"=>"lab"}
+  [4;35;1mUsuario Load (0.000227)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;36;1mConsulta Load (0.000741)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."doctor_id" = '1') [0m
+  [4;35;1mCita Load (0.000266)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;36;1mOperation Load (0.000296)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 31) LIMIT 1[0m
+  [4;35;1mPago Load (0.000221)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 13) [0m
+  [4;36;1mCita Load (0.000224)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;35;1mOperation Load (0.000246)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 32) LIMIT 1[0m
+  [4;36;1mPago Load (0.000200)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 16) [0m
+  [4;35;1mCita Load (0.000221)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;36;1mOperation Load (0.000244)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 33) LIMIT 1[0m
+  [4;35;1mPago Load (0.000201)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 17) [0m
+  [4;36;1mCita Load (0.000221)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;35;1mOperation Load (0.000243)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 34) LIMIT 1[0m
+  [4;36;1mPago Load (0.000202)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 23) [0m
+  [4;35;1mCita Load (0.000220)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;36;1mOperation Load (0.000242)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 35) LIMIT 1[0m
+  [4;35;1mPago Load (0.000202)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 34) [0m
+  [4;36;1mCita Load (0.000222)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 36) [0m
+  [4;35;1mOperation Load (0.000242)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 36) LIMIT 1[0m
+  [4;36;1mPago Load (0.000202)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 35) [0m
+Rendering template within layouts/lab
+  [4;35;1mOperation Load (0.000281)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 13) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;35;1mPaciente Load (0.000508)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 13) [0m
+  [4;36;1mEstudio Load (0.000265)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000275)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 16) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;36;1mPaciente Load (0.000394)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 14) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mOperation Load (0.000257)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 17) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;35;1mPaciente Load (0.000391)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 15) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000254)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 23) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;36;1mPaciente Load (0.000383)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 16) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mOperation Load (0.000252)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 34) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;35;1mPaciente Load (0.000392)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 17) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000254)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 35) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 36) [0m
+  [4;36;1mPaciente Load (0.000373)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 18) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+Rendered lab/_pago_semana (0.08758)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;36;1mDoctor Load (0.000321)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 1) [0m
+Completed in 0.13874 (7 reqs/sec) | Rendering: 0.09555 (68%) | DB: 0.01049 (7%) | 200 OK [http://localhost/lab/pago_semana/1]
+
+
+Processing LabController#pago_semana (for 127.0.0.1 at 2008-11-03 08:25:42) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"pago_semana", "id"=>"1", "controller"=>"lab"}
+  [4;35;1mUsuario Load (0.000223)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;36;1mConsulta Load (0.000729)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."doctor_id" = '1') [0m
+  [4;35;1mCita Load (0.000268)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;36;1mOperation Load (0.000298)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 31) LIMIT 1[0m
+  [4;35;1mPago Load (0.000221)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 13) [0m
+  [4;36;1mCita Load (0.000223)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;35;1mOperation Load (0.000248)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 32) LIMIT 1[0m
+  [4;36;1mPago Load (0.000211)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 16) [0m
+  [4;35;1mCita Load (0.000220)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;36;1mOperation Load (0.000245)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 33) LIMIT 1[0m
+  [4;35;1mPago Load (0.000200)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 17) [0m
+  [4;36;1mCita Load (0.000221)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;35;1mOperation Load (0.000244)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 34) LIMIT 1[0m
+  [4;36;1mPago Load (0.000201)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 23) [0m
+  [4;35;1mCita Load (0.000222)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;36;1mOperation Load (0.000246)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 35) LIMIT 1[0m
+  [4;35;1mPago Load (0.000199)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 34) [0m
+  [4;36;1mCita Load (0.000221)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 36) [0m
+  [4;35;1mOperation Load (0.000243)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 36) LIMIT 1[0m
+  [4;36;1mPago Load (0.000200)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 35) [0m
+Rendering template within layouts/lab
+  [4;35;1mOperation Load (0.000303)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 13) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;35;1mPaciente Load (0.000497)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 13) [0m
+  [4;36;1mEstudio Load (0.000260)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000270)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 16) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;36;1mPaciente Load (0.000395)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 14) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mOperation Load (0.000260)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 17) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;35;1mPaciente Load (0.000386)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 15) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000252)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 23) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;36;1mPaciente Load (0.000379)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 16) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mOperation Load (0.000251)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 34) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;35;1mPaciente Load (0.000391)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 17) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000251)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 35) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 36) [0m
+  [4;36;1mPaciente Load (0.000382)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 18) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+Rendered lab/_pago_semana (0.09108)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;36;1mDoctor Load (0.000316)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 1) [0m
+Completed in 0.14341 (6 reqs/sec) | Rendering: 0.10053 (70%) | DB: 0.01049 (7%) | 200 OK [http://localhost/lab/pago_semana/1]
+
+
+Processing LabController#pago_semana (for 127.0.0.1 at 2008-11-03 08:26:43) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"pago_semana", "id"=>"1", "controller"=>"lab"}
+  [4;35;1mUsuario Load (0.000224)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;36;1mConsulta Load (0.000738)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."doctor_id" = '1') [0m
+  [4;35;1mCita Load (0.000261)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;36;1mOperation Load (0.000295)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 31) LIMIT 1[0m
+  [4;35;1mPago Load (0.000269)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 13) [0m
+  [4;36;1mCita Load (0.000228)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;35;1mOperation Load (0.000248)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 32) LIMIT 1[0m
+  [4;36;1mPago Load (0.000201)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 16) [0m
+  [4;35;1mCita Load (0.000219)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;36;1mOperation Load (0.000247)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 33) LIMIT 1[0m
+  [4;35;1mPago Load (0.000199)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 17) [0m
+  [4;36;1mCita Load (0.000221)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;35;1mOperation Load (0.000252)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 34) LIMIT 1[0m
+  [4;36;1mPago Load (0.000201)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 23) [0m
+  [4;35;1mCita Load (0.000222)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;36;1mOperation Load (0.000420)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 35) LIMIT 1[0m
+  [4;35;1mPago Load (0.000209)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 34) [0m
+  [4;36;1mCita Load (0.000227)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 36) [0m
+  [4;35;1mOperation Load (0.000247)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 36) LIMIT 1[0m
+  [4;36;1mPago Load (0.000205)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 35) [0m
+Rendering template within layouts/lab
+  [4;35;1mOperation Load (0.000323)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 13) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;35;1mPaciente Load (0.000453)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 13) [0m
+  [4;36;1mEstudio Load (0.000256)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000265)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 16) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;36;1mPaciente Load (0.000385)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 14) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mOperation Load (0.000251)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 17) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;35;1mPaciente Load (0.000387)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 15) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000249)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 23) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;36;1mPaciente Load (0.000378)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 16) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mOperation Load (0.000249)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 34) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;35;1mPaciente Load (0.000388)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 17) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000249)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 35) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 36) [0m
+  [4;36;1mPaciente Load (0.000380)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 18) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+Rendered lab/_pago_semana (0.02971)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;36;1mDoctor Load (0.000319)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 1) [0m
+Completed in 0.14197 (7 reqs/sec) | Rendering: 0.03925 (27%) | DB: 0.01069 (7%) | 200 OK [http://localhost/lab/pago_semana/1]
+
+
+Processing LabController#pago_semana (for 127.0.0.1 at 2008-11-03 08:27:18) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"pago_semana", "id"=>"1", "controller"=>"lab"}
+  [4;35;1mUsuario Load (0.000227)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;36;1mConsulta Load (0.000735)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."doctor_id" = '1') [0m
+  [4;35;1mCita Load (0.000264)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;36;1mOperation Load (0.000396)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 31) LIMIT 1[0m
+  [4;35;1mPago Load (0.000251)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 13) [0m
+  [4;36;1mCita Load (0.000230)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;35;1mOperation Load (0.000252)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 32) LIMIT 1[0m
+  [4;36;1mPago Load (0.000206)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 16) [0m
+  [4;35;1mCita Load (0.000226)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;36;1mOperation Load (0.000248)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 33) LIMIT 1[0m
+  [4;35;1mPago Load (0.000206)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 17) [0m
+  [4;36;1mCita Load (0.000224)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;35;1mOperation Load (0.000262)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 34) LIMIT 1[0m
+  [4;36;1mPago Load (0.000229)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 23) [0m
+  [4;35;1mCita Load (0.000237)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;36;1mOperation Load (0.000270)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 35) LIMIT 1[0m
+  [4;35;1mPago Load (0.000276)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 34) [0m
+  [4;36;1mCita Load (0.000247)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 36) [0m
+  [4;35;1mOperation Load (0.000262)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 36) LIMIT 1[0m
+  [4;36;1mPago Load (0.000210)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 35) [0m
+Rendering template within layouts/lab
+  [4;35;1mOperation Load (0.000308)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 13) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;35;1mPaciente Load (0.000444)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 13) [0m
+  [4;36;1mEstudio Load (0.000254)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000295)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 16) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;36;1mPaciente Load (0.000391)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 14) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mOperation Load (0.000249)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 17) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;35;1mPaciente Load (0.000383)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 15) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000250)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 23) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;36;1mPaciente Load (0.000391)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 16) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mOperation Load (0.000260)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 34) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;35;1mPaciente Load (0.000391)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 17) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000250)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 35) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 36) [0m
+  [4;36;1mPaciente Load (0.000382)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 18) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+Rendered lab/_pago_semana (0.03088)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;36;1mDoctor Load (0.000315)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 1) [0m
+Completed in 0.14334 (6 reqs/sec) | Rendering: 0.04031 (28%) | DB: 0.01086 (7%) | 200 OK [http://localhost/lab/pago_semana/1]
+
+
+Processing LabController#pago_semana (for 127.0.0.1 at 2008-11-03 08:27:28) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"pago_semana", "id"=>"1", "controller"=>"lab"}
+  [4;35;1mUsuario Load (0.000229)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;36;1mConsulta Load (0.000729)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."doctor_id" = '1') [0m
+  [4;35;1mCita Load (0.000313)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;36;1mOperation Load (0.000337)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 31) LIMIT 1[0m
+  [4;35;1mPago Load (0.000235)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 13) [0m
+  [4;36;1mCita Load (0.000230)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;35;1mOperation Load (0.000254)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 32) LIMIT 1[0m
+  [4;36;1mPago Load (0.000206)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 16) [0m
+  [4;35;1mCita Load (0.000239)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;36;1mOperation Load (0.000265)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 33) LIMIT 1[0m
+  [4;35;1mPago Load (0.000232)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 17) [0m
+  [4;36;1mCita Load (0.000240)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;35;1mOperation Load (0.000274)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 34) LIMIT 1[0m
+  [4;36;1mPago Load (0.000542)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 23) [0m
+  [4;35;1mCita Load (0.000251)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;36;1mOperation Load (0.000262)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 35) LIMIT 1[0m
+  [4;35;1mPago Load (0.000208)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 34) [0m
+  [4;36;1mCita Load (0.000229)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 36) [0m
+  [4;35;1mOperation Load (0.000253)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 36) LIMIT 1[0m
+  [4;36;1mPago Load (0.000221)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 35) [0m
+Rendering template within layouts/lab
+  [4;35;1mOperation Load (0.000316)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 13) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;35;1mPaciente Load (0.000457)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 13) [0m
+  [4;36;1mEstudio Load (0.000244)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000274)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 16) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;36;1mPaciente Load (0.000386)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 14) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mOperation Load (0.000249)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 17) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;35;1mPaciente Load (0.000378)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 15) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000246)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 23) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;36;1mPaciente Load (0.000376)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 16) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mOperation Load (0.000267)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 34) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;35;1mPaciente Load (0.000385)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 17) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000252)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 35) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 36) [0m
+  [4;36;1mPaciente Load (0.000382)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 18) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+Rendered lab/_pago_semana (0.02962)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;36;1mDoctor Load (0.000307)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 1) [0m
+Completed in 0.14260 (7 reqs/sec) | Rendering: 0.03867 (27%) | DB: 0.01107 (7%) | 200 OK [http://localhost/lab/pago_semana/1]
+
+
+Processing LabController#pago_semana (for 127.0.0.1 at 2008-11-03 08:27:44) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"pago_semana", "id"=>"1", "controller"=>"lab"}
+  [4;35;1mUsuario Load (0.000224)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;36;1mConsulta Load (0.000741)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."doctor_id" = '1') [0m
+  [4;35;1mCita Load (0.000302)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;36;1mOperation Load (0.000335)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 31) LIMIT 1[0m
+  [4;35;1mPago Load (0.000229)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 13) [0m
+  [4;36;1mCita Load (0.000227)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;35;1mOperation Load (0.000252)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 32) LIMIT 1[0m
+  [4;36;1mPago Load (0.000206)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 16) [0m
+  [4;35;1mCita Load (0.000228)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;36;1mOperation Load (0.000267)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 33) LIMIT 1[0m
+  [4;35;1mPago Load (0.000211)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 17) [0m
+  [4;36;1mCita Load (0.000228)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;35;1mOperation Load (0.000266)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 34) LIMIT 1[0m
+  [4;36;1mPago Load (0.000206)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 23) [0m
+  [4;35;1mCita Load (0.000224)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;36;1mOperation Load (0.000249)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 35) LIMIT 1[0m
+  [4;35;1mPago Load (0.000205)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 34) [0m
+  [4;36;1mCita Load (0.000226)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 36) [0m
+  [4;35;1mOperation Load (0.000249)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 36) LIMIT 1[0m
+  [4;36;1mPago Load (0.000206)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 35) [0m
+Rendering template within layouts/lab
+  [4;35;1mOperation Load (0.000291)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 13) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;35;1mPaciente Load (0.000443)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 13) [0m
+  [4;36;1mEstudio Load (0.000250)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000265)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 16) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;36;1mPaciente Load (0.000382)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 14) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mOperation Load (0.000254)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 17) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;35;1mPaciente Load (0.000387)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 15) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000245)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 23) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;36;1mPaciente Load (0.000364)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 16) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mOperation Load (0.000243)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 34) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;35;1mPaciente Load (0.000378)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 17) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000251)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 35) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 36) [0m
+  [4;36;1mPaciente Load (0.000368)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 18) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+Rendered lab/_pago_semana (0.02968)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;36;1mDoctor Load (0.000312)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 1) [0m
+Completed in 0.14292 (6 reqs/sec) | Rendering: 0.03866 (27%) | DB: 0.01052 (7%) | 200 OK [http://localhost/lab/pago_semana/1]
+
+
+Processing LabController#pago_semana (for 127.0.0.1 at 2008-11-03 08:27:53) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"pago_semana", "id"=>"1", "controller"=>"lab"}
+  [4;35;1mUsuario Load (0.000227)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;36;1mConsulta Load (0.000790)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."doctor_id" = '1') [0m
+  [4;35;1mCita Load (0.000281)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;36;1mOperation Load (0.000320)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 31) LIMIT 1[0m
+  [4;35;1mPago Load (0.000303)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 13) [0m
+  [4;36;1mCita Load (0.000245)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;35;1mOperation Load (0.000258)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 32) LIMIT 1[0m
+  [4;36;1mPago Load (0.000207)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 16) [0m
+  [4;35;1mCita Load (0.000226)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;36;1mOperation Load (0.000249)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 33) LIMIT 1[0m
+  [4;35;1mPago Load (0.000217)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 17) [0m
+  [4;36;1mCita Load (0.000227)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;35;1mOperation Load (0.000253)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 34) LIMIT 1[0m
+  [4;36;1mPago Load (0.000204)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 23) [0m
+  [4;35;1mCita Load (0.000226)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;36;1mOperation Load (0.000247)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 35) LIMIT 1[0m
+  [4;35;1mPago Load (0.000203)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 34) [0m
+  [4;36;1mCita Load (0.000224)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 36) [0m
+  [4;35;1mOperation Load (0.000247)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 36) LIMIT 1[0m
+  [4;36;1mPago Load (0.000203)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 35) [0m
+Rendering template within layouts/lab
+  [4;35;1mOperation Load (0.000296)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 13) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;35;1mPaciente Load (0.000435)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 13) [0m
+  [4;36;1mEstudio Load (0.000244)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000259)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 16) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;36;1mPaciente Load (0.000379)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 14) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mOperation Load (0.000249)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 17) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;35;1mPaciente Load (0.000381)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 15) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000243)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 23) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;36;1mPaciente Load (0.000372)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 16) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mOperation Load (0.000246)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 34) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;35;1mPaciente Load (0.000377)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 17) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000247)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 35) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 36) [0m
+  [4;36;1mPaciente Load (0.000382)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 18) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+Rendered lab/_pago_semana (0.02923)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;36;1mDoctor Load (0.000312)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 1) [0m
+Completed in 0.14250 (7 reqs/sec) | Rendering: 0.03827 (26%) | DB: 0.01060 (7%) | 200 OK [http://localhost/lab/pago_semana/1]
+
+
+Processing LabController#pago_semana (for 127.0.0.1 at 2008-11-03 08:28:03) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"pago_semana", "id"=>"1", "controller"=>"lab"}
+  [4;35;1mUsuario Load (0.000246)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;36;1mConsulta Load (0.000766)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."doctor_id" = '1') [0m
+  [4;35;1mCita Load (0.000277)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;36;1mOperation Load (0.000332)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 31) LIMIT 1[0m
+  [4;35;1mPago Load (0.000230)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 13) [0m
+  [4;36;1mCita Load (0.000232)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;35;1mOperation Load (0.000252)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 32) LIMIT 1[0m
+  [4;36;1mPago Load (0.000205)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 16) [0m
+  [4;35;1mCita Load (0.000224)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;36;1mOperation Load (0.000249)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 33) LIMIT 1[0m
+  [4;35;1mPago Load (0.000204)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 17) [0m
+  [4;36;1mCita Load (0.000225)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;35;1mOperation Load (0.000248)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 34) LIMIT 1[0m
+  [4;36;1mPago Load (0.000204)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 23) [0m
+  [4;35;1mCita Load (0.000242)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;36;1mOperation Load (0.000250)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 35) LIMIT 1[0m
+  [4;35;1mPago Load (0.000220)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 34) [0m
+  [4;36;1mCita Load (0.000225)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 36) [0m
+  [4;35;1mOperation Load (0.000249)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 36) LIMIT 1[0m
+  [4;36;1mPago Load (0.000203)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 35) [0m
+Rendering template within layouts/lab
+  [4;35;1mOperation Load (0.000348)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 13) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;35;1mPaciente Load (0.000460)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 13) [0m
+  [4;36;1mEstudio Load (0.000237)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000264)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 16) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;36;1mPaciente Load (0.000385)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 14) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mOperation Load (0.000248)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 17) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;35;1mPaciente Load (0.000372)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 15) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000244)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 23) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;36;1mPaciente Load (0.000369)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 16) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mOperation Load (0.000259)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 34) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;35;1mPaciente Load (0.000383)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 17) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.000246)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."pago_id" = 35) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 36) [0m
+  [4;36;1mPaciente Load (0.000373)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 18) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+Rendered lab/_pago_semana (0.02977)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;36;1mDoctor Load (0.000308)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 1) [0m
+Completed in 0.08458 (11 reqs/sec) | Rendering: 0.03949 (46%) | DB: 0.01061 (12%) | 200 OK [http://localhost/lab/pago_semana/1]
+
+
+Processing PacientesController#index (for 127.0.0.1 at 2008-11-03 08:28:21) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"index", "controller"=>"pacientes"}
+  [4;35;1mUsuario Load (0.000276)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;36;1mDoctor Load (0.000330)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 1) [0m
+Rendering template within layouts/lab
+Rendering pacientes/index
+  [4;35;1mPaciente Load (0.001870)[0m   [0mSELECT "pacientes".* FROM "pacientes" INNER JOIN consultas ON pacientes.id = consultas.paciente_id WHERE (("consultas".doctor_id = 1)) [0m
+Rendered pacientes/_lista_pacientes (0.02023)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 1) [0m
+Completed in 0.08013 (12 reqs/sec) | Rendering: 0.05376 (67%) | DB: 0.00374 (4%) | 200 OK [http://localhost/pacientes]
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2008-11-03 08:28:28) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"doctors"}
+  [4;36;1mDoctor Load (0.000346)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 1) [0m
+Rendering template within layouts/lab
+Rendering doctors/show
+  [4;35;1mSpecialization Load (0.000469)[0m   [0mSELECT * FROM "specializations" WHERE ("specializations".doctor_id = 1) LIMIT 1[0m
+  [4;36;1mEspecialidad Load (0.000311)[0m   [0;1mSELECT * FROM "especialidads" WHERE ("especialidads"."id" = 1) [0m
+  [4;35;1mUsuario Load (0.000277)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 1) [0m
+Completed in 0.16156 (6 reqs/sec) | Rendering: 0.09076 (56%) | DB: 0.00268 (1%) | 200 OK [http://localhost/doctors/1]
+
+
+Processing AdminController#logout (for 127.0.0.1 at 2008-11-03 08:28:31) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"logout", "controller"=>"admin"}
+  [4;36;1mUsuario Load (0.000224)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/admin/login
+Completed in 0.00861 (116 reqs/sec) | DB: 0.00104 (12%) | 302 Found [http://localhost/admin/logout]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-03 08:28:31) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+Rendering template within layouts/lab
+Rendering admin/login
+  [4;35;1mUsuario Load (0.000141)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" IS NULL) LIMIT 1[0m
+Completed in 0.01059 (94 reqs/sec) | Rendering: 0.00850 (80%) | DB: 0.00099 (9%) | 200 OK [http://localhost/admin/login]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-03 08:28:41) [POST]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"commit"=>"Login", "nombre"=>"admin", "authenticity_token"=>"fbfa07b376535db7cbaea0c0ea25ef0cd66abcca", "action"=>"login", "controller"=>"admin", "password"=>"123"}
+  [4;36;1mUsuario Load (0.000228)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."nombre" = 'admin') LIMIT 1[0m
+Redirected to http://localhost:3000/admin
+Completed in 0.00985 (101 reqs/sec) | DB: 0.00116 (11%) | 302 Found [http://localhost/admin/login]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-11-03 08:28:41) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;35;1mUsuario Load (0.000223)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mPaciente Load (0.001290)[0m   [0;1mSELECT * FROM "pacientes" [0m
+Rendering template within layouts/lab
+Rendering admin/index
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.03266 (30 reqs/sec) | Rendering: 0.01709 (52%) | DB: 0.00237 (7%) | 200 OK [http://localhost/admin]
+
+
+Processing PacientesController#index (for 127.0.0.1 at 2008-11-03 08:29:37) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"index", "controller"=>"pacientes"}
+  [4;35;1mUsuario Load (0.000228)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mPaciente Load (0.001288)[0m   [0;1mSELECT * FROM "pacientes" [0m
+Rendering template within layouts/lab
+Rendering pacientes/index
+Rendered pacientes/_lista_pacientes (0.00650)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.03180 (31 reqs/sec) | Rendering: 0.00927 (29%) | DB: 0.00238 (7%) | 200 OK [http://localhost/pacientes]
+
+
+Processing OperationsController#index (for 127.0.0.1 at 2008-11-03 08:29:39) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"index", "controller"=>"operations"}
+  [4;36;1mUsuario Load (0.000258)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mOperation Load (0.000832)[0m   [0mSELECT * FROM "operations" [0m
+Rendering template within layouts/lab
+Rendering operations/index
+  [4;36;1mCita Load (0.000301)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;35;1mPaciente Load (0.000416)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 13) [0m
+  [4;36;1mEstudio Load (0.000254)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;36;1mCita Load (0.000265)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;35;1mPaciente Load (0.000379)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 14) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;36;1mCita Load (0.000234)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;35;1mPaciente Load (0.000376)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 15) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;36;1mCita Load (0.000232)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;35;1mPaciente Load (0.000374)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 16) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;36;1mCita Load (0.000239)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;35;1mPaciente Load (0.000385)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 17) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;36;1mCita Load (0.000233)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 36) [0m
+  [4;35;1mPaciente Load (0.000378)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 18) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 36) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.15234 (6 reqs/sec) | Rendering: 0.13132 (86%) | DB: 0.00648 (4%) | 200 OK [http://localhost/operations]
+
+
+Processing CitasController#index (for 127.0.0.1 at 2008-11-03 08:29:43) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"index", "controller"=>"citas"}
+  [4;35;1mUsuario Load (0.000233)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mCita Load (0.000667)[0m   [0;1mSELECT * FROM "citas" [0m
+Rendering template within layouts/citas
+Rendering citas/index
+  [4;35;1mPaciente Load (0.000522)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 13) [0m
+  [4;36;1mPaciente Load (0.000492)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 14) [0m
+  [4;35;1mPaciente Load (0.000704)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 15) [0m
+  [4;36;1mPaciente Load (0.000428)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 16) [0m
+  [4;35;1mPaciente Load (0.000390)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 17) [0m
+  [4;36;1mPaciente Load (0.000376)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 18) [0m
+Completed in 0.07239 (13 reqs/sec) | Rendering: 0.05366 (74%) | DB: 0.00515 (7%) | 200 OK [http://localhost/citas]
+
+
+Processing LabController#index (for 127.0.0.1 at 2008-11-03 08:29:54) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"index", "controller"=>"lab"}
+  [4;35;1mUsuario Load (0.000267)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mConsulta Load (0.000174)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."fecha_consulta" BETWEEN '2008-11-03 00:00:00' AND '2008-11-03 23:59:59') [0m
+Rendering template within layouts/lab
+Rendering lab/index
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.05041 (19 reqs/sec) | Rendering: 0.03599 (71%) | DB: 0.00127 (2%) | 200 OK [http://localhost/lab]
+
+
+Processing PagosController#index (for 127.0.0.1 at 2008-11-03 08:29:56) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"index", "controller"=>"pagos"}
+  [4;36;1mUsuario Load (0.000357)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mPago Load (0.001123)[0m   [0mSELECT * FROM "pagos" [0m
+Rendering template within layouts/lab
+Rendering pagos/index
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.05678 (17 reqs/sec) | Rendering: 0.03501 (61%) | DB: 0.00305 (5%) | 200 OK [http://localhost/pagos]
+
+
+Processing LabController#show_horario (for 127.0.0.1 at 2008-11-03 08:29:59) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"show_horario", "controller"=>"lab"}
+  [4;35;1mUsuario Load (0.000231)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mHorario Load (0.000862)[0m   [0;1mSELECT * FROM "horarios" [0m
+  [4;35;1mHorario Load (0.001360)[0m   [0mSELECT * FROM "horarios" ORDER BY cubiculo[0m
+Rendering template within layouts/lab
+Rendering lab/show_horario
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.08620 (11 reqs/sec) | Rendering: 0.03665 (42%) | DB: 0.00327 (3%) | 200 OK [http://localhost/lab/show_horario]
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2008-11-03 08:30:01) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"index", "controller"=>"doctors"}
+  [4;35;1mDoctor Load (0.000436)[0m   [0mSELECT * FROM "doctors" [0m
+Rendering template within layouts/lab
+Rendering doctors/index
+  [4;36;1mSpecialization Load (0.000332)[0m   [0;1mSELECT * FROM "specializations" WHERE ("specializations".doctor_id = 1) LIMIT 1[0m
+  [4;35;1mEspecialidad Load (0.000254)[0m   [0mSELECT * FROM "especialidads" WHERE ("especialidads"."id" = 1) [0m
+  [4;36;1mSpecialization Load (0.000180)[0m   [0;1mSELECT * FROM "specializations" WHERE ("specializations".doctor_id = 2) LIMIT 1[0m
+  [4;35;1mEspecialidad Load (0.000150)[0m   [0mSELECT * FROM "especialidads" WHERE ("especialidads"."id" = 6) [0m
+Rendered doctors/_lista (0.08134)
+  [4;36;1mUsuario Load (0.000242)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.13624 (7 reqs/sec) | Rendering: 0.12568 (92%) | DB: 0.00248 (1%) | 200 OK [http://localhost/doctors]
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2008-11-03 08:31:31) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"index", "controller"=>"doctors"}
+  [4;35;1mDoctor Load (0.000435)[0m   [0mSELECT * FROM "doctors" [0m
+Rendering template within layouts/lab
+Rendering doctors/index
+  [4;36;1mSpecialization Load (0.000245)[0m   [0;1mSELECT * FROM "specializations" WHERE ("specializations".doctor_id = 1) LIMIT 1[0m
+  [4;35;1mEspecialidad Load (0.000172)[0m   [0mSELECT * FROM "especialidads" WHERE ("especialidads"."id" = 1) [0m
+  [4;36;1mSpecialization Load (0.000169)[0m   [0;1mSELECT * FROM "specializations" WHERE ("specializations".doctor_id = 2) LIMIT 1[0m
+  [4;35;1mEspecialidad Load (0.000149)[0m   [0mSELECT * FROM "especialidads" WHERE ("especialidads"."id" = 6) [0m
+Rendered doctors/_lista (0.01255)
+  [4;36;1mUsuario Load (0.000222)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.03311 (30 reqs/sec) | Rendering: 0.02288 (69%) | DB: 0.00226 (6%) | 200 OK [http://localhost/doctors]
+
+
+Processing DoctorsController#destroy (for 127.0.0.1 at 2008-11-03 08:31:55) [DELETE]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"authenticity_token"=>"fbfa07b376535db7cbaea0c0ea25ef0cd66abcca", "_method"=>"delete", "action"=>"destroy", "id"=>"2", "controller"=>"doctors"}
+  [4;35;1mDoctor Load (0.000313)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 2) [0m
+  [4;36;1mSpecialization Delete all (0.003291)[0m   [0;1mDELETE FROM "specializations" WHERE (doctor_id = 2) [0m
+  [4;35;1mDoctor Destroy (0.000532)[0m   [0m DELETE FROM "doctors"
+ WHERE "id" = 2
+[0m
+Redirected to http://localhost:3000/doctors
+Completed in 0.02184 (45 reqs/sec) | DB: 0.00496 (22%) | 302 Found [http://localhost/doctors/2]
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2008-11-03 08:31:55) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"index", "controller"=>"doctors"}
+  [4;36;1mDoctor Load (0.000329)[0m   [0;1mSELECT * FROM "doctors" [0m
+Rendering template within layouts/lab
+Rendering doctors/index
+  [4;35;1mSpecialization Load (0.000229)[0m   [0mSELECT * FROM "specializations" WHERE ("specializations".doctor_id = 1) LIMIT 1[0m
+  [4;36;1mEspecialidad Load (0.000174)[0m   [0;1mSELECT * FROM "especialidads" WHERE ("especialidads"."id" = 1) [0m
+Rendered doctors/_lista (0.01158)
+  [4;35;1mUsuario Load (0.000229)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.03089 (32 reqs/sec) | Rendering: 0.02112 (68%) | DB: 0.00179 (5%) | 200 OK [http://localhost/doctors]
+
+
+Processing PagosController#index (for 127.0.0.1 at 2008-11-03 08:31:59) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"index", "controller"=>"pagos"}
+  [4;36;1mUsuario Load (0.000219)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mPago Load (0.000674)[0m   [0mSELECT * FROM "pagos" [0m
+Rendering template within layouts/lab
+Rendering pagos/index
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.02661 (37 reqs/sec) | Rendering: 0.01367 (51%) | DB: 0.00180 (6%) | 200 OK [http://localhost/pagos]
+
+
+Processing LabController#index (for 127.0.0.1 at 2008-11-03 08:32:00) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"index", "controller"=>"lab"}
+  [4;35;1mUsuario Load (0.000238)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mConsulta Load (0.000172)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."fecha_consulta" BETWEEN '2008-11-03 00:00:00' AND '2008-11-03 23:59:59') [0m
+Rendering template within layouts/lab
+Rendering lab/index
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.02527 (39 reqs/sec) | Rendering: 0.01103 (43%) | DB: 0.00124 (4%) | 200 OK [http://localhost/lab]
+
+
+Processing CitasController#index (for 127.0.0.1 at 2008-11-03 08:32:01) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"index", "controller"=>"citas"}
+  [4;36;1mUsuario Load (0.000226)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mCita Load (0.000712)[0m   [0mSELECT * FROM "citas" [0m
+Rendering template within layouts/citas
+Rendering citas/index
+  [4;36;1mPaciente Load (0.000425)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 13) [0m
+  [4;35;1mPaciente Load (0.000417)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 14) [0m
+  [4;36;1mPaciente Load (0.000379)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 15) [0m
+  [4;35;1mPaciente Load (0.000371)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 16) [0m
+  [4;36;1mPaciente Load (0.000378)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 17) [0m
+  [4;35;1mPaciente Load (0.000374)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 18) [0m
+Completed in 0.03297 (30 reqs/sec) | Rendering: 0.01686 (51%) | DB: 0.00410 (12%) | 200 OK [http://localhost/citas]
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2008-11-03 08:32:04) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"index", "controller"=>"doctors"}
+  [4;36;1mDoctor Load (0.000347)[0m   [0;1mSELECT * FROM "doctors" [0m
+Rendering template within layouts/lab
+Rendering doctors/index
+  [4;35;1mSpecialization Load (0.000247)[0m   [0mSELECT * FROM "specializations" WHERE ("specializations".doctor_id = 1) LIMIT 1[0m
+  [4;36;1mEspecialidad Load (0.000178)[0m   [0;1mSELECT * FROM "especialidads" WHERE ("especialidads"."id" = 1) [0m
+Rendered doctors/_lista (0.01212)
+  [4;35;1mUsuario Load (0.000234)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.03208 (31 reqs/sec) | Rendering: 0.02175 (67%) | DB: 0.00184 (5%) | 200 OK [http://localhost/doctors]
+
+
+Processing LabController#show_horario (for 127.0.0.1 at 2008-11-03 08:32:05) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"show_horario", "controller"=>"lab"}
+  [4;36;1mUsuario Load (0.000222)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mHorario Load (0.000487)[0m   [0mSELECT * FROM "horarios" [0m
+  [4;36;1mHorario Load (0.000777)[0m   [0;1mSELECT * FROM "horarios" ORDER BY cubiculo[0m
+Rendering template within layouts/lab
+Rendering lab/show_horario
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.03286 (30 reqs/sec) | Rendering: 0.01540 (46%) | DB: 0.00232 (7%) | 200 OK [http://localhost/lab/show_horario]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-11-03 08:32:07) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;36;1mUsuario Load (0.000244)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mPaciente Load (0.001280)[0m   [0mSELECT * FROM "pacientes" [0m
+Rendering template within layouts/lab
+Rendering admin/index
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.03232 (30 reqs/sec) | Rendering: 0.01722 (53%) | DB: 0.00235 (7%) | 200 OK [http://localhost/admin]
+
+
+Processing PacientesController#index (for 127.0.0.1 at 2008-11-03 08:32:15) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"index", "controller"=>"pacientes"}
+  [4;36;1mUsuario Load (0.000224)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mPaciente Load (0.001308)[0m   [0mSELECT * FROM "pacientes" [0m
+Rendering template within layouts/lab
+Rendering pacientes/index
+Rendered pacientes/_lista_pacientes (0.00686)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.09465 (10 reqs/sec) | Rendering: 0.00983 (10%) | DB: 0.00235 (2%) | 200 OK [http://localhost/pacientes]
+
+
+Processing PacientesController#show (for 127.0.0.1 at 2008-11-03 08:32:19) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"show", "id"=>"17", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000427)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 17) [0m
+Rendering template within layouts/lab
+Rendering pacientes/show
+  [4;36;1mConsulta Load (0.000348)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."paciente_id" = 17) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."paciente_id" = 17) LIMIT 1[0m
+  [4;36;1mDoctor Load (0.000312)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 1) [0m
+  [4;35;1mUsuario Load (0.000226)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mConsulta Load (0.000260)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".paciente_id = 17) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 1) [0m
+  [4;35;1mCita Load (0.000306)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;36;1mOperation Load (0.000363)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 35) LIMIT 1[0m
+  [4;35;1mPago Load (0.000222)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 34) [0m
+  [4;36;1mEstudio Load (0.000285)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+Rendered consultas/_registro (0.08820)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mDoctor Load (0.000568)[0m   [0;1mSELECT * FROM "doctors" [0m
+  [4;35;1mEstudio Load (0.000850)[0m   [0mSELECT * FROM "estudios" [0m
+Rendered pacientes/_record (0.01610)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.21939 (4 reqs/sec) | Rendering: 0.20605 (93%) | DB: 0.00503 (2%) | 200 OK [http://localhost/pacientes/17]
+
+
+Processing ConsultasController#show (for 127.0.0.1 at 2008-11-03 08:32:22) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"action"=>"show", "id"=>"27", "controller"=>"consultas"}
+  [4;35;1mConsulta Load (0.000275)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 27) [0m
+Rendering template within layouts/lab
+Rendering consultas/show
+  [4;36;1mPaciente Load (0.000610)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 17) [0m
+  [4;35;1mDoctor Load (0.000327)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 1) [0m
+Rendered consultas/_lista (0.01490)
+  [4;36;1mCita Load (0.000324)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas".paciente_id = 17) [0m
+  [4;35;1mOperation Load (0.000405)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 35) LIMIT 1[0m
+  [4;36;1mEstudio Load (0.000247)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 17) [0m
+  [4;36;1mCita Load (0.000268)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;35;1mUsuario Load (0.000246)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.16888 (5 reqs/sec) | Rendering: 0.15927 (94%) | DB: 0.00384 (2%) | 200 OK [http://localhost/consultas/27]
+
+
+Processing PagosController#imprime (for 127.0.0.1 at 2008-11-03 08:32:24) [GET]
+  Session ID: c2d056d787bf83ee406503f867bfa68d
+  Parameters: {"paciente_id"=>"17", "action"=>"imprime", "id"=>"34", "controller"=>"pagos", "operation_id"=>"33"}
+  [4;36;1mUsuario Load (0.000234)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mPago Load (0.000262)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 34) [0m
+  [4;36;1mPaciente Load (0.000408)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 17) [0m
+  [4;35;1mOperation Load (0.000265)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."id" = 33) [0m
+  [4;36;1mEstudio Load (0.000233)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+Rendering pagos/imprime
+Completed in 1.04560 (0 reqs/sec) | Rendering: 1.00957 (96%) | DB: 0.00225 (0%) | 200 OK [http://localhost/pagos/imprime/34?operation_id=33&paciente_id=17]

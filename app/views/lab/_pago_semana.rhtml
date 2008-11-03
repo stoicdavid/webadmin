@@ -3,13 +3,15 @@
 <% honorarios_isr=0.0 %> 
 <div>
 	<% @cons_pagos.each do |dia,consultas| %>
-		<h4><%= dia.strftime('%A') %></h4>	
+		<h3><%= dia.strftime('%A') %></h4>	
 		<% for consulta in consultas %>
-		<% g=Generate.find_by_pago_id(consulta.id) %>
+		<% o=Operation.find_by_pago_id(consulta.id) %>
 			<tr>
-			<td><%=h g.operation.cita.paciente.nombre_completo %></td><br/>	
-			<td><%=h honorarios+=g.operation.tipo.estudio.comision_doctor.to_f %></td><br/>
-			<td><%=h honorarios_isr+=g.operation.tipo.estudio.comision_isr.to_f %></td><br/>
+			<td><h4><%=h o.cita.paciente.nombre_completo %></h3></td><br/>
+			<td>Honorarios :<%= h number_to_currency(Estudio.find(o.tipo_id).comision_doctor.to_f) %></td><br/>
+			<td>ISR: <%= h number_to_currency(Estudio.find(o.tipo_id).comision_isr.to_f) %></td><br/>
+			<% honorarios+=Estudio.find(o.tipo_id).comision_doctor.to_f %></td>
+			<% honorarios_isr+=Estudio.find(o.tipo_id).comision_isr.to_f %>
 			<td><%=h consulta.created_at.to_s(:short) %></td><br/><br/>
 
 			</tr>
