@@ -1,0 +1,18 @@
+  [4;36;1mConsulta Load (0.000965)[0m   [0;1mSELECT * FROM "consultas" LIMIT 1[0m
+  [4;35;1mConsulta Load (0.000275)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."doctor_id" = '--- :first
+') [0m
+  [4;36;1mConsulta Load (0.001754)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."doctor_id" = 1) [0m
+  [4;35;1mCita Load (0.000348)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 31) [0m
+  [4;36;1mOperation Load (0.000370)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 31) LIMIT 1[0m
+  [4;35;1mCita Load (0.000274)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 32) [0m
+  [4;36;1mOperation Load (0.000253)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 32) LIMIT 1[0m
+  [4;35;1mCita Load (0.000263)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 33) [0m
+  [4;36;1mOperation Load (0.000246)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 33) LIMIT 1[0m
+  [4;35;1mCita Load (0.000228)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 34) [0m
+  [4;36;1mOperation Load (0.000243)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 34) LIMIT 1[0m
+  [4;35;1mCita Load (0.000228)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 35) [0m
+  [4;36;1mOperation Load (0.000245)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 35) LIMIT 1[0m
+  [4;35;1mCita Load (0.000228)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 36) [0m
+  [4;36;1mOperation Load (0.000245)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 36) LIMIT 1[0m
+  [4;35;1mCita Load (0.000228)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 38) [0m
+  [4;36;1mOperation Load (0.000244)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 38) LIMIT 1[0m
