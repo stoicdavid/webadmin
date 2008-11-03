@@ -1,0 +1,4 @@
+@citas = Cita.find_all_by_fecha_hora(1.month.ago(Time.now.beginning_of_month)...Time.now.end_of_month).collect {|p| [p.fecha_hora]}
+
+page.replace_html 'tablas',:partial => 'tabla_mes'
+page.visual_effect :appear,'tablas'

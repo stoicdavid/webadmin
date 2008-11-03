@@ -3,7 +3,7 @@
 <% honorarios_isr=0.0 %> 
 <div>
 	<% @cons_pagos.each do |dia,consultas| %>
-		<h3><%= dia.strftime('%A') %></h4>	
+		<h3><%= dia.strftime('%A') %></h3>	
 		<% for consulta in consultas %>
 		<% o=Operation.find_by_pago_id(consulta.id) %>
 			<tr>

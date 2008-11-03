@@ -1,4 +1,5 @@
+@citas = Cita.find_all_by_fecha_hora(Time.now.beginning_of_day...Time.now.end_of_day)
 
-    page.replace_html 'tablas',:partial => 'tabla_dia'
-    page.visual_effect :slide_down,'tablas'
+page.replace_html 'tablas',:partial => 'tabla_dia'
+page.visual_effect :appear,'tablas'
 

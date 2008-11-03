@@ -1,0 +1,4 @@
+@citas = Cita.find_all_by_fecha_hora(Time.now.beginning_of_week...Time.now.end_of_week)
+
+page.replace_html 'tablas',:partial => 'tabla_semana'
+page.visual_effect :appear,'tablas'

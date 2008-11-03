@@ -4,7 +4,7 @@
 
   	<p>
 		<%= link_to_remote "Diario", :url => {:action => 'horario',:id => paciente.id,:object => @citas },:html => {:id => 'dia'} %>
-		<%= link_to_remote "Semana",:url => {:action => 'horario2',:id => paciente.id},:html => {:id => 'semana'} %>	
+		<%= link_to_remote "Semana",:url => {:action => 'horario2',:id => paciente.id}, :html => {:id => 'semana'} %>	
 		<%= link_to_remote "Mes",:url => {:action => 'horario3',:id => paciente.id}, :html => {:id => 'mes'} %>
 	</p>
 

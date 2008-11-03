@@ -279,7 +279,7 @@ def pago_mes
   @pagos = Array.new
   @consultas = Consulta.find_all_by_doctor_id(params[:id])
   @consultas.each {|x|
-      if pago = x.cita.operation.generate.pago
+      if pago = Pago.find(x.cita.operation.pago_id)
         @pagos << pago 
       end}
   @cons_pagos = @pagos.group_by { |t| t.created_at.beginning_of_day}    
