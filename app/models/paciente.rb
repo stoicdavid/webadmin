@@ -12,6 +12,7 @@ class Paciente < ActiveRecord::Base
   ]
   validates_presence_of :nombre, :app_pat, :app_mat,:genero, :on => :create, :message => " no puede ser vacio"
   validates_inclusion_of :genero, :in => GENERO.map {|disp, value| value}
+  validates_uniqueness_of :rfc_pac, :on => :create, :message => "Paciente capturado anteriormente"
 
   def consulta_atributos=(atributos)
 #    atributos.each do |a|
@@ -23,6 +24,12 @@ class Paciente < ActiveRecord::Base
   def nombres
     [nombre,nombre_2].join(' ')
   end
+  
+  def genera_rfc
+    rfc = self.app_pat.first.capitalize + self.app_pat.scan(/[aeiou]/).first.capitalize + self.app_mat.first.capitalize + self.nombre.first.capitalize + self.fecha_nac.strftime('%y%m%d')
+    self.rfc_pac = rfc
+  end
+  
   
   def nombres=(nombre)
     split = nombre.split(' ', 2)
@@ -41,6 +48,12 @@ class Paciente < ActiveRecord::Base
   def edad
       now = Time.now.utc
       now.year - self.fecha_nac.year - (self.fecha_nac.to_time.change(:year => now.year) > now ? 1 : 0)
+  end
+  
+  def edad_meses
+      now = Time.now.utc
+      actual = self.fecha_nac.to_time.change(:year => now.year)
+      actual > now ? 12 - (actual.month - now.month)  : (now.month - actual.month)
   end
   
   def nombre_medio
@@ -77,6 +90,9 @@ class Paciente < ActiveRecord::Base
   end
 
   def domicilio_completo
-    self.calle_dom + " " + self.colonia_dom + " " + self.estado_dom
+    if calle_dom!=nil and colonia_dom!=nil 
+      self.calle_dom + " " + self.colonia_dom
+    end
   end
+  
 end

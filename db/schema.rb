@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081031144334) do
+ActiveRecord::Schema.define(:version => 20081113201305) do
 
   create_table "agendas", :id => false, :force => true do |t|
     t.integer  "paciente_id", :null => false
@@ -137,6 +137,13 @@ ActiveRecord::Schema.define(:version => 20081031144334) do
     t.datetime "updated_at"
     t.string   "razon"
     t.string   "del_mun"
+    t.string   "del_mun_dom"
+    t.string   "num_int_dom"
+    t.string   "num_ext_dom"
+    t.string   "num_int_fis"
+    t.string   "num_ext_fis"
+    t.string   "rfc_pac"
+    t.string   "nombre_contacto"
   end
 
 # Could not dump table "pagos" because of following StandardError

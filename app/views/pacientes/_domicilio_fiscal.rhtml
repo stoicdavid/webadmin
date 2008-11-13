@@ -1,0 +1,28 @@
+<h4>Domicilio fiscal</h4>
+
+  	<%= f.label 'Calle' %><br>
+	<%= f.text_field :calle_fis  %>
+
+
+
+  	<%= f.label 'Exterior' %>
+<%= text_field_tag :calle_fis %>
+
+
+
+  <%= f.label 'Interior' %>
+<%= text_field_tag :calle_fis %>
+
+<p>
+	<%= f.label 'Colonia' %>
+	<%= f.text_field :colonia_fis  %>
+</p>
+
+<p>
+	<%= f.label 'Delegación / Municipio' %>
+	<%= text_field_tag :del_mun  %>
+	<%= f.label 'Estado' %>
+	<%= text_field_tag :estado_fis  %>
+	<%= f.label 'Código Postal' %>
+	<%= text_field_tag :cp_fis  %>
+</p>

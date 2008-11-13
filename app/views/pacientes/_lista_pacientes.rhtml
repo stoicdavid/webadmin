@@ -1,4 +1,5 @@
-<% unless @pacientes==nil %>
+
+
 <h1>Pacientes con Consulta</h1>
 <% form_tag pacientes_path, :method => 'get'  do %>
 	<p>
@@ -8,6 +9,7 @@
 
 <% end %>
     <br />
+<% unless @pacientes==nil %>
 <% for paciente in @pacientes %>
   <tr>
 	<td><%= link_to "#{h paciente.nombre_completo}",paciente %></td> 

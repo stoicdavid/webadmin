@@ -12,7 +12,11 @@ class PacientesController < ApplicationController
     elsif doctor = @usuario.doctor
       @pacientes = doctor.pacientes
     elsif @usuario.nombre=='admin'
-      @pacientes = Paciente.find(:all)
+      consultas = Consulta.find_all_by_fecha_consulta(Time.now.beginning_of_day...Time.now.end_of_day)
+      @pacientes = Array.new
+      consultas.each { |paciente|
+      @pacientes << Paciente.find(paciente.paciente_id)
+      }
     end
     
     respond_to do |format|
@@ -23,6 +27,23 @@ class PacientesController < ApplicationController
 
   # GET /pacientes/1
   # GET /pacientes/1.xml
+  
+  def imprime_ficha
+     prawnto :prawn => {
+                    :left_margin => 20,
+                    :right_margin => 20,
+                    :top_margin => 20,
+                    :bottom_margin => 20 }
+    @paciente = Paciente.find(params[:id])                
+    @consulta = Consulta.find(params[:consulta_id])
+     respond_to do |format|
+        #format.html # show.html.erb
+        #format.xml  { render :xml => @pago }
+        format.pdf {render :layout => false }
+    end
+  end
+  
+  
   def show
     @paciente = Paciente.find(params[:id])
 
@@ -54,8 +75,10 @@ class PacientesController < ApplicationController
   def create
     @paciente = Paciente.new(params[:paciente])
     @paciente.fecha_nac=params[:fecha_nac]
+    @paciente.genera_rfc
     respond_to do |format|
       if @paciente.save
+
         flash[:notice] = 'El Paciente se creo exitosamente'
         format.html { redirect_to(@paciente) }
         format.xml  { render :xml => @paciente, :status => :created, :location => @paciente }

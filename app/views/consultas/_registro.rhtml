@@ -45,7 +45,9 @@
 <%= button_to 'Crea Cita', {:controller => "lab",:action => "crea_cita", :id => registro.cita.id } %> 
 <% end %>
 </p>
-
+<p>
+<%= link_to 'Imprimir ficha', :action => 'imprime_ficha',:controller => 'pacientes',:id => @paciente.id, :consulta_id => registro.id %>
+</p>
 <%= link_to 'Detalle', registro %>
 <%= link_to 'Eliminar', registro, :confirm => 'Are you sure?', :method => :delete, :paciente_id => registro.paciente_id %>
 

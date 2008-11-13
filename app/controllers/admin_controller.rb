@@ -23,7 +23,8 @@ class AdminController < ApplicationController
 
   
   def index
-    @pacientes = Paciente.find(:all)
+    @citas = Cita.find(:all)
+
   end
   protected 
   def authorize_admin

@@ -7,9 +7,14 @@
 
 
   <p>	
-    <%= f.label 'Nombres' %><br />
-    <%= f.text_field :nombres -%>
+    <%= f.label 'Primer Nombre' %><br />
+    <%= f.text_field :nombre -%>
   </p>
+  <p>	
+    <%= f.label 'Segundo Nombre' %><br />
+    <%= f.text_field :nombre_2 -%>
+  </p>
+
   <p>
     <%= f.label 'Apellido Paterno' %><br />
     <%= f.text_field :app_pat %>
@@ -24,6 +29,96 @@
 	<%= calendar_date_select_tag :fecha_nac,Time.now.strftime('%d-%m-%Y'), :year_range => 30.years.ago..0.years.ago  %>
     
   </p>
+<h4>Contacto del Paciente:</h4>
+<p>
+  <%= f.label 'Nombre del contacto' %><br />
+	<%= f.text_field :nombre_contacto  %>
+</p>
+<h4>Teléfonos:</h4>
+  <p>
+    <%= f.label 'Celular' %><br />
+	<%= f.text_field :celular  %>
+  </p>
+
+  <p>
+    <%= f.label 'Casa' %><br />
+	<%= f.text_field :casa  %>
+  </p>
+
+  <p>
+    <%= f.label 'Correo electrónico' %><br />
+	<%= f.text_field :correo  %>
+  </p>
+
+<h4>Domicilio particular</h4>
+
+  	<%= f.label 'Calle' %><br>
+	<%= f.text_field :calle_dom  %>
+
+
+
+  	<%= f.label 'Exterior' %>
+<%= f.text_field :num_ext_dom %>
+
+
+
+  <%= f.label 'Interior' %>
+<%= f.text_field :num_int_dom %>
+
+<p>
+	<%= f.label 'Colonia' %>
+	<%= f.text_field :colonia_dom  %>
+</p>
+
+<p>
+	<%= f.label 'Delegación / Municipio' %>
+	<%= f.text_field :del_mun_dom  %>
+	<%= f.label 'Estado' %>
+	<%= text_field_tag :estado_dom  %>
+	<%= f.label 'Código Postal' %>
+	<%= f.text_field :cp_dom  %>
+</p>
+
+<%# link_to_remote '¿Deseas capturar los datos del domicilio fiscal?',:url => {:action => 'show_form' } %> <br/>
+¿Deseas capturar los datos del domicilio fiscal? <%= check_box_tag 'dom_fis','1',true %>
+
+<%= observe_field 'dom_fis', :url => {:action => 'show_form' } %>
+
+<div id ="fiscal">
+
+	<h4>Domicilio fiscal</h4><br/>
+		¿El domicilio particular es el mismo que el domicilio fiscal? <%= check_box_tag 'up_fis','1',false %> <br/>
+		<%= observe_field 'up_fis', :url => {:action => 'update_form' } %>
+	  	<%= f.label 'Calle' %><br>
+		<%= f.text_field :calle_fis  %>
+
+	  	<%= f.label 'Exterior' %>
+		<%= f.text_field :num_ext_fis %>
+
+
+	  	<%= f.label 'Interior' %>
+		<%= f.text_field :num_int_fis %>
+
+	<p>
+		<%= f.label 'Colonia' %>
+		<%= f.text_field :colonia_fis  %>
+	</p>
+
+	<p>
+		<%= f.label 'Delegación / Municipio' %>
+		<%= f.text_field :del_mun  %>
+		<%= f.label 'Estado' %>
+		<%= f.text_field :estado_fis  %>
+		<%= f.label 'Código Postal' %>
+		<%= f.text_field :cp_fis  %>
+	</p>	
+</div>
+		
+
+<p>
+
+</p>
+
   <p>
 	<%= f.select :genero, Paciente::GENERO, :prompt => "Selecciona el genero"  %>
   </p>

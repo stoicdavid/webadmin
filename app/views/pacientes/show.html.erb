@@ -21,12 +21,18 @@
 <% end %>
 </p>
 <p>
-  <b>Fecha de nacimiento:</b>
-  <%=h @paciente.fecha_nac %>
+  <b>Edad:</b>
+  <%=h @paciente.edad %> años
+  <%= @paciente.edad_meses %> meses
+</p>
+<p>
+	<b>RFC:</b>
+	<%= @paciente.rfc_pac %>
 </p>
 
+
 <% if Usuario.find_by_id(session[:usuario_id]).nombre=="admin" %>
-<%= link_to 'Edit', edit_paciente_path(@paciente) %> 
+<%= link_to 'Editar', edit_paciente_path(@paciente) %> 
 <% end %>
 <% unless @paciente.consultas ==nil %>
 <h3 id="registros_count"><%= pluralize(@paciente.consultas.size, 'Registro') %></h3>
