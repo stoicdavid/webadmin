@@ -1,10 +1,16 @@
 require'mongrel_cluster/recipes' 
 
 
+set :domain, "deploy@172.16.90.100"
 set :application, "webadmin"
-set :repository,  "http://neurolab-webadmin.googlecode.com/svn/trunk/webadmin"
-set :deploy_to, "/Library/Rails/#{webadmin}" 
+set :repository,  "git://github.com/stoicdavid/webadmin.git"
+set :deploy_to, "/var/www/apps/#{application}"
+set :ssh_options, {:port => 7000}
 set :mongrel_conf, "#{current_path}/config/mongrel_cluster.yml"
+set :monit_group, 'mongrel'
+role :app, domain
+role :web, domain
+role :db,  domain, :primary => true
 
 
 # If you aren't deploying to /u/apps/#{application} on the target
@@ -16,21 +22,13 @@ set :mongrel_conf, "#{current_path}/config/mongrel_cluster.yml"
 # your SCM below:
 # set :scm, :subversion
 
-role :app, "neurolab.homelinux.org"
-role :web, "neurolab.homelinux.org"
-role :db,  "neurolab.homelinux.org", :primary => true
-
-set :user, 'webadmin'
-set :scm_username, "svnusername" 
-set :server, 'neurolab.railsplayground.net'
-set :application, 'webadmin'
-set :applicationdir, 'webadmin' 
-set :repository, "http://neurolab-webadmin.googlecode.com/svn/trunk/webadmin" 
-role :web, server
-role :app, server
-role :db,  server, :primary => true
-
-set :deploy_to, "/home/#{webadmin}/#{webadmin}" 
+namespace :deploy do
+  %w(restart stop start).each do |command|
+    task command.to_sym, :roles => :app do
+      sudo "/usr/sbin/monit #{command} all -g #{monit_group}"
+    end
+  end
+end
 
 task :restart, :roles => :app do
 end

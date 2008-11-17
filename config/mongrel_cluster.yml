@@ -1,8 +1,9 @@
 --- 
-cwd: /deploy/path/current
 log_file: log/mongrel.log
+cwd: /var/www/apps/webadmin/current
+user: deploy
+group: deploy
 port: "8000"
-environment: production
-address: 127.0.0.1
 pid_file: tmp/pids/mongrel.pid
-servers: 2
+servers: 3
+environment: production

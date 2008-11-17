@@ -16,5 +16,5 @@ test:
 production:
   adapter: mysql
   database: webadmin
-  username: webadmin
+  username: root
   password: 719110 
