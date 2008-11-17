@@ -20,7 +20,7 @@ role :db,  domain, :primary => true
 
 # If you aren't using Subversion to manage your source code, specify
 # your SCM below:
-# set :scm, :subversion
+set :scm, :git
 
 namespace :deploy do
   %w(restart stop start).each do |command|
