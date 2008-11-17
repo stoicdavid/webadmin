@@ -62,7 +62,11 @@ end
     redirect_to :action => 'show', :controller => 'pacientes'
   end
   
-
+  def genera_id
+    @operacion = Operation.find_by_cita_id(params[:id])
+    @operacion.genera_id
+  end
+  
   def borra_cita
     cita=Cita.find(params[:id])
     cita.update_attributes(:fecha_hora => nil,:status => 'Sin Cita',:cubiculo =>nil  )

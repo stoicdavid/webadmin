@@ -71,7 +71,7 @@ class Paciente < ActiveRecord::Base
   	nombres + " " + self.app_pat + " " + self.app_mat
   end
   
-  def codigo
+  def codigo_fiscal
     cod = ""
     if self.cp_fis.to_s.length == 4
       cod+='0' + self.cp_fis.to_s
@@ -82,17 +82,67 @@ class Paciente < ActiveRecord::Base
   end
   
   def direccion_fiscal_completa
-    if calle_fis!=nil and colonia_fis!=nil and self.estado_fis!=nil 
-      d = self.calle_fis + " " + self.colonia_fis + " " + self.del_mun + " " + codigo + ", " + self.estado_fis
-	  else
-	    d=""
-	  end
+      d = self.calle_fis unless self.calle_fis.nil?
+      d += ' Ext. ' + self.num_ext_fis unless self.num_ext_fis.nil?
+      d += ' Int. ' + self.num_int_fis unless self.num_int_fis.nil?
+      d += ' Col. ' + self.colonia_fis unless self.colonia_fis.nil?
+      d += ' Del/Mun. ' + self.del_mun unless self.del_mun.nil?
+      d += ' ' + self.estado_fis unless self.estado_fis.nil?
+      d += ' CP. '+ self.codigo_fiscal
+      d
   end
 
+       
   def domicilio_completo
-    if calle_dom!=nil and colonia_dom!=nil 
-      self.calle_dom + " " + self.colonia_dom
-    end
+    d = self.calle_dom unless self.calle_dom.nil?
+    d += ' Ext. ' + self.num_ext_dom unless self.num_ext_dom.nil?
+    d += ' Int. ' + self.num_int_dom unless self.num_int_dom.nil?
+    d += ' Col. ' + self.colonia_dom unless self.colonia_dom.nil?
+    d += ' Del/Mun. ' + self.del_mun_dom unless self.del_mun_dom.nil?
+    d += ' ' +self.estado_dom unless self.estado_dom.nil?
+    d
+    
+  end
+  
+  def tel_cel
+    cel = ""
+    cel = self.celular unless self.celular.nil?
+    cel
+  end
+  
+  def tel_rec
+    tel_rec =""
+    tel_rec = self.recados unless self.recados.nil?
+    tel_rec
+  end
+  
+  def tel_casa
+    tel_casa = ""
+    tel_casa = self.casa unless self.casa.nil?
+    tel_casa
+  end
+  
+  def tel_oficina
+    tel_oficina = ""
+    tel_oficina = self.oficina unless self.oficina.nil?
+    tel_oficina
+  end
+  def tel_fax
+    tel_fax = ""
+    tel_fax = self.fax unless self.fax.nil?
+    tel_fax
+  end
+  
+  def mail
+    mail = ""
+    mail = self.correo unless self.correo.nil? 
+    mail
+  end
+  
+  def contacto
+    cont = ""
+    cont = self.nombre_contacto unless self.nombre_contacto.nil? 
+    cont
   end
   
 end

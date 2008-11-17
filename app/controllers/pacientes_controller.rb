@@ -36,6 +36,11 @@ class PacientesController < ApplicationController
                     :bottom_margin => 20 }
     @paciente = Paciente.find(params[:id])                
     @consulta = Consulta.find(params[:consulta_id])
+    if !@consulta.cita.nil?
+     @ref_estudio = @consulta.cita.operation.ref_estudio unless @consulta.cita.operation.ref_estudio.nil?
+    else
+      @ref_estudio = ""
+    end
      respond_to do |format|
         #format.html # show.html.erb
         #format.xml  { render :xml => @pago }
