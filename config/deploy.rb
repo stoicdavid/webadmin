@@ -1,4 +1,4 @@
-require'mongrel_cluster/recipes' 
+#require'mongrel_cluster/recipes' 
 
 
 set :domain, "deploy@172.16.90.100"
@@ -28,9 +28,6 @@ namespace :deploy do
       sudo "/usr/sbin/monit #{command} all -g #{monit_group}"
     end
   end
-end
-
-task :restart, :roles => :app do
 end
 
 task :after_update_code, :roles => [:web, :db, :app] do

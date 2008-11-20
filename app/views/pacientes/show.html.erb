@@ -5,12 +5,6 @@
   <%=h @paciente.nombre_completo %>
 </p>
 
-<p>
-	<b>Doctor que atendió:</b>
-	<% if Consulta.find_by_paciente_id(@paciente.id)!=nil %>
-  <%=h Consulta.find_by_paciente_id(@paciente.id).doctor.nombre_completo %>
-	<% end %>
-</p>
 
 <p>
   <b>Genero:</b>

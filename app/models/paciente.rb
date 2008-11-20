@@ -10,9 +10,10 @@ class Paciente < ActiveRecord::Base
   [ "Masculino", "m" ], 
   [ "Femenino", "f" ]
   ]
-  validates_presence_of :nombre, :app_pat, :app_mat,:genero, :on => :create, :message => " no puede ser vacio"
+  validates_presence_of :nombre, :app_pat, :app_mat,:genero,:rfc_pac, :on => :create, :message => 
+  " no puede ser vacio"
   validates_inclusion_of :genero, :in => GENERO.map {|disp, value| value}
-  validates_uniqueness_of :rfc_pac, :on => :create, :message => "Paciente capturado anteriormente"
+  validates_uniqueness_of :rfc_pac, :on => :create, :message => "^Paciente capturado anteriormente"
 
   def consulta_atributos=(atributos)
 #    atributos.each do |a|
@@ -26,9 +27,11 @@ class Paciente < ActiveRecord::Base
   end
   
   def genera_rfc
+    if self.valid?
     rfc = self.app_pat.first.capitalize + self.app_pat.scan(/[aeiou]/).first.capitalize + self.app_mat.first.capitalize + self.nombre.first.capitalize + self.fecha_nac.strftime('%y%m%d')
     self.rfc_pac = rfc
   end
+ end
   
   
   def nombres=(nombre)

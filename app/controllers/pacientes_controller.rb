@@ -63,7 +63,7 @@ class PacientesController < ApplicationController
   # GET /pacientes/new.xml
   def new
     @paciente = Paciente.new
-    @paciente.consultas.build
+    @consulta = @paciente.consultas.build
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @paciente }
@@ -83,7 +83,7 @@ class PacientesController < ApplicationController
     @paciente.genera_rfc
     respond_to do |format|
       if @paciente.save
-
+        
         flash[:notice] = 'El Paciente se creo exitosamente'
         format.html { redirect_to(@paciente) }
         format.xml  { render :xml => @paciente, :status => :created, :location => @paciente }
@@ -91,6 +91,7 @@ class PacientesController < ApplicationController
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @paciente.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @consulta.errors, :status => :unprocessable_entity }
       end
     end
   end
