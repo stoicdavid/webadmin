@@ -5,7 +5,7 @@ set :domain, "deploy@172.16.90.100"
 set :application, "webadmin"
 set :repository,  "git://github.com/stoicdavid/webadmin.git"
 set :deploy_to, "/var/www/apps/#{application}"
-set :ssh_options, {:port => 7000}
+set :ssh_options, {:port => 7777}
 set :mongrel_conf, "#{current_path}/config/mongrel_cluster.yml"
 set :monit_group, 'mongrel'
 role :app, domain

@@ -10,7 +10,7 @@ class Paciente < ActiveRecord::Base
   [ "Masculino", "m" ], 
   [ "Femenino", "f" ]
   ]
-  validates_presence_of :nombre, :app_pat, :app_mat,:genero,:rfc_pac, :on => :create, :message => 
+  validates_presence_of :nombre, :app_pat, :app_mat,:genero, :on => :create, :message => 
   " no puede ser vacio"
   validates_inclusion_of :genero, :in => GENERO.map {|disp, value| value}
   validates_uniqueness_of :rfc_pac, :on => :create, :message => "^Paciente capturado anteriormente"
@@ -27,10 +27,13 @@ class Paciente < ActiveRecord::Base
   end
   
   def genera_rfc
-    if self.valid?
-    rfc = self.app_pat.first.capitalize + self.app_pat.scan(/[aeiou]/).first.capitalize + self.app_mat.first.capitalize + self.nombre.first.capitalize + self.fecha_nac.strftime('%y%m%d')
+    rfc =  self.app_pat.first.capitalize unless self.app_pat.first.nil?
+    rfc += self.app_pat.scan(/[aeiou]/).first.capitalize unless self.app_pat.scan(/[aeiou]/).first.nil?
+    rfc += self.app_mat.first.capitalize unless self.app_mat.first.nil? 
+    rfc += self.nombre.first.capitalize unless self.nombre.first.nil? 
+    rfc += self.fecha_nac.strftime('%y%m%d') unless self.fecha_nac.nil?
     self.rfc_pac = rfc
-  end
+
  end
   
   
