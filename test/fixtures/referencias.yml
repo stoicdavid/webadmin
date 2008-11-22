@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nombre_paciente: MyString
+  telefono: MyString
+  ref_id: 
+
+two:
+  nombre_paciente: MyString
+  telefono: MyString
+  ref_id: 

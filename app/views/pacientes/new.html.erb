@@ -22,7 +22,9 @@
     <%= f.label 'Apellido Materno' %><br />
     <%= f.text_field :app_mat %>
   </p>
-
+  <p>
+	<%= f.select :genero, Paciente::GENERO, :prompt => "Selecciona el genero"  %>
+  </p
   <p>
     <%= f.label 'Fecha de nacimiento' %><br />
 	<%= calendar_date_select_tag :fecha_nac,Time.now.strftime('%d-%m-%Y'), :year_range => 30.years.ago..0.years.ago  %>
@@ -118,9 +120,7 @@
 
 </p>
 
-  <p>
-	<%= f.select :genero, Paciente::GENERO, :prompt => "Selecciona el genero"  %>
-  </p>
+
 
 	<%= render :partial => 'consulta', @collection => @paciente.consultas %>
 

@@ -11,7 +11,7 @@
 
 <p>
   <b>Especialidad:</b>
-  <%=h @doctor.specialization.especialidad[:especialidad] %>
+  <%=h Especialidad.find(@doctor.especialidad_id).especialidad %>
   
 </p>
 

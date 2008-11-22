@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :referencias
+
   map.resources :horarios
 
   map.resources :searches

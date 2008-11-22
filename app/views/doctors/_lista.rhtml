@@ -12,7 +12,7 @@
 	<td><%= link_to "#{h doctor.nombre_completo}",doctor %></td> <br />
 
 
-	<td><%=h doctor.specialization.especialidad[:especialidad] %></td>
+	<td><%=h Especialidad.find(doctor.especialidad_id).especialidad %></td>
 
 
     <td><%=h doctor.telefono_consultorio %></td>

@@ -8,6 +8,10 @@ class Estudio < ActiveRecord::Base
     find(:all).collect { |p| [p.tipo_estudio, p.id] }
   end
   
+  def self.find_current
+    find(:all,:conditions =>['id <= 3']).collect { |p| [p.tipo_estudio, p.id] }
+  end
+  
   def precio_formato
     helpers.number_to_currency(self.precio)
   end

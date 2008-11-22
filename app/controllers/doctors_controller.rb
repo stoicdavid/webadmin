@@ -51,13 +51,9 @@ class DoctorsController < ApplicationController
   # POST /doctors.xml
   def create
     @doctor = Doctor.new(params[:doctor])
-    
+    @doctor.genera_rfc
     respond_to do |format|
       if @doctor.save 
-        doc_esp = Specialization.new
-        doc_esp.doctor_id = @doctor.id
-        doc_esp.especialidad_id = params[:especialidad][:doctor]
-        doc_esp.save  
         flash[:notice] = 'Doctor was successfully created.'
         format.html { redirect_to(@doctor) }
         format.xml  { render :xml => @doctor, :status => :created, :location => @doctor }
@@ -72,7 +68,6 @@ class DoctorsController < ApplicationController
   # PUT /doctors/1.xml
   def update
     @doctor = Doctor.find(params[:id])
-    Specialization.update_all("especialidad_id = #{params[:especialidad][:doctor]}","doctor_id=#{@doctor.id}" )
     respond_to do |format|
       if @doctor.update_attributes(params[:doctor])
         flash[:notice] = 'Doctor was successfully updated.'
@@ -91,7 +86,6 @@ class DoctorsController < ApplicationController
   # DELETE /doctors/1.xml
   def destroy
     @doctor = Doctor.find(params[:id])
-    Specialization.delete_all "doctor_id = #{@doctor.id}"
     @doctor.destroy
     
 

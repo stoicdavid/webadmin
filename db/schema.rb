@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081113201305) do
+ActiveRecord::Schema.define(:version => 20081122203853) do
 
   create_table "agendas", :id => false, :force => true do |t|
     t.integer  "paciente_id", :null => false
@@ -63,6 +63,18 @@ ActiveRecord::Schema.define(:version => 20081113201305) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "imagen"
+    t.integer  "especialidad_id"
+    t.string   "especialidad_otro"
+    t.string   "rfc_virtual"
+    t.string   "rfc_doc"
+    t.string   "razon_doc"
+    t.string   "calle_fis"
+    t.string   "num_ext_fis"
+    t.string   "num_int_fis"
+    t.string   "colonia_fis"
+    t.string   "del_mun_fis"
+    t.string   "estado_fis"
+    t.string   "cp_fis"
   end
 
   create_table "especialidads", :force => true do |t|
@@ -148,6 +160,22 @@ ActiveRecord::Schema.define(:version => 20081113201305) do
 
 # Could not dump table "pagos" because of following StandardError
 #   Unknown type 'precision8default0scale2' for column 'precio'
+
+  create_table "referencias", :force => true do |t|
+    t.string   "nombre"
+    t.string   "apellidos"
+    t.string   "nombre_contacto"
+    t.string   "diagnostico"
+    t.date     "fecha_referencia"
+    t.string   "telefono_casa"
+    t.string   "telefono_celular"
+    t.string   "e_mail"
+    t.integer  "ref_id",           :default => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "estudio_id"
+    t.integer  "doctor_id"
+  end
 
   create_table "searches", :force => true do |t|
     t.string   "nombre"

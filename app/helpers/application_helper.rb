@@ -5,7 +5,7 @@ module ApplicationHelper
     
     menu= link_to("Home", :controller => "admin") + "<br />"
     if usuario.nombre=='admin' 
-      menu+= link_to("Administracion", :controller => "doctors") + "<br />"
+      menu+= link_to("Doctores", :controller => "doctors") + "<br />"
       menu+= link_to("Cubículos",:controller => "lab", :action => 'show_horario')+"<br />"
       menu+= link_to("Pagos", :controller => "pagos") +"<br />"
       menu+= link_to( "Consultas", :controller => "lab") +"<br />"
@@ -20,7 +20,7 @@ module ApplicationHelper
     
     if session[:usuario_id]
       menu+= link_to( "Pacientes", :controller => "pacientes")+ "<br />"
-   
+      menu+= link_to( "Referencias", :controller => "referencias")+ "<br />"
     end
     menu+=link_to 'Logout', :controller => :admin, :action => 'logout' 
   end

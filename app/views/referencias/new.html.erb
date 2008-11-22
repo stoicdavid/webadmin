@@ -1,0 +1,40 @@
+<h1>Nueva referencia</h1>
+
+<% form_for(@referencia) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </p>
+  <p>
+    <%= f.label :apellidos %><br />
+    <%= f.text_field :apellidos %>
+  </p>
+	<%= f.hidden_field :fecha_referencia, :value => Time.now %>
+  <p>
+	
+    <%= f.label :telefono_casa %><br />
+    <%= f.text_field :telefono_casa %>
+  </p>
+  <p>
+    <%= f.label :telefono_celular %><br />
+    <%= f.text_field :telefono_celular %>
+  </p>
+  <p>
+    <%= f.label :e_mail %><br />
+    <%= f.text_field :e_mail %>
+  </p>
+	<p>
+     Selecciona el estudio a realizar: <br />
+    <%= select :referencia, :estudio_id, Estudio.find_current, :prompt => "Selecciona el estudio" %>
+  </p>
+
+
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', referencias_path %>
