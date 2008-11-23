@@ -39,10 +39,13 @@
   <b>Fax:</b>
   <%=h @doctor.fax %>
 </p>
+
+<% if @doctor.usuario!=nil %>
+	<%= link_to 'Modifica Password', :controller => "usuarios", :action => "edit", :id => @doctor.id %>
+<% end %>
+
 <% if Usuario.find_by_id(session[:usuario_id]).nombre =="admin" && @doctor.usuario==nil %>
 <%= button_to 'Crea Usuario', {:controller => "usuarios", :action => "new", :id => @doctor.id } %>
 <%= link_to 'Edit', edit_doctor_path(@doctor) %> |
 <%= link_to 'Back', doctors_path %>
 <% end %>
-
-

@@ -40036,3 +40036,623 @@ Rendering doctors/show
   [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
   [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
 Completed in 0.09229 (10 reqs/sec) | Rendering: 0.01504 (16%) | DB: 0.00242 (2%) | 200 OK [http://localhost/doctors/4]
+
+
+Processing AdminController#logout (for 127.0.0.1 at 2008-11-22 15:42:06) [GET]
+  Session ID: 0ec9e108bf82b516f26f1a5d26820c04
+  Parameters: {"action"=>"logout", "controller"=>"admin"}
+  [4;35;1mUsuario Load (0.000236)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 0.00936 (106 reqs/sec) | DB: 0.00113 (12%) | 302 Found [http://localhost/admin/logout]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-22 15:42:06) [GET]
+  Session ID: 0ec9e108bf82b516f26f1a5d26820c04
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+Rendering template within layouts/lab
+Rendering admin/login
+  [4;36;1mUsuario Load (0.000166)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" IS NULL) LIMIT 1[0m
+Completed in 0.01198 (83 reqs/sec) | Rendering: 0.00960 (80%) | DB: 0.00112 (9%) | 200 OK [http://localhost/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-22 15:42:09) [POST]
+  Session ID: 0ec9e108bf82b516f26f1a5d26820c04
+  Parameters: {"commit"=>"Login", "nombre"=>"admin", "authenticity_token"=>"78547ab3086c8386b6599e72b3062cfb491b5c8d", "action"=>"login", "controller"=>"admin", "password"=>"123"}
+  [4;35;1mUsuario Load (0.000234)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."nombre" = 'admin') LIMIT 1[0m
+Redirected to http://localhost:3000/admin
+Completed in 0.01005 (99 reqs/sec) | DB: 0.00117 (11%) | 302 Found [http://localhost/]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-11-22 15:42:09) [GET]
+  Session ID: 0ec9e108bf82b516f26f1a5d26820c04
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;36;1mUsuario Load (0.000249)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mCita Load (0.000171)[0m   [0mSELECT * FROM "citas" [0m
+Rendering template within layouts/lab
+Rendering admin/index
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mEspecialidad Load (0.000609)[0m   [0;1mSELECT * FROM "especialidads" [0m
+Completed in 0.03772 (26 reqs/sec) | Rendering: 0.02319 (61%) | DB: 0.00205 (5%) | 200 OK [http://localhost/admin]
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2008-11-22 15:42:11) [GET]
+  Session ID: 0ec9e108bf82b516f26f1a5d26820c04
+  Parameters: {"action"=>"index", "controller"=>"doctors"}
+  [4;35;1mEspecialidad Load (0.000589)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000540)[0m   [0;1mSELECT * FROM "doctors" [0m
+Rendering template within layouts/lab
+Rendering doctors/index
+  [4;35;1mEspecialidad Load (0.000253)[0m   [0mSELECT * FROM "especialidads" WHERE ("especialidads"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "especialidads" WHERE ("especialidads"."id" = 1) [0m
+Rendered doctors/_lista (0.00768)
+  [4;35;1mUsuario Load (0.000249)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.03303 (30 reqs/sec) | Rendering: 0.01809 (54%) | DB: 0.00252 (7%) | 200 OK [http://localhost/doctors]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-22 18:18:06) [GET]
+  Session ID: 0ec9e108bf82b516f26f1a5d26820c04
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+Rendering template within layouts/lab
+Rendering admin/login
+  [4;36;1mUsuario Load (0.000172)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" IS NULL) LIMIT 1[0m
+Completed in 0.04257 (23 reqs/sec) | Rendering: 0.04040 (94%) | DB: 0.00037 (0%) | 200 OK [http://localhost/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-22 18:18:13) [POST]
+  Session ID: 0ec9e108bf82b516f26f1a5d26820c04
+  Parameters: {"commit"=>"Login", "nombre"=>"carlos", "authenticity_token"=>"78547ab3086c8386b6599e72b3062cfb491b5c8d", "action"=>"login", "controller"=>"admin", "password"=>"loredo"}
+  [4;35;1mUsuario Load (0.000243)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."nombre" = 'carlos') LIMIT 1[0m
+Redirected to http://localhost:3000/admin
+Completed in 0.01088 (91 reqs/sec) | DB: 0.00122 (11%) | 302 Found [http://localhost/]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-11-22 18:18:13) [GET]
+  Session ID: 0ec9e108bf82b516f26f1a5d26820c04
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;36;1mUsuario Load (0.000242)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mCita Load (0.000144)[0m   [0mSELECT * FROM "citas" [0m
+Rendering template within layouts/lab
+Rendering admin/index
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mEspecialidad Load (0.001078)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000566)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.16797 (5 reqs/sec) | Rendering: 0.15273 (90%) | DB: 0.00313 (1%) | 200 OK [http://localhost/admin]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-11-22 18:21:46) [GET]
+  Session ID: 0ec9e108bf82b516f26f1a5d26820c04
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;36;1mUsuario Load (0.000249)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mCita Load (0.000168)[0m   [0mSELECT * FROM "citas" [0m
+Rendering template within layouts/lab
+Rendering admin/index
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mEspecialidad Load (0.000648)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000405)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.04047 (24 reqs/sec) | Rendering: 0.02565 (63%) | DB: 0.00241 (5%) | 200 OK [http://localhost/admin]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-22 18:25:48) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+Rendering template within layouts/lab
+Rendering admin/login
+  [4;36;1mUsuario Load (0.000160)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" IS NULL) LIMIT 1[0m
+Completed in 0.01200 (83 reqs/sec) | Rendering: 0.00978 (81%) | DB: 0.00101 (8%) | 200 OK [http://localhost/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-22 18:26:01) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+Rendering template within layouts/lab
+Rendering admin/login
+  [4;35;1mUsuario Load (0.000153)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" IS NULL) LIMIT 1[0m
+Completed in 0.01258 (79 reqs/sec) | Rendering: 0.01040 (82%) | DB: 0.00110 (8%) | 200 OK [http://localhost/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-22 18:26:04) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+Rendering template within layouts/lab
+Rendering admin/login
+  [4;36;1mUsuario Load (0.000194)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" IS NULL) LIMIT 1[0m
+Completed in 0.01121 (89 reqs/sec) | Rendering: 0.00898 (80%) | DB: 0.00110 (9%) | 200 OK [http://localhost/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-22 18:32:56) [POST]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"commit"=>"Login", "nombre"=>"admin", "authenticity_token"=>"cc0553f7fd835b8ec33087cac8731cd40d4f5235", "action"=>"login", "controller"=>"admin", "password"=>"123"}
+  [4;35;1mUsuario Load (0.000487)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."nombre" = 'admin') LIMIT 1[0m
+Redirected to http://localhost:3000/admin
+Completed in 0.01197 (83 reqs/sec) | DB: 0.00138 (11%) | 302 Found [http://localhost/]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-11-22 18:32:56) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;36;1mUsuario Load (0.000236)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mCita Load (0.000160)[0m   [0mSELECT * FROM "citas" [0m
+Rendering template within layouts/lab
+Rendering admin/index
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mEspecialidad Load (0.000616)[0m   [0;1mSELECT * FROM "especialidads" [0m
+Completed in 0.03876 (25 reqs/sec) | Rendering: 0.02494 (64%) | DB: 0.00200 (5%) | 200 OK [http://localhost/admin]
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2008-11-22 18:33:06) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"index", "controller"=>"doctors"}
+  [4;35;1mEspecialidad Load (0.000600)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000551)[0m   [0;1mSELECT * FROM "doctors" [0m
+Rendering template within layouts/lab
+Rendering doctors/index
+  [4;35;1mEspecialidad Load (0.000352)[0m   [0mSELECT * FROM "especialidads" WHERE ("especialidads"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "especialidads" WHERE ("especialidads"."id" = 1) [0m
+Rendered doctors/_lista (0.01251)
+  [4;35;1mUsuario Load (0.000353)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.12933 (7 reqs/sec) | Rendering: 0.11273 (87%) | DB: 0.00327 (2%) | 200 OK [http://localhost/doctors]
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2008-11-22 18:33:08) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"doctors"}
+  [4;36;1mEspecialidad Load (0.000609)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000396)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Rendering template within layouts/lab
+Rendering doctors/show
+  [4;36;1mEspecialidad Load (0.000199)[0m   [0;1mSELECT * FROM "especialidads" WHERE ("especialidads"."id" = 1) [0m
+  [4;35;1mUsuario Load (0.000264)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios".doctor_id = 4) LIMIT 1[0m
+  [4;36;1mUsuario Load (0.000188)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.03306 (30 reqs/sec) | Rendering: 0.01599 (48%) | DB: 0.00265 (8%) | 200 OK [http://localhost/doctors/4]
+
+
+Processing AdminController#logout (for 127.0.0.1 at 2008-11-22 18:33:11) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"logout", "controller"=>"admin"}
+  [4;36;1mUsuario Load (0.000225)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 0.07601 (13 reqs/sec) | DB: 0.00121 (1%) | 302 Found [http://localhost/admin/logout]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-22 18:33:11) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+Rendering template within layouts/lab
+Rendering admin/login
+  [4;35;1mUsuario Load (0.000153)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" IS NULL) LIMIT 1[0m
+Completed in 0.01094 (91 reqs/sec) | Rendering: 0.00882 (80%) | DB: 0.00109 (9%) | 200 OK [http://localhost/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-22 18:33:14) [POST]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"commit"=>"Login", "nombre"=>"carlos", "authenticity_token"=>"cc0553f7fd835b8ec33087cac8731cd40d4f5235", "action"=>"login", "controller"=>"admin", "password"=>"loredo"}
+  [4;36;1mUsuario Load (0.000238)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."nombre" = 'carlos') LIMIT 1[0m
+Redirected to http://localhost:3000/admin
+Completed in 0.00991 (100 reqs/sec) | DB: 0.00125 (12%) | 302 Found [http://localhost/]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-11-22 18:33:14) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;35;1mUsuario Load (0.000241)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mCita Load (0.000166)[0m   [0;1mSELECT * FROM "citas" [0m
+Rendering template within layouts/lab
+Rendering admin/index
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mEspecialidad Load (0.000683)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000417)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.03806 (26 reqs/sec) | Rendering: 0.02380 (62%) | DB: 0.00251 (6%) | 200 OK [http://localhost/admin]
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2008-11-22 18:33:19) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"doctors"}
+  [4;35;1mEspecialidad Load (0.000627)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000394)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Rendering template within layouts/lab
+Rendering doctors/show
+  [4;35;1mEspecialidad Load (0.000188)[0m   [0mSELECT * FROM "especialidads" WHERE ("especialidads"."id" = 1) [0m
+  [4;36;1mUsuario Load (0.000349)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios".doctor_id = 4) LIMIT 1[0m
+  [4;35;1mUsuario Load (0.000197)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.09680 (10 reqs/sec) | Rendering: 0.07982 (82%) | DB: 0.00266 (2%) | 200 OK [http://localhost/doctors/4]
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2008-11-22 18:33:41) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"doctors"}
+  [4;36;1mEspecialidad Load (0.000601)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000396)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Rendering template within layouts/lab
+Rendering doctors/show
+  [4;36;1mEspecialidad Load (0.000197)[0m   [0;1mSELECT * FROM "especialidads" WHERE ("especialidads"."id" = 1) [0m
+  [4;35;1mUsuario Load (0.000265)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios".doctor_id = 4) LIMIT 1[0m
+  [4;36;1mUsuario Load (0.000206)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.03326 (30 reqs/sec) | Rendering: 0.01617 (48%) | DB: 0.00256 (7%) | 200 OK [http://localhost/doctors/4]
+
+
+Processing UsuariosController#edit (for 127.0.0.1 at 2008-11-22 18:33:43) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"edit", "id"=>"4", "controller"=>"usuarios"}
+  [4;35;1mUsuario Load (0.000247)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mUsuario Load (0.000209)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) [0m
+Rendering template within layouts/lab
+Rendering usuarios/edit
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mEspecialidad Load (0.000629)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000421)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.04834 (20 reqs/sec) | Rendering: 0.03631 (75%) | DB: 0.00280 (5%) | 200 OK [http://localhost/usuarios/4/edit]
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2008-11-22 18:35:07) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"doctors"}
+  [4;36;1mEspecialidad Load (0.000602)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000407)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Rendering template within layouts/lab
+Rendering doctors/show
+  [4;36;1mEspecialidad Load (0.000186)[0m   [0;1mSELECT * FROM "especialidads" WHERE ("especialidads"."id" = 1) [0m
+  [4;35;1mUsuario Load (0.000275)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios".doctor_id = 4) LIMIT 1[0m
+  [4;36;1mUsuario Load (0.000191)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.03111 (32 reqs/sec) | Rendering: 0.01395 (44%) | DB: 0.00257 (8%) | 200 OK [http://localhost/doctors/4]
+
+
+Processing UsuariosController#edit (for 127.0.0.1 at 2008-11-22 18:35:09) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"edit", "id"=>"4", "controller"=>"usuarios"}
+  [4;35;1mUsuario Load (0.000238)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mUsuario Load (0.000204)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) [0m
+Rendering template within layouts/lab
+Rendering usuarios/edit
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mEspecialidad Load (0.000615)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000399)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.02941 (33 reqs/sec) | Rendering: 0.01885 (64%) | DB: 0.00243 (8%) | 200 OK [http://localhost/usuarios/4/edit]
+
+
+Processing UsuariosController#edit (for 127.0.0.1 at 2008-11-22 18:35:34) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"edit", "id"=>"4", "controller"=>"usuarios"}
+  [4;36;1mUsuario Load (0.000233)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mUsuario Load (0.000200)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) [0m
+Rendering template within layouts/lab
+Rendering usuarios/edit
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mEspecialidad Load (0.000632)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000393)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.02887 (34 reqs/sec) | Rendering: 0.01853 (64%) | DB: 0.00237 (8%) | 200 OK [http://localhost/usuarios/4/edit]
+
+
+Processing UsuariosController#update (for 127.0.0.1 at 2008-11-22 18:35:44) [PUT]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"cc0553f7fd835b8ec33087cac8731cd40d4f5235", "_method"=>"put", "action"=>"update", "id"=>"4", "controller"=>"usuarios", "usuario"=>{"nombre"=>"carlos", "password_confirmation"=>"ritter", "password"=>"ritter"}}
+  [4;35;1mUsuario Load (0.000230)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mUsuario Load (0.000203)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) [0m
+  [4;35;1mSQL (0.000105)[0m   [0mSELECT "nombre" FROM "usuarios" WHERE ("usuarios".nombre = 'carlos' AND "usuarios".id <> 4) [0m
+  [4;36;1mUsuario Update (0.000309)[0m   [0;1mUPDATE "usuarios" SET "hashed_password" = '4ed269be8880afe457e6eff22c4d385313132e22', "updated_at" = '2008-11-23 00:35:44', "salt" = '182363700.405735911451558' WHERE "id" = 4[0m
+Redirected to http://localhost:3000/usuarios
+Completed in 0.01694 (59 reqs/sec) | DB: 0.00186 (10%) | 302 Found [http://localhost/usuarios/4]
+
+
+Processing UsuariosController#index (for 127.0.0.1 at 2008-11-22 18:35:44) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"index", "controller"=>"usuarios"}
+  [4;35;1mUsuario Load (0.000260)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mUsuario Load (0.000679)[0m   [0;1mSELECT * FROM "usuarios" ORDER BY nombre[0m
+Rendering template within layouts/lab
+Rendering usuarios/index
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mEspecialidad Load (0.000679)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000418)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.10015 (9 reqs/sec) | Rendering: 0.08803 (87%) | DB: 0.00308 (3%) | 200 OK [http://localhost/usuarios]
+
+
+Processing AdminController#logout (for 127.0.0.1 at 2008-11-22 18:35:48) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"logout", "controller"=>"admin"}
+  [4;36;1mUsuario Load (0.000235)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 0.00933 (107 reqs/sec) | DB: 0.00117 (12%) | 302 Found [http://localhost/admin/logout]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-22 18:35:48) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+Rendering template within layouts/lab
+Rendering admin/login
+  [4;35;1mUsuario Load (0.000149)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" IS NULL) LIMIT 1[0m
+Completed in 0.01086 (92 reqs/sec) | Rendering: 0.00868 (79%) | DB: 0.00109 (10%) | 200 OK [http://localhost/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-22 18:35:55) [POST]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"commit"=>"Login", "nombre"=>"carlos", "authenticity_token"=>"cc0553f7fd835b8ec33087cac8731cd40d4f5235", "action"=>"login", "controller"=>"admin", "password"=>"loredo"}
+  [4;36;1mUsuario Load (0.000249)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."nombre" = 'carlos') LIMIT 1[0m
+Rendering template within layouts/lab
+Rendering admin/login
+  [4;35;1mUsuario Load (0.000128)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" IS NULL) LIMIT 1[0m
+Completed in 0.01218 (82 reqs/sec) | Rendering: 0.00218 (17%) | DB: 0.00132 (10%) | 200 OK [http://localhost/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-22 18:36:00) [POST]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"commit"=>"Login", "nombre"=>"carlos", "authenticity_token"=>"cc0553f7fd835b8ec33087cac8731cd40d4f5235", "action"=>"login", "controller"=>"admin", "password"=>"ritter"}
+  [4;36;1mUsuario Load (0.000241)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."nombre" = 'carlos') LIMIT 1[0m
+Redirected to http://localhost:3000/admin
+Completed in 0.01007 (99 reqs/sec) | DB: 0.00117 (11%) | 302 Found [http://localhost/]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-11-22 18:36:00) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;35;1mUsuario Load (0.000238)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mCita Load (0.000158)[0m   [0;1mSELECT * FROM "citas" [0m
+Rendering template within layouts/lab
+Rendering admin/index
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mEspecialidad Load (0.000602)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000400)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.03820 (26 reqs/sec) | Rendering: 0.02415 (63%) | DB: 0.00236 (6%) | 200 OK [http://localhost/admin]
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2008-11-22 18:37:30) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"doctors"}
+  [4;35;1mEspecialidad Load (0.000602)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000388)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Rendering template within layouts/lab
+Rendering doctors/show
+  [4;35;1mEspecialidad Load (0.000196)[0m   [0mSELECT * FROM "especialidads" WHERE ("especialidads"."id" = 1) [0m
+  [4;36;1mUsuario Load (0.000258)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios".doctor_id = 4) LIMIT 1[0m
+  [4;35;1mUsuario Load (0.000190)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.03086 (32 reqs/sec) | Rendering: 0.01380 (44%) | DB: 0.00253 (8%) | 200 OK [http://localhost/doctors/4]
+
+
+Processing UsuariosController#edit (for 127.0.0.1 at 2008-11-22 18:37:31) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"edit", "id"=>"4", "controller"=>"usuarios"}
+  [4;36;1mUsuario Load (0.000230)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mUsuario Load (0.000204)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) [0m
+Rendering template within layouts/lab
+Rendering usuarios/edit
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mEspecialidad Load (0.000604)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000412)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.02861 (34 reqs/sec) | Rendering: 0.01834 (64%) | DB: 0.00241 (8%) | 200 OK [http://localhost/usuarios/4/edit]
+
+
+Processing UsuariosController#update (for 127.0.0.1 at 2008-11-22 18:37:37) [PUT]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"cc0553f7fd835b8ec33087cac8731cd40d4f5235", "_method"=>"put", "action"=>"update", "id"=>"4", "controller"=>"usuarios", "usuario"=>{"nombre"=>"carlos", "password_confirmation"=>"loredo", "password"=>"loredo"}}
+  [4;35;1mUsuario Load (0.000231)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mUsuario Load (0.000197)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) [0m
+  [4;35;1mSQL (0.000104)[0m   [0mSELECT "nombre" FROM "usuarios" WHERE ("usuarios".nombre = 'carlos' AND "usuarios".id <> 4) [0m
+  [4;36;1mUsuario Update (0.000556)[0m   [0;1mUPDATE "usuarios" SET "hashed_password" = '5b807976a073114fec2609df9bcdb08fb648e608', "updated_at" = '2008-11-23 00:37:37', "salt" = '164317700.434314692414371' WHERE "id" = 4[0m
+Redirected to http://localhost:3000/doctors/4
+Completed in 0.01584 (63 reqs/sec) | DB: 0.00204 (12%) | 302 Found [http://localhost/usuarios/4]
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2008-11-22 18:37:37) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"doctors"}
+  [4;35;1mEspecialidad Load (0.000597)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000394)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Rendering template within layouts/lab
+Rendering doctors/show
+  [4;35;1mEspecialidad Load (0.000191)[0m   [0mSELECT * FROM "especialidads" WHERE ("especialidads"."id" = 1) [0m
+  [4;36;1mUsuario Load (0.000276)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios".doctor_id = 4) LIMIT 1[0m
+  [4;35;1mUsuario Load (0.000192)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.03129 (31 reqs/sec) | Rendering: 0.01425 (45%) | DB: 0.00259 (8%) | 200 OK [http://localhost/doctors/4]
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2008-11-22 18:37:47) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"doctors"}
+  [4;36;1mEspecialidad Load (0.000672)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000426)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Rendering template within layouts/lab
+Rendering doctors/show
+  [4;36;1mEspecialidad Load (0.000223)[0m   [0;1mSELECT * FROM "especialidads" WHERE ("especialidads"."id" = 1) [0m
+  [4;35;1mUsuario Load (0.000286)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios".doctor_id = 4) LIMIT 1[0m
+  [4;36;1mUsuario Load (0.000197)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.09664 (10 reqs/sec) | Rendering: 0.01494 (15%) | DB: 0.00275 (2%) | 200 OK [http://localhost/doctors/4]
+
+
+Processing AdminController#logout (for 127.0.0.1 at 2008-11-22 18:37:50) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"logout", "controller"=>"admin"}
+  [4;35;1mUsuario Load (0.000231)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 0.00923 (108 reqs/sec) | DB: 0.00117 (12%) | 302 Found [http://localhost/admin/logout]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-22 18:37:50) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+Rendering template within layouts/lab
+Rendering admin/login
+  [4;36;1mUsuario Load (0.000171)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" IS NULL) LIMIT 1[0m
+Completed in 0.07744 (12 reqs/sec) | Rendering: 0.07529 (97%) | DB: 0.00111 (1%) | 200 OK [http://localhost/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-22 18:37:56) [POST]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"commit"=>"Login", "nombre"=>"carlos", "authenticity_token"=>"cc0553f7fd835b8ec33087cac8731cd40d4f5235", "action"=>"login", "controller"=>"admin", "password"=>"loredo"}
+  [4;35;1mUsuario Load (0.000246)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."nombre" = 'carlos') LIMIT 1[0m
+Redirected to http://localhost:3000/admin
+Completed in 0.01029 (97 reqs/sec) | DB: 0.00118 (11%) | 302 Found [http://localhost/]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-11-22 18:37:56) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;36;1mUsuario Load (0.000268)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mCita Load (0.000203)[0m   [0mSELECT * FROM "citas" [0m
+Rendering template within layouts/lab
+Rendering admin/index
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mEspecialidad Load (0.000691)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000430)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.10709 (9 reqs/sec) | Rendering: 0.09141 (85%) | DB: 0.00254 (2%) | 200 OK [http://localhost/admin]
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2008-11-22 18:38:00) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"doctors"}
+  [4;36;1mEspecialidad Load (0.000600)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000398)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Rendering template within layouts/lab
+Rendering doctors/show
+  [4;36;1mEspecialidad Load (0.000190)[0m   [0;1mSELECT * FROM "especialidads" WHERE ("especialidads"."id" = 1) [0m
+  [4;35;1mUsuario Load (0.000267)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios".doctor_id = 4) LIMIT 1[0m
+  [4;36;1mUsuario Load (0.000207)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.03168 (31 reqs/sec) | Rendering: 0.01452 (45%) | DB: 0.00265 (8%) | 200 OK [http://localhost/doctors/4]
+
+
+Processing LabController#lista_honorarios (for 127.0.0.1 at 2008-11-22 18:38:03) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"lista_honorarios", "id"=>"4", "controller"=>"lab"}
+  [4;35;1mUsuario Load (0.000277)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mEspecialidad Load (0.000614)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000421)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = '4') LIMIT 1[0m
+Rendering template within layouts/lab
+Rendered lab/_consultas (0.00077)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mDoctor Load (0.000446)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.03067 (32 reqs/sec) | Rendering: 0.00497 (16%) | DB: 0.00318 (10%) | 200 OK [http://localhost/lab/lista_honorarios/4]
+
+
+Processing PacientesController#index (for 127.0.0.1 at 2008-11-22 18:38:05) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"index", "controller"=>"pacientes"}
+  [4;36;1mUsuario Load (0.000237)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mEspecialidad Load (0.000602)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000422)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mEstudio Load (0.000536)[0m   [0mSELECT * FROM "estudios" [0m
+Rendering template within layouts/lab
+Rendering pacientes/index
+  [4;36;1mPaciente Load (0.000902)[0m   [0;1mSELECT "pacientes".* FROM "pacientes" INNER JOIN consultas ON pacientes.id = consultas.paciente_id WHERE (("consultas".doctor_id = 4)) [0m
+Rendered pacientes/_lista_pacientes (0.02052)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.07692 (13 reqs/sec) | Rendering: 0.04258 (55%) | DB: 0.00358 (4%) | 200 OK [http://localhost/pacientes]
+
+
+Processing ReferenciasController#index (for 127.0.0.1 at 2008-11-22 18:38:07) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"index", "controller"=>"referencias"}
+  [4;35;1mUsuario Load (0.000236)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mEstudio Load (0.000703)[0m   [0mSELECT * FROM "estudios" WHERE (id <= 3) [0m
+  [4;36;1mReferencia Load (0.000479)[0m   [0;1mSELECT * FROM "referencias" WHERE (doctor_id = 4) [0m
+Rendering template within layouts/lab
+Rendering referencias/index
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mEspecialidad Load (0.000622)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000401)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.07290 (13 reqs/sec) | Rendering: 0.02337 (32%) | DB: 0.00334 (4%) | 200 OK [http://localhost/referencias]
+
+
+Processing ReferenciasController#index (for 127.0.0.1 at 2008-11-22 18:38:29) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"index", "controller"=>"referencias"}
+  [4;35;1mUsuario Load (0.000244)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mEstudio Load (0.000435)[0m   [0mSELECT * FROM "estudios" WHERE (id <= 3) [0m
+  [4;36;1mReferencia Load (0.000300)[0m   [0;1mSELECT * FROM "referencias" WHERE (doctor_id = 4) [0m
+Rendering template within layouts/lab
+Rendering referencias/index
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mEspecialidad Load (0.000625)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000409)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.04287 (23 reqs/sec) | Rendering: 0.02195 (51%) | DB: 0.00294 (6%) | 200 OK [http://localhost/referencias]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-11-22 18:38:30) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/images/lpdf.jpg" with {:method=>:get}):
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/routing/route_set.rb:385:in `recognize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.2/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ReferenciasController#index (for 127.0.0.1 at 2008-11-22 18:38:41) [GET]
+  Session ID: 0d8bb20d0e85685f5fd386056cf8c92e
+  Parameters: {"action"=>"index", "controller"=>"referencias"}
+  [4;35;1mUsuario Load (0.000233)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mEstudio Load (0.000415)[0m   [0mSELECT * FROM "estudios" WHERE (id <= 3) [0m
+  [4;36;1mReferencia Load (0.000290)[0m   [0;1mSELECT * FROM "referencias" WHERE (doctor_id = 4) [0m
+Rendering template within layouts/lab
+Rendering referencias/index
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 4) LIMIT 1[0m
+  [4;35;1mEspecialidad Load (0.000614)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000434)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.04244 (23 reqs/sec) | Rendering: 0.02207 (52%) | DB: 0.00292 (6%) | 200 OK [http://localhost/referencias]
