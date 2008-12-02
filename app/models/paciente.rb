@@ -89,22 +89,22 @@ class Paciente < ActiveRecord::Base
   
   def direccion_fiscal_completa
       d = self.calle_fis unless self.calle_fis.nil?
-      d += ' Ext. ' + self.num_ext_fis unless self.num_ext_fis.nil?
-      d += ' Int. ' + self.num_int_fis unless self.num_int_fis.nil?
-      d += ' Col. ' + self.colonia_fis unless self.colonia_fis.nil?
-      d += ' Del/Mun. ' + self.del_mun unless self.del_mun.nil?
+      d += ' ' + self.num_ext_fis unless self.num_ext_fis.nil?
+      d += ' ' + self.num_int_fis unless self.num_int_fis.nil?
+      d += ' ' + self.colonia_fis unless self.colonia_fis.nil?
+      d += ' ' + self.del_mun unless self.del_mun.nil?
       d += ' ' + self.estado_fis unless self.estado_fis.nil?
-      d += ' CP. '+ self.codigo_fiscal
+      d += ' '+ self.codigo_fiscal
       d
   end
 
        
   def domicilio_completo
     d = self.calle_dom unless self.calle_dom.nil?
-    d += ' Ext. ' + self.num_ext_dom unless self.num_ext_dom.nil?
-    d += ' Int. ' + self.num_int_dom unless self.num_int_dom.nil?
-    d += ' Col. ' + self.colonia_dom unless self.colonia_dom.nil?
-    d += ' Del/Mun. ' + self.del_mun_dom unless self.del_mun_dom.nil?
+    d += ' ' + self.num_ext_dom unless self.num_ext_dom.nil?
+    d += ' ' + self.num_int_dom unless self.num_int_dom.nil?
+    d += ' ' + self.colonia_dom unless self.colonia_dom.nil?
+    d += ' ' + self.del_mun_dom unless self.del_mun_dom.nil?
     d += ' ' +self.estado_dom unless self.estado_dom.nil?
     d
     

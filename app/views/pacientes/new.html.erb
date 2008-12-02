@@ -87,6 +87,10 @@
 
 <div id ="fiscal">
 
+	<h4>RFC</h4>
+	<br>
+	<%= f.text_field :rfc  %>
+	<br>
 	<h4>Domicilio fiscal</h4><br/>
 		¿El domicilio particular es el mismo que el domicilio fiscal? <%= check_box_tag 'up_fis','1',false %> <br/>
 		<%= observe_field 'up_fis', :url => {:action => 'update_form' } %>

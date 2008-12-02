@@ -40656,3 +40656,2181 @@ Rendering referencias/index
   [4;35;1mEspecialidad Load (0.000614)[0m   [0mSELECT * FROM "especialidads" [0m
   [4;36;1mDoctor Load (0.000434)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
 Completed in 0.04244 (23 reqs/sec) | Rendering: 0.02207 (52%) | DB: 0.00292 (6%) | 200 OK [http://localhost/referencias]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-25 11:57:40) [GET]
+  Session ID: 9d448b912290a2e03de8e8cd2ff14e18
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+Rendering template within layouts/lab
+Rendering admin/login
+  [4;36;1mUsuario Load (0.000222)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" IS NULL) LIMIT 1[0m
+Completed in 0.12245 (8 reqs/sec) | Rendering: 0.11890 (97%) | DB: 0.00048 (0%) | 200 OK [http://localhost/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-25 11:57:45) [POST]
+  Session ID: 9d448b912290a2e03de8e8cd2ff14e18
+  Parameters: {"commit"=>"Login", "nombre"=>"admin", "authenticity_token"=>"7b9a893d0d2874d45b0ae0b924270c0d242587b6", "action"=>"login", "controller"=>"admin", "password"=>"123"}
+  [4;35;1mUsuario Load (0.000258)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."nombre" = 'admin') LIMIT 1[0m
+Redirected to http://localhost:3000/admin
+Completed in 0.01147 (87 reqs/sec) | DB: 0.00119 (10%) | 302 Found [http://localhost/]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-11-25 11:57:46) [GET]
+  Session ID: 9d448b912290a2e03de8e8cd2ff14e18
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;36;1mUsuario Load (0.000250)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mCita Load (0.000281)[0m   [0mSELECT * FROM "citas" [0m
+Rendering template within layouts/lab
+Rendering admin/index
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mEspecialidad Load (0.001052)[0m   [0;1mSELECT * FROM "especialidads" [0m
+Completed in 1.06581 (0 reqs/sec) | Rendering: 1.04089 (97%) | DB: 0.00254 (0%) | 200 OK [http://localhost/admin]
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2008-11-25 11:58:13) [GET]
+  Session ID: 9d448b912290a2e03de8e8cd2ff14e18
+  Parameters: {"action"=>"index", "controller"=>"doctors"}
+  [4;35;1mEspecialidad Load (0.000625)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000559)[0m   [0;1mSELECT * FROM "doctors" [0m
+Rendering template within layouts/lab
+Rendering doctors/index
+  [4;35;1mEspecialidad Load (0.000291)[0m   [0mSELECT * FROM "especialidads" WHERE ("especialidads"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "especialidads" WHERE ("especialidads"."id" = 1) [0m
+Rendered doctors/_lista (0.01143)
+  [4;35;1mUsuario Load (0.000234)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.06592 (15 reqs/sec) | Rendering: 0.05050 (76%) | DB: 0.00261 (3%) | 200 OK [http://localhost/doctors]
+
+
+Processing DoctorsController#new (for 127.0.0.1 at 2008-11-25 11:58:21) [GET]
+  Session ID: 9d448b912290a2e03de8e8cd2ff14e18
+  Parameters: {"action"=>"new", "controller"=>"doctors"}
+  [4;36;1mEspecialidad Load (0.000677)[0m   [0;1mSELECT * FROM "especialidads" [0m
+Rendering template within layouts/lab
+Rendering doctors/new
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mUsuario Load (0.000247)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.12911 (7 reqs/sec) | Rendering: 0.04540 (35%) | DB: 0.00191 (1%) | 200 OK [http://localhost/doctors/new]
+
+
+Processing DoctorsController#show_form (for 127.0.0.1 at 2008-11-25 12:00:19) [POST]
+  Session ID: 9d448b912290a2e03de8e8cd2ff14e18
+  Parameters: {"authenticity_token"=>"7b9a893d0d2874d45b0ae0b924270c0d242587b6", "action"=>"show_form", "controller"=>"doctors", "null"=>nil}
+Rendering doctors/show_form
+Completed in 0.02747 (36 reqs/sec) | Rendering: 0.02514 (91%) | DB: 0.00100 (3%) | 200 OK [http://localhost/doctors/show_form]
+
+
+Processing DoctorsController#show_form (for 127.0.0.1 at 2008-11-25 12:00:21) [POST]
+  Session ID: 9d448b912290a2e03de8e8cd2ff14e18
+  Parameters: {"authenticity_token"=>"7b9a893d0d2874d45b0ae0b924270c0d242587b6", "action"=>"show_form", "1"=>nil, "controller"=>"doctors"}
+Rendering doctors/show_form
+Completed in 0.00597 (167 reqs/sec) | Rendering: 0.00351 (58%) | DB: 0.00090 (15%) | 200 OK [http://localhost/doctors/show_form]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-29 09:23:24) [GET]
+  Session ID: ba2d61ffdfe1d01dd51f431e653d8dd3
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+Rendering template within layouts/lab
+Rendering admin/login
+  [4;36;1mUsuario Load (0.000241)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" IS NULL) LIMIT 1[0m
+Completed in 0.07889 (12 reqs/sec) | Rendering: 0.07536 (95%) | DB: 0.00056 (0%) | 200 OK [http://localhost/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-29 09:23:41) [GET]
+  Session ID: 6b1c8466cc1476aa245d154b05c0bace
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+Rendering template within layouts/lab
+Rendering admin/login
+  [4;35;1mUsuario Load (0.000155)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" IS NULL) LIMIT 1[0m
+Completed in 0.01111 (90 reqs/sec) | Rendering: 0.00890 (80%) | DB: 0.00102 (9%) | 200 OK [http://localhost/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-29 09:23:50) [GET]
+  Session ID: 9f7cbec2c98a0002276ee9d490522da6
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+Rendering template within layouts/lab
+Rendering admin/login
+  [4;36;1mUsuario Load (0.000146)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" IS NULL) LIMIT 1[0m
+Completed in 0.01131 (88 reqs/sec) | Rendering: 0.00900 (79%) | DB: 0.00104 (9%) | 200 OK [http://localhost/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-29 09:35:48) [GET]
+  Session ID: ba2d61ffdfe1d01dd51f431e653d8dd3
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+Rendering template within layouts/lab
+Rendering admin/login
+  [4;36;1mUsuario Load (0.000147)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" IS NULL) LIMIT 1[0m
+Completed in 0.01518 (65 reqs/sec) | Rendering: 0.01301 (85%) | DB: 0.00035 (2%) | 200 OK [http://localhost/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-29 09:35:54) [POST]
+  Session ID: ba2d61ffdfe1d01dd51f431e653d8dd3
+  Parameters: {"commit"=>"Login", "nombre"=>"admin", "authenticity_token"=>"e9b0fc9bb58319e151738b54fd9a8a684546de28", "action"=>"login", "controller"=>"admin", "password"=>"123"}
+  [4;35;1mUsuario Load (0.000239)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."nombre" = 'admin') LIMIT 1[0m
+Redirected to http://localhost:3000/admin
+Completed in 0.01131 (88 reqs/sec) | DB: 0.00114 (10%) | 302 Found [http://localhost/]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-11-29 09:35:54) [GET]
+  Session ID: ba2d61ffdfe1d01dd51f431e653d8dd3
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;36;1mUsuario Load (0.000235)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mCita Load (0.000177)[0m   [0mSELECT * FROM "citas" [0m
+Rendering template within layouts/lab
+Rendering admin/index
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mEspecialidad Load (0.000691)[0m   [0;1mSELECT * FROM "especialidads" [0m
+Completed in 1.07917 (0 reqs/sec) | Rendering: 1.06535 (98%) | DB: 0.00207 (0%) | 200 OK [http://localhost/admin]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-29 09:35:59) [GET]
+  Session ID: 6b1c8466cc1476aa245d154b05c0bace
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+Rendering template within layouts/lab
+Rendering admin/login
+  [4;35;1mUsuario Load (0.000189)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" IS NULL) LIMIT 1[0m
+Completed in 0.01749 (57 reqs/sec) | Rendering: 0.01513 (86%) | DB: 0.00110 (6%) | 200 OK [http://localhost/]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-11-29 09:36:00) [GET]
+  Session ID: ba2d61ffdfe1d01dd51f431e653d8dd3
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;36;1mUsuario Load (0.000234)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mCita Load (0.000153)[0m   [0mSELECT * FROM "citas" [0m
+Rendering template within layouts/lab
+Rendering admin/index
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mEspecialidad Load (0.000604)[0m   [0;1mSELECT * FROM "especialidads" [0m
+Completed in 0.03552 (28 reqs/sec) | Rendering: 0.02199 (61%) | DB: 0.00190 (5%) | 200 OK [http://localhost/admin]
+
+
+Processing PacientesController#index (for 127.0.0.1 at 2008-11-29 09:36:04) [GET]
+  Session ID: ba2d61ffdfe1d01dd51f431e653d8dd3
+  Parameters: {"action"=>"index", "controller"=>"pacientes"}
+  [4;35;1mUsuario Load (0.000233)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mEspecialidad Load (0.000595)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mEstudio Load (0.000587)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000241)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."fecha_consulta" BETWEEN '2008-11-29 00:00:00' AND '2008-11-29 23:59:59') [0m
+Rendering template within layouts/lab
+Rendering pacientes/index
+Rendered pacientes/_lista_pacientes (0.00042)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.09774 (10 reqs/sec) | Rendering: 0.00483 (4%) | DB: 0.00255 (2%) | 200 OK [http://localhost/pacientes]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-29 09:36:17) [GET]
+  Session ID: 6b1c8466cc1476aa245d154b05c0bace
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+Rendering template within layouts/lab
+Rendering admin/login
+  [4;36;1mUsuario Load (0.000173)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" IS NULL) LIMIT 1[0m
+Completed in 0.01224 (81 reqs/sec) | Rendering: 0.00998 (81%) | DB: 0.00114 (9%) | 200 OK [http://localhost/]
+
+
+Processing PacientesController#index (for 127.0.0.1 at 2008-11-29 09:36:18) [GET]
+  Session ID: ba2d61ffdfe1d01dd51f431e653d8dd3
+  Parameters: {"action"=>"index", "controller"=>"pacientes"}
+  [4;35;1mUsuario Load (0.000236)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mEspecialidad Load (0.000602)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mEstudio Load (0.000580)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000143)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."fecha_consulta" BETWEEN '2008-11-29 00:00:00' AND '2008-11-29 23:59:59') [0m
+Rendering template within layouts/lab
+Rendering pacientes/index
+Rendered pacientes/_lista_pacientes (0.00037)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.03596 (27 reqs/sec) | Rendering: 0.00414 (11%) | DB: 0.00247 (6%) | 200 OK [http://localhost/pacientes]
+
+
+Processing PacientesController#index (for 127.0.0.1 at 2008-11-29 09:36:38) [GET]
+  Session ID: ba2d61ffdfe1d01dd51f431e653d8dd3
+  Parameters: {"action"=>"index", "controller"=>"pacientes"}
+  [4;36;1mUsuario Load (0.000236)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mEspecialidad Load (0.000625)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mEstudio Load (0.000555)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000152)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."fecha_consulta" BETWEEN '2008-11-29 00:00:00' AND '2008-11-29 23:59:59') [0m
+Rendering template within layouts/lab
+Rendering pacientes/index
+Rendered pacientes/_lista_pacientes (0.00042)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.09636 (10 reqs/sec) | Rendering: 0.00432 (4%) | DB: 0.00249 (2%) | 200 OK [http://localhost/pacientes]
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2008-11-29 09:38:14) [GET]
+  Session ID: ba2d61ffdfe1d01dd51f431e653d8dd3
+  Parameters: {"action"=>"index", "controller"=>"doctors"}
+  [4;35;1mEspecialidad Load (0.000600)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000541)[0m   [0;1mSELECT * FROM "doctors" [0m
+Rendering template within layouts/lab
+Rendering doctors/index
+  [4;35;1mEspecialidad Load (0.000321)[0m   [0mSELECT * FROM "especialidads" WHERE ("especialidads"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "especialidads" WHERE ("especialidads"."id" = 1) [0m
+Rendered doctors/_lista (0.01190)
+  [4;35;1mUsuario Load (0.000235)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.06327 (15 reqs/sec) | Rendering: 0.04837 (76%) | DB: 0.00259 (4%) | 200 OK [http://localhost/doctors]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-29 19:22:51) [GET]
+  Session ID: ba2d61ffdfe1d01dd51f431e653d8dd3
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+Rendering template within layouts/lab
+Rendering admin/login
+  [4;36;1mUsuario Load (0.000167)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" IS NULL) LIMIT 1[0m
+Completed in 0.01218 (82 reqs/sec) | Rendering: 0.00975 (80%) | DB: 0.00113 (9%) | 200 OK [http://localhost/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-11-29 19:22:55) [POST]
+  Session ID: ba2d61ffdfe1d01dd51f431e653d8dd3
+  Parameters: {"commit"=>"Login", "nombre"=>"admin", "authenticity_token"=>"e9b0fc9bb58319e151738b54fd9a8a684546de28", "action"=>"login", "controller"=>"admin", "password"=>"123"}
+  [4;35;1mUsuario Load (0.000272)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."nombre" = 'admin') LIMIT 1[0m
+Redirected to http://localhost:3000/admin
+Completed in 0.01072 (93 reqs/sec) | DB: 0.00124 (11%) | 302 Found [http://localhost/]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-11-29 19:22:55) [GET]
+  Session ID: ba2d61ffdfe1d01dd51f431e653d8dd3
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;36;1mUsuario Load (0.000235)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mCita Load (0.000192)[0m   [0mSELECT * FROM "citas" [0m
+Rendering template within layouts/lab
+Rendering admin/index
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mEspecialidad Load (0.000606)[0m   [0;1mSELECT * FROM "especialidads" [0m
+Completed in 0.03717 (26 reqs/sec) | Rendering: 0.02355 (63%) | DB: 0.00197 (5%) | 200 OK [http://localhost/admin]
+
+
+Processing PacientesController#index (for 127.0.0.1 at 2008-11-29 19:23:00) [GET]
+  Session ID: ba2d61ffdfe1d01dd51f431e653d8dd3
+  Parameters: {"action"=>"index", "controller"=>"pacientes"}
+  [4;35;1mUsuario Load (0.000240)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mEspecialidad Load (0.000599)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mEstudio Load (0.000586)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000156)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."fecha_consulta" BETWEEN '2008-11-29 00:00:00' AND '2008-11-29 23:59:59') [0m
+Rendering template within layouts/lab
+Rendering pacientes/index
+Rendered pacientes/_lista_pacientes (0.00040)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.03664 (27 reqs/sec) | Rendering: 0.00317 (8%) | DB: 0.00256 (6%) | 200 OK [http://localhost/pacientes]
+
+
+Processing PacientesController#new (for 127.0.0.1 at 2008-11-29 19:23:02) [GET]
+  Session ID: ba2d61ffdfe1d01dd51f431e653d8dd3
+  Parameters: {"action"=>"new", "controller"=>"pacientes"}
+  [4;36;1mEstudio Load (0.000541)[0m   [0;1mSELECT * FROM "estudios" [0m
+Rendering template within layouts/lab
+Rendering pacientes/new
+ERROR: compiling _run_erb_47app47views47pacientes47new46html46erb RAISED compile error
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/views/pacientes/new.html.erb:91: syntax error, unexpected '<'
+	<%= f.text_field :rfc  ).to_s); _erbout.concat "\n"
+	 ^
+Function body: def _run_erb_47app47views47pacientes47new46html46erb(local_assigns)
+_erbout = ''; _erbout.concat "\n"
+_erbout.concat "<h1>Captura los datos del paciente </h1>\n"
+_erbout.concat(( error_messages_for :consulta ).to_s); _erbout.concat "\n"
+ form_for(@paciente) do |f| ; _erbout.concat "\n"
+_erbout.concat "  "; _erbout.concat(( f.error_messages ).to_s); _erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "  <p>\t\n"
+_erbout.concat "    "; _erbout.concat(( f.label 'Primer Nombre' ).to_s); _erbout.concat "<br />\n"
+_erbout.concat "    "; _erbout.concat(( f.text_field :nombre ).to_s)
+_erbout.concat "  </p>\n"
+_erbout.concat "  <p>\t\n"
+_erbout.concat "    "; _erbout.concat(( f.label 'Segundo Nombre' ).to_s); _erbout.concat "<br />\n"
+_erbout.concat "    "; _erbout.concat(( f.text_field :nombre_2 ).to_s)
+_erbout.concat "  </p>\n"
+_erbout.concat "\n"
+_erbout.concat "  <p>\n"
+_erbout.concat "    "; _erbout.concat(( f.label 'Apellido Paterno' ).to_s); _erbout.concat "<br />\n"
+_erbout.concat "    "; _erbout.concat(( f.text_field :app_pat ).to_s); _erbout.concat "\n"
+_erbout.concat "  </p>\n"
+_erbout.concat "  <p>\n"
+_erbout.concat "    "; _erbout.concat(( f.label 'Apellido Materno' ).to_s); _erbout.concat "<br />\n"
+_erbout.concat "    "; _erbout.concat(( f.text_field :app_mat ).to_s); _erbout.concat "\n"
+_erbout.concat "  </p>\n"
+_erbout.concat "  <p>\n"
+_erbout.concat "\t"; _erbout.concat(( f.select :genero, Paciente::GENERO, :prompt => "Selecciona el genero"  ).to_s); _erbout.concat "\n"
+_erbout.concat "  </p\n"
+_erbout.concat "  <p>\n"
+_erbout.concat "    "; _erbout.concat(( f.label 'Fecha de nacimiento' ).to_s); _erbout.concat "<br />\n"
+_erbout.concat "\t"; _erbout.concat(( calendar_date_select_tag :fecha_nac,Time.now.strftime('%d-%m-%Y'), :year_range => 30.years.ago..0.years.ago  ).to_s); _erbout.concat "\n"
+_erbout.concat "    \n"
+_erbout.concat "  </p>\n"
+_erbout.concat "<h4>Contacto del Paciente:</h4>\n"
+_erbout.concat "<p>\n"
+_erbout.concat "  "; _erbout.concat(( f.label 'Nombre del contacto' ).to_s); _erbout.concat "<br />\n"
+_erbout.concat "\t"; _erbout.concat(( f.text_field :nombre_contacto  ).to_s); _erbout.concat "\n"
+_erbout.concat "</p>\n"
+_erbout.concat "<h4>Tel\303\251fonos:</h4>\n"
+_erbout.concat "  <p>\n"
+_erbout.concat "    "; _erbout.concat(( f.label 'Celular' ).to_s); _erbout.concat "<br />\n"
+_erbout.concat "\t"; _erbout.concat(( f.text_field :celular  ).to_s); _erbout.concat "\n"
+_erbout.concat "  </p>\n"
+_erbout.concat "\n"
+_erbout.concat "  <p>\n"
+_erbout.concat "    "; _erbout.concat(( f.label 'Casa' ).to_s); _erbout.concat "<br />\n"
+_erbout.concat "\t"; _erbout.concat(( f.text_field :casa  ).to_s); _erbout.concat "\n"
+_erbout.concat "  </p>\n"
+_erbout.concat "\n"
+_erbout.concat "  <p>\n"
+_erbout.concat "    "; _erbout.concat(( f.label 'Correo electrónico' ).to_s); _erbout.concat "<br />\n"
+_erbout.concat "\t"; _erbout.concat(( f.text_field :correo  ).to_s); _erbout.concat "\n"
+_erbout.concat "  </p>\n"
+_erbout.concat "\n"
+_erbout.concat "<h4>Domicilio particular</h4>\n"
+_erbout.concat "\n"
+_erbout.concat "  \t"; _erbout.concat(( f.label 'Calle' ).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\t"; _erbout.concat(( f.text_field :calle_dom  ).to_s); _erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "  \t"; _erbout.concat(( f.label 'Exterior' ).to_s); _erbout.concat "\n"
+_erbout.concat(( f.text_field :num_ext_dom ).to_s); _erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "  "; _erbout.concat(( f.label 'Interior' ).to_s); _erbout.concat "\n"
+_erbout.concat(( f.text_field :num_int_dom ).to_s); _erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "<p>\n"
+_erbout.concat "\t"; _erbout.concat(( f.label 'Colonia' ).to_s); _erbout.concat "\n"
+_erbout.concat "\t"; _erbout.concat(( f.text_field :colonia_dom  ).to_s); _erbout.concat "\n"
+_erbout.concat "</p>\n"
+_erbout.concat "\n"
+_erbout.concat "<p>\n"
+_erbout.concat "\t"; _erbout.concat(( f.label 'Delegación / Municipio' ).to_s); _erbout.concat "\n"
+_erbout.concat "\t"; _erbout.concat(( f.text_field :del_mun_dom  ).to_s); _erbout.concat "\n"
+_erbout.concat "\t"; _erbout.concat(( f.label 'Estado' ).to_s); _erbout.concat "\n"
+_erbout.concat "\t"; _erbout.concat(( text_field_tag :estado_dom  ).to_s); _erbout.concat "\n"
+_erbout.concat "\t"; _erbout.concat(( f.label 'Código Postal' ).to_s); _erbout.concat "\n"
+_erbout.concat "\t"; _erbout.concat(( f.text_field :cp_dom  ).to_s); _erbout.concat "\n"
+_erbout.concat "</p>\n"
+_erbout.concat "\n"
+_erbout.concat " <br/>\n"
+_erbout.concat "\302\277Deseas capturar los datos del domicilio fiscal? "; _erbout.concat(( check_box_tag 'dom_fis','1',true ).to_s); _erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat(( observe_field 'dom_fis', :url => {:action => 'show_form' } ).to_s); _erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "<div id =\"fiscal\">\n"
+_erbout.concat "\n"
+_erbout.concat "\t"; _erbout.concat(( 'RFC'<br>
+	<%= f.text_field :rfc  ).to_s); _erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "\t<h4>Domicilio fiscal</h4><br/>\n"
+_erbout.concat "\t\t\302\277El domicilio particular es el mismo que el domicilio fiscal? "; _erbout.concat(( check_box_tag 'up_fis','1',false ).to_s); _erbout.concat " <br/>\n"
+_erbout.concat "\t\t"; _erbout.concat(( observe_field 'up_fis', :url => {:action => 'update_form' } ).to_s); _erbout.concat "\n"
+_erbout.concat "\t  \t"; _erbout.concat(( f.label 'Calle' ).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\t\t"; _erbout.concat(( f.text_field :calle_fis  ).to_s); _erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "\t  \t"; _erbout.concat(( f.label 'Exterior' ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t"; _erbout.concat(( f.text_field :num_ext_fis ).to_s); _erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "\t  \t"; _erbout.concat(( f.label 'Interior' ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t"; _erbout.concat(( f.text_field :num_int_fis ).to_s); _erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "\t<p>\n"
+_erbout.concat "\t\t"; _erbout.concat(( f.label 'Colonia' ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t"; _erbout.concat(( f.text_field :colonia_fis  ).to_s); _erbout.concat "\n"
+_erbout.concat "\t</p>\n"
+_erbout.concat "\n"
+_erbout.concat "\t<p>\n"
+_erbout.concat "\t\t"; _erbout.concat(( f.label 'Delegación / Municipio' ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t"; _erbout.concat(( f.text_field :del_mun  ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t"; _erbout.concat(( f.label 'Estado' ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t"; _erbout.concat(( f.text_field :estado_fis  ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t"; _erbout.concat(( f.label 'Código Postal' ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t"; _erbout.concat(( f.text_field :cp_fis  ).to_s); _erbout.concat "\n"
+_erbout.concat "\t</p>\t\n"
+_erbout.concat "</div>\n"
+_erbout.concat "\t\t\n"
+_erbout.concat "\n"
+_erbout.concat "<p>\n"
+_erbout.concat "\n"
+_erbout.concat "</p>\n"
+_erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "\t"; _erbout.concat(( render :partial => 'consulta', @collection => @paciente.consultas ).to_s); _erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "  <p>\n"
+_erbout.concat "\t"; _erbout.concat(( submit_tag "Crear" ).to_s); _erbout.concat "\n"
+_erbout.concat "  </p>\n"
+ end ; _erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat(( link_to 'Back', pacientes_path ).to_s); _erbout
+end
+Backtrace: /Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/views/pacientes/new.html.erb:136:in `compile_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:55:in `prepare!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:34:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:22:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/base.rb:248:in `render_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1112:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:869:in `render_with_no_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:884:in `render_with_no_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:131:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:131:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:160:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:160:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:154:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:154:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/pacientes_controller.rb:67:in `new'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:579:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.1.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.1.2/lib/active_record/query_cache.rb:8:in `cache'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/session_management.rb:130:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:389:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:149:in `handle_request'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:107:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:35:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+/Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+/Library/Ruby/Gems/1.8/gems/rails-2.1.2/lib/commands/servers/mongrel.rb:64
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+/Library/Ruby/Gems/1.8/gems/rails-2.1.2/lib/commands/server.rb:39
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/views/pacientes/new.html.erb:91: syntax error, unexpected '<'
+	<%= f.text_field :rfc  ).to_s); _erbout.concat "\n"
+	 ^) on line #91 of pacientes/new.html.erb:
+88: <div id ="fiscal">
+89: 
+90: 	<%= 'RFC'<br>
+91: 	<%= f.text_field :rfc  %>
+92: 
+93: 	<h4>Domicilio fiscal</h4><br/>
+94: 		¿El domicilio particular es el mismo que el domicilio fiscal? <%= check_box_tag 'up_fis','1',false %> <br/>
+
+    app/views/pacientes/new.html.erb:136:in `compile_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:55:in `prepare!'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:34:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/base.rb:248:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1112:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:869:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:884:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:131:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:160:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:160:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:154:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:154:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/pacientes_controller.rb:67:in `new'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:579:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.2/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PacientesController#new (for 127.0.0.1 at 2008-11-29 19:23:21) [GET]
+  Session ID: ba2d61ffdfe1d01dd51f431e653d8dd3
+  Parameters: {"action"=>"new", "controller"=>"pacientes"}
+  [4;35;1mEstudio Load (0.000542)[0m   [0mSELECT * FROM "estudios" [0m
+Rendering template within layouts/lab
+Rendering pacientes/new
+  [4;36;1mEspecialidad Load (0.000686)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000548)[0m   [0mSELECT * FROM "doctors" [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" [0m
+Rendered pacientes/_consulta (0.02890)
+  [4;35;1mUsuario Load (0.000238)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.26288 (3 reqs/sec) | Rendering: 0.23979 (91%) | DB: 0.00291 (1%) | 200 OK [http://localhost/pacientes/new]
+
+
+Processing PacientesController#new (for 127.0.0.1 at 2008-11-29 19:23:41) [GET]
+  Session ID: ba2d61ffdfe1d01dd51f431e653d8dd3
+  Parameters: {"action"=>"new", "controller"=>"pacientes"}
+  [4;36;1mEstudio Load (0.000594)[0m   [0;1mSELECT * FROM "estudios" [0m
+Rendering template within layouts/lab
+Rendering pacientes/new
+  [4;35;1mEspecialidad Load (0.000605)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000546)[0m   [0;1mSELECT * FROM "doctors" [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" [0m
+Rendered pacientes/_consulta (0.02762)
+  [4;36;1mUsuario Load (0.000252)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.13858 (7 reqs/sec) | Rendering: 0.05060 (36%) | DB: 0.00289 (2%) | 200 OK [http://localhost/pacientes/new]
+
+
+Processing PacientesController#new (for 127.0.0.1 at 2008-11-29 19:23:47) [GET]
+  Session ID: ba2d61ffdfe1d01dd51f431e653d8dd3
+  Parameters: {"action"=>"new", "controller"=>"pacientes"}
+  [4;35;1mEstudio Load (0.000583)[0m   [0mSELECT * FROM "estudios" [0m
+Rendering template within layouts/lab
+Rendering pacientes/new
+  [4;36;1mEspecialidad Load (0.000610)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000556)[0m   [0mSELECT * FROM "doctors" [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" [0m
+Rendered pacientes/_consulta (0.02723)
+  [4;35;1mUsuario Load (0.000238)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.13729 (7 reqs/sec) | Rendering: 0.05030 (36%) | DB: 0.00289 (2%) | 200 OK [http://localhost/pacientes/new]
+
+
+Processing PacientesController#new (for 127.0.0.1 at 2008-11-29 19:25:16) [GET]
+  Session ID: ba2d61ffdfe1d01dd51f431e653d8dd3
+  Parameters: {"action"=>"new", "controller"=>"pacientes"}
+  [4;36;1mEstudio Load (0.000563)[0m   [0;1mSELECT * FROM "estudios" [0m
+Rendering template within layouts/lab
+Rendering pacientes/new
+  [4;35;1mEspecialidad Load (0.000607)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000531)[0m   [0;1mSELECT * FROM "doctors" [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" [0m
+Rendered pacientes/_consulta (0.02676)
+  [4;36;1mUsuario Load (0.000250)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.07167 (13 reqs/sec) | Rendering: 0.04727 (65%) | DB: 0.00287 (4%) | 200 OK [http://localhost/pacientes/new]
+
+
+Processing PacientesController#new (for 127.0.0.1 at 2008-11-29 19:25:23) [GET]
+  Session ID: ba2d61ffdfe1d01dd51f431e653d8dd3
+  Parameters: {"action"=>"new", "controller"=>"pacientes"}
+  [4;35;1mEstudio Load (0.000567)[0m   [0mSELECT * FROM "estudios" [0m
+Rendering template within layouts/lab
+Rendering pacientes/new
+  [4;36;1mEspecialidad Load (0.000608)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000559)[0m   [0mSELECT * FROM "doctors" [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" [0m
+Rendered pacientes/_consulta (0.02688)
+  [4;35;1mUsuario Load (0.000241)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.07061 (14 reqs/sec) | Rendering: 0.04555 (64%) | DB: 0.00289 (4%) | 200 OK [http://localhost/pacientes/new]
+
+
+Processing PacientesController#new (for 127.0.0.1 at 2008-11-29 19:26:13) [GET]
+  Session ID: ba2d61ffdfe1d01dd51f431e653d8dd3
+  Parameters: {"action"=>"new", "controller"=>"pacientes"}
+  [4;36;1mEstudio Load (0.000563)[0m   [0;1mSELECT * FROM "estudios" [0m
+Rendering template within layouts/lab
+Rendering pacientes/new
+  [4;35;1mEspecialidad Load (0.000614)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000574)[0m   [0;1mSELECT * FROM "doctors" [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" [0m
+Rendered pacientes/_consulta (0.02488)
+  [4;36;1mUsuario Load (0.000239)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.06950 (14 reqs/sec) | Rendering: 0.04548 (65%) | DB: 0.00290 (4%) | 200 OK [http://localhost/pacientes/new]
+
+
+Processing PacientesController#create (for 127.0.0.1 at 2008-11-29 19:26:56) [POST]
+  Session ID: ba2d61ffdfe1d01dd51f431e653d8dd3
+  Parameters: {"commit"=>"Crear", "fecha_consulta"=>"", "dom_fis"=>"1", "fecha_nac"=>"28-09-1981", "authenticity_token"=>"e9b0fc9bb58319e151738b54fd9a8a684546de28", "action"=>"create", "fecha_envio"=>"", "paciente"=>{"genero"=>"f", "celular"=>"", "del_mun"=>"", "casa"=>"", "colonia_fis"=>"", "estado_fis"=>"", "cp_fis"=>"", "nombre"=>"Denisse", "app_mat"=>"Rios", "calle_fis"=>"", "num_int_dom"=>"", "del_mun_dom"=>"", "correo"=>"", "num_ext_dom"=>"", "rfc"=>"", "app_pat"=>"Guerrero", "nombre_2"=>"", "num_ext_fis"=>"", "num_int_fis"=>"", "colonia_dom"=>"", "nombre_contacto"=>"", "cp_dom"=>"", "calle_dom"=>"", "consulta_atributos"=>{"diagnostico"=>"", "medicina_actual"=>"", "doctor_id"=>"5", "medicina_anterior"=>"", "estudio_id"=>"2"}}, "controller"=>"pacientes", "estado_dom"=>""}
+  [4;35;1mEstudio Load (0.000581)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mSQL (0.000143)[0m   [0;1mSELECT "rfc_pac" FROM "pacientes" WHERE ("pacientes".rfc_pac = 'GURD810928') [0m
+Rendering template within layouts/lab
+Rendering pacientes/new
+  [4;35;1mEspecialidad Load (0.000623)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000622)[0m   [0;1mSELECT * FROM "doctors" [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" [0m
+Rendered pacientes/_consulta (0.02688)
+  [4;36;1mUsuario Load (0.000243)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.07227 (13 reqs/sec) | Rendering: 0.04211 (58%) | DB: 0.00313 (4%) | 200 OK [http://localhost/pacientes]
+
+
+Processing PacientesController#create (for 127.0.0.1 at 2008-11-29 19:27:51) [POST]
+  Session ID: ba2d61ffdfe1d01dd51f431e653d8dd3
+  Parameters: {"commit"=>"Crear", "fecha_consulta"=>"", "dom_fis"=>"1", "fecha_nac"=>"29-11-2008", "authenticity_token"=>"e9b0fc9bb58319e151738b54fd9a8a684546de28", "action"=>"create", "fecha_envio"=>"", "paciente"=>{"genero"=>"f", "celular"=>"", "del_mun"=>"", "casa"=>"", "colonia_fis"=>"", "estado_fis"=>"", "cp_fis"=>"", "nombre"=>"Denisse", "app_mat"=>"Rios", "calle_fis"=>"", "num_int_dom"=>"", "del_mun_dom"=>"", "correo"=>"", "num_ext_dom"=>"", "rfc"=>"", "app_pat"=>"Guerrero", "nombre_2"=>"", "num_ext_fis"=>"", "num_int_fis"=>"", "colonia_dom"=>"", "nombre_contacto"=>"", "cp_dom"=>"", "calle_dom"=>"", "consulta_atributos"=>{"diagnostico"=>"", "medicina_actual"=>"", "doctor_id"=>"4", "medicina_anterior"=>"", "estudio_id"=>"1"}}, "controller"=>"pacientes", "estado_dom"=>""}
+  [4;35;1mEstudio Load (0.000561)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mSQL (0.000154)[0m   [0;1mSELECT "rfc_pac" FROM "pacientes" WHERE ("pacientes".rfc_pac = 'GURD081129') [0m
+  [4;35;1mPaciente Create (0.000339)[0m   [0mINSERT INTO "pacientes" ("celular", "genero", "del_mun", "colonia_fis", "estado_fis", "cp_fis", "casa", "recados", "updated_at", "nombre", "app_mat", "calle_fis", "fecha_nac", "del_mun_dom", "num_int_dom", "rfc", "oficina", "correo", "num_ext_dom", "app_pat", "nombre_2", "rfc_pac", "fax", "num_int_fis", "num_ext_fis", "colonia_dom", "estado_dom", "cp_dom", "pagina_web", "nombre_contacto", "calle_dom", "created_at", "razon") VALUES('', 'f', '', '', '', NULL, '', NULL, '2008-11-30 01:27:51', 'Denisse', 'Rios', '', '2008-11-29', '', '', '', NULL, '', '', 'Guerrero', '', 'GURD081129', NULL, '', '', '', NULL, NULL, NULL, '', '', '2008-11-30 01:27:51', NULL)[0m
+  [4;36;1mConsulta Create (0.000131)[0m   [0;1mINSERT INTO "consultas" ("cita_id", "fecha_consulta", "diagnostico", "medicina_actual", "updated_at", "paciente_id", "doctor_id", "medicina_anterior", "fecha_envio", "fecha_in_sintomas", "estudio_id", "created_at") VALUES(NULL, NULL, '', '', '2008-11-30 01:27:51', 35, 4, '', NULL, NULL, 1, '2008-11-30 01:27:51')[0m
+Redirected to http://localhost:3000/pacientes/35
+Completed in 0.03563 (28 reqs/sec) | DB: 0.00212 (5%) | 302 Found [http://localhost/pacientes]
+
+
+Processing PacientesController#show (for 127.0.0.1 at 2008-11-29 19:27:51) [GET]
+  Session ID: ba2d61ffdfe1d01dd51f431e653d8dd3
+  Parameters: {"action"=>"show", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000481)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+Rendering template within layouts/lab
+Rendering pacientes/show
+  [4;36;1mUsuario Load (0.000236)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mEstudio Load (0.000555)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000264)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".paciente_id = 35) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mEspecialidad Load (0.000689)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000434)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mEstudio Load (0.000294)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+Rendered consultas/_registro (0.09273)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mDoctor Load (0.001012)[0m   [0;1mSELECT * FROM "doctors" [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "estudios" [0m
+Rendered pacientes/_record (0.01565)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.21193 (4 reqs/sec) | Rendering: 0.19789 (93%) | DB: 0.00492 (2%) | 200 OK [http://localhost/pacientes/35]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-12-02 01:05:21) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+Rendering template within layouts/lab
+Rendering admin/login
+  [4;36;1mUsuario Load (0.000200)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" IS NULL) LIMIT 1[0m
+Completed in 0.09150 (10 reqs/sec) | Rendering: 0.08738 (95%) | DB: 0.00076 (0%) | 200 OK [http://localhost/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-12-02 01:05:25) [POST]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"commit"=>"Login", "nombre"=>"admin", "authenticity_token"=>"d6b7055fd065a9b86261c1b31912ac9e343104b3", "action"=>"login", "controller"=>"admin", "password"=>"123"}
+  [4;35;1mUsuario Load (0.000263)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."nombre" = 'admin') LIMIT 1[0m
+Redirected to http://localhost:3000/admin
+Completed in 0.01091 (91 reqs/sec) | DB: 0.00123 (11%) | 302 Found [http://localhost/]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-12-02 01:05:25) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;36;1mUsuario Load (0.000288)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mCita Load (0.000261)[0m   [0mSELECT * FROM "citas" [0m
+Rendering template within layouts/lab
+Rendering admin/index
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mEspecialidad Load (0.001083)[0m   [0;1mSELECT * FROM "especialidads" [0m
+Completed in 0.83943 (1 reqs/sec) | Rendering: 0.81484 (97%) | DB: 0.00269 (0%) | 200 OK [http://localhost/admin]
+
+
+Processing PacientesController#index (for 127.0.0.1 at 2008-12-02 01:05:30) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"index", "controller"=>"pacientes"}
+  [4;35;1mUsuario Load (0.000239)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mEspecialidad Load (0.000604)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mEstudio Load (0.000911)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000242)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."fecha_consulta" BETWEEN '2008-12-02 00:00:00' AND '2008-12-02 23:59:59') [0m
+Rendering template within layouts/lab
+Rendering pacientes/index
+Rendered pacientes/_lista_pacientes (0.00059)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.08173 (12 reqs/sec) | Rendering: 0.00693 (8%) | DB: 0.00336 (4%) | 200 OK [http://localhost/pacientes]
+
+
+Processing PacientesController#index (for 127.0.0.1 at 2008-12-02 01:05:32) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"commit"=>"Buscar", "search"=>"", "action"=>"index", "controller"=>"pacientes"}
+  [4;36;1mUsuario Load (0.000249)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mPaciente Load (0.000763)[0m   [0mSELECT * FROM "pacientes" WHERE (nombre LIKE '%%' or app_pat LIKE '%%' or app_mat LIKE '%%') [0m
+Rendering template within layouts/lab
+Rendering pacientes/index
+Rendered pacientes/_lista_pacientes (0.00729)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mEspecialidad Load (0.000656)[0m   [0mSELECT * FROM "especialidads" [0m
+Completed in 0.03935 (25 reqs/sec) | Rendering: 0.02255 (57%) | DB: 0.00259 (6%) | 200 OK [http://localhost/pacientes?search=&commit=Buscar]
+
+
+Processing PacientesController#show (for 127.0.0.1 at 2008-12-02 01:05:33) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"show", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000546)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+Rendering template within layouts/lab
+Rendering pacientes/show
+  [4;35;1mUsuario Load (0.000248)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mEstudio Load (0.000584)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000305)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".paciente_id = 35) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mEspecialidad Load (0.000713)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000464)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mEstudio Load (0.000301)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+Rendered consultas/_registro (0.08754)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mDoctor Load (0.000636)[0m   [0mSELECT * FROM "doctors" [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" [0m
+Rendered pacientes/_record (0.06476)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.24156 (4 reqs/sec) | Rendering: 0.22756 (94%) | DB: 0.00469 (1%) | 200 OK [http://localhost/pacientes/35]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:05:36) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000496)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;35;1mEstudio Load (0.000669)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000307)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mEspecialidad Load (0.000634)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000398)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.55627 (1 reqs/sec) | Rendering: 0.45839 (82%) | DB: 0.00340 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:06:18) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000487)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;36;1mEstudio Load (0.000539)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000258)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mEspecialidad Load (0.000633)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000422)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.34816 (2 reqs/sec) | Rendering: 0.32217 (92%) | DB: 0.00323 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:06:34) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000516)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;35;1mEstudio Load (0.000579)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000300)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mEspecialidad Load (0.000599)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000407)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.41994 (2 reqs/sec) | Rendering: 0.30944 (73%) | DB: 0.00331 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:06:40) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000493)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;36;1mEstudio Load (0.000531)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000317)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mEspecialidad Load (0.078015)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000433)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.39077 (2 reqs/sec) | Rendering: 0.28747 (73%) | DB: 0.08069 (20%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:06:47) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000482)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;35;1mEstudio Load (0.000592)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000294)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mEspecialidad Load (0.000684)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000406)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.42198 (2 reqs/sec) | Rendering: 0.31174 (73%) | DB: 0.00335 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:06:53) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000485)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;36;1mEstudio Load (0.000549)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000275)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mEspecialidad Load (0.000609)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000390)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.34499 (2 reqs/sec) | Rendering: 0.31903 (92%) | DB: 0.00321 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:06:59) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000483)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;35;1mEstudio Load (0.000528)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000354)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mEspecialidad Load (0.000602)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000454)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.42292 (2 reqs/sec) | Rendering: 0.31229 (73%) | DB: 0.00335 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:07:07) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000499)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;36;1mEstudio Load (0.000534)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000263)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mEspecialidad Load (0.000607)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000413)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.34416 (2 reqs/sec) | Rendering: 0.31835 (92%) | DB: 0.00322 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:07:13) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000494)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;35;1mEstudio Load (0.000557)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000289)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mEspecialidad Load (0.000674)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000405)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.42448 (2 reqs/sec) | Rendering: 0.31475 (74%) | DB: 0.00341 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:07:17) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000483)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;36;1mEstudio Load (0.000528)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000267)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mEspecialidad Load (0.000680)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000391)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.34212 (2 reqs/sec) | Rendering: 0.31598 (92%) | DB: 0.00330 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:07:23) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000501)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;35;1mEstudio Load (0.000585)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000274)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mEspecialidad Load (0.000608)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000400)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.42109 (2 reqs/sec) | Rendering: 0.31219 (74%) | DB: 0.00327 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:07:28) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000483)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;36;1mEstudio Load (0.000538)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000257)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mEspecialidad Load (0.000609)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000407)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.34105 (2 reqs/sec) | Rendering: 0.31533 (92%) | DB: 0.00327 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:07:35) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000490)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;35;1mEstudio Load (0.000590)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000271)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mEspecialidad Load (0.000607)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000440)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.42072 (2 reqs/sec) | Rendering: 0.31246 (74%) | DB: 0.00330 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:07:40) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000498)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;36;1mEstudio Load (0.000529)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000268)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mEspecialidad Load (0.000670)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000407)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.33806 (2 reqs/sec) | Rendering: 0.31192 (92%) | DB: 0.00328 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:08:34) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000524)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;35;1mEstudio Load (0.000546)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000281)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mEspecialidad Load (0.000664)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000397)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+
+
+ActionView::TemplateError (undefined method `fec_ini' for #<Consulta:0x515e78>) on line #41 of pacientes/imprime_ficha.pdf.prawn:
+38: 	pdf.text " "
+39: 	pdf.text 'Diagnóstico: ' + @consulta.diagnostico
+40:     pdf.text 'Fecha de inicio de síntomas: ' + @consulta.fec_ini
+41: 	pdf.text " "
+42: 	pdf.text 'Resumen del padecimiento:', :size => 12,:spacing => 16
+43: 	pdf.text " "
+44: 	pdf.text 'Medicación actual:', :size => 12,:spacing => 16
+
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.2/lib/active_record/attribute_methods.rb:256:in `method_missing'
+    app/views/pacientes/imprime_ficha.pdf.prawn:41:in `render'
+    vendor/gems/prawn-0.2.3/lib/prawn/document/bounding_box.rb:177:in `call'
+    vendor/gems/prawn-0.2.3/lib/prawn/document/bounding_box.rb:177:in `init_bounding_box'
+    vendor/gems/prawn-0.2.3/lib/prawn/document/bounding_box.rb:86:in `bounding_box'
+    app/views/pacientes/imprime_ficha.pdf.prawn:35:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:35:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/base.rb:248:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1112:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:926:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/layout.rb:259:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/pacientes_controller.rb:47:in `imprime_ficha'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:131:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:154:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:154:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/pacientes_controller.rb:44:in `imprime_ficha'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:579:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.2/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:08:39) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000568)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;36;1mEstudio Load (0.000535)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000265)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mEspecialidad Load (0.000609)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000406)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+
+
+ActionView::TemplateError (undefined method `fec_sintomas' for #<Consulta:0x211f268>) on line #41 of pacientes/imprime_ficha.pdf.prawn:
+38: 	pdf.text " "
+39: 	pdf.text 'Diagnóstico: ' + @consulta.diagnostico
+40:     pdf.text 'Fecha de inicio de síntomas: ' + @consulta.fec_sintomas
+41: 	pdf.text " "
+42: 	pdf.text 'Resumen del padecimiento:', :size => 12,:spacing => 16
+43: 	pdf.text " "
+44: 	pdf.text 'Medicación actual:', :size => 12,:spacing => 16
+
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.2/lib/active_record/attribute_methods.rb:256:in `method_missing'
+    app/views/pacientes/imprime_ficha.pdf.prawn:41:in `render'
+    vendor/gems/prawn-0.2.3/lib/prawn/document/bounding_box.rb:177:in `call'
+    vendor/gems/prawn-0.2.3/lib/prawn/document/bounding_box.rb:177:in `init_bounding_box'
+    vendor/gems/prawn-0.2.3/lib/prawn/document/bounding_box.rb:86:in `bounding_box'
+    app/views/pacientes/imprime_ficha.pdf.prawn:35:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:35:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/base.rb:248:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1112:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:926:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/layout.rb:259:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/pacientes_controller.rb:47:in `imprime_ficha'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:131:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:154:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:154:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/pacientes_controller.rb:44:in `imprime_ficha'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:579:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.2/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:09:43) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000624)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;35;1mEstudio Load (0.000564)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000326)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mEspecialidad Load (0.000670)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000395)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+
+
+ActionView::TemplateError (can't convert nil into String) on line #41 of pacientes/imprime_ficha.pdf.prawn:
+38: 	pdf.text " "
+39: 	pdf.text 'Diagnóstico: ' + @consulta.diagnostico
+40:     pdf.text 'Fecha de inicio de síntomas: ' + @consulta.fecha_in_sintomas
+41: 	pdf.text " "
+42: 	pdf.text 'Resumen del padecimiento:', :size => 12,:spacing => 16
+43: 	pdf.text " "
+44: 	pdf.text 'Medicación actual:', :size => 12,:spacing => 16
+
+    app/views/pacientes/imprime_ficha.pdf.prawn:41:in `+'
+    app/views/pacientes/imprime_ficha.pdf.prawn:41:in `render'
+    vendor/gems/prawn-0.2.3/lib/prawn/document/bounding_box.rb:177:in `call'
+    vendor/gems/prawn-0.2.3/lib/prawn/document/bounding_box.rb:177:in `init_bounding_box'
+    vendor/gems/prawn-0.2.3/lib/prawn/document/bounding_box.rb:86:in `bounding_box'
+    app/views/pacientes/imprime_ficha.pdf.prawn:35:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:35:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/base.rb:248:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1112:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:926:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/layout.rb:259:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/pacientes_controller.rb:47:in `imprime_ficha'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:131:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:154:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:154:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/pacientes_controller.rb:44:in `imprime_ficha'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:579:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.2/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:10:07) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000494)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;36;1mEstudio Load (0.000527)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000270)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mEspecialidad Load (0.000628)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000419)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.34716 (2 reqs/sec) | Rendering: 0.32106 (92%) | DB: 0.00324 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:10:20) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000580)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;35;1mEstudio Load (0.000700)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000298)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mEspecialidad Load (0.000662)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000385)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.35467 (2 reqs/sec) | Rendering: 0.32670 (92%) | DB: 0.00359 (1%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:12:01) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000534)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;36;1mEstudio Load (0.000699)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000267)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+
+
+ActionView::TemplateError (compile error
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/views/pacientes/imprime_ficha.pdf.prawn:64: syntax error, unexpected kEND, expecting $end) on line #64 of pacientes/imprime_ficha.pdf.prawn:
+61: 
+62: 	pdf.text "Celular (044):  #{@paciente.tel_cel}"
+63: end
+64: pdf.bounding_box([300,272], :width=>500, :height=>100) do
+65: 	pdf.font.size = 10
+66: 	pdf.text "e-mail:  #{@paciente.mail}",:spacing => 10
+67: 
+
+    app/views/pacientes/imprime_ficha.pdf.prawn:64:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:35:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/base.rb:248:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1112:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:926:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/layout.rb:259:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/pacientes_controller.rb:47:in `imprime_ficha'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:131:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:154:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:154:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/pacientes_controller.rb:44:in `imprime_ficha'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:579:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.2/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:12:34) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000483)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;35;1mEstudio Load (0.000534)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000264)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mEspecialidad Load (0.000625)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000422)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.34933 (2 reqs/sec) | Rendering: 0.32340 (92%) | DB: 0.00323 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:13:09) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000502)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;36;1mEstudio Load (0.000542)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000279)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mEspecialidad Load (0.000640)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000392)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.35424 (2 reqs/sec) | Rendering: 0.32770 (92%) | DB: 0.00329 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:13:18) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000512)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;35;1mEstudio Load (0.000618)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000264)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mEspecialidad Load (0.000612)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000486)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.35757 (2 reqs/sec) | Rendering: 0.33134 (92%) | DB: 0.00339 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:13:30) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000486)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;36;1mEstudio Load (0.000539)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000277)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mEspecialidad Load (0.000674)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000412)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.35651 (2 reqs/sec) | Rendering: 0.32995 (92%) | DB: 0.00331 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:13:46) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000494)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;35;1mEstudio Load (0.000589)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000270)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mEspecialidad Load (0.000602)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000453)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.43647 (2 reqs/sec) | Rendering: 0.32907 (75%) | DB: 0.00330 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:13:53) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000497)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;36;1mEstudio Load (0.000536)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000256)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+
+
+ActionView::TemplateError (compile error
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/views/pacientes/imprime_ficha.pdf.prawn:63: syntax error, unexpected kEND, expecting $end) on line #63 of pacientes/imprime_ficha.pdf.prawn:
+60: end
+61: 	pdf.text "Celular (044):  #{@paciente.tel_cel}"
+62: end
+63: pdf.bounding_box([300,272], :width=>500, :height=>100) do
+64: 	pdf.font.size = 10
+65: 	pdf.text "e-mail:  #{@paciente.mail}",:spacing => 10
+66: 
+
+    app/views/pacientes/imprime_ficha.pdf.prawn:63:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:35:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/base.rb:248:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1112:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:926:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/layout.rb:259:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/pacientes_controller.rb:47:in `imprime_ficha'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:131:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:154:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:154:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/pacientes_controller.rb:44:in `imprime_ficha'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:579:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.2/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:14:14) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000492)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;35;1mEstudio Load (0.000537)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000317)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+
+
+ActionView::TemplateError (compile error
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/views/pacientes/imprime_ficha.pdf.prawn:64: syntax error, unexpected kEND, expecting $end) on line #64 of pacientes/imprime_ficha.pdf.prawn:
+61: end
+62: 	pdf.text "Celular (044):  #{@paciente.tel_cel}"
+63: end
+64: pdf.bounding_box([300,272], :width=>500, :height=>100) do
+65: 	pdf.font.size = 10
+66: 	pdf.text "e-mail:  #{@paciente.mail}",:spacing => 10
+67: 
+
+    app/views/pacientes/imprime_ficha.pdf.prawn:64:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:35:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/base.rb:248:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1112:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:926:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/layout.rb:259:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/pacientes_controller.rb:47:in `imprime_ficha'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:131:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:154:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:154:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/pacientes_controller.rb:44:in `imprime_ficha'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:579:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.2/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:14:27) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000496)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;36;1mEstudio Load (0.000528)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000281)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mEspecialidad Load (0.000650)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000438)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.34902 (2 reqs/sec) | Rendering: 0.32313 (92%) | DB: 0.00330 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:14:43) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000511)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;35;1mEstudio Load (0.000816)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000238)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mEspecialidad Load (0.000602)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000418)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.36097 (2 reqs/sec) | Rendering: 0.33363 (92%) | DB: 0.00357 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:14:49) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000504)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;36;1mEstudio Load (0.000531)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000265)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mEspecialidad Load (0.000635)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000415)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.35835 (2 reqs/sec) | Rendering: 0.33243 (92%) | DB: 0.00327 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:14:56) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000513)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;35;1mEstudio Load (0.000548)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000276)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mEspecialidad Load (0.000623)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000397)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.35275 (2 reqs/sec) | Rendering: 0.32603 (92%) | DB: 0.00327 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:15:02) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000485)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;36;1mEstudio Load (0.000553)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000271)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mEspecialidad Load (0.000632)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000410)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.36145 (2 reqs/sec) | Rendering: 0.33541 (92%) | DB: 0.00326 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:15:20) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000513)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;35;1mEstudio Load (0.000543)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000271)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mEspecialidad Load (0.000613)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000407)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.34964 (2 reqs/sec) | Rendering: 0.32235 (92%) | DB: 0.00326 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:15:28) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000564)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;36;1mEstudio Load (0.000551)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000274)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mEspecialidad Load (0.000605)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000426)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.43545 (2 reqs/sec) | Rendering: 0.40925 (93%) | DB: 0.00332 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:15:34) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000485)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;35;1mEstudio Load (0.000528)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000255)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mEspecialidad Load (0.000729)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000451)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.35381 (2 reqs/sec) | Rendering: 0.32780 (92%) | DB: 0.00336 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:15:39) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000532)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;36;1mEstudio Load (0.000576)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000290)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mEspecialidad Load (0.000581)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000407)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.35414 (2 reqs/sec) | Rendering: 0.32621 (92%) | DB: 0.00331 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:20:17) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000476)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;35;1mEstudio Load (0.000565)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000254)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mEspecialidad Load (0.000624)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000423)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.59023 (1 reqs/sec) | Rendering: 0.56351 (95%) | DB: 0.00356 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:20:42) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000487)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;36;1mEstudio Load (0.000519)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000296)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mEspecialidad Load (0.000606)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000398)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.35228 (2 reqs/sec) | Rendering: 0.32608 (92%) | DB: 0.00321 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:21:10) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000523)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;35;1mEstudio Load (0.000579)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000276)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mEspecialidad Load (0.000614)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000398)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+
+
+ActionView::TemplateError (undefined method `+' for :bold:Symbol) on line #38 of pacientes/imprime_ficha.pdf.prawn:
+35: 	pdf.text "Fecha de nacimiento: #{@paciente.fecha_nac.strftime('%d / %m / %Y')}       (#{@paciente.edad} años #{@paciente.edad_meses}  meses)"
+36: 	pdf.text " "
+37: 	pdf.text 'Médico que lo envía: ',:style => :bold + @consulta.doctor.nombre_completo
+38: 	pdf.text " "
+39: 	pdf.text 'Diagnóstico: ' + @consulta.diagnostico
+40: 	pdf.text " "
+41: 	pdf.text 'Resumen del padecimiento:', :size => 12,:spacing => 16
+
+    app/views/pacientes/imprime_ficha.pdf.prawn:38:in `render'
+    vendor/gems/prawn-0.2.3/lib/prawn/document/bounding_box.rb:177:in `call'
+    vendor/gems/prawn-0.2.3/lib/prawn/document/bounding_box.rb:177:in `init_bounding_box'
+    vendor/gems/prawn-0.2.3/lib/prawn/document/bounding_box.rb:86:in `bounding_box'
+    app/views/pacientes/imprime_ficha.pdf.prawn:35:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:35:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/base.rb:248:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1112:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:926:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/layout.rb:259:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/pacientes_controller.rb:47:in `imprime_ficha'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:131:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:154:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:154:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/pacientes_controller.rb:44:in `imprime_ficha'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:579:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.2/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:21:23) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000494)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;36;1mEstudio Load (0.000551)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000274)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+
+
+ActionView::TemplateError (compile error
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/views/pacientes/imprime_ficha.pdf.prawn:38: syntax error, unexpected '\n', expecting tASSOC
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/views/pacientes/imprime_ficha.pdf.prawn:53: syntax error, unexpected kDO_BLOCK, expecting $end
+pdf.bounding_box([300,485], :width=>200, :height=>100) do	
+                                                         ^) on line #38 of pacientes/imprime_ficha.pdf.prawn:
+35: 	pdf.text "Fecha de nacimiento: #{@paciente.fecha_nac.strftime('%d / %m / %Y')}       (#{@paciente.edad} años #{@paciente.edad_meses}  meses)"
+36: 	pdf.text " "
+37: 	pdf.text 'Médico que lo envía: ',:style => :bold, + @consulta.doctor.nombre_completo
+38: 	pdf.text " "
+39: 	pdf.text 'Diagnóstico: ' + @consulta.diagnostico
+40: 	pdf.text " "
+41: 	pdf.text 'Resumen del padecimiento:', :size => 12,:spacing => 16
+
+    app/views/pacientes/imprime_ficha.pdf.prawn:53:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:35:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_view/base.rb:248:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1112:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:926:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/layout.rb:259:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/pacientes_controller.rb:47:in `imprime_ficha'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:131:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:154:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:154:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/pacientes_controller.rb:44:in `imprime_ficha'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:579:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.2/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-12-02 01:21:53) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+Rendering template within layouts/lab
+Rendering admin/login
+  [4;36;1mUsuario Load (0.000157)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" IS NULL) LIMIT 1[0m
+Completed in 0.01122 (89 reqs/sec) | Rendering: 0.00906 (80%) | DB: 0.00110 (9%) | 200 OK [http://localhost/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-12-02 01:21:56) [POST]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"commit"=>"Login", "nombre"=>"admin", "authenticity_token"=>"d6b7055fd065a9b86261c1b31912ac9e343104b3", "action"=>"login", "controller"=>"admin", "password"=>"123"}
+  [4;35;1mUsuario Load (0.000250)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."nombre" = 'admin') LIMIT 1[0m
+Redirected to http://localhost:3000/admin
+Completed in 0.01056 (94 reqs/sec) | DB: 0.00122 (11%) | 302 Found [http://localhost/]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-12-02 01:21:56) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;36;1mUsuario Load (0.000231)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mCita Load (0.000143)[0m   [0mSELECT * FROM "citas" [0m
+Rendering template within layouts/lab
+Rendering admin/index
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mEspecialidad Load (0.000600)[0m   [0;1mSELECT * FROM "especialidads" [0m
+Completed in 0.03435 (29 reqs/sec) | Rendering: 0.02108 (61%) | DB: 0.00190 (5%) | 200 OK [http://localhost/admin]
+
+
+Processing PacientesController#index (for 127.0.0.1 at 2008-12-02 01:22:00) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"index", "controller"=>"pacientes"}
+  [4;35;1mUsuario Load (0.000243)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mEspecialidad Load (0.000619)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mEstudio Load (0.000558)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000159)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."fecha_consulta" BETWEEN '2008-12-02 00:00:00' AND '2008-12-02 23:59:59') [0m
+Rendering template within layouts/lab
+Rendering pacientes/index
+Rendered pacientes/_lista_pacientes (0.00042)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.03736 (26 reqs/sec) | Rendering: 0.00322 (8%) | DB: 0.00251 (6%) | 200 OK [http://localhost/pacientes]
+
+
+Processing PacientesController#index (for 127.0.0.1 at 2008-12-02 01:22:02) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"commit"=>"Buscar", "search"=>"", "action"=>"index", "controller"=>"pacientes"}
+  [4;36;1mUsuario Load (0.000277)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mPaciente Load (0.000712)[0m   [0mSELECT * FROM "pacientes" WHERE (nombre LIKE '%%' or app_pat LIKE '%%' or app_mat LIKE '%%') [0m
+Rendering template within layouts/lab
+Rendering pacientes/index
+Rendered pacientes/_lista_pacientes (0.00717)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mEspecialidad Load (0.000655)[0m   [0mSELECT * FROM "especialidads" [0m
+Completed in 0.10744 (9 reqs/sec) | Rendering: 0.09170 (85%) | DB: 0.00254 (2%) | 200 OK [http://localhost/pacientes?search=&commit=Buscar]
+
+
+Processing PacientesController#show (for 127.0.0.1 at 2008-12-02 01:22:03) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"show", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000494)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+Rendering template within layouts/lab
+Rendering pacientes/show
+  [4;35;1mUsuario Load (0.000238)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;36;1mEstudio Load (0.000607)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000306)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".paciente_id = 35) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mEspecialidad Load (0.000600)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000451)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mEstudio Load (0.000285)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+Rendered consultas/_registro (0.02361)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+  [4;35;1mDoctor Load (0.000630)[0m   [0mSELECT * FROM "doctors" [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "estudios" [0m
+Rendered pacientes/_record (0.01009)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) LIMIT 1[0m
+Completed in 0.16006 (6 reqs/sec) | Rendering: 0.14593 (91%) | DB: 0.00451 (2%) | 200 OK [http://localhost/pacientes/35]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:22:05) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000901)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;35;1mEstudio Load (0.000549)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000289)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mEspecialidad Load (0.000691)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000447)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.36929 (2 reqs/sec) | Rendering: 0.34152 (92%) | DB: 0.00387 (1%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:22:28) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000523)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;36;1mEstudio Load (0.000552)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000291)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mEspecialidad Load (0.000671)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000404)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.35669 (2 reqs/sec) | Rendering: 0.32906 (92%) | DB: 0.00342 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:22:45) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000485)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;35;1mEstudio Load (0.000580)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000264)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mEspecialidad Load (0.000628)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000422)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.36012 (2 reqs/sec) | Rendering: 0.33409 (92%) | DB: 0.00343 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:23:15) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000505)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;36;1mEstudio Load (0.000546)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000277)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mEspecialidad Load (0.000617)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000397)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.35296 (2 reqs/sec) | Rendering: 0.32566 (92%) | DB: 0.00326 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:23:24) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000480)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;35;1mEstudio Load (0.000565)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000261)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mEspecialidad Load (0.000632)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000424)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.43985 (2 reqs/sec) | Rendering: 0.41371 (94%) | DB: 0.00329 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:24:44) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000505)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;36;1mEstudio Load (0.000552)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000267)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mEspecialidad Load (0.000633)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000432)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.36177 (2 reqs/sec) | Rendering: 0.33544 (92%) | DB: 0.00330 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:24:58) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000542)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;35;1mEstudio Load (0.000559)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000277)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mEspecialidad Load (0.000606)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000385)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.35579 (2 reqs/sec) | Rendering: 0.32813 (92%) | DB: 0.00331 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:27:21) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000498)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;36;1mEstudio Load (0.000597)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000262)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mEspecialidad Load (0.000618)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000534)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.36766 (2 reqs/sec) | Rendering: 0.34130 (92%) | DB: 0.00350 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:27:37) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;36;1mPaciente Load (0.000515)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;35;1mEstudio Load (0.000595)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.000294)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mEspecialidad Load (0.000616)[0m   [0mSELECT * FROM "especialidads" [0m
+  [4;36;1mDoctor Load (0.000401)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.35815 (2 reqs/sec) | Rendering: 0.32998 (92%) | DB: 0.00334 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2008-12-02 01:27:56) [GET]
+  Session ID: 72c1304faaa87930170abccd82cb4a9e
+  Parameters: {"action"=>"imprime_ficha", "consulta_id"=>"47", "id"=>"35", "controller"=>"pacientes"}
+  [4;35;1mPaciente Load (0.000489)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 35) [0m
+  [4;36;1mEstudio Load (0.000533)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.000407)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 47) [0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mEspecialidad Load (0.000612)[0m   [0;1mSELECT * FROM "especialidads" [0m
+  [4;35;1mDoctor Load (0.000419)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 0.44869 (2 reqs/sec) | Rendering: 0.33697 (75%) | DB: 0.00336 (0%) | 200 OK [http://localhost/pacientes/imprime_ficha/35?consulta_id=47]

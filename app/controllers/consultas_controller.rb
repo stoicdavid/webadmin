@@ -51,6 +51,8 @@ class ConsultasController < ApplicationController
   # POST /consultas.xml
   def create
     @consulta = Consulta.create(params[:consulta])
+    @consulta.fecha_consulta=params[:fecha_consulta]
+    @consulta.fecha_envio=params[:fecha_envio]
     respond_to do |format|
       if @consulta.save
         flash[:notice] = 'Se ha creado un nuevo registro'
