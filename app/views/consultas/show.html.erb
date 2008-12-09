@@ -24,14 +24,14 @@
 
 	<% else %>		
 		<td><%= button_to 'Confirma Cita', {:controller => "lab",:action => "confirma_cita", :id => cita.id } %></td>
-		<td><%= button_to 'Cancela', {:controller => "lab",:action => "cancela_cita", :id => cita.id } %></td>
+		<td><%= button_to 'Cancela', {:controller => "lab",:action => "cancela_cita", :id => cita.paciente_id,:id_cons => @consulta.id } %></td>
 		<% end %>
 <% end %>
 
 </p>
 <hr>
 <% if @consulta.cita == nil %>
-<%= button_to 'Crea Cita', {:controller => "lab", :action => "crea_cita", :id => @consulta.paciente_id,:id_cons => @consulta.id } %>
+	<%= button_to 'Crea Cita', {:controller => "lab", :action => "crea_cita", :id => @consulta.paciente_id,:id_cons => @consulta.id } %>
 <% end %>
 <%= link_to 'Edit', edit_consulta_path(@consulta) %> |
 <%= link_to 'Back', consultas_path %>

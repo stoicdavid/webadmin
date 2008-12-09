@@ -78,7 +78,7 @@ pdf.bounding_box([20,229], :width=>500, :height=>120) do
 	pdf.text 'Datos de Facturación:',:size => 12,:style => :bold
 	pdf.text " "
 	pdf.text 'Nombre o razón social:',:spacing => 10
-	pdf.text " "
+	pdf.text " " 
 	pdf.text 'Domicilio Fiscal:',:spacing => 10
 	pdf.text " "
 	pdf.text 'RFC:'

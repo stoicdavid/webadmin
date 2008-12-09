@@ -1,15 +1,18 @@
 <div>
 
-<%= form_remote_tag :method => 'get',:url => {:action => :realizar_busqueda}%>
-     <p><b>Fecha y Hora:</b></p>
+<%= form_remote_tag :url => {:action => :asigna_cita}%>
+     <p><b>Hora:</b></p>
      <%# t = Time.now %>
 	<%# calendar_date_select_tag "cita", @cita.fecha_hora %>
 	<% inicial=Time.now.beginning_of_year.strftime('%Y') %>
 	<% final=Time.now.beginning_of_year.years_since(3).strftime('%Y') %>
-	<%= calendar_date_select_tag "fecha_cita", Time.now, :time => true  %>
-	<%= hidden_field :paciente, :value => @cita.paciente.id  %>	
+	<%# calendar_date_select_tag "fecha_cita", Time.now, :time => true  %>
+	<%= time_picker(Time.parse('7:00'), {:time_format => '12', :minute_step => 60,:time_separator => ':'}) %>
+	<%= hidden_field_tag :paciente, Paciente.find(params[:id]).id  %>	
+	<%= hidden_field_tag :consulta, params[:id_cons]  %>	
+	<%= hidden_field_tag :dia,  @dia  %>	
      <p><b>Cubículo:</b></p>
      <p><%= text_field_tag 'cubiculo'%></p>
-   <%= submit_tag "Buscar" %>
+   <%= submit_tag "Asignar", :id => Paciente.find(params[:id]).id  %>
 
 </div>

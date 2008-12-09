@@ -46,7 +46,7 @@
 <% end %>
 </p>
 <p>
-	<% if status == 'Activa' && registro.cita.operation.ref_estudio.nil? %>
+	<% if status == 'Activa' && registro.cita.operation.nil? %>
 	<%= button_to 'Genera ID Estudio', {:controller => "lab",:action => "genera_id", :id => registro.cita_id } %> 
 	<% end %>
 </p>

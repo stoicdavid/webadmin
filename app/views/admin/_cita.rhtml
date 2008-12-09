@@ -1,0 +1,7 @@
+
+<% if cita.fecha_hora.strftime('%F').to_s == @dia.to_s %>
+<br />
+
+<%= Paciente.find(cita.paciente_id).nombre_completo %><br>
+<%= cita.fecha_hora.strftime('%d-%m-%Y %H:%M') %>
+<% end %>

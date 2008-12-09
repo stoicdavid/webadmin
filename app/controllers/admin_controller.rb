@@ -24,7 +24,8 @@ class AdminController < ApplicationController
   
   def index
     @citas = Cita.find(:all)
-
+    @dates = @citas.collect { |p| p.fecha_hora.strftime('%d-%m-%Y') }
+    
   end
   protected 
   def authorize_admin

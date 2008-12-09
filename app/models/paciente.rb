@@ -14,7 +14,7 @@ class Paciente < ActiveRecord::Base
   " no puede ser vacio"
   validates_inclusion_of :genero, :in => GENERO.map {|disp, value| value}
   validates_uniqueness_of :rfc_pac, :on => :create, :message => "^Paciente capturado anteriormente"
-
+  
   def consulta_atributos=(atributos)
 #    atributos.each do |a|
       consultas.build(atributos)

@@ -196,7 +196,29 @@ end
     end
   end
 
+  def asigna_cita
+    
+    fecha = params[:dia] + " " + params[:date][:hour_minute]
+    fecha_cita = Time.parse(fecha)
+    consulta=Consulta.find(params[:consulta])
+    operation=Operation.create(:cita_id => 0,:tipo_id => consulta.estudio_id)
+    @cita=Cita.create(:paciente_id => params[:paciente],:fecha_hora => fecha_cita,:status => 'Activa',
+    :cubiculo => params[:cubiculo],:operation_id => operation.id)
+    @cita.save
+    operation.save
+    operation.update_attributes(:cita_id => @cita.id)
+    consulta.update_attributes(:cita_id => @cita.id)
+    render :update do |page|
+      page['resultados'].replace_html :partial => 'cita_creada', :id => params[:paciente]
+    end
+  end
 
+  def cancela_cita
+    cita=Consulta.find(params[:id_cons]).cita
+    cita.destroy
+    redirect_to :action => 'crea_cita', :id => params[:id],:id_cons => params[:id_cons]
+
+  end
 
 
   def list_horarios
@@ -215,8 +237,8 @@ end
     #operation = Operation.create(:cita_id => consulta.cita_id,:tipo => "value", )
     #@cita.update_attributes(:operation_id => operation.id)
     #	<%= render :partial => 'consultas/listas', :collection => @cons = @paciente.consultas, :id => @paciente.id %>
-    
-    @citas = Cita.find_all_by_fecha_hora(Time.now.beginning_of_day...Time.now.end_of_day)
+    @citas = Cita.find(:all)
+    @dates = @citas.collect { |p| p.fecha_hora.strftime('%d-%m-%Y') }
     render :partial => 'crea_cita', :id => paciente.id, :layout => "lab"
   end
   

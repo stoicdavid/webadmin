@@ -1,0 +1,26 @@
+TimePicker
+==========
+
+The usage of time_picker follows closely of that of ActionView::Helpers::DateHelper.
+
+Once installed, use it in your views.
+
+Right now, the only method is 
+
+time_picker(datetime, options = {})
+
+Examples
+--------
+To use a time_picker with the default 24 hour format, 30 minute step, 
+
+time_picker(Time.now, {:minute_step => 30})
+
+To use a time_picker with 12 hour format, 30 minute step,
+
+time_picker(Time.now, {:time_format => '12', :minute_step => 30})
+
+Other options (same as ActionView::Helpers::DateHelper) are:
+
+* :prefix
+* :field_name
+* :time_separator

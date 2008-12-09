@@ -1,11 +1,21 @@
 <%= calendar({:year => Time.now.year, :month => Time.now.month, :table_class =>
-"calendar_helper"}) do |d|
-  if @citas.include?(d)
-    [d.mday, {:class => "specialDay"}]
+"calendar"}) do |d|
+	@dia=d
+  if @dates.include?(d.strftime('%d-%m-%Y'))
+    [link_to_function(d.mday, {:class => "specialDay"}) do |page|
+	page[:citas].replace_html :partial => 'cita',:collection => @citas
+	end]
   else  
     [d.mday, {:class => "day"}]
   end
 end %>
+<div id="box_citas">
+	<h4>Citas:</h4>
+
+	<div id ="citas"></div>
+
+</div>
+
 <br />
 <div>
 <%# link_to_prototype_window('Link', 'Hola') %>
@@ -16,5 +26,3 @@ Son las <%= Time.now%><br />
 
 
 <%= principal %>
-
-
