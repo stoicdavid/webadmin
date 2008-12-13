@@ -1,0 +1,35 @@
+<h1>New tipo_estudio</h1>
+
+<% form_for(@estudio) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :tipo_estudio %><br />
+    <%= f.text_field :tipo_estudio %>
+  </p>
+  <p>
+    <%= f.label :descripcion %><br />
+    <%= f.text_area :descripcion %>
+  </p>
+  <p>
+    <%= f.label :precio %><br />
+    <%= f.text_field :precio %>
+  </p>
+  <p>
+    <%= f.label :descuento %><br />
+    <%= f.text_field :descuento %>
+  </p>
+  <p>
+    <%= f.label :comision_doctor %><br />
+    <%= f.text_field :comision_doctor %>
+  </p>
+  <p>
+    <%= f.label :comision_isr %><br />
+    <%= f.text_field :comision_isr %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', estudios_path %>

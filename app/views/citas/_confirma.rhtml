@@ -1,4 +1,18 @@
-<h1>Confirma cita</h1>
+<h1>Confirma cita</h1><br />
+<%paciente = Paciente.find(@cita.paciente_id) %>
+
+<h4><%= paciente.nombre_completo %></h4><br />
+Contacto: <%= paciente.contacto %><br />
+<br />
+Teléfonos<br />
+<p>
+Celular: <%= paciente.tel_cel %><br />
+Casa:<%= paciente.tel_casa %><br />
+Recados:<%= paciente.tel_rec %><br />
+Oficina:<%= paciente.tel_oficina %><br />
+Fax:<%= paciente.tel_fax %><br />
+</p>
+
 <% form_for(@cita) do |f| %>
   <p>
     <%= f.label 'Persona que confirma cita' %><br />
@@ -8,16 +22,13 @@
     <%= f.label 'Recibió documentación?' %><br />
     <%= f.check_box :confirma_doc %>
   </p>
-  <p>
-    <%= f.label 'Servicio valet parking?' %><br />
-    <%= f.check_box :confirma_valet %>
-  </p>
+
   <p>
     <%= f.label 'Persona que acompaña' %><br />
     <%= f.text_field :acompana %>
   </p>
-<%= f.submit "Update" %>
+<%= f.submit "Actualizar" %>
 <% end %>
 
-<%= link_to 'Edit', edit_cita_path(@cita) %> |
-<%= link_to "Consultas", :controller => "lab" %> </a><br />
+<%# link_to 'Edit', edit_cita_path(@cita) %> 
+<%# link_to "Consultas", :controller => "lab" %> </a><br />

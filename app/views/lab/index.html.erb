@@ -10,22 +10,18 @@
 <div id="primario"> 
 
      <div id='principal'> 
-          <h1>Citas para hoy</h1> 
-		
-			<%= render :partial => 'recepcion', :collection => @consultas   %>
-		
+          <h1>Citas para hoy</h1>
+			<%= render :partial => 'recepcion', :collection => @consultas_hoy   %>
      </div> 
 
 <div id='barra-der'> 
      <div class="barra-citas"> 
          <h1>Citas para confirmar hoy </h1> 
-		    <ul id="todo-list"> 
-	               <li>recepcion</li> 
-	               <li>recepcion</li>  
-	          </ul>
+			<%= render :partial => 'recepcion_confirma', :collection => @confirma_hoy   %>
     </div> 
      <div class="barra-citas"> 
         <h1>Citas sin confirmar</h1> 
+			<%= render :partial => 'recepcion_sin_conf', :collection => @sin_confirma   %>
     </div> 
 </div>
 

@@ -13,12 +13,12 @@
 </p>
 <p>
    <%= c_form.label 'Fecha de consulta' %><br />
-   <%= calendar_date_select_tag :fecha_consulta,Time.now.strftime('%d-%m-%Y'), :year_range => 2.years.ago..0.years.ago  %>
+   <%= calendar_date_select_tag :fecha_consulta,'', :year_range => 2.years.ago..0.years.ago  %>
 
  </p>
  <p>
    <%= c_form.label 'Fecha de Referencia' %><br />
-   <%= calendar_date_select_tag :fecha_envio,Time.now.strftime('%d-%m-%Y'), :year_range => 2.years.ago..0.years.ago  %>
+   <%= calendar_date_select_tag :fecha_envio,'', :year_range => 2.years.ago..0.years.ago  %>
 
  </p>
  <p>
@@ -27,7 +27,7 @@
  </p>
  <p>
     <%= c_form.label 'Fecha de inicio de síntomas' %><br />
-   <%= calendar_date_select_tag :fecha_envio,Time.now.strftime('%d-%m-%Y'), :year_range => 30.years.ago..0.years.ago  %>
+   <%= calendar_date_select_tag :fecha_envio,'', :year_range => 30.years.ago..0.years.ago  %>
 
   </p>
   <p>

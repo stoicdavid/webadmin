@@ -25,7 +25,9 @@ class AdminController < ApplicationController
   def index
     @citas = Cita.find(:all)
     @dates = @citas.collect { |p| p.fecha_hora.strftime('%d-%m-%Y') }
-    
+    @consultas_hoy = Cita.find_all_by_fecha_hora(Time.now.beginning_of_day...Time.now.end_of_day)
+    @confirma_hoy = Cita.find_all_by_fecha_hora(1.day.since(Time.now.beginning_of_day)...2.day.since(Time.now.end_of_day), :conditions => ['status = ?','Activa'])
+    @sin_confirma = Cita.find_all_by_status('Activa')
   end
   protected 
   def authorize_admin

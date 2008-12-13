@@ -27,7 +27,7 @@
   </p
   <p>
     <%= f.label 'Fecha de nacimiento' %><br />
-	<%= calendar_date_select_tag :fecha_nac,Time.now.strftime('%d-%m-%Y'), :year_range => 30.years.ago..0.years.ago  %>
+	<%= calendar_date_select_tag :fecha_nac,'', :year_range => 30.years.ago..0.years.ago  %>
     
   </p>
 <h4>Contacto del Paciente:</h4>

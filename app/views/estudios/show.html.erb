@@ -1,0 +1,33 @@
+<p>
+  <b>Tipo estudio:</b>
+  <%=h @estudio.tipo_estudio %>
+</p>
+
+<p>
+  <b>Descripcion:</b>
+  <%=h @estudio.descripcion %>
+</p>
+
+<p>
+  <b>Precio:</b>
+  <%=h number_to_currency(@estudio.precio) %>
+</p>
+
+<p>
+  <b>Descuento:</b>
+  <%=h number_to_percentage(@estudio.descuento*100,:precision => 0) %>
+</p>
+
+<p>
+  <b>Honorarios:</b>
+  <%=h number_to_currency(@estudio.comision_doctor) %>
+</p>
+
+<p>
+  <b>ISR:</b>
+  <%=h number_to_currency(@estudio.comision_isr) %>
+</p>
+
+
+<%= link_to 'Edit', edit_estudio_path(@estudio) %> |
+<%= link_to 'Back', estudios_path %>

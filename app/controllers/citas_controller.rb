@@ -60,14 +60,24 @@ class CitasController < ApplicationController
   def update
     @cita = Cita.find(params[:id])
 
+    if @cita.status == 'Activa'
+      @cita.status = 'Confirmada'
+      @cita.save
+    else
+      
+    end
 
     respond_to do |format|
       if @cita.update_attributes(params[:cita])
         if @cita.status == 'Sin Cita'
           @cita.status = 'Activa'
+          @cita.save
+        elsif @cita.status == 'Activa'
+          @cita.status = 'Confirmada'
+          @cita.save
         end
-        flash[:notice] = 'Cita was successfully updated.'
-        format.html { redirect_to(@cita) }
+        flash[:notice] = 'La cita fue actualizada.'
+        format.html { redirect_to :controller => 'admin',:action => 'index' }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -78,8 +88,6 @@ class CitasController < ApplicationController
   
   def confirma
     @cita = Cita.find(params[:id])
-    @cita.status = 'Confirmada'
-    @cita.save
     render :partial => 'confirma', :layout => 'lab'
   end
 

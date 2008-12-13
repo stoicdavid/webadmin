@@ -109,6 +109,9 @@ class OperationsController < ApplicationController
     op = Operation.find(params[:id])
     op.fin_estudio= Time.now
     op.save
+    cita = op.cita
+    cita.status = 'Estudio Realizado'
+    cita.save
     redirect_to :controller  => "operations", :id => params[:id], :action => "edit"
   end
   

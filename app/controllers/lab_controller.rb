@@ -53,8 +53,9 @@ end
   #    format.html # index.html.erb
 
     #end
-    @consultas = Consulta.find_all_by_fecha_consulta(Time.now.beginning_of_day...Time.now.end_of_day)
-
+    @consultas_hoy = Cita.find_all_by_fecha_hora(Time.now.beginning_of_day...Time.now.end_of_day)
+    @confirma_hoy = Cita.find_all_by_fecha_hora(1.day.ago(Time.now.beginning_of_day)...1.day.ago(Time.now.end_of_day), :conditions => ['status = ?','Activa'])
+    @sin_confirma = Cita.find_all_by_status('Activa')
   end
   
   def debug

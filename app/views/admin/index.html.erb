@@ -1,3 +1,8 @@
+<div id="vasijas">
+	
+	
+</div>
+
 <%= calendar({:year => Time.now.year, :month => Time.now.month, :table_class =>
 "calendar"}) do |d|
 	@dia=d
@@ -15,14 +20,35 @@ end %>
 	<div id ="citas"></div>
 
 </div>
+<br />
+Son las <%= Time.now.strftime('%H:%M a %d, %b')%><br />
 
+
+<%= principal %>
+<br />
 <br />
 <div>
 <%# link_to_prototype_window('Link', 'Hola') %>
 <%# link_to_function "link",'Dialog.confirm({url:"Hola", options: {method: "get"}}, 
                      {top: 10, width:250, className: "alphacube", okLabel: "Yes", cancelLabel:"No"});' %>
 </div>
-Son las <%= Time.now%><br />
+
+<div id="primario"> 
+
+     <div id='principal'> 
+          <h1>Citas para hoy</h1>
+			<%= render :partial => 'lab/recepcion', :collection => @consultas_hoy   %>
+     </div> 
+
+<div id='barra-der'> 
+     <div class="barra-citas"> 
+         <h1>Citas para confirmar hoy </h1> 
+			<%= render :partial => 'lab/recepcion_confirma', :collection => @confirma_hoy   %>
+    </div> 
+     <div class="barra-citas"> 
+        <h1>Citas sin confirmar</h1> 
+			<%= render :partial => 'lab/recepcion_sin_conf', :collection => @sin_confirma   %>
+    </div> 
+</div>
 
 
-<%= principal %>

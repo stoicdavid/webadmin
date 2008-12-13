@@ -1,0 +1,30 @@
+<h1>Estudios Disponibles</h1>
+
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>Descripcion</th>
+    <th>Precio</th>
+    <th>Descuento</th>
+    <th>Honorarios Dr</th>
+    <th>ISR</th>
+  </tr>
+
+<% for estudio in @estudios %>
+  <tr>
+    <td><%=h estudio.tipo_estudio %></td>
+    <td><%=h estudio.descripcion %></td>
+    <td><%=h number_to_currency(estudio.precio) %></td>
+    <td><%=h number_to_percentage(estudio.descuento*100) %></td>
+    <td><%=h number_to_currency(estudio.comision_doctor) %></td>
+    <td><%=h number_to_currency(estudio.comision_isr) %></td>
+    <td><%= link_to 'Detalle', estudio %></td>
+    <td><%= link_to 'Editar', edit_estudio_path(estudio) %></td>
+    <td><%= link_to 'Borrar', estudio, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Agregar Estudio', new_estudio_path %>

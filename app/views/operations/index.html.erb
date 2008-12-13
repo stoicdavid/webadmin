@@ -1,33 +1,23 @@
-<h1>Estudios Realizados</h1>
+<h1>Estudios ...</h1>
 
 <table>
   <tr>
+	<th>Referencia</th>
 	<th>Paciente</th>
     <th>Tipo de Estudio</th>
-    <th>Hora llegada</th>
-    <th>Ini conexion</th>
-    <th>Fin conexion</th>
-    <th>Ini estudio</th>
-    <th>Fin estudio</th>
-    <th>Fecha interpretacion</th>
-    <th>Fecha entrega</th>
-    <th>Status</th>
+    <th>Status </th>
   </tr>
 
 <% for operation in @operations %>
   <tr>
-
+	<% cita = Cita.find(operation.cita_id) %>
+	<td><%=h operation.ref_estudio%><br /></td>
 	<td><%=h Paciente.find(Cita.find(operation.cita_id).paciente_id).nombre_completo %><br /></td>
     <td><%=h Estudio.find(operation.tipo_id).tipo_estudio %></td>
-    <td><%=h operation.hora_llegada %></td>
-    <td><%=h operation.ini_conexion %></td>
-    <td><%=h operation.fin_conexion %></td>
-    <td><%=h operation.ini_estudio %></td>
-    <td><%=h operation.fin_estudio %></td>
-    <td><%=h operation.fecha_interpretacion %></td>
-    <td><%=h operation.fecha_entrega %></td>
-    <td><%=h Cita.find(operation.cita_id).status %></td>
+    <td><%=h cita.status %></td>
+	<% if cita.status != 'Pagada' %>
 	<td><%= button_to 'Pago', {:action => "genera_orden", :id => operation.id } %></td>
+	<% end %>
     <td><%= link_to 'Show', operation %></td>
     <td><%= link_to 'Edit', edit_operation_path(operation) %></td>
     <td><%= link_to 'Destroy', operation, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -38,4 +28,4 @@
 
 <br />
 
-<%= link_to 'New operation', new_operation_path %>
+<%# link_to 'New operation', new_operation_path %>

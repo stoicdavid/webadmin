@@ -3,12 +3,12 @@ module ApplicationHelper
   def menu
     if usuario=Usuario.find_by_id(session[:usuario_id])
     
-    menu= link_to("Home", :controller => "admin") + "<br />"
+    menu= link_to("Home", :controller => "admin") + "<br /><br />"
     if usuario.nombre=='admin' 
       menu+= link_to("Doctores", :controller => "doctors") + "<br />"
+      menu+= link_to("Precios", :controller => "estudios") + "<br />"
       menu+= link_to("Cubículos",:controller => "lab", :action => 'show_horario')+"<br />"
       menu+= link_to("Pagos", :controller => "pagos") +"<br />"
-      menu+= link_to( "Consultas", :controller => "lab") +"<br />"
       menu+= link_to( "Citas", :controller => "citas")+ "<br />"
       menu+= link_to( "Estudios", :controller => "operations" )+"<br />"
     end

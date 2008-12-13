@@ -14,7 +14,7 @@
 	Haz clic en la liga para capturar la hora de llegada:
 	<%= link_to "Hora de Llegada", :controller => "operations", :action => "h_llegada", :id => params[:id]    %>
 	<%else %>
-	<%= @operation.hora_llegada %>
+	<%= @operation.hora_llegada.strftime('%H:%M, %d %b') %>
 
   </p>
 
@@ -24,7 +24,7 @@
 	Haz clic en la liga para capturar la hora de Inicio de Conexión:
 	<%= link_to "Inicio de Conexión", :controller => "operations", :action => "ini_con", :id => params[:id]    %>
 	<%else %>
-	<%= @operation.ini_conexion %>
+	<%= @operation.ini_conexion.strftime('%H:%M, %d %b') %>
 
   </p>
 
@@ -33,7 +33,7 @@
 	Haz clic en la liga para capturar la hora de Fin de Conexión:
 	<%= link_to "Fin de Conexión", :controller => "operations", :action => "fin_con", :id => params[:id]    %>
 	<%else %>
-	<%= @operation.fin_conexion %>
+	<%= @operation.fin_conexion.strftime('%H:%M, %d %b') %>
 
   </p>
 
@@ -42,7 +42,7 @@
 	Haz clic en la liga para capturar la hora de Inicio del Estudio:
 	<%= link_to "Inicio de Estudio", :controller => "operations", :action => "ini_est", :id => params[:id]    %>
 	<%else %>
-	<%= @operation.ini_estudio %>
+	<%= @operation.ini_estudio.strftime('%H:%M, %d %b') %>
 
   </p>
 
@@ -51,8 +51,7 @@
 	Haz clic en la liga para capturar la hora de Fin del Estudio:
 	<%= link_to "Fin de Estudio", :controller => "operations", :action => "fin_est", :id => params[:id]    %>
 	<%else %>
-	<%= @operation.fin_estudio %>
-	<% @operation.cita.status = 'Realizada' %>
+	<%= @operation.fin_estudio.strftime('%H:%M, %d %b') %>
 	<% end %>
 		<% end %>
 			<% end %>

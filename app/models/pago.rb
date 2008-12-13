@@ -9,8 +9,11 @@ class Pago < ActiveRecord::Base
     ]
     
     def folio
-      pago = Pago.find(:last)
-      pago.folio_factura + 1
+      if Pago.find(:last)
+        pago.folio_factura + 1
+      else
+        0
+      end
     end
     
     def precio_f
