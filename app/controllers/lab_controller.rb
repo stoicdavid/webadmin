@@ -65,6 +65,10 @@ end
   def genera_id
     @operacion = Operation.find_by_cita_id(params[:id])
     @operacion.genera_id
+    render :update do |page|
+      page.replace_html 'ref_est', "La clave del estudio es #{@operacion.ref_estudio}"
+    end
+    
   end
   
   def borra_cita
@@ -197,19 +201,26 @@ end
   end
 
   def asigna_cita
-    
+
+      
     fecha = params[:dia] + " " + params[:date][:hour_minute]
     fecha_cita = Time.parse(fecha)
-    consulta=Consulta.find(params[:consulta])
-    operation=Operation.create(:cita_id => 0,:tipo_id => consulta.estudio_id)
-    @cita=Cita.create(:paciente_id => params[:paciente],:fecha_hora => fecha_cita,:status => 'Activa',
-    :cubiculo => params[:cubiculo],:operation_id => operation.id)
-    @cita.save
-    operation.save
-    operation.update_attributes(:cita_id => @cita.id)
-    consulta.update_attributes(:cita_id => @cita.id)
-    render :update do |page|
-      page['resultados'].replace_html :partial => 'cita_creada', :id => params[:paciente]
+    if cita = Cita.find_by_fecha_hora(fecha_cita.gmtime,:conditions => ['cubiculo = ?',params[:cita][:cubiculo]])
+      render :update do |page|
+        page.insert_html :bottom, 'citas', 'Ya existe una cita asignada en ese horario'
+      end
+    else
+      consulta=Consulta.find(params[:consulta])
+      operation=Operation.create(:cita_id => 0,:tipo_id => consulta.estudio_id)
+      @cita=Cita.create(:paciente_id => params[:paciente],:fecha_hora => fecha_cita,:status => 'Activa',
+      :cubiculo => params[:cita][:cubiculo],:operation_id => operation.id)
+      @cita.save
+      operation.save
+      operation.update_attributes(:cita_id => @cita.id)
+      consulta.update_attributes(:cita_id => @cita.id)
+      render :update do |page|
+        page['tablas'].replace_html :partial => 'cita_creada', :id => params[:paciente]
+      end
     end
   end
 

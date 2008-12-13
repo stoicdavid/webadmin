@@ -37,9 +37,11 @@ class PacientesController < ApplicationController
     @paciente = Paciente.find(params[:id])                
     @consulta = Consulta.find(params[:consulta_id])
     if !@consulta.cita.nil?
-     @ref_estudio = @consulta.cita.operation.ref_estudio unless @consulta.cita.operation.ref_estudio.nil?
+      @ref_estudio = @consulta.cita.operation.ref_estudio unless @consulta.cita.operation.ref_estudio.nil?
+      @fecha_hora = @consulta.cita.fecha_hora unless @consulta.cita.fecha_hora.nil?
     else
       @ref_estudio = ""
+      @fecha_hora = ""
     end
      respond_to do |format|
         #format.html # show.html.erb

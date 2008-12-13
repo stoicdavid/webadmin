@@ -33,25 +33,27 @@
 		  if @dates.include?(d.strftime('%d-%m-%Y'))
 		    [link_to_function(d.mday, {:class => "specialDay"}) do |page|
 			page[:citas].replace_html :partial => 'cita',:object => @citas
+			page[:tablas].replace_html :partial => 'tabla_dia',:object => @citas ,:id => paciente.id, :locals => {:id_c => params[:id_cons],:dia => @dia}
 			end]
 		  else  
 			#[d.mday, {:class => "day"}]
 		    [link_to_function(d.mday, {:class => "day"}) do |page|
 		 	page[:citas].replace_html :partial => 'cita',:object => @citas
+			page[:tablas].replace_html :partial => 'tabla_dia',:object => @citas ,:id => paciente.id, :locals => {:id_c => params[:id_cons],:dia => @dia}
 			end]
 		  end
 		end %>
 		
 	<div id="box_citas">
 			<h4>Citas:</h4>
-
+<%# page[:citas].replace_html :partial => 'cita',:object => @citas %>
 			<div id ="citas"></div>
 
 		</div>
 	</div>
 
 	<div id="tablas">
-	<%# render :partial => 'tabla_dia',:object => @citas ,:id => paciente.id, :locals => {:id_c => params[:id_cons]} %>
+	<%# render :partial => 'tabla_dia',:object => @citas ,:id => paciente.id, :locals => {:id_c => params[:id_cons],:dia => @dia} %>
 	</div>	
 
 </div>

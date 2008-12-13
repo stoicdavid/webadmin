@@ -5,5 +5,11 @@ class Cita < ActiveRecord::Base
   has_one :horario
   
   validates_uniqueness_of :fecha_hora, :on => :update, :message => "ya existe con esa fecha"
+  
+  CUBICULO = [ 
+  # Displayed stored in db 
+  [ "1", 1 ], 
+  [ "2", 2 ]
+  ]
     
 end

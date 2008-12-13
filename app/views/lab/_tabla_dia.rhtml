@@ -1,8 +1,10 @@
+
+
 	<table id="mothertable" width="100%" cellpadding="0" cellspacing="0">
 	<tbody>
 	<% inicial=Timex.parse('7:00')
 		ini=Timex.parse('9:00')
-	   final = Timex.parse('20:30')%>
+	   final = Timex.parse('20:00')%>
 	<% count=0 %>
 	<tr>
 	<% for column in ["Horas","Cubículo 1","Cubículo 2","Cubículo 3","Cubículo 4","Cubículo 5","Cubículo 6"] %>
@@ -13,7 +15,7 @@
 		<% count_2=0 %>
 		<% celda="" %>
 		<% drag="" %>
-		<% inicial.step(final,60*90) {|x| %>
+		<% inicial.step(final,60*60) {|x| %>
 
 	<tr>
 		<td id="rowheadcell" >
@@ -21,7 +23,7 @@
 				<div class="rhead" id="rhead0" style="height:35px;top:0ex">
 					<div class="rheadtext">
 						<%= x.strftime('%H:%M - ') %>
-						<%  y=x + (60*90) %>
+						<%  y=x + (60*60) %>
 						<%= y.strftime('%H:%M') %>
 					</div>
 				</div>
@@ -46,11 +48,11 @@
 								:fecha_hora => Time.parse(x.strftime('%H:%M'))  } } )
 			%>">
 				<div class="chip" id="<%= drag %>" style="position:relative;width=100%" onclick="" ondblclick="">
-			<% unless @citas == nil %>
-			<% @citas.each{|cita| %>
+			<% unless tabla_dia == nil %>
+			<% tabla_dia.each{|cita| %>
 		
 					<%if cita.fecha_hora!=nil 
-					if cita.fecha_hora.to_s(:short) == Time.parse(x.strftime('%H:%M')).to_s(:short) and cita.cubiculo==cub %>	
+					if cita.fecha_hora.strftime('%H:%M') == Time.parse(x.strftime('%H:%M')).strftime('%H:%M') and cita.fecha_hora.strftime('%F').to_s == @dia.to_s and cita.cubiculo==cub %>	
 							<div class="t1" style="background-color:#A32929"> </div>
 						<div class="t2" style="background-color:#A32929"> </div>
 						<div class="chipbody edit" style="background-color:#d96666">

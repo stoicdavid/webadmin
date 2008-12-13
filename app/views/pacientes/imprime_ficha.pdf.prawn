@@ -21,20 +21,21 @@ end
 
 pdf.bounding_box([400,650], :width=>200, :height=>100) do
   pdf.font.size = 10
-  pdf.text Time.now.strftime('%A, %d de %B de %Y')
-  pdf.text Time.now.strftime('%H:%M')
-  pdf.text 'Estudio: ' + @ref_estudio
+  pdf.text @fecha_hora.strftime('%A, %d de %B de %Y')
+  pdf.text @fecha_hora.strftime('%H:%M')
+  pdf.text 'Estudio: ' + @ref_estudio.to_s
 end
 pdf.bounding_box([20,560], :width=>500, :height=>100) do
-  pdf.font.size = 10
-  pdf.text 'Nombre completo del paciente: (nombre,segundo nombre, apellido paterno y materno)',:size => 12,:style => :bold
+  pdf.font.size = 12
+  pdf.text 'Nombre completo del paciente: (nombre,segundo nombre, apellido paterno y materno)',:size => 10
   pdf.text " "
-  pdf.text @paciente.nombre_completo
+  pdf.text @paciente.nombre_completo,:style => :bold,:align => :center,:size => 10
 	pdf.stroke_line [pdf.bounds.left,  pdf.bounds.top],
               [pdf.bounds.right, pdf.bounds.top]
 end
 
 pdf.bounding_box([20,510], :width=>500, :height=>250) do
+	pdf.font.size = 10
 	pdf.text "Fecha de nacimiento: #{@paciente.fecha_nac.strftime('%d / %m / %Y')}       (#{@paciente.edad} años #{@paciente.edad_meses}  meses)"
 	pdf.text " "
 	pdf.text 'Médico que lo envía: ' + @consulta.doctor.nombre_completo
