@@ -2,17 +2,17 @@
 <% honorarios=0.0 %> 
 <% honorarios_isr=0.0 %> 
 <div>
-	<% @cons_pagos.each do |dia,consultas| %>
+	<% @cons_pagos.each do |dia,pagos| %>
 		<h3><%= dia.strftime('%A') %></h3>	
-		<% for consulta in consultas %>
-		<% o=Operation.find_by_pago_id(consulta.id) %>
+		<% for pago in pagos %>
+		<% o=Operation.find_by_pago_id(pago.id) %>
 			<tr>
 			<td><h4><%=h o.cita.paciente.nombre_completo %></h3></td><br/>
 			<td>Honorarios :<%= h number_to_currency(Estudio.find(o.tipo_id).comision_doctor.to_f) %></td><br/>
 			<td>ISR: <%= h number_to_currency(Estudio.find(o.tipo_id).comision_isr.to_f) %></td><br/>
 			<% honorarios+=Estudio.find(o.tipo_id).comision_doctor.to_f %></td>
 			<% honorarios_isr+=Estudio.find(o.tipo_id).comision_isr.to_f %>
-			<td><%=h consulta.created_at.to_s(:short) %></td><br/><br/>
+			<td><%=h pago.created_at.to_s(:short) %></td><br/><br/>
 
 			</tr>
 			<hr>	
@@ -21,10 +21,10 @@
 </div>
 
 <%# honorarios %>	
-<%#for consulta in @consultas  %>
+<%#for pago in @pagos  %>
 
 
-	<%# if consulta.cita.status=="Pagada"%>
+	<%# if pago.cita.status=="Pagada"%>
 	<table border="0" cellspacing="5" cellpadding="5">
 		<tr><th>Honorarios</th></tr>
 		<tr><td>Honorarios Médicos</td><td><%=h number_to_currency(honorarios) %></td></tr>

@@ -6,8 +6,9 @@
 <%= render :partial => 'lista' %>
 
 <p>
-  <b>Citas:</b><br/ >
-<% for cita in @consulta.paciente.citas %><br/ >
+  <b>Cita:</b><br/ >
+<% cita = @consulta.cita %>
+
 	<b>Fecha</b> 
 	<% if cita.fecha_hora!=nil%>
 	<%= cita.fecha_hora.strftime('%d -%B- %y Hora: %H:%M')  %><br / >
@@ -20,10 +21,11 @@
 	<br / >
 		<%= link_to 'Estudio', :controller  => "operations",:action => "edit",:id  => cita.operation.id %> |
 	<% else %>		
+		<td><%= button_to 'Reasigna Cita', {:controller => "citas",:action => "confirma", :id => cita.id } %></td>
 		<td><%= button_to 'Confirma Cita', {:controller => "citas",:action => "confirma", :id => cita.id } %></td>
 		<td><%= button_to 'Cancela', {:controller => "lab",:action => "cancela_cita", :id => cita.paciente_id,:id_cons => @consulta.id } %></td>
 		<% end %>
-<% end %>
+
 
 </p>
 <hr>

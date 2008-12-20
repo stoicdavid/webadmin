@@ -47,12 +47,14 @@
 </p>
 <p>
 <div id="ref_est">
-<% if status == 'Activa' && registro.cita.operation.ref_estudio.nil? %>
+<% if !registro.cita.nil? %>
+<% if registro.cita.operation.ref_estudio.nil?%>
 	<%= link_to_remote 'Genera ID Estudio', :url => {:controller => "lab",:action => "genera_id", :id => registro.cita_id}  %> 
+<% end %>
 <% end %>
 </p>
 </div>
-<%= link_to 'Detalle', registro %>
+<%= link_to 'Detalle', :controller => "consultas",:action => "show", :id => registro.id %>
 	<p>
 	<%= link_to_if status == "Activa" || !registro.cita.nil?, 'Imprimir ficha', {:action => 'imprime_ficha',:controller => 'pacientes',:id => @paciente.id, :consulta_id => registro.id}, :popup => true %>
 

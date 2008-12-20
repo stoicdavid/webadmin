@@ -1,6 +1,6 @@
 <p>
   <b>Paciente:</b>
-  <%=h @paciente.nombre_completo %>
+  <%=h Operation.find_by_pago_id(@pago.id).cita.consulta.paciente.nombre_completo %>
 </p>
 
 <p>

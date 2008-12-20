@@ -9,7 +9,7 @@ class Pago < ActiveRecord::Base
     ]
     
     def folio
-      if Pago.find(:last)
+      if pago = Pago.find(:last)
         pago.folio_factura + 1
       else
         0
@@ -50,7 +50,7 @@ class Pago < ActiveRecord::Base
         @descuento = Estudio.find(Operation.find(id).tipo_id).descuento
       if @descuento > 0
         desc = @importe * @descuento
-      elsif
+      else
         desc = 0
       end
       desc

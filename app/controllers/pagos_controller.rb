@@ -29,9 +29,16 @@ class PagosController < ApplicationController
   def show
     
     @pago = Pago.find(params[:id])
-    @paciente=Paciente.find(params[:paciente_id])
-
-    @operation = Operation.find(params[:operation_id])
+    if params[:paciente_id] == nil
+      @paciente=Operation.find_by_pago_id(params[:id]).cita.consulta.paciente
+    else
+      @paciente=Paciente.find(params[:paciente_id])
+    end
+    if params[:paciente_id] == nil
+      @operation=Operation.find_by_pago_id(params[:id])
+    else
+      @operation = Operation.find(params[:operation_id])
+    end
     @estudio = Estudio.find(@operation.tipo_id)
     respond_to do |format|
       format.html # show.html.erb

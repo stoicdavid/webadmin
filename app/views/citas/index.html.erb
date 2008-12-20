@@ -13,7 +13,6 @@
     <th>Paciente</th>
     <th>Cubiculo</th>
     <th>Fecha hora</th>
-    <th>Persona conf</th>
     <th>Confirma doc</th>
     <th>Confirma valet</th>
     <th>Acompana</th>
@@ -24,7 +23,7 @@
 
     <td><%=h cita.paciente.nombre %></td>
     <td><%=h cita.cubiculo %></td>
-    <td><%=h cita.fecha_hora %></td>
+    <td><%=h cita.fecha_hora.strftime('%d %m %Y,  %H:%M') %></td>
     <td><%=h cita.confirma_doc %></td>
     <td><%=h cita.confirma_valet %></td>
     <td><%=h cita.acompana %></td>

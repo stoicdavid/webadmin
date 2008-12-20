@@ -303,9 +303,14 @@ def pago_semana
   @pagos = Array.new
   @consultas = Consulta.find_all_by_doctor_id(params[:id])
   @consultas.each {|x|
-     if pago = Pago.find(x.cita.operation.pago_id)
-    @pagos << pago 
+      unless x.cita.operation.nil? 
+        if x.cita.operation.pago_id != nil
+          pago_id=x.cita.operation.pago_id
+          pago = Pago.find(pago_id) 
+              @pagos << pago
+        end                 
     end}
+    
   @cons_pagos = @pagos.group_by { |t| t.created_at.beginning_of_day}
   render :partial => "pago_semana" , :layout =>  "lab"
 #  render :update do |page|
@@ -317,9 +322,13 @@ def pago_mes
   @pagos = Array.new
   @consultas = Consulta.find_all_by_doctor_id(params[:id])
   @consultas.each {|x|
-      if pago = Pago.find(x.cita.operation.pago_id)
-        @pagos << pago 
-      end}
+      unless x.cita.operation.nil? 
+        if x.cita.operation.pago_id != nil
+          pago_id=x.cita.operation.pago_id
+          pago = Pago.find(pago_id) 
+              @pagos << pago
+        end                 
+    end}
   @cons_pagos = @pagos.group_by { |t| t.created_at.beginning_of_day}    
   render :partial => "pago_mes" , :layout =>  "lab"
   #render :update do |page|
