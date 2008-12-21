@@ -14,6 +14,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :citas
   
   map.resources :estudios
+
+  map.resources :admin
   
   map.resources :usuarios
 

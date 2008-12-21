@@ -1,0 +1,20 @@
+<div>
+
+<%= form_remote_tag :url => {:action => :actualiza_cita}%>
+     <p><b>Hora:</b></p>
+     <%# t = Time.now %>
+	<%# calendar_date_select_tag "cita", @cita.fecha_hora %>
+	<% inicial=Time.now.beginning_of_year.strftime('%Y') %>
+	<% final=Time.now.beginning_of_year.years_since(3).strftime('%Y') %>
+	<%# calendar_date_select_tag "fecha_cita", Time.now, :time => true  %>
+	<%= time_picker(Time.parse('7:00'), {:time_format => '12', :minute_step => 60,:time_separator => ':'}) %>
+	<%= hidden_field_tag :paciente, Paciente.find(params[:id]).id  %>	
+	<%= hidden_field_tag :consulta, params[:id_cons]  %>	
+	<%= hidden_field_tag :dia,  @dia  %>	
+	<%= hidden_field_tag :cita_id,  Consulta.find(params[:id_cons]).cita.id  %>	
+     <p><b>Cubículo:</b></p>
+     <p><%= select :cita, :cubiculo, Cita::CUBICULO,:prompt => "Selecciona:" %></p>
+
+   <%= submit_tag "Actualizar Horario", :id => Paciente.find(params[:id]).id   %>
+
+</div>

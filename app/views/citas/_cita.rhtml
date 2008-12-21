@@ -1,0 +1,18 @@
+
+<% if cita.fecha_hora.strftime('%F').to_s == @dia.to_s %>
+<br />
+<table >
+	<% for head in ["Nombre", "Fecha y Hora", "Status"] %>
+	<th align=left><%= head %></th>
+	<% end %>
+
+  <tr>
+
+    <td width = 240px><%= link_to Paciente.find(cita.paciente_id).nombre_completo, :controller => "pacientes", :action => "show", :id => cita.paciente_id %></td>
+    <td width = 150px><%=h cita.fecha_hora.strftime('%d %m %Y,  %H:%M') %></td>
+    <td width = 10px><%=h cita.status %></td>
+  </tr>
+</table>
+
+
+<% end %>

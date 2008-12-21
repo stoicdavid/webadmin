@@ -1,8 +1,9 @@
-<h4><%= @dia.strftime('%d / %m / %y') %></h4>
+<br />Fecha solicitada:<br /><h4><%= @dia.strftime('%d / %m / %y') %></h4>
 <% if Consulta.find(params[:id_cons]).cita.nil? %>
 	<%= render :partial => 'busqueda', :id => params[:id],:locals => {:id_cons => params[:id_cons]}%>
 <% else %>
-<%= button_to 'Reasigna Cita', {:controller => "lab", :action => "reasigna_cita", :id => params[:id],:id_cons => params[:id_cons] } %>
+	<%= render :partial => 'busqueda_2', :id => params[:id],:locals => {:id_cons => params[:id_cons]}%>
+<%# button_to 'Actualza Horario', {:controller => "lab", :action => "actualiza_cita", :id => params[:id],:id_cons => params[:id_cons] } %>
 <%= button_to 'Cancela Cita', {:controller => "lab", :action => "cancela_cita", :id => params[:id],:id_cons => params[:id_cons] } %>
 <% end %>
 

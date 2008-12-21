@@ -2,29 +2,31 @@
 	
 	
 </div>
+Son las <%= Time.now.strftime('%H:%M a %d, %b')%><br />
 
+<hr>
+<!--
 <%= calendar({:year => Time.now.year, :month => Time.now.month, :table_class =>
-"calendar"}) do |d|
+"calendar",:first_day_of_week => 1}  ) do |d|
 	@dia=d
   if @dates.include?(d.strftime('%d-%m-%Y'))
     [link_to_function(d.mday, {:class => "specialDay"}) do |page|
 	page[:citas].replace_html :partial => 'cita',:collection => @citas
+	page[:citas].visual_effect 'highlight', :duration => 1.3
 	end]
   else  
     [d.mday, {:class => "day"}]
   end
 end %>
-<div id="box_citas">
+<div id="box_citas" >
 	<h4>Citas:</h4>
 
 	<div id ="citas"></div>
 
 </div>
+!-->
 <br />
-Son las <%= Time.now.strftime('%H:%M a %d, %b')%><br />
 
-
-<%= principal %>
 <br />
 <br />
 <div>

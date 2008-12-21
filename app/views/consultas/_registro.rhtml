@@ -48,7 +48,7 @@
 <p>
 <div id="ref_est">
 <% if !registro.cita.nil? %>
-<% if registro.cita.operation.ref_estudio.nil?%>
+<% if registro.cita.operation.ref_estudio.nil? and registro.cita.status = 'Confirmada'%>
 	<%= link_to_remote 'Genera ID Estudio', :url => {:controller => "lab",:action => "genera_id", :id => registro.cita_id}  %> 
 <% end %>
 <% end %>

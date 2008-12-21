@@ -14,6 +14,6 @@
      <p><b>Cubículo:</b></p>
      <p><%= select :cita, :cubiculo, Cita::CUBICULO,:prompt => "Selecciona:" %></p>
 
-   <%= submit_tag "Asignar", :id => Paciente.find(params[:id]).id  %>
+   <%= submit_tag "Asignar Horario", :id => Paciente.find(params[:id]).id   %>
 
 </div>

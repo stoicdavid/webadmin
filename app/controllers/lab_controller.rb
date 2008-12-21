@@ -220,10 +220,14 @@ end
       operation.update_attributes(:cita_id => @cita.id)
       consulta.update_attributes(:cita_id => @cita.id)
       render :update do |page|
-        page['tablas'].replace_html :partial => 'cita_creada', :id => params[:paciente]
+        page['citas'].replace_html :partial => 'cita_creada', :id => params[:paciente]
+        page['citas'].visual_effect :highlight, :duration => 5
+        page['tablas'].toggle
       end
     end
   end
+  
+
 
   def cancela_cita
     cita=Consulta.find(params[:id_cons]).cita
@@ -241,17 +245,47 @@ end
     end
   end
 
+  def reasigna_cita
+    @paciente = Paciente.find(params[:id])
+    @cita = Consulta.find(params[:id_cons],:include => :cita).cita
+    @citas = Cita.find(:all,:include => :paciente)
+    @dates = @citas.collect { |p| p.fecha_hora.strftime('%d-%m-%Y') }
+    render :partial => 'crea_cita', :id => @paciente.id, :layout => "lab",:object => @citas
+  end
+  
+  def actualiza_cita
+    fecha = params[:dia] + " " + params[:date][:hour_minute]
+    fecha_cita = Time.parse(fecha)
+    if cita = Cita.find_by_fecha_hora(fecha_cita.gmtime,:conditions => ['cubiculo = ?',params[:cita][:cubiculo]])
+      render :update do |page|
+        page.insert_html :bottom, 'citas', 'Ya existe una cita asignada en ese horario'
+      end
+    else
+      consulta=Consulta.find(params[:consulta])
+      @cita=Cita.update(params[:cita_id],:paciente_id => params[:paciente],:fecha_hora => fecha_cita,:status => 'Activa',
+      :cubiculo => params[:cita][:cubiculo])
+      #flash[:notice] = 'La cita fue actualizada exitosamente'
+      #redirect_to :action => 'index',:controller => "admin"
+      render :update do |page|
+        page['resultados'].replace_html :partial => 'cita_creada', :id => params[:paciente]
+        page['resultados'].visual_effect :highlight, :duration => 5
+        page['tablas'].toggle
+      end
+    end
+    
+  end
+
   def crea_cita
     
-    paciente = Paciente.find(params[:id])
+    @paciente = Paciente.find(params[:id])
     #@cita = Cita.create(:paciente_id => consulta.paciente_id,:status => 'Activa',:operation_id => 0)
     #consulta.update_attributes(:cita_id => @cita.id)
     #operation = Operation.create(:cita_id => consulta.cita_id,:tipo => "value", )
     #@cita.update_attributes(:operation_id => operation.id)
     #	<%= render :partial => 'consultas/listas', :collection => @cons = @paciente.consultas, :id => @paciente.id %>
-    @citas = Cita.find(:all)
+    @citas = Cita.find(:all,:include => :paciente)
     @dates = @citas.collect { |p| p.fecha_hora.strftime('%d-%m-%Y') }
-    render :partial => 'crea_cita', :id => paciente.id, :layout => "lab"
+    render :partial => 'crea_cita', :id => @paciente.id, :layout => "lab"
   end
   
   def confirma_cita

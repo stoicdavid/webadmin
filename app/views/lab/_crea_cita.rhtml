@@ -1,11 +1,11 @@
 
-<h1>Crea cita</h1>
-<% paciente = Paciente.find(params[:id]) %>
+<h1>Asigna fecha y hora de la cita</h1>
+
 
   	<p>
-		<%# link_to_remote "Diario", :url => {:action => 'horario',:id => paciente.id,:object => @citas },:html => {:id => 'dia'} %>
-		<%# link_to_remote "Semana",:url => {:action => 'horario2',:id => paciente.id}, :html => {:id => 'semana'} %>	
-		<%# link_to_remote "Mes",:url => {:action => 'horario3',:id => paciente.id}, :html => {:id => 'mes'} %>
+		<%# link_to_remote "Diario", :url => {:action => 'horario',:id => @paciente.id,:object => @citas },:html => {:id => 'dia'} %>
+		<%# link_to_remote "Semana",:url => {:action => 'horario2',:id => @paciente.id}, :html => {:id => 'semana'} %>	
+		<%# link_to_remote "Mes",:url => {:action => 'horario3',:id => @paciente.id}, :html => {:id => 'mes'} %>
 	</p>
 
 
@@ -25,35 +25,37 @@
 
 	<h2><%# @cita.status %></h2>
 
-	  <h3>Paciente: <%=h paciente.nombre_completo %></h3> 
+	  <h3>Paciente: <%=h @paciente.nombre_completo %></h3> 
 		<h4><%= Time.now.strftime('%d-%B-%Y') %></h4>
 		<%= calendar({:year => Time.now.year, :month => Time.now.month, :table_class =>
-		"calendar",:first_day_of_week => 1  }) do |d|
+		"calendar",:first_day_of_week => 1}) do |d|
 			@dia=d
 		  if @dates.include?(d.strftime('%d-%m-%Y'))
 		    [link_to_function(d.mday, {:class => "specialDay"}) do |page|
 			page[:citas].replace_html :partial => 'cita',:object => @citas
-			page[:tablas].replace_html :partial => 'tabla_dia',:object => @citas ,:id => paciente.id, :locals => {:id_c => params[:id_cons],:dia => @dia}
+			page[:tablas].replace_html :partial => 'tabla_dia',:object => @citas ,:id => @paciente.id, :locals => {:id_c => params[:id_cons],:dia => @dia}
 			end]
 		  else  
 			#[d.mday, {:class => "day"}]
 		    [link_to_function(d.mday, {:class => "day"}) do |page|
 		 	page[:citas].replace_html :partial => 'cita',:object => @citas
-			page[:tablas].replace_html :partial => 'tabla_dia',:object => @citas ,:id => paciente.id, :locals => {:id_c => params[:id_cons],:dia => @dia}
+			page[:tablas].replace_html :partial => 'tabla_dia',:object => @citas ,:id => @paciente.id, :locals => {:id_c => params[:id_cons],:dia => @dia}
 			end]
 		  end
 		end %>
 		
 	<div id="box_citas">
 			<h4>Citas:</h4>
-<%# page[:citas].replace_html :partial => 'cita',:object => @citas %>
-			<div id ="citas"></div>
+			<% if !@cita.nil? %>
+			<%= render :partial => 'single_cita',:object => @cita %>
+			<% end %>
+		<div id ="citas"></div>
 
 		</div>
 	</div>
 
 	<div id="tablas">
-	<%# render :partial => 'tabla_dia',:object => @citas ,:id => paciente.id, :locals => {:id_c => params[:id_cons],:dia => @dia} %>
+	<%# render :partial => 'tabla_dia',:object => @citas ,:id => @paciente.id, :locals => {:id_c => params[:id_cons],:dia => @dia} %>
 	</div>	
 
 </div>

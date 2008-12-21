@@ -2,8 +2,13 @@ class CitasController < ApplicationController
   # GET /citas
   # GET /citas.xml
   def index
-    @citas = Cita.find(:all)
-
+    @mes_actual = Time.now
+    @mes_anterior = 1.month.ago(@mes_actual)
+    @mes_sig = 1.month.since(@mes_actual)
+    @citas = Cita.find_all_by_fecha_hora(@mes_actual.beginning_of_month...@mes_actual.end_of_month)
+    
+    @dates = @citas.collect { |p| p.fecha_hora.strftime('%d-%m-%Y') }
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @citas }
@@ -85,6 +90,21 @@ class CitasController < ApplicationController
       end
     end
   end
+  
+  def update_calendario
+    @mes_actual = Time.parse(params[:id])
+    @mes_anterior = 1.month.ago(@mes_actual)
+    @mes_sig = 1.month.since(@mes_actual)
+    @citas = Cita.find_all_by_fecha_hora(@mes_actual.beginning_of_month...@mes_actual.end_of_month)
+    @dates = @citas.collect { |p| p.fecha_hora.strftime('%d-%m-%Y') }    
+    render :update do |page|
+      page['calendario'].replace_html :partial => "calendar" 
+      page['calendario'].visual_effect 'blind_down', :duration => 1.3
+      page['citas'].toggle
+      
+    end        
+  end
+  
   
   def confirma
     @cita = Cita.find(params[:id])

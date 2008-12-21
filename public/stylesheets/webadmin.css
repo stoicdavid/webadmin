@@ -110,7 +110,6 @@ div.cita{
 }
 
 
-
 /* Styles for main page */
 
 #banner {
@@ -129,12 +128,13 @@ div.cita{
 }
 
 #columns {
+
   background: #153A8B;
 }
 
 #main {
   margin-left: 12.3em;
-  padding-top: 11ex;
+  padding-top: 3ex;
   padding-left: 2em;
   background: white;
 }
@@ -144,7 +144,7 @@ div.cita{
   padding-top: 1em;
   padding-left: 1em;
   padding-bottom: 1em;
-  width: 1em;
+  width: 11.3em;
   background: #153A8B;
 }
 
