@@ -2,6 +2,10 @@
 
 /* Styles for products/index */
 
+
+
+
+
 #primario {
     width:800px;
 }
@@ -96,20 +100,61 @@ div.avatar{
 	margin: 3px 400px 0 0;
 }
 
+
 td.fondo{
 	background-color: #A91A1A;
 }
 
-div.cita{
- text-align: right;	
+td.cita{
+ height:30px;
+ text-align: left;	
  background-color: transparent;
- font:  20px/20px "Arial", serif;
- color: #FFF;
+ font:  "Arial", serif;
 
- padding-right: 20px;
 }
 
 
+div.bloque{
+ position:relative;width=100%
+}
+
+div.tit1{
+	background-color:#A32929
+}
+div.tit2{
+	background-color:#A32929
+}
+
+div.cuadro{
+	display:block;
+	height:35px;
+	overflow:hidden;
+    background-color:#d96666;
+    padding-top:0;
+    vertical-align:top;
+}
+
+dd.nombre{
+margin:15px 5px;
+	
+}
+
+dl.lista{
+border-color:#a32929;
+font: "Arial", serif; color: #40292B;
+text-align:left;
+}
+dt.tiempo{
+  display:block;
+  color: #FFF;
+  background-color:#A32929;
+  font: "Arial", serif;
+  font-size:8pt;
+margin:-13px 0px;
+}
+div.bib2{
+background-color:#D96666;border-color:#A32929
+}
 /* Styles for main page */
 
 #banner {

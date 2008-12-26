@@ -10,7 +10,7 @@
 	<%= time_picker(Time.parse('7:00'), {:time_format => '12', :minute_step => 60,:time_separator => ':'}) %>
 	<%= hidden_field_tag :paciente, Paciente.find(params[:id]).id  %>	
 	<%= hidden_field_tag :consulta, params[:id_cons]  %>	
-	<%= hidden_field_tag :dia,  @dia  %>	
+	<%= hidden_field_tag :dia,  params[:dia]  %>	
      <p><b>Cubículo:</b></p>
      <p><%= select :cita, :cubiculo, Cita::CUBICULO,:prompt => "Selecciona:" %></p>
 

@@ -36,7 +36,7 @@
 }
 
 .otherMonth {
-  color: #eeeeee;
+  color: #A6ACAE;
   background-color: white;
 }
 
@@ -47,16 +47,16 @@
 }
 .specialDay {
   background-color: #003355;
-  color: white;
+  color: #C4BD7F;
 }
 .specialDay a, .specialDay a:visited, .specialDay a:hover {
-  color: white;
+  color: #99884C;
   text-decoration: none;
-  padding: 1em;
+  padding: 0em;
 }
 .specialDay a:hover {
   color: white;
-  background-color: black;
+  background-color: #993845;
 }
 .weekendDay {
   background-color: #ffffdd;

@@ -31,16 +31,12 @@
 		"calendar",:first_day_of_week => 1}) do |d|
 			@dia=d
 		  if @dates.include?(d.strftime('%d-%m-%Y'))
-		    [link_to_function(d.mday, {:class => "specialDay"}) do |page|
-			page[:citas].replace_html :partial => 'cita',:object => @citas
-			page[:tablas].replace_html :partial => 'tabla_dia',:object => @citas ,:id => @paciente.id, :locals => {:id_c => params[:id_cons],:dia => @dia}
-			end]
+			[link_to_remote(d.mday,
+				:url => {:action => 'ligas',:id => @paciente.id,:dia => @dia, :id_cons => params[:id_cons]}),{:class => "specialDay"}]
 		  else  
-			#[d.mday, {:class => "day"}]
-		    [link_to_function(d.mday, {:class => "day"}) do |page|
-		 	page[:citas].replace_html :partial => 'cita',:object => @citas
-			page[:tablas].replace_html :partial => 'tabla_dia',:object => @citas ,:id => @paciente.id, :locals => {:id_c => params[:id_cons],:dia => @dia}
-			end]
+			[link_to_remote(d.mday, 
+				:url => {:action => 'ligas',:id => @paciente.id,:dia => @dia, :id_cons => params[:id_cons]}
+				),{:class => "day"}]
 		  end
 		end %>
 		

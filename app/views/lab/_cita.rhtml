@@ -1,4 +1,4 @@
-<br />Fecha solicitada:<br /><h4><%= @dia.strftime('%d / %m / %y') %></h4>
+<br />Fecha solicitada:<br /><h4><%= Time.parse(params[:dia]).strftime('%d / %m / %y') %></h4>
 <% if Consulta.find(params[:id_cons]).cita.nil? %>
 	<%= render :partial => 'busqueda', :id => params[:id],:locals => {:id_cons => params[:id_cons]}%>
 <% else %>
@@ -6,50 +6,3 @@
 <%# button_to 'Actualza Horario', {:controller => "lab", :action => "actualiza_cita", :id => params[:id],:id_cons => params[:id_cons] } %>
 <%= button_to 'Cancela Cita', {:controller => "lab", :action => "cancela_cita", :id => params[:id],:id_cons => params[:id_cons] } %>
 <% end %>
-
-
-<!--
-<% inicial=Timex.parse('7:00')
-	ini=Timex.parse('9:00')
-   final = Timex.parse('18:00')%>
-<br />
-<% dias = ["Horas","Paciente","Cubículo","Status"] %>
-<table >
-	<tbody>
-
-
-<% for column in dias %>
-		<th><%= column %></th>
-<% end %>
-
-
-<% inicial.step(final,60*60) {|x| %>
-
-<tr>
-	<td>
-		<%= x.strftime('%H:%M - ') %>
-		<%  y=x + (60*60) %>
-		<%= y.strftime('%H:%M') %>
-	</td>
-
-
-	<td align="center">
-		<% cita.each {|citas| %>
-		<% if citas.fecha_hora.strftime('%H:%M') == Time.parse(x.strftime('%H:%M')).strftime('%H:%M') and citas.fecha_hora.strftime('%F').to_s == @dia.to_s  %>	
-		<%= Paciente.find(citas.paciente_id).nombre_completo %>
-		<td align ="center">
-		<%= citas.cubiculo %>
-	</td>
-	<td align ="center">
-		<%= citas.status %>
-	</td>
-	</td>
-	<% end %>
-<% } %>
-</tr>
-
-
-<% } %>
-</tbody>
-</table>
-!-->

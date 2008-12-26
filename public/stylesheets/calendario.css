@@ -564,9 +564,10 @@ body.ko .callistLink,body.ja .callistLink,body.zh .callistLink,body.th .callistL
 	img.ul,img.ur{top:0}img.bl,img.br{bottom:-1px}
 	img.ul,img.bl{left:0}
 	img.ur,img.br{right:0}
+	
 	#mothertable{table-layout:fixed;
-		padding:0 1ex
-		}
+		         padding:0 1ex;
+		         }
 	#topBar{padding-right:1ex;padding-left:1ex}
 	#nav{vertical-align:top;width:13em}
 	* html #nav{padding-right:0}

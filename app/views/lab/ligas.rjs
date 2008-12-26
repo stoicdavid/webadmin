@@ -1,0 +1,6 @@
+@citas = Cita.find_all_by_fecha_hora(Time.parse(params[:dia]).beginning_of_day...Time.parse(params[:dia]).end_of_day)
+
+page['citas'].replace_html :partial => 'cita',:object => @citas,:id => params[:id], :id_cons => params[:id_cons], :dia => params[:dia]
+page['citas'].visual_effect 'highlight',:duration => 1.3
+page['tablas'].replace_html :partial => 'tabla_dia',:object => @citas ,:id => params[:id], :locals => {:id_c => params[:id_cons],:dia => params[:dia]}
+debug params
