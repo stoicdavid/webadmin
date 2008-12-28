@@ -51,13 +51,14 @@ class Paciente < ActiveRecord::Base
     @paciente = self.find(:all)
   end
   
-  def edad
-      now = Time.now.utc
+  def edad(edad_p)
+      now = edad_p
       now.year - self.fecha_nac.year - (self.fecha_nac.to_time.change(:year => now.year) > now ? 1 : 0)
   end
   
-  def edad_meses
-      now = Time.now.utc
+  
+  def edad_meses(edad_p)
+      now = edad_p
       actual = self.fecha_nac.to_time.change(:year => now.year)
       actual > now ? 12 - (actual.month - now.month)  : (now.month - actual.month)
   end

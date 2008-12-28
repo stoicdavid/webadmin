@@ -100,7 +100,7 @@ class CitasController < ApplicationController
     render :update do |page|
       page['calendario'].replace_html :partial => "calendar" 
       page['calendario'].visual_effect 'blind_down', :duration => 1.3
-      page['citas'].toggle
+
       
     end        
   end

@@ -16,6 +16,9 @@
 <p>
 <% unless registro.cita==nil %>
 <% if registro.cita.status == 'Pagada' %>	
+  <b>Edad (al realizar el estudio):</b>
+  <%=h registro.paciente.edad(registro.cita.fecha_hora) %> años
+  <%=h registro.paciente.edad_meses(registro.cita.fecha_hora) %> meses <br /><br />
   <b>Fecha de estudio:</b>
   <%=h registro.cita.fecha_hora.strftime('%d-%B-%Y') %>
 </p>

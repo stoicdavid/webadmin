@@ -16,12 +16,37 @@
 </p>
 <p>
   <b>Edad:</b>
-  <%=h @paciente.edad %> años
-  <%= @paciente.edad_meses %> meses
+  <%=h @paciente.edad(Time.now.utc) %> años
+  <%= @paciente.edad_meses(Time.now.utc) %> meses
 </p>
 <p>
 	<b>RFC:</b>
 	<%= @paciente.rfc_pac %>
+</p>
+<h3>Datos del Contacto</h3>
+<p>
+	<b>Contacto:</b>
+	<%= @paciente.contacto %>
+</p>
+<p>
+	<b>Celular:</b>
+	<%= @paciente.tel_cel %>
+</p>
+<p>
+	<b>Teléfono Casa:</b>
+	<%= @paciente.tel_casa %>
+</p>
+<p>
+	<b>Teléfono Oficina:</b>
+	<%= @paciente.tel_oficina %>
+</p>
+<p>
+	<b>Fax:</b>
+	<%= @paciente.tel_fax %>
+</p>
+<p>
+	<b>Correo electrónico:</b>
+	<%= @paciente.mail %>
 </p>
 
 
