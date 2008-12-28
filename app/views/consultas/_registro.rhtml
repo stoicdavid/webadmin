@@ -17,7 +17,7 @@
 <% unless registro.cita==nil %>
 <% if registro.cita.status == 'Pagada' %>	
   <b>Fecha de estudio:</b>
-  <%=h Pago.find(registro.cita.operation.pago_id).created_at.strftime('%d-%B-%Y') %>
+  <%=h registro.cita.fecha_hora.strftime('%d-%B-%Y') %>
 </p>
 <% end %>
 <% end %>
