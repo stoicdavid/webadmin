@@ -27,8 +27,9 @@
 
 	  <h3>Paciente: <%=h @paciente.nombre_completo %></h3> 
 		<h4><%= Time.now.strftime('%d-%B-%Y') %></h4>
-		<%= calendar({:year => Time.now.year, :month => Time.now.month, :table_class =>
-		"calendar",:first_day_of_week => 1}) do |d|
+		<div id="calendario">
+		<%= calendar({:year => Time.now.year, :month => @mes_actual.month, :table_class =>
+		"calendar",:first_day_of_week => 1,:next_month_text => link_to_remote(@mes_sig.strftime('%B'),:url => {:action => 'update_calendario',:id => @mes_sig,:paciente_id => @paciente.id,:id_cons => params[:id_cons]})}) do |d|
 			@dia=d
 		  if @dates.include?(d.strftime('%d-%m-%Y'))
 			[link_to_remote(d.mday,
@@ -39,7 +40,7 @@
 				),{:class => "day"}]
 		  end
 		end %>
-		
+		</div>
 	<div id="box_citas">
 			<h4>Citas:</h4>
 			<% if !@cita.nil? %>

@@ -235,7 +235,24 @@ end
     redirect_to :action => 'crea_cita', :id => params[:id],:id_cons => params[:id_cons]
 
   end
+  
+  def update_calendario
+    @mes_actual = Time.parse(params[:id])
+    @mes_anterior = 1.month.ago(@mes_actual)
+    @mes_sig = 1.month.since(@mes_actual)
+    @citas = Cita.find_all_by_fecha_hora(@mes_actual.beginning_of_month...@mes_actual.end_of_month)
+    @dates = @citas.collect { |p| p.fecha_hora.strftime('%d-%m-%Y') }    
+    @paciente = Paciente.find(params[:paciente_id])
 
+    @citas = Cita.find_all_by_fecha_hora(@mes_actual.beginning_of_month...@mes_actual.end_of_month)
+    @dates = @citas.collect { |p| p.fecha_hora.strftime('%d-%m-%Y') }
+    render :update do |page|
+      page['calendario'].replace_html :partial => "calendar", :locals => {:id_cons => params[:id_cons]}
+      page['calendario'].visual_effect 'appear', :duration => 1.3
+
+      
+    end        
+  end
 
   def list_horarios
     @cubiculos = Cita.find_all_by_fecha_hora(params[:fec_cita],:order => 'cubiculo')
@@ -246,9 +263,14 @@ end
   end
 
   def reasigna_cita
+    @mes_actual = Time.now
+    @mes_anterior = 1.month.ago(@mes_actual)
+    @mes_sig = 1.month.since(@mes_actual)
+    
+    
     @paciente = Paciente.find(params[:id])
     @cita = Consulta.find(params[:id_cons],:include => :cita).cita
-    @citas = Cita.find(:all,:include => :paciente)
+    @citas = Cita.find_all_by_fecha_hora(@mes_actual.beginning_of_month...@mes_actual.end_of_month)
     @dates = @citas.collect { |p| p.fecha_hora.strftime('%d-%m-%Y') }
     render :partial => 'crea_cita', :id => @paciente.id, :layout => "lab",:object => @citas
   end
@@ -276,14 +298,17 @@ end
   end
 
   def crea_cita
-    
+    @mes_actual = Time.now
+    @mes_anterior = 1.month.ago(@mes_actual)
+    @mes_sig = 1.month.since(@mes_actual)
+      
     @paciente = Paciente.find(params[:id])
     #@cita = Cita.create(:paciente_id => consulta.paciente_id,:status => 'Activa',:operation_id => 0)
     #consulta.update_attributes(:cita_id => @cita.id)
     #operation = Operation.create(:cita_id => consulta.cita_id,:tipo => "value", )
     #@cita.update_attributes(:operation_id => operation.id)
     #	<%= render :partial => 'consultas/listas', :collection => @cons = @paciente.consultas, :id => @paciente.id %>
-    @citas = Cita.find(:all,:include => :paciente)
+    @citas = Cita.find_all_by_fecha_hora(@mes_actual.beginning_of_month...@mes_actual.end_of_month)
     @dates = @citas.collect { |p| p.fecha_hora.strftime('%d-%m-%Y') }
     render :partial => 'crea_cita', :id => @paciente.id, :layout => "lab"
   end

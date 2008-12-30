@@ -99,7 +99,7 @@ class CitasController < ApplicationController
     @dates = @citas.collect { |p| p.fecha_hora.strftime('%d-%m-%Y') }    
     render :update do |page|
       page['calendario'].replace_html :partial => "calendar" 
-      page['calendario'].visual_effect 'blind_down', :duration => 1.3
+      page['calendario'].visual_effect 'appear', :duration => 1.3
 
       
     end        

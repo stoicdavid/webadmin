@@ -1,0 +1,14 @@
+
+<%= calendar({:year => @mes_actual.year, :month => @mes_actual.month, :table_class =>
+"calendar",:previous_month_text =>link_to_remote(@mes_anterior.strftime('%B'),:url => {:action => 'update_calendario',:id => @mes_anterior,:paciente_id => @paciente.id,:id_cons => params[:id_cons]}),
+:next_month_text => link_to_remote(@mes_sig.strftime('%B'),:url => {:action => 'update_calendario',:id => @mes_sig,:paciente_id => @paciente.id,:id_cons => params[:id_cons]}),:first_day_of_week => 1} ) do |d|
+	@dia=d
+	if @dates.include?(d.strftime('%d-%m-%Y'))
+		[link_to_remote(d.mday,
+			:url => {:action => 'ligas',:id => @paciente.id,:dia => @dia, :id_cons => params[:id_cons]}),{:class => "specialDay"}]
+	  else  
+		[link_to_remote(d.mday, 
+			:url => {:action => 'ligas',:id => @paciente.id,:dia => @dia, :id_cons => params[:id_cons]}
+			),{:class => "day"}]
+	  end
+end %>
