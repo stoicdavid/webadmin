@@ -29,14 +29,14 @@
   <div id="banner">
 	<%= image_tag("lpdf.png",:size => "160x105") %> 
 
-    <%= @page_title || "AMERICAN NEUROLAB INC" %><!-- <label id="code.depot.e.title"/> -->
+    <%= @page_title || "AMERICAN NEUROLAB INC" %>
   </div>
 <div id="columns"> 
 	<div id="side"> 
 <%= menu %>
 	</div>
     <div id="main">
-		<p id="notice"><%= flash[:notice] %></p>
+		<p class="notice"><%= flash[:notice] %></p>
       <%= yield :layout %><!-- <label id="code.depot.e.include"/> -->
     </div>
 </div>

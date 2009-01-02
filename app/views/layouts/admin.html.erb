@@ -4,16 +4,18 @@
 <head> 
 	<title>Bienvenida</title> 
 	<%= stylesheet_link_tag "webadmin", :media => "all" %> 
+	
 </head> 
 <body id="store"> 
-	<div id="banner"> 
 
-	<%= @page_title || "Bienvenido" %> 
-	
-</div> 
+<div class="logo">
+<%= image_tag("Logo ANL Inc.jpg",:size => "295x205") %> 	
+</div>
+
 
 
 	<div id="main"> 
+	<p class="notice"><%= flash[:notice] %></p>
 	<%= yield :layout %> 
 </div> 
 </div> 
