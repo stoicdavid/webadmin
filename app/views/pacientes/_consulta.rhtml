@@ -1,3 +1,5 @@
+<%= error_messages_for :consulta %>
+
 <h1>Agrega un registro</h1>
 <% fields_for "paciente[consulta_atributos]", consulta do |c_form| %>
 
@@ -9,7 +11,7 @@
 
  <p>
    Estudio a realizar: <br />
-  <%= c_form.select :estudio_id, Estudio.find_all, :prompt => "Selecciona el estudio" %>
+  <%= c_form.collection_select :estudio_id, Estudio.all, :id,:tipo_estudio %>
 </p>
 <p>
    <%= c_form.label 'Fecha de consulta' %><br />
@@ -38,6 +40,12 @@
     <%= c_form.label 'Fármacos actuales' %><br />
     <%= c_form.text_area :medicina_actual %>
   </p>
+<% if !params[:id].nil? %>
+
+ <p>
+ 	<%= c_form.submit "Crear" %>
+ </p>
+<% end %>
 
 <% end %>
 

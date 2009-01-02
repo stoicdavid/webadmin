@@ -1,6 +1,5 @@
-<h2>Paso 2</h2>
 
-<h1>Captura Consulta</h1>
+<h1>Edita Consulta</h1>
 
 <% form_for(@consulta) do |f| %>
   <%= f.error_messages %>
@@ -8,33 +7,31 @@
      Paciente: <br />
 <%=    @consulta.paciente.nombre_completo %>
   </p>
-<p>
-     Doctor que atendio: <br />
-<%=  @consulta.doctor.nombre_completo %><br />
-<%= @consulta.doctor.specialization.especialidad.especialidad %>
-  </p>
+
+ <%= f.select :doctor_id, Doctor.find_all, :prompt => "Selecciona el doctor" %>
 
   <p>
-    <%= f.label 'Fecha de consulta' %><br />
-    <%= f.datetime_select :fecha_consulta %>
+	<%= f.label 'Fecha de consulta' %><br />
+	<%= calendar_date_select_tag :fecha_consulta,'', :year_range => 2.years.ago..0.years.ago  %>
   </p>
+
+
   <p>
-    <%= f.label 'Fecha de Referencia' %><br />
-    <%= f.datetime_select :fecha_envio %>
+   <%= f.label 'Fecha de Referencia' %><br />
+   <%= calendar_date_select_tag :fecha_envio,'', :year_range => 2.years.ago..0.years.ago  %>
   </p>
   <p>
     <%= f.label 'Diagnóstico' %><br />
     <%= f.text_area :diagnostico %>
   </p>
-  <p>
-    Estudio a realizar: <br />
-   <%= select :tipo_estudio, :estudio, Estudio.find_all(), :prompt => "Selecciona el estudio" %>
-
- </p>
+ <p>
+   Estudio a realizar: <br />
+  <%= f.collection_select :estudio_id, Estudio.all, :id,:tipo_estudio %>
+</p>
 
   <p>
     <%= f.label 'Fecha de inicio de síntomas' %><br />
-    <%= f.date_select :fecha_in_sintomas %>
+   <%= calendar_date_select_tag :fecha_envio,'', :year_range => 30.years.ago..0.years.ago  %>
   </p>
   <p>
     <%= f.label 'Fármacos anteriores' %><br />
@@ -45,7 +42,7 @@
     <%= f.text_area :medicina_actual %>
   </p>
   <p>
-    <%= f.submit "Update" %>
+    <%= f.submit "Actualizar" %>
   </p>
 <% end %>
 

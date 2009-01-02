@@ -155,6 +155,17 @@ margin:-13px 0px;
 div.bib2{
 background-color:#D96666;border-color:#A32929
 }
+
+.error_message {
+  display:block;
+  color: #D00;
+  font-size: 12px;
+  margin:6px 0px;
+
+}
+
+
+
 /* Styles for main page */
 
 #banner {

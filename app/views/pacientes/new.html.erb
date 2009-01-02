@@ -1,9 +1,7 @@
 
 <h1>Captura los datos del paciente </h1>
 <%= error_messages_for :consulta %>
-<% form_for(@paciente) do |f| %>
-  <%= f.error_messages %>
-
+<% form_for @paciente, :html => { :id => "paciente_form" }  do |f| %>
 
   <p>	
     <%= f.label 'Primer Nombre' %><br />
@@ -27,8 +25,11 @@
   </p
   <p>
     <%= f.label 'Fecha de nacimiento' %><br />
+	<%= f.hidden_field :fecha_nac %>
 	<%= calendar_date_select_tag :fecha_nac,'', :year_range => 30.years.ago..0.years.ago  %>
-    
+	<div class="duplicado">
+	<%= f.hidden_field :rfc_pac %>    
+	</div>
   </p>
 <h4>Contacto del Paciente:</h4>
 <p>
@@ -123,14 +124,12 @@
 <p>
 
 </p>
-
-
-
-	<%= render :partial => 'consulta', @collection => @paciente.consultas %>
+	<%= render :partial => 'consulta', @collection => @consulta %>
 
   <p>
-	<%= submit_tag "Crear" %>
+	<%= f.submit "Crear" %>
   </p>
 <% end %>
+<%= observe_form "paciente_form", :url => (@paciente.new_record? ? pacientes_path : @paciente)  %>
 
 <%= link_to 'Back', pacientes_path %>

@@ -66,12 +66,13 @@
 <% if Usuario.find_by_id(session[:usuario_id]).nombre=="admin" %>
 <br />
 <div id="link">
+<p>
 <%= link_to_function "Agrega un registro..." do |page| 
-	page.insert_html :bottom, :agrega, :partial => 'record', :object => @paciente.consultas.build ,:id => @paciente.id
-	page.visual_effect :blind_down, 'agrega',:duration => 5
+	page.insert_html :bottom, :agrega, :partial => 'consulta', :object => @paciente.consultas.build ,:id => @paciente.id
+	page.visual_effect :blind_down, 'agrega',:duration => 3
 	page.hide('link')
 end %>
-
+</p>	
 </div>
 
 

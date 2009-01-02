@@ -10,10 +10,18 @@ class Paciente < ActiveRecord::Base
   [ "Masculino", "m" ], 
   [ "Femenino", "f" ]
   ]
-  validates_presence_of :nombre, :app_pat, :app_mat,:genero, :on => :create, :message => 
-  " no puede ser vacio"
-  validates_inclusion_of :genero, :in => GENERO.map {|disp, value| value}
-  validates_uniqueness_of :rfc_pac, :on => :create, :message => "^Paciente capturado anteriormente"
+  validates_presence_of :nombre, :on => :create, :message => 
+  "^El nombre no puede ser vacío"
+  validates_presence_of :app_pat, :on => :create, :message => 
+  "^El apellido paterno no puede ser vacío."
+  validates_presence_of :app_mat, :on => :create, :message => 
+  "^El apellido materno no puede ser vacío."
+  validates_presence_of :fecha_nac, :on => :create, :message => 
+  "^La fecha de nacimiento no puede ser vacía."
+  
+  
+  validates_inclusion_of :genero, :in => GENERO.map {|disp, value| value},:message => "^Debes seleccionar un género."
+  validates_uniqueness_of :rfc_pac, :on => :create, :message => "^Paciente capturado anteriormente."
   
   def consulta_atributos=(atributos)
 #    atributos.each do |a|

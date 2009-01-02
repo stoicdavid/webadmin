@@ -66,9 +66,10 @@ class PacientesController < ApplicationController
   def new
     @paciente = Paciente.new
     @consulta = @paciente.consultas.build
+    @consulta.estudio_id = Estudio.find(1)
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @paciente }
+      #format.xml  { render :xml => @paciente }
     end
   end
 
@@ -84,17 +85,15 @@ class PacientesController < ApplicationController
     @paciente.fecha_nac=params[:fecha_nac]
     @paciente.genera_rfc
     respond_to do |format|
-      if @paciente.save
-        
-        flash[:notice] = 'El Paciente se creo exitosamente'
-        format.html { redirect_to(@paciente) }
-        format.xml  { render :xml => @paciente, :status => :created, :location => @paciente }
-
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @paciente.errors, :status => :unprocessable_entity }
-        format.xml  { render :xml => @consulta.errors, :status => :unprocessable_entity }
+      format.html do
+        if @paciente.save
+          flash[:notice] = 'El Paciente se creo exitosamente'
+          redirect_to(@paciente)
+        else
+          render :action => "new"
+        end
       end
+      format.js { render :action => 'validar'}
     end
   end
 

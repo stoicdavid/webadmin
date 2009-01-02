@@ -1,0 +1,9 @@
+if @paciente.valid?
+  page[:paciente_submit].enable
+else
+  page[:paciente_submit].disable
+end
+page.select('.error_message').each(&:remove)
+@paciente.errors.each do |name, msg|
+  page.insert_html :before, "paciente_#{name}", content_tag(:span, msg.sub(/^\^/, ''), :class => "error_message")
+end

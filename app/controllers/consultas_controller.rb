@@ -44,7 +44,7 @@ class ConsultasController < ApplicationController
 
   # GET /consultas/1/edit
   def edit
-    @consulta = Consulta.find_by_paciente_id(params[:id])
+    @consulta = Consulta.find(params[:id])
   end
 
   # POST /consultas
@@ -61,7 +61,7 @@ class ConsultasController < ApplicationController
         #format.xml  { render :xml => @consulta, :status => :created, :location => @consulta }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @consulta.errors, :status => :unprocessable_entity }
+        #format.xml  { render :xml => @consulta.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -71,6 +71,8 @@ class ConsultasController < ApplicationController
   # PUT /consultas/1.xml
   def update
     @consulta = Consulta.find(params[:id])
+    @consulta.fecha_consulta=params[:fecha_consulta]
+    @consulta.fecha_envio=params[:fecha_envio]
     respond_to do |format|
       if @consulta.update_attributes(params[:consulta])
         flash[:notice] = 'Consulta was successfully updated.'

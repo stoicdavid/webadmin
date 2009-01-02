@@ -2,35 +2,6 @@
 
 class LabController < ApplicationController
 
-
-
-  
-  def initialize
-    
-  
-    
-  @Days = {
-    1 => "Mon",
-    2 => "Tue",
-    3 => "Wed",
-    4 => "Thu",
-    5 => "Fri"
-  }
-  
-  @Day_n = {
-    "Mon" => "1",
-    "Tue" => "2",
-    "Wed" => "3",
-    "Thu" => "4",
-    "Fri" => "5"
-  }
-
-  @Dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"]
-  @rgg = "Mon Tue Wed Thu Fri Sat"
-  
-  @Horas_impar = ["0700","0830","1000","1130","1300","1430","1600","1730","1900"]
-  @Horas_par = ["0730","0900","10300","1200","1330","1500","1630","1800","1930"]
-end
   
   def index
     #if @cons = Consulta.find_all_by_doctor_id(nil)
