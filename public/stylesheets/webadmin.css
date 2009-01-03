@@ -175,7 +175,7 @@ background-color:#D96666;border-color:#A32929
   background: #528199;
   padding-bottom: 63px;
   border-bottom: 2px solid;
-  font:  40px/40px "Times", sans-serif;
+  font:  40px/40px "Times", serif;
   font-style:normal;
   
   color: #110474;
@@ -185,7 +185,7 @@ background-color:#D96666;border-color:#A32929
 .titulo{
   position:relative;
   top:25px;
-  font-weight:500;
+  font-weight:lighter;
   font-size:50px;
 }
 
