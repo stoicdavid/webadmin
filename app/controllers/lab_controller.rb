@@ -177,7 +177,7 @@ class LabController < ApplicationController
   def asigna_cita
 
       
-    fecha = params[:dia] + " " + params[:date][:hour_minute]
+    fecha = params[:dia] + " " + params[:date][:hour] + ":" + params[:date][:minute]
     fecha_cita = Time.parse(fecha)
     if cita = Cita.find_by_fecha_hora(fecha_cita.gmtime,:conditions => ['cubiculo = ?',params[:cita][:cubiculo]])
       render :update do |page|
@@ -249,7 +249,7 @@ class LabController < ApplicationController
   end
   
   def actualiza_cita
-    fecha = params[:dia] + " " + params[:date][:hour_minute]
+    fecha = params[:dia] + " " + params[:date][:hour] + ":" + params[:date][:minute]
     fecha_cita = Time.parse(fecha)
     if cita = Cita.find_by_fecha_hora(fecha_cita.gmtime,:conditions => ['cubiculo = ?',params[:cita][:cubiculo]])
       render :update do |page|

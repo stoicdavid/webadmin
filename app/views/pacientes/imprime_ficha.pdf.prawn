@@ -21,7 +21,7 @@ end
 
 pdf.bounding_box([400,650], :width=>200, :height=>100) do
   pdf.font.size = 10
-  pdf.text @fecha_hora.strftime('%A, %d de %B de %Y')
+  pdf.text l @fecha_hora, :format => '%A, %d de %B de %Y'
   pdf.text @fecha_hora.strftime('%H:%M')
   pdf.text 'Estudio: ' + @ref_estudio.to_s
 end
@@ -36,7 +36,7 @@ end
 
 pdf.bounding_box([20,510], :width=>500, :height=>250) do
 	pdf.font.size = 10
-	pdf.text "Fecha de nacimiento: #{@paciente.fecha_nac.strftime('%d / %m / %Y')}       (#{@paciente.edad(@fecha_hora)} años #{@paciente.edad_meses(@fecha_hora)}  meses)"
+	pdf.text "Fecha de nacimiento: #{l (@paciente.fecha_nac, :format => '%d / %b / %Y')}       (#{@paciente.edad(@fecha_hora)} años #{@paciente.edad_meses(@fecha_hora)}  meses)"
 	pdf.text " "
 	pdf.text 'Médico que lo envía: ' + @consulta.doctor.nombre_completo
 	pdf.text " "

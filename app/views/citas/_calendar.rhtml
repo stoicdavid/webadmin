@@ -1,11 +1,13 @@
 
 <%= calendar({:year => @mes_actual.year, :month => @mes_actual.month, :table_class =>
-"calendar",:previous_month_text =>link_to_remote(@mes_anterior.strftime('%B'),:url => {:action => 'update_calendario',:id => @mes_anterior}),
-:next_month_text => link_to_remote(@mes_sig.strftime('%B'),:url => {:action => 'update_calendario',:id => @mes_sig}),:first_day_of_week => 1} ) do |d|
+"calendar",:previous_month_text =>link_to_remote(l(@mes_anterior, :format => '%B'),:url => {:action => 'update_calendario',:id => @mes_anterior}),
+:next_month_text => link_to_remote(l(@mes_sig, :format => '%B'),:url => {:action => 'update_calendario',:id => @mes_sig}),:first_day_of_week => 1} ) do |d|
 	@dia=d
   if @dates.include?(d.strftime('%d-%m-%Y'))
     [link_to_function(d.mday, {:class => "specialDay"}) do |page|
-	page[:citas].replace_html :partial => 'cita',:collection => @citas
+    page.insert_html :before,"box_citas","<h4>Citas:<br /><br />#{l @dia,:format => '%d/%b/%Y' }</h4>"
+	page[:citas].replace_html :partial => 'cita',:object => @citas
+
 	page[:citas].visual_effect 'highlight', :duration => 1.3
 	end]
   else  

@@ -20,7 +20,7 @@
   <%=h registro.paciente.edad(registro.cita.fecha_hora) %> años
   <%=h registro.paciente.edad_meses(registro.cita.fecha_hora) %> meses <br /><br />
   <b>Fecha de estudio:</b>
-  <%=h registro.cita.fecha_hora.strftime('%d-%B-%Y') %>
+  <%=h l registro.cita.fecha_hora, :format => '%d-%B-%Y' %>
 </p>
 <% end %>
 <% end %>

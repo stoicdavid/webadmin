@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_filter :authorize, :except => :login 
   #before_filter :authorize_admin, :except => [:login,:pacientes]
 
-  session:session_key => '_webadmin_session_id' 
+  session :session_key => '_webadmin_session_id' 
   helper :all # include all helpers, all the time
   helper :prototype_window_class
   # See ActionController::RequestForgeryProtection for details
@@ -17,6 +17,8 @@ class ApplicationController < ActionController::Base
   # Uncomment this to filter the contents of submitted sensitive data parameters
   # from your application log (in this case, all fields with names like "password"). 
   # filter_parameter_logging :password
+
+  
 
   protected 
   def authorize_admin
@@ -33,5 +35,9 @@ class ApplicationController < ActionController::Base
       redirect_to :controller => :admin, :action => :login 
     end 
   end 
+  
+  
+  
+  
 end
   

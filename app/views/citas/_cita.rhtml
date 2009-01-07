@@ -2,15 +2,17 @@
 <% if cita.fecha_hora.strftime('%F').to_s == @dia.to_s %>
 <br />
 <table >
-	<% for head in ["Nombre", "Fecha y Hora", "Status"] %>
+	<% for head in ["Nombre", "Hora", "Cubículo","Status","Contacto"] %>
 	<th align=left><%= head %></th>
 	<% end %>
 
   <tr>
 
     <td width = 240px><%= link_to Paciente.find(cita.paciente_id).nombre_completo, :controller => "pacientes", :action => "show", :id => cita.paciente_id %></td>
-    <td width = 150px><%=h cita.fecha_hora.strftime('%d %m %Y,  %H:%M') %></td>
-    <td width = 10px><%=h cita.status %></td>
+    <td width = 75px><%=h l cita.fecha_hora,:format => '%H:%M' %></td>
+    <td width = 75px><%=h cita.cubiculo %></td>
+    <td width = 60px><%=h cita.status %></td>
+    <td width = 240px><%=h Paciente.find(cita.paciente_id).contacto %></td>
   </tr>
 </table>
 

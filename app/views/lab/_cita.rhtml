@@ -1,4 +1,4 @@
-<br />Fecha solicitada:<br /><h4><%= Time.parse(params[:dia]).strftime('%d / %m / %y') %></h4>
+<br />Fecha solicitada:<br /><h4><%= l Time.parse(params[:dia]), :format => '%d / %b / %y' %></h4>
 <% if Consulta.find(params[:id_cons]).cita.nil? %>
 	<%= render :partial => 'busqueda', :id => params[:id],:locals => {:id_cons => params[:id_cons]}%>
 <% else %>

@@ -84,14 +84,15 @@ module CalendarHelper
       :next_month_text => nil
     }
     options = defaults.merge options
-
+    monthnames= [nil, 'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Setiembre', 'Octubre', 'Noviembre', 'Diciembre']
+    daynames= ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado']
     first = Date.civil(options[:year], options[:month], 1)
     last = Date.civil(options[:year], options[:month], -1)
 
     first_weekday = first_day_of_week(options[:first_day_of_week])
     last_weekday = last_day_of_week(options[:first_day_of_week])
     
-    day_names = Date::DAYNAMES.dup
+    day_names = daynames.dup
     first_weekday.times do
       day_names.push(day_names.shift)
     end
@@ -105,7 +106,7 @@ module CalendarHelper
     else
       colspan=7
     end
-    cal << %(<th colspan="#{colspan}" class="#{options[:month_name_class]}">#{Date::MONTHNAMES[options[:month]]}</th>)
+    cal << %(<th colspan="#{colspan}" class="#{options[:month_name_class]}">#{monthnames[options[:month]]}</th>)
     cal << %(<th colspan="2">#{options[:next_month_text]}</th>) if options[:next_month_text]
     cal << %(</tr><tr class="#{options[:day_name_class]}">)
     day_names.each do |d|
@@ -120,7 +121,7 @@ module CalendarHelper
       cal << %(<td class="#{options[:other_month_class]})
       cal << " weekendDay" if weekend?(d)
       if options[:accessible]
-        cal << %(">#{d.day}<span class="hidden"> #{Date::MONTHNAMES[d.month]}</span></td>)
+        cal << %(">#{d.day}<span class="hidden"> #{monthnames[d.month]}</span></td>)
       else
         cal << %(">#{d.day}</td>)
       end
@@ -139,7 +140,7 @@ module CalendarHelper
       cal << %(<td class="#{options[:other_month_class]})
       cal << " weekendDay" if weekend?(d)
       if options[:accessible]
-        cal << %(">#{d.day}<span class='hidden'> #{Date::MONTHNAMES[d.mon]}</span></td>)
+        cal << %(">#{d.day}<span class='hidden'> #{monthnames[d.mon]}</span></td>)
       else
         cal << %(">#{d.day}</td>)        
       end
