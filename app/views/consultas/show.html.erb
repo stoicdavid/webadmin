@@ -6,12 +6,15 @@
 <%= render :partial => 'lista' %>
 
 <p>
-  <b>Cita:</b><br/ >
+
 <% unless @consulta.cita.nil? %>
+
 <% cita = @consulta.cita %>
 
-	<b>Fecha</b> 
+
 	<% if cita.fecha_hora.nil?%>
+	  <b>Cita:</b><br/ >
+		<b>Fecha</b> 
 	<%= cita.fecha_hora.strftime('%d -%B- %y Hora: %H:%M')  %><br / >
 	<% end %>
 	<br / >

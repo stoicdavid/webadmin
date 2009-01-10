@@ -35,6 +35,10 @@ class PacientesController < ApplicationController
                     :top_margin => 20,
                     :bottom_margin => 20 }
     @paciente = Paciente.find(params[:id])                
+    @razon = ""
+    @razon = @paciente.razon unless @paciente.razon.nil?
+    @rfc = ""
+    @rfc = @paciente.rfc unless @paciente.rfc.nil?
     @consulta = Consulta.find(params[:consulta_id])
     if !@consulta.cita.nil?
       @ref_estudio = @consulta.cita.operation.ref_estudio unless @consulta.cita.operation.ref_estudio.nil?
