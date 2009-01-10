@@ -3,4 +3,10 @@ La cita fue creada exitosamente para <br />
 
 <%= Paciente.find(params[:paciente]).nombre_completo %>
 </p>
-<br /><%= link_to("Home", :controller => "admin") %>
+<div id="email">
+<% if Consulta.find(params[:consulta]).cita.confirma_valet.nil? %>
+<%= link_to "Envía Correo", :controller => "lab",:action => 'envia_info', :id => params[:consulta] %>
+<% end %>
+</div>
+<br />
+<br /><%= link_to("Home", :controller => "lab") %>

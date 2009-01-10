@@ -22,7 +22,7 @@ class Usuario < ActiveRecord::Base
   end
 
   def self.authenticate(nombre, password) 
-    usuario = self.find_by_nombre(nombre) 
+    usuario = self.find_by_nombre(nombre)  
     if usuario 
       expected_password = encrypted_password(password, usuario.salt) 
       if usuario.hashed_password != expected_password 
@@ -34,8 +34,9 @@ class Usuario < ActiveRecord::Base
 
   private
   def password_non_blank
-    errors.add_to_base("Missing password") if hashed_password.blank?
+    errors.add_to_base("Falta el password") if hashed_password.blank?
   end
+  
 
   def self.encrypted_password(password, salt) 
     string_to_hash = password + "wibble" + salt 

@@ -34,19 +34,29 @@ class UsuariosController < ApplicationController
 
   # GET /usuarios/1/edit
   def edit
-    @usuario = Usuario.find(params[:id])
+    @usuario = Usuario.find(params[:id_usuario])
+    @doctor=Doctor.find_by_id(params[:id])
   end
 
   # POST /usuarios
   # POST /usuarios.xml
+  def envia_registro(doc,pass)
+    email = NeuroMailer.create_registra_doctor(doc,pass) 
+    email.set_content_type("text/html")
+    NeuroMailer.deliver(email) 
+  end
+  
   def create
     @usuario = Usuario.new(params[:usuario])
     
     respond_to do |format|
       if @usuario.save
-        flash[:notice] = "Usuario #{@usuario.nombre} fue creado exitosamente."
-        format.html { redirect_to(:action => :index ) }
-        format.xml  { render :xml => @usuario, :status => :created, :location => @usuario }
+        @password = params[:usuario][:password]
+        @doctor = Doctor.find(params[:usuario][:doctor_id])
+        envia_registro(@doctor,@password)
+        flash[:notice] = "El usuario #{@usuario.nombre} fue creado exitosamente y se ha enviado un correo a #{@doctor.correo}"
+        format.html { redirect_to(:controller => "doctors",:action => "show",:id => @usuario.doctor_id) }
+        format.xml  { head :ok }
       else
         format.html { redirect_to :action => "new",:id => params[:usuario][:doctor_id] } #:locals => {:id => params[:id]}
         format.xml  { render :xml => @usuario.errors, :status => :unprocessable_entity }
@@ -61,7 +71,10 @@ class UsuariosController < ApplicationController
 
     respond_to do |format|
       if @usuario.update_attributes(params[:usuario])
-        flash[:notice] = "Usuario #{@usuario.nombre} fue actualizado."
+        @password = params[:usuario][:password]
+        @doctor = Doctor.find(params[:usuario][:doctor_id])
+        envia_registro(@doctor,@password)
+        flash[:notice] = "El usuario #{@usuario.nombre} fue creado exitosamente y se ha enviado un correo a #{@doctor.correo}"
         format.html { redirect_to(:controller => "doctors",:action => "show",:id => @usuario.doctor_id) }
         format.xml  { head :ok }
       else

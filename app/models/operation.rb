@@ -4,7 +4,7 @@ class Operation < ActiveRecord::Base
   has_one :pago
   
   def genera_id
-    l = Operation.find(:last,:conditions => ['ref_estudio IS NOT ?',nil])
+    l = Operation.find(:last,:conditions => ['ref_estudio IS NOT ?',nil],:order => "indice_estudio ASC")
     tmp = l.ref_estudio.slice(4,4).to_i + 1
     c_hist = ''
     c_mes = ''

@@ -15,6 +15,7 @@
     Confirma password<br />
     <%= f.password_field :password_confirmation %>
   </p>
+	<%= f.hidden_field :doctor_id, :value => @doctor.id  %>
   <p>
     <%= f.submit "Actualizar" %>
   </p>

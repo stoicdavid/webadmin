@@ -5,7 +5,8 @@
 	@dia=d
   if @dates.include?(d.strftime('%d-%m-%Y'))
     [link_to_function(d.mday, {:class => "specialDay"}) do |page|
-    page.insert_html :before,"box_citas","<h4>Citas:<br /><br />#{l @dia,:format => '%d/%b/%Y' }</h4>"
+	page.remove('header')
+    page.insert_html :before,"box_citas","<div id='header'><h4>Citas:<br /><br />#{l @dia,:format => '%d/%b/%Y' }</h4></div>"
 	page[:citas].replace_html :partial => 'cita',:object => @citas
 
 	page[:citas].visual_effect 'highlight', :duration => 1.3

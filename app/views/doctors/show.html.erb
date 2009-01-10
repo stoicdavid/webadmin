@@ -41,7 +41,7 @@
 </p>
 
 <% if @doctor.usuario!=nil %>
-	<%= link_to 'Modifica Password', :controller => "usuarios", :action => "edit", :id => @doctor.usuario.id %>
+	<%= link_to 'Modifica Password', :controller => "usuarios", :action => "edit", :id_usuario => @doctor.usuario.id %>
 <% end %>
 
 <% if Usuario.find_by_id(session[:usuario_id]).nombre =="admin" && @doctor.usuario==nil %>

@@ -1,0 +1,19 @@
+<h1></h1>
+<br />
+<br />
+<h4>Estimado(a) <%= @paciente.contacto %>, </h4>
+<br />
+<p>
+En el archivo adjunto encontrar&aacute;s las indicaciones para realizar el estudio de <br>
+<%= @estudio %> de tu <%= @paciente.genero =="f" ? 'hija ' : 'hijo ' %><%= @paciente.nombre_completo %>  <br>
+el d&iacute;a <%= l @cita,:format  => '%A %d de %B a las %H:%M horas' %>. <br>
+El laboratorio est&aacute; ubicado en la Torre de oficinas del WTC en <br>
+Montecito 38 piso 15 oficina 23, Col. N&aacute;poles M&eacute;xico, D.F. 03810
+</p>
+
+<p>
+	Pueden acceder al lobby del edificio directamente por los elevadores del estacionamiento o por <br>
+	la planta baja de los elevadores que est&aacute;n junto a Bancomer. Es necesario registrarse <br>
+	en el escritorio del lobby donde deber&acure;s presentar identificaci&oacute;n oficial vigente y <br>
+	posteriormente les indicar&aacute;n los elevadores por los cuales podr&aacute;n llegar al piso 15.
+</p>

@@ -22,15 +22,20 @@
 	<br / >
 		<%= link_to 'Estudio', :controller  => "operations",:action => "edit",:id  => cita.operation.id %> |
 	<% elsif cita.operation.ref_estudio.nil? %>		
+
 		<td><%= button_to 'Reasigna Cita', {:controller => "lab", :action => "reasigna_cita", :id => cita.paciente_id,:id_cons =>@consulta.id  } %></td>
 		<td><%= button_to 'Confirma Cita', {:controller => "citas",:action => "confirma", :id => cita.id } %></td>
 		<td><%= button_to 'Cancela', {:controller => "lab",:action => "cancela_cita", :id => cita.paciente_id,:id_cons => @consulta.id } %></td>
 		<% end %>
-
+		<br>
+		<% if @consulta.cita.confirma_valet.nil? %>
+		<%= link_to "Envía Correo", :controller => "lab",:action => 'envia_info', :id => @consulta.id %>
+		<% end %>
 
 </p>
 <hr>
 <% end %>
+
 <% if @consulta.cita == nil %>
 	<%= button_to 'Crea Cita', {:controller => "lab", :action => "crea_cita", :id => @consulta.paciente_id,:id_cons => @consulta.id } %>
 <% end %>

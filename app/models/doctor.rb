@@ -6,7 +6,7 @@ class Doctor < ActiveRecord::Base
   
   file_column :imagen, :magick => { :geometry => "100x100" }
   
-  validates_presence_of :nombre, :app_pat, :app_mat, :on => :create, :message => " no puede ser vacio"
+  validates_presence_of :nombre, :app_pat, :app_mat, :correo, :on => :create, :message => " no puede ser vacio"
   validates_presence_of :especialidad_id, :on => :create, :message => "no puede ser vacio"
   validates_inclusion_of :especialidad_id, :in => Especialidad.find(:all).map { |esp| esp.id }
   validates_uniqueness_of :rfc_virtual, :on => :create, :message => "^Doctor capturado anteriormente"

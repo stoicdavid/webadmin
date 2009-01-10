@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081122203853) do
+ActiveRecord::Schema.define(:version => 20090110164747) do
 
   create_table "agendas", :id => false, :force => true do |t|
     t.integer  "paciente_id", :null => false
@@ -118,6 +118,7 @@ ActiveRecord::Schema.define(:version => 20081122203853) do
     t.datetime "updated_at"
     t.integer  "tipo_id"
     t.integer  "pago_id"
+    t.integer  "indice_estudio"
   end
 
   add_index "operations", ["cita_id"], :name => "index_operations_on_cita_id"
@@ -193,8 +194,8 @@ ActiveRecord::Schema.define(:version => 20081122203853) do
     t.datetime "updated_at"
   end
 
-  add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
   add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
+  add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
 
   create_table "specializations", :id => false, :force => true do |t|
     t.integer  "doctor_id",       :null => false

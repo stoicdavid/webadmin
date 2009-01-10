@@ -193,14 +193,26 @@ class LabController < ApplicationController
       operation.update_attributes(:cita_id => @cita.id)
       consulta.update_attributes(:cita_id => @cita.id)
       render :update do |page|
-        page['citas'].replace_html :partial => 'cita_creada', :id => params[:paciente]
-        page['citas'].visual_effect :highlight, :duration => 5
+        page['resultados'].replace_html :partial => 'cita_creada', :id => params[:paciente]
+        page['resultados'].visual_effect :highlight, :duration => 5
         page['tablas'].toggle
       end
     end
   end
   
-
+  def envia_info 
+  consulta = Consulta.find(params[:id])
+  @paciente = consulta.paciente
+  @estudio = Estudio.find(consulta.estudio_id).tipo_estudio
+  @fecha_cita = consulta.cita.fecha_hora
+  email = NeuroMailer.create_informa_paciente(@paciente,@estudio,@fecha_cita) 
+  email.set_content_type("text/html")
+  NeuroMailer.deliver(email) 
+  consulta.cita.confirma_valet=true
+  consulta.cita.save
+  flash[:notice] = "Se ha enviado el correo a #{@paciente.correo}"
+  redirect_to @paciente
+end
 
   def cancela_cita
     cita=Consulta.find(params[:id_cons]).cita
