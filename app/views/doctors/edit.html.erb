@@ -1,6 +1,6 @@
 <h1>Editar doctor</h1>
 
-<% form_for(@doctor) do |f| %>
+<% form_for(@doctor,:html => {:multipart => true } ) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -19,6 +19,15 @@
     <%= f.label :app_mat %><br />
     <%= f.text_field :app_mat %>
   </p>
+	
+
+
+	<div class="avatar">
+
+	<%= image_tag url_for_file_column(@doctor, "imagen") if @doctor.imagen!=nil%>	
+	</div>
+	
+	  <p><%= file_column_field "doctor","imagen" %></p>
   <p>
      Especialidad <br />
     <%= select :doctor,:especialidad_id, Especialidad.find_all, :prompt => "Selecciona la especialidad" %>
