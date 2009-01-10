@@ -1,8 +1,5 @@
 class AdminController < ApplicationController
 
-
-
-
   def login 
     session[:usuario_id] = nil 
     if request.post? 
