@@ -1,10 +1,10 @@
-require 'smtp_tls'
+
 
 ActionMailer::Base.smtp_settings = {
-  :address => "smtp.gmail.com",
-  :port => "25",
-  :domain => "localhost.localdomain",
+  :address => "smtp.uservers.net",
+  :port => "2525",
+  :domain => "americanneurolab.com",
   :authentication => :plain,
-  :user_name => "stoicdavid",
-  :password  => "fat719110"
+  :user_name => "info@americanneurolab.com",
+  :password  => "ventana"
 }
