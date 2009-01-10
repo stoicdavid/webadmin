@@ -45,7 +45,7 @@ pdf.bounding_box([20,510], :width=>500, :height=>250) do
 	pdf.text 'Resumen del padecimiento:', :size => 12,:spacing => 16,:style => :bold
 	pdf.text " "
 	pdf.text 'Medicación actual:', :size => 12,:spacing => 16,:style => :bold
-	pdf.text  " "
+	pdf.text  @consulta.medicina_actual
 	pdf.text 'Domicilio particular:', :size => 12,:style => :bold
 	pdf.text " "
 	pdf.text  @paciente.domicilio_completo
@@ -78,11 +78,11 @@ pdf.bounding_box([20,229], :width=>500, :height=>120) do
               [pdf.bounds.right, pdf.bounds.top]
 	pdf.text 'Datos de Facturación:',:size => 12,:style => :bold
 	pdf.text " "
-	pdf.text 'Nombre o razón social:',:spacing => 10
-	pdf.text " " 
-	pdf.text 'Domicilio Fiscal:',:spacing => 10
+	pdf.text 'Nombre o razón social: '+@paciente.razon,:spacing => 5
 	pdf.text " "
-	pdf.text 'RFC:'
+	pdf.text 'Domicilio Fiscal:' + @paciente.direccion_fiscal_completa,:spacing => 10
+	pdf.text " "
+	pdf.text 'RFC: '+@paciente.rfc
 end
 pdf.bounding_box([20,115], :width=>500, :height=>120) do
 	pdf.font.size = 10

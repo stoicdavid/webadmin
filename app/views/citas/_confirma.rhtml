@@ -2,8 +2,15 @@
 <%paciente = Paciente.find(@cita.paciente_id) %>
 
 <h4><%= paciente.nombre_completo %></h4><br />
+
+Fecha y Hora de la cita:
+<%=l @cita.fecha_hora, :format => ('%d-%b-%y   a las %H:%M')  %><br /><br />
+
 Contacto: <%= paciente.contacto %><br />
 <br />
+Correo: <%=paciente.correo %><br />
+<br />
+
 Teléfonos<br />
 <p>
 Celular: <%= paciente.tel_cel %><br />
