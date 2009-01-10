@@ -2,7 +2,7 @@ class OperationsController < ApplicationController
   # GET /operations
   # GET /operations.xml
   def index
-    @operations = Operation.find(:all)
+    @operations = Operation.find(:all,:order => "indice_estudio ASC")
 
     respond_to do |format|
       format.html # index.html.erb

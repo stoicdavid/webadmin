@@ -30,6 +30,7 @@ class Operation < ActiveRecord::Base
     
     per = Time.now.strftime('%m%y') + c_hist +'mx'+ c_mes
     self.ref_estudio = per
+    self.indice_estudio = c_hist
     self.save
   end
   

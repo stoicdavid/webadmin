@@ -9,7 +9,7 @@ class Pago < ActiveRecord::Base
     ]
     
     def folio
-      if pago = Pago.find(:last)
+      if pago = Pago.find(:last,:conditions => ['folio_factura IS NOT ?',nil])
         pago.folio_factura + 1
       else
         0
