@@ -21,6 +21,17 @@
     <%= f.label 'Apellido Materno' %><br />
     <%= f.text_field :app_mat %>
   </p>
+<p>
+  <%= f.label 'Nombre del contacto' %><br />
+	<%= f.text_field :nombre_contacto  %>
+</p>
+
+<p>
+  <%= f.label 'Parentezco' %><br />
+	<%= f.select :parentezco, Paciente::PAR %>
+</p>
+
+
   <p>
     <%= f.label 'Razon Social' %><br />
     <%= f.text_field :razon %>

@@ -36,6 +36,11 @@
   <%= f.label 'Nombre del contacto' %><br />
 	<%= f.text_field :nombre_contacto  %>
 </p>
+
+<p>
+	<%= f.select :parentezco, Paciente::PAR, :prompt => "Selecciona un parentezco"  %>
+</p>
+
 <h4>Teléfonos:</h4>
   <p>
     <%= f.label 'Celular' %><br />

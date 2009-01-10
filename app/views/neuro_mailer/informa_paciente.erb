@@ -1,19 +1,32 @@
-<h1></h1>
 <br />
 <br />
-<h4>Estimado(a) <%= @paciente.contacto %>, </h4>
+<% if @paciente.parentezco == "m" %>
+	<h4>Estimada Sra. <%= @paciente.contacto %>, </h4>
+<% elsif @paciente.parentezco == "p"%>
+	<h4>Estimado Sr. <%= @paciente.contacto %>, </h4>
+<% else %>
+	<h4>Apreciable <%= @paciente.contacto %>, </h4>
+<% end %>
 <br />
 <p>
-En el archivo adjunto encontrar&aacute;s las indicaciones para realizar el estudio de <br>
-<%= @estudio %> de tu <%= @paciente.genero =="f" ? 'hija ' : 'hijo ' %><%= @paciente.nombre_completo %>  <br>
-el d&iacute;a <%= l @cita,:format  => '%A %d de %B a las %H:%M horas' %>. <br>
-El laboratorio est&aacute; ubicado en la Torre de oficinas del WTC en <br>
+En el archivo adjunto encontrar&aacute; las indicaciones para realizar el estudio de
+<%= @estudio.id==3 ? "Poligr&aacute;fico de Sue&ntilde;o":@estudio.tipo_estudio %> de <%= @paciente.nombre %> el d&iacute;a <%= l @cita,:format  => '%A %d de %B a las %H:%M horas' %>. <br>
+El laboratorio est&aacute; ubicado en la Torre de oficinas del WTC en 
 Montecito 38 piso 15 oficina 23, Col. N&aacute;poles M&eacute;xico, D.F. 03810
 </p>
 
 <p>
-	Pueden acceder al lobby del edificio directamente por los elevadores del estacionamiento o por <br>
-	la planta baja de los elevadores que est&aacute;n junto a Bancomer. Es necesario registrarse <br>
-	en el escritorio del lobby donde deber&acute;s presentar identificaci&oacute;n oficial vigente y <br>
+	Pueden acceder al lobby del edificio directamente por los elevadores del estacionamiento o por 
+	la planta baja en los elevadores que est&aacute;n junto a Bancomer. Es necesario registrarse 
+	en el escritorio del lobby donde deber&aacute; presentar identificaci&oacute;n oficial vigente y 
 	posteriormente les indicar&aacute;n los elevadores por los cuales podr&aacute;n llegar al piso 15.
 </p>
+<p>
+El costo del estudio es de <%= number_to_currency(@estudio.precio.to_f*1.15) %> y por ser paciente del Dr. <%= @doctor.app_pat %> 
+le otorgaremos un <%= @estudio.descuento_porcentaje %> de descuento, con un total a pagar de <%= number_to_currency(@estudio.precio.to_f*1.15-(@estudio.precio.to_f*1.15*0.1)) %>
+Su forma de pago puede ser mediante tarjeta de cr&eacute;dito visa o mastercard, d&eacute;bito, en efectivo o con cheque a nombre de 
+GRC Neurocl&iacute;nica, S.A. de C.V. <br>
+Con la finalidad de agilizar la facturaci&oacute;n le suplico enviarme los datos fiscales mediante esta misma v&iacute;a. 
+</p>
+Me pongo a sus &oacute;rdenes para cualquier duda en mi celular o en la oficina en el 50 20 9722. <br>
+Atentamente,

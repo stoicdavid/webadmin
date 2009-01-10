@@ -61,8 +61,8 @@ class EstudiosController < ApplicationController
 
     respond_to do |format|
       if @estudio.update_attributes(params[:estudio])
-        flash[:notice] = "Estudio #{@estudio.nombre} fue actualizado."
-        format.html { redirect_to(:controller => "doctors",:action => "show",:id => @estudio.doctor_id) }
+        flash[:notice] = "Estudio #{@estudio.tipo_estudio} fue actualizado."
+        format.html { redirect_to(:action => :index) }
         format.xml  { head :ok }
       else
         format.html { redirect_to :action => "edit" }

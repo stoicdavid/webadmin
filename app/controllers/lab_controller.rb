@@ -202,10 +202,11 @@ class LabController < ApplicationController
   
   def envia_info 
   consulta = Consulta.find(params[:id])
+  @doctor = consulta.doctor
   @paciente = consulta.paciente
-  @estudio = Estudio.find(consulta.estudio_id).tipo_estudio
+  @estudio = Estudio.find(consulta.estudio_id)
   @fecha_cita = consulta.cita.fecha_hora
-  email = NeuroMailer.create_informa_paciente(@paciente,@estudio,@fecha_cita) 
+  email = NeuroMailer.create_informa_paciente(@paciente,@estudio,@fecha_cita,@doctor) 
   email.set_content_type("text/html")
   NeuroMailer.deliver(email) 
   consulta.cita.confirma_valet=true
