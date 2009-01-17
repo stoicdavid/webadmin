@@ -16,6 +16,12 @@ class NeuroMailer < ActionMailer::Base
     sent_on    Time.now
     
     body       :paciente => paciente,:estudio => estudio,:cita => cita,:doctor => doctor
+    
+    attachment "application/pdf" do |a|
+    		a.disposition = "attachment"
+        a.filename= "instrucciones_previas.pdf"
+    		a.body = File.read(RAILS_ROOT + "/public/docs/instrucciones_previas.pdf")
+    	end
   end
 
 end

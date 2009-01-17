@@ -42,9 +42,9 @@ class Doctor < ActiveRecord::Base
   
   def direccion_completa
     d = self.calle unless self.calle.nil?
-    d = self.colonia unless self.colonia.nil?
-    d = self.estado unless self.estado.nil?
-    d = self.codigo
+    d += ' ' + self.colonia unless self.colonia.nil?
+    d += ' ' + self.estado unless self.estado.nil?
+    d += ' ' + self.codigo
     d
   end
   
