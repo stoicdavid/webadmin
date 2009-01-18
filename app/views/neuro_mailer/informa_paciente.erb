@@ -8,13 +8,22 @@
 	<h4>Apreciable <%= @paciente.contacto %>, </h4>
 <% end %>
 <br />
+
+<% if @paciente.parentezco == "y" %>
+<p>
+En el archivo adjunto encontrar&aacute; las indicaciones para realizar su estudio de
+<%= @estudio.id==3 ? "Poligr&aacute;fico de Sue&ntilde;o":@estudio.tipo_estudio %> el d&iacute;a <%= l @cita,:format  => '%A %d de %B a las %H:%M horas' %>. <br>
+El laboratorio est&aacute; ubicado en la Torre de oficinas del WTC en 
+Montecito 38 piso 15 oficina 23, Col. N&aacute;poles M&eacute;xico, D.F. 03810
+</p>
+<% else %>
 <p>
 En el archivo adjunto encontrar&aacute; las indicaciones para realizar el estudio de
 <%= @estudio.id==3 ? "Poligr&aacute;fico de Sue&ntilde;o":@estudio.tipo_estudio %> de <%= @paciente.nombre %> el d&iacute;a <%= l @cita,:format  => '%A %d de %B a las %H:%M horas' %>. <br>
 El laboratorio est&aacute; ubicado en la Torre de oficinas del WTC en 
 Montecito 38 piso 15 oficina 23, Col. N&aacute;poles M&eacute;xico, D.F. 03810
 </p>
-
+<% end %>
 <p>
 	Pueden acceder al lobby del edificio directamente por los elevadores del estacionamiento o por 
 	la planta baja en los elevadores que est&aacute;n junto a Bancomer. Es necesario registrarse 
