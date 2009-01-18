@@ -15,6 +15,7 @@ class Paciente < ActiveRecord::Base
   # Displayed stored in db 
   [ "Mamá", "m" ], 
   [ "Papá", "p" ],
+  ["El mismo","y"],
   [ "Otro", "o" ]
   ]
   
