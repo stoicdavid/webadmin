@@ -57,14 +57,14 @@ class PagosController < ApplicationController
 
       @pago = Pago.find(params[:id])
       @paciente=Paciente.find(params[:paciente_id])
-      if @paciente.rfc != nil
+      if !@paciente.rfc.nil?
         @rfc = @paciente.rfc
       else
         @rfc=""
       end
       @operation = Operation.find(params[:operation_id])
       @estudio = Estudio.find(@operation.tipo_id)
-      @fecha = Time.now.strftime('%d - %b - %Y')
+      @fecha = l Time.now, :format => '%d - %B - %Y'
       if @pago.descuento != "0"
         @descuento = "Descuento #{@estudio.descuento_porcentaje}"
         @importe_des = "-" + @pago.descuento_f

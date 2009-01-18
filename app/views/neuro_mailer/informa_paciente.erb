@@ -4,6 +4,8 @@
 	<h4>Estimada Sra. <%= @paciente.contacto %>, </h4>
 <% elsif @paciente.parentezco == "p"%>
 	<h4>Estimado Sr. <%= @paciente.contacto %>, </h4>
+<% elsif @paciente.parentezco == "y" %>
+	<h4>Apreciable <%= @paciente.nombre_completo %>, </h4>
 <% else %>
 	<h4>Apreciable <%= @paciente.contacto %>, </h4>
 <% end %>

@@ -1,63 +1,77 @@
-pdf.bounding_box([400,700], :width=>150, :height=>100) do
-  pdf.font.size = 10
-  pdf.text 'Superman'
-  pdf.text '789 Ice Fortress Lane'
-  pdf.text 'North Pole, Arctic 00000'
-end
-2.times do
+	pdf.bounding_box([15,650], :width=>600, :height=>100) do
+		pdf.font.size=9
+		pdf.text @paciente.razon,:spacing => 5
+		pdf.text @paciente.direccion_fiscal_completa,:spacing => 5
+		pdf.text 'México, D.F.                                  ' + @fecha +'                                  '+ @rfc
+	end
+	
+	pdf.bounding_box([15,550], :width=>600, :height=>100) do
+		pdf.font.size=9
+		pdf.text '      1' + '               '+@estudio.tipo_estudio , :spacing => 10
+		pdf.text '    	                  ' + @descuento , :spacing => 10
+		pdf.text '                       Paciente:  ' + @paciente.nombre_completo 
+	end
+	
+	pdf.bounding_box([415,550], :width=>600, :height=>100) do
+		pdf.font.size=9
+		pdf.text @pago.precio_f
+	end
 
-	pdf.table([[@paciente.razon,'',''],
-				[@paciente.direccion_fiscal_completa,'','']],
-			  :font_size=>9,
-			  :horizontal_padding => 20,
-	          :vertical_padding => 3,
-	          :border_width =>0,
-	          #:position => :center,
-	          #:row_colors => ['ffffff','ffffbb'],
-	          :headers => [''])
-	pdf.table([['México D.F.' + '              ',@fecha,'             	' + @rfc]],
-			  :font_size=>9,
-			  :horizontal_padding => 20,
-	          :vertical_padding => 1,
-	          :border_width =>0,
-	          #:position => :center,
-	          #:row_colors => ['ffffff','ffffbb'],
-	          :headers => [''])
-	pdf.text " "
-	pdf.text " "
+	pdf.bounding_box([506,550], :width=>600, :height=>100) do
+		pdf.font.size=9
+		pdf.text @pago.precio_f, :spacing => 15
+		pdf.text '  '+@importe_des
+	end
+	
+	
+	pdf.bounding_box([180,440], :width=>600, :height=>100) do
+		pdf.font.size=8
+		pdf.text @pago.total.to_f.to_currency
+	end
+	
+	pdf.bounding_box([506,440], :width=>600, :height=>100) do
+		pdf.font.size=9
+		pdf.text @pago.subtotal_f, :spacing => 8
+		pdf.text '   '+@pago.iva_f, :spacing => 8
+		pdf.text @pago.total_f
+	end
 
-	pdf.table([['1','   ','         ','   ','  ' + @estudio.tipo_estudio + ' de ' + @paciente.nombre_completo,'                                      '+ @pago.precio_f,'           ' + @pago.precio_f],
-				['','','','','  ' + @descuento,'','            ' + @importe_des]],
-			  :font_size=>10,
-			  :horizontal_padding => 2,
-	          :vertical_padding => 3,
-	          :border_width =>0,
-	          #:position => :center,
-	          #:row_colors => ['ffffff','ffffbb'],
-	          :headers => [''])
-	pdf.text " "
-	pdf.text " "
-	pdf.text " "
-	pdf.text " "
-	pdf.text " "
+#other part
 
-	pdf.table([['                           ','','','               ',@pago.subtotal_f],['','                                                ',@pago.total.to_f.to_currency,'                                            15%','   ' + @pago.iva_f],['','','','                   ',@pago.total_f]],
-			  :font_size=>8,
-			  :horizontal_padding => 2,
-	          :vertical_padding => 3.5,
-	          :border_width =>0,
-	          #:position => :center,
-	          #:row_colors => ['ffffff','ffffbb'],
-	          :headers => [''])
-	pdf.text " "
-	pdf.text " "
-	pdf.text " "
-	pdf.text " "
-	pdf.text " "
-	pdf.text " "
-	pdf.text " "
-	pdf.text " "
-	pdf.text " "
-	pdf.text " "
+	pdf.bounding_box([15,330], :width=>600, :height=>100) do
+		pdf.font.size=9
+		pdf.text @paciente.razon,:spacing => 5
+		pdf.text @paciente.direccion_fiscal_completa,:spacing => 5
+		pdf.text 'México, D.F.                                  ' + @fecha +'                                  '+ @rfc
+	end
+	
+	pdf.bounding_box([15,230], :width=>600, :height=>100) do
+		pdf.font.size=9
+		pdf.text '      1' + '               '+@estudio.tipo_estudio , :spacing => 10
+		pdf.text '    	                  ' + @descuento , :spacing => 10
+		pdf.text '                       Paciente:  ' + @paciente.nombre_completo 
+	end
+	
+	pdf.bounding_box([415,230], :width=>600, :height=>100) do
+		pdf.font.size=9
+		pdf.text @pago.precio_f
+	end
 
-end
+	pdf.bounding_box([506,230], :width=>600, :height=>100) do
+		pdf.font.size=9
+		pdf.text @pago.precio_f, :spacing => 15
+		pdf.text '  '+@importe_des
+	end
+	
+	
+	pdf.bounding_box([180,120], :width=>600, :height=>100) do
+		pdf.font.size=8
+		pdf.text @pago.total.to_f.to_currency
+	end
+	
+	pdf.bounding_box([506,120], :width=>600, :height=>100) do
+		pdf.font.size=9
+		pdf.text @pago.subtotal_f, :spacing => 8
+		pdf.text '   '+@pago.iva_f, :spacing => 8
+		pdf.text @pago.total_f
+	end
