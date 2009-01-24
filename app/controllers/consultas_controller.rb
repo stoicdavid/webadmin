@@ -51,8 +51,6 @@ class ConsultasController < ApplicationController
   # POST /consultas.xml
   def create
     @consulta = Consulta.create(params[:consulta])
-    @consulta.fecha_consulta=params[:fecha_consulta]
-    @consulta.fecha_envio=params[:fecha_envio]
     respond_to do |format|
       if @consulta.save
         flash[:notice] = 'Se ha creado un nuevo registro'
@@ -71,11 +69,9 @@ class ConsultasController < ApplicationController
   # PUT /consultas/1.xml
   def update
     @consulta = Consulta.find(params[:id])
-    @consulta.fecha_consulta=params[:fecha_consulta]
-    @consulta.fecha_envio=params[:fecha_envio]
     respond_to do |format|
       if @consulta.update_attributes(params[:consulta])
-        flash[:notice] = 'Consulta was successfully updated.'
+        flash[:notice] = 'Los datos clínicos fueron actualizados.'
         format.html { redirect_to(@consulta) }
         format.xml  { head :ok }
       else

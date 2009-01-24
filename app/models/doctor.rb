@@ -1,15 +1,20 @@
 class Doctor < ActiveRecord::Base
   has_one :usuario
-  has_one :specialization
+  has_one :especialidad
   has_many :consultas
   has_many :pacientes, :through => :consultas
   
   file_column :imagen, :magick => { :geometry => "100x100" }
   
   validates_presence_of :nombre, :app_pat, :app_mat, :correo, :on => :create, :message => " no puede ser vacio"
-  validates_presence_of :especialidad_id, :on => :create, :message => "no puede ser vacio"
-  validates_inclusion_of :especialidad_id, :in => Especialidad.find(:all).map { |esp| esp.id }
   validates_uniqueness_of :rfc_virtual, :on => :create, :message => "^Doctor capturado anteriormente"
+  
+  GENERO = [ 
+  # Displayed stored in db 
+  [ "Masculino", "m" ], 
+  [ "Femenino", "f" ]
+  ]
+  
   
   #validates_numericality_of :cp
   def self.find_all
@@ -25,6 +30,11 @@ class Doctor < ActiveRecord::Base
 
   end
   
+    def especialidad_atributos=(atributos)
+      #atributos.each do |a|
+        build_especialidad(atributos)
+     #end
+    end
   
   def nombre_completo
   	self.nombre + " " + self.nombre_2 + " " + self.app_pat + " " + self.app_mat

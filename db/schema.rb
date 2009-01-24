@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090110195109) do
+ActiveRecord::Schema.define(:version => 20090124222451) do
 
   create_table "agendas", :id => false, :force => true do |t|
     t.integer  "paciente_id", :null => false
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(:version => 20090110195109) do
     t.datetime "fecha_envio"
     t.datetime "fecha_consulta"
     t.text     "diagnostico"
-    t.date     "fecha_in_sintomas"
+    t.string   "fecha_in_sintomas"
     t.text     "medicina_anterior"
     t.text     "medicina_actual"
     t.datetime "created_at"
@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(:version => 20090110195109) do
     t.string   "del_mun_fis"
     t.string   "estado_fis"
     t.string   "cp_fis"
+    t.string   "genero"
   end
 
   create_table "especialidads", :force => true do |t|

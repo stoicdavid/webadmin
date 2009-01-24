@@ -11,7 +11,6 @@ class CitasController < ApplicationController
     
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @citas }
     end
   end
 
@@ -103,6 +102,14 @@ class CitasController < ApplicationController
 
       
     end        
+  end
+  
+  def asigna_cita
+    @dia = params[:id]
+    @cita = Cita.new
+    @paciente = @cita.build_paciente
+    @consulta = @paciente.consultas.build
+    
   end
   
   

@@ -1,6 +1,6 @@
 <%= error_messages_for :consulta %>
 
-<h1>Agrega un registro</h1>
+<h1>Agregar estudio y datos clínicos</h1>
 <% fields_for "paciente[consulta_atributos]", consulta do |c_form| %>
 
 
@@ -15,12 +15,12 @@
 </p>
 <p>
    <%= c_form.label 'Fecha de consulta' %><br />
-   <%= calendar_date_select_tag :fecha_consulta,'', :year_range => 2.years.ago..0.years.ago  %>
+   <%= calendar_date_select_tag 'consulta[fecha_consulta]','', :year_range => 2.years.ago..0.years.ago  %>
 
  </p>
  <p>
    <%= c_form.label 'Fecha de Referencia' %><br />
-   <%= calendar_date_select_tag :fecha_envio,'', :year_range => 2.years.ago..0.years.ago  %>
+   <%= calendar_date_select_tag 'consulta[fecha_envio]','', :year_range => 2.years.ago..0.years.ago  %>
 
  </p>
  <p>
@@ -28,8 +28,8 @@
    <%= c_form.text_area :diagnostico %>
  </p>
  <p>
-    <%= c_form.label 'Fecha de inicio de síntomas' %><br />
-   <%= calendar_date_select_tag :fecha_envio,'', :year_range => 30.years.ago..0.years.ago  %>
+    <%= c_form.label 'Inicio de síntomas' %><br />
+   <%= c_form.text_field :fecha_in_sintomas%>
 
   </p>
   <p>
@@ -40,12 +40,7 @@
     <%= c_form.label 'Fármacos actuales' %><br />
     <%= c_form.text_area :medicina_actual %>
   </p>
-<% if !params[:id].nil? %>
 
- <p>
- 	<%= c_form.submit "Crear" %>
- </p>
-<% end %>
 
 <% end %>
 

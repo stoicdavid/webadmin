@@ -15,6 +15,7 @@
     <td width = 240px><%=h Paciente.find(cita.paciente_id).contacto %></td>
   </tr>
 </table>
-
+<br /><br />
+<%= render :partial => 'link',:object => @dia %>
 
 <% end %>

@@ -16,7 +16,7 @@
   <tr>
     <td><%=h referencia.nombre %></td>
     <td><%=h Doctor.find(referencia.doctor_id).nombre_completo %></td>
-    <td><%=h referencia.fecha_referencia.strftime('%d %B %Y') %></td>
+    <td><%=h referencia.fecha_referencia.strftime('%d %B %Y') unless referencia.fecha_referencia.nil? %></td>
     <td><%=h referencia.telefono_casa %></td>
     <td><%=h referencia.diagnostico %></td>
     <td><%= link_to 'Show', referencia %></td>

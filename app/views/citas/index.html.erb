@@ -15,7 +15,12 @@
 	page[:citas].visual_effect 'highlight', :duration => 1.3
 	end]
   else  
-    [d.mday, {:class => "day"}]
+    [link_to_function(d.mday, {:class => "day"}) do |page|
+    page.remove('header')
+	page.insert_html :before,"box_citas","<div id='header'><h4>Citas:<br /><br />#{l @dia,:format => '%d/%b/%Y' }</h4></div>"
+    page[:citas].replace_html :partial => 'link', :object => @dia
+	end
+	]
   end
 end %> 
 </div>
@@ -23,36 +28,6 @@ end %>
 
 <div id="box_citas" >
 	<div id="header"></div>
+	<div id="link"></div>
 </div>
 <div id ="citas"></div>
-<!--
-<table>
-  <tr>
-    <th>Paciente</th>
-    <th>Cubiculo</th>
-    <th>Fecha hora</th>
-    <th>Confirma doc</th>
-    <th>Confirma valet</th>
-    <th>Acompana</th>
-  </tr>
-
-<% for cita in @citas %>
-  <tr>
-
-    <td><%=h cita.paciente.nombre %></td>
-    <td><%=h cita.cubiculo %></td>
-    <td><%=h cita.fecha_hora.strftime('%d %m %Y,  %H:%M') %></td>
-    <td><%=h cita.confirma_doc %></td>
-    <td><%=h cita.confirma_valet %></td>
-    <td><%=h cita.acompana %></td>
-    <td><%= link_to 'Show', cita %></td>
-    <td><%= link_to 'Edit', edit_cita_path(cita) %></td>
-    <td><%= link_to 'Destroy', cita, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-
-!-->

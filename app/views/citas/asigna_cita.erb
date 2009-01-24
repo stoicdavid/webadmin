@@ -1,0 +1,9 @@
+<h1>Selecciona la hora y el cubículo </h1>
+<h4>Dia:</h4><br>
+<%=l Time.parse(@dia),:format => '%d %b, %Y' %><br /><br />
+<h4>Hora de la cita:</h4><br>
+<%= select_time(Time.parse('07:00'),:time_separator => ':',:minute_step => 60 ) %> 
+<p><b>Cubículo:</b></p>
+<p><%= select :cita, :cubiculo, Cita::CUBICULO,:prompt => "Selecciona:" %></p>
+
+<%= render :partial => 'pacientes/form' %>

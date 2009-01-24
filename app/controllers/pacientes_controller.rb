@@ -80,6 +80,7 @@ class PacientesController < ApplicationController
   # GET /pacientes/1/edit
   def edit
     @paciente = Paciente.find(params[:id])
+    @consulta = Consulta.find_by_paciente_id(@paciente.id)
   end
 
   # POST /pacientes
@@ -105,18 +106,20 @@ class PacientesController < ApplicationController
   # PUT /pacientes/1.xml
   def update
     @paciente = Paciente.find(params[:id])
-
+    @paciente.attributes = params[:paciente]
     respond_to do |format|
-      if @paciente.update_attributes(params[:paciente])
-        flash[:notice] = 'Paciente was successfully updated.'
-        format.html { redirect_to(@paciente) }
-        format.xml  { head :ok }
+      format.html do
+      if @paciente.save
+        flash[:notice] = 'El paciente ha sido actualizado.'
+        redirect_to(@paciente) 
       else
-        format.html { render :action => "edit" }
+        render :action => "edit" 
         format.xml  { render :xml => @paciente.errors, :status => :unprocessable_entity }
       end
     end
+    format.js { render :action => 'validar'}
   end
+end
 
   def crea_consulta
     redirect_to :controller => "consultas", :id => params[:id], :action => 'edit'

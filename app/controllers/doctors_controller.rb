@@ -35,7 +35,7 @@ class DoctorsController < ApplicationController
   # GET /doctors/new.xml
   def new
     @doctor = Doctor.new
-
+    @especialidad = @doctor.build_especialidad
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @doctor }
@@ -50,27 +50,30 @@ class DoctorsController < ApplicationController
   # POST /doctors
   # POST /doctors.xml
   def create
+
     @doctor = Doctor.new(params[:doctor])
     @doctor.genera_rfc
     respond_to do |format|
-      if @doctor.save 
-        flash[:notice] = 'Doctor was successfully created.'
-        format.html { redirect_to(@doctor) }
-        format.xml  { render :xml => @doctor, :status => :created, :location => @doctor }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @doctor.errors, :status => :unprocessable_entity }
+      format.html do
+        if @doctor.save
+          if params[:doctor][:especialidad_id] ==""
+            @doctor.especialidad_id = Especialidad.find(:last).id
+            @doctor.save(false)
+          end
+          flash[:notice] = "El doctor #{@doctor.nombre_completo} fue creado."
+          redirect_to @doctor
+        else
+          render :action => "new"
+        end
       end
     end
   end
-
-  # PUT /doctors/1
-  # PUT /doctors/1.xml
+  
   def update
     @doctor = Doctor.find(params[:id])
     respond_to do |format|
       if @doctor.update_attributes(params[:doctor])
-        flash[:notice] = 'Doctor was successfully updated.'
+        flash[:notice] = "El doctor #{@doctor.nombre_completo} fue actualizado."
         format.html { redirect_to(@doctor) }
         format.xml  { head :ok }
       else

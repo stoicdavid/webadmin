@@ -12,13 +12,13 @@
 
   <p>
 	<%= f.label 'Fecha de consulta' %><br />
-	<%= calendar_date_select_tag :fecha_consulta,'', :year_range => 2.years.ago..0.years.ago  %>
+	<%= calendar_date_select_tag 'consulta[fecha_consulta]',"#{@consulta.fecha_consulta}", :year_range => 2.years.ago..0.years.ago  %>
   </p>
 
 
   <p>
    <%= f.label 'Fecha de Referencia' %><br />
-   <%= calendar_date_select_tag :fecha_envio,'', :year_range => 2.years.ago..0.years.ago  %>
+   <%= calendar_date_select_tag 'consulta[fecha_envio]',"#{@consulta.fecha_envio}", :year_range => 2.years.ago..0.years.ago  %>
   </p>
   <p>
     <%= f.label 'Diagnóstico' %><br />
@@ -30,8 +30,8 @@
 </p>
 
   <p>
-    <%= f.label 'Fecha de inicio de síntomas' %><br />
-   <%= calendar_date_select_tag :fecha_envio,'', :year_range => 30.years.ago..0.years.ago  %>
+    <%= f.label 'Inicio de síntomas' %><br />
+   <%= f.text_field :fecha_in_sintomas  %>
   </p>
   <p>
     <%= f.label 'Fármacos anteriores' %><br />
