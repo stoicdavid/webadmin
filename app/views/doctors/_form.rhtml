@@ -20,7 +20,7 @@
     <%= f.text_field :app_mat %>
   </p>
   <p>
-	<%= f.select :genero, Paciente::GENERO, :prompt => "Selecciona el genero"  %>
+	<%= f.select :genero, Doctor::GENERO, :prompt => "Selecciona el genero"  %>
   </p
 	<p><%= file_column_field "doctor", "imagen" %></p>
 
