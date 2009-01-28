@@ -1,6 +1,4 @@
-pdf.bounding_box([190,770], :width=>200, :height=>200) do
-	pdf.image "public/images/lpdf.png"
-end
+
 
 pdf.bounding_box([20,650], :width=>200, :height=>100) do
   pdf.font.size = 10

@@ -48,7 +48,7 @@ class CitasController < ApplicationController
 
     respond_to do |format|
       if @cita.save
-        flash[:notice] = 'Cita was successfully created.'
+        flash[:notice] = 'La cita fue creada'
         format.html { redirect_to(@cita) }
         format.xml  { render :xml => @cita, :status => :created, :location => @cita }
       else

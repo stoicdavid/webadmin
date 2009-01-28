@@ -54,8 +54,8 @@ class ConsultasController < ApplicationController
     respond_to do |format|
       if @consulta.save
         flash[:notice] = 'Se ha creado un nuevo registro'
-        format.html { redirect_to :controller => 'pacientes',:action => 'show',:id => @consulta.paciente_id  }
-        #format.js
+        format.html { redirect_to pacientes_path(@consulta.paciente_id)  }
+        format.js
         #format.xml  { render :xml => @consulta, :status => :created, :location => @consulta }
       else
         format.html { render :action => "new" }
