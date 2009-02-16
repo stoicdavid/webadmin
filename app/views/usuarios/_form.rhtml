@@ -4,7 +4,7 @@
 <%= error_messages_for :usuario %>
 <% form_for @usuario,:html => { :id => "usuario_form" } do |f| -%>
 
-<p><%= label_tag 'nombre' %><br/>
+<p><%= label_tag 'name','nombre' %><br/>
 <%= f.text_field :name %></p>
 
 <p><%= label_tag 'login' %><br/>
