@@ -113,6 +113,12 @@ td.cita{
 
 }
 
+div.super{
+ position:relative;
+  left:750px;
+  font-size:    x-small;
+
+}
 
 div.bloque{
  position:relative;width=100%

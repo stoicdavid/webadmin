@@ -1,6 +1,7 @@
 class OperationsController < ApplicationController
   # GET /operations
   # GET /operations.xml
+  before_filter :login_required
   def index
     @operations = Operation.find(:all,:order => "indice_estudio ASC")
 

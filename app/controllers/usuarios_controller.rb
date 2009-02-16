@@ -1,18 +1,19 @@
 class UsuariosController < ApplicationController
-  # GET /usuarios
-  # GET /usuarios.xml
-  def index
-    @usuarios = Usuario.find(:all, :order => :nombre )
+  # Be sure to include AuthenticationSystem in Application Controller instead
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @usuarios }
-    end
-  end
+  before_filter :login_required
+  require_role "admin", :for_all_except => [:edit,:update,:show]
 
-  # GET /usuarios/1
-  # GET /usuarios/1.xml
-  def show
+
+ def index
+   @usuarios = Usuario.find(:all, :order => :login)
+
+   respond_to do |format|
+     format.html # index.html.erb
+     format.xml  { render :xml => @usuarios }
+   end
+ end
+ def show
     @usuario = Usuario.find(params[:id])
 
     respond_to do |format|
@@ -20,72 +21,47 @@ class UsuariosController < ApplicationController
       format.xml  { render :xml => @usuario }
     end
   end
-
-  # GET /usuarios/new
-  # GET /usuarios/new.xml
   def new
     @usuario = Usuario.new
-    @doctor=Doctor.find_by_id(params[:id])
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @usuario }
-    end
-  end
-
-  # GET /usuarios/1/edit
-  def edit
-    @usuario = Usuario.find(params[:id_usuario])
-    @doctor=Doctor.find_by_id(params[:id])
-  end
-
-  # POST /usuarios
-  # POST /usuarios.xml
-  def envia_registro(doc,pass)
-    email = NeuroMailer.create_registra_doctor(doc,pass) 
-    email.set_content_type("text/html")
-    NeuroMailer.deliver(email) 
   end
   
-  def create
-    @usuario = Usuario.new(params[:usuario])
-    
-    respond_to do |format|
-      if @usuario.save
-        @password = params[:usuario][:password]
-        @doctor = Doctor.find(params[:usuario][:doctor_id])
-        envia_registro(@doctor,@password)
-        flash[:notice] = "El usuario #{@usuario.nombre} fue creado exitosamente y se ha enviado un correo a #{@doctor.correo}"
-        format.html { redirect_to(:controller => "doctors",:action => "show",:id => @usuario.doctor_id) }
-        format.xml  { head :ok }
-      else
-        format.html { redirect_to :action => "new",:id => params[:usuario][:doctor_id] } #:locals => {:id => params[:id]}
-        format.xml  { render :xml => @usuario.errors, :status => :unprocessable_entity }
-      end
-    end
+  def edit
+    @usuario = Usuario.find(params[:id])
   end
 
-  # PUT /usuarios/1
-  # PUT /usuarios/1.xml
+ 
+  def create
+    #logout_keeping_session!
+    @usuario = Usuario.new(params[:usuario])
+    success = @usuario && @usuario.save
+    if success && @usuario.errors.empty?
+      # Protects against session fixation attacks, causes request forgery
+      # protection if visitor resubmits an earlier form using back
+      # button. Uncomment if you understand the tradeoffs.
+      #reset session
+      #self.current_usuario = @usuario # !! now logged in
+      redirect_back_or_default('/lab/index')
+      flash[:notice] = "Gracias por registrarte"
+    else
+      flash[:notice]  = "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."
+      render :action => 'new'
+    end
+  end
+  
   def update
     @usuario = Usuario.find(params[:id])
-
     respond_to do |format|
       if @usuario.update_attributes(params[:usuario])
-        @password = params[:usuario][:password]
-        @doctor = Doctor.find(params[:usuario][:doctor_id])
-        envia_registro(@doctor,@password)
-        flash[:notice] = "El usuario #{@usuario.nombre} fue creado exitosamente y se ha enviado un correo a #{@doctor.correo}"
-        format.html { redirect_to(:controller => "doctors",:action => "show",:id => @usuario.doctor_id) }
+        flash[:notice] = "El usuario #{@usuario.login} fue actualizado exitosamente"
+        format.html { redirect_to(:action => "show",:id => @usuario.id) }
         format.xml  { head :ok }
       else
-        format.html { redirect_to :action => "edit" }
+        format.html { redirect_to :action => "edit"}
         format.xml  { render :xml => @usuario.errors, :status => :unprocessable_entity }
       end
     end
   end
-
-  # DELETE /usuarios/1
-  # DELETE /usuarios/1.xml
+  
   def destroy
     @usuario = Usuario.find(params[:id])
     @usuario.destroy
@@ -95,5 +71,4 @@ class UsuariosController < ApplicationController
       format.xml  { head :ok }
     end
   end
-  
 end

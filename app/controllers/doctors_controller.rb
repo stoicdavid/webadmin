@@ -1,6 +1,7 @@
 class DoctorsController < ApplicationController
   # GET /doctors
   # GET /doctors.xml
+  before_filter :login_required
   def index
     if params[:search]
       values = {}
@@ -47,21 +48,32 @@ class DoctorsController < ApplicationController
     @doctor = Doctor.find(params[:id])
   end
 
+  def crea_usuario
+    doctor = Doctor.find(params[:id])
+    @usuario = doctor.build_usuario
+    @usuario.name = doctor.nombre_completo
+    @usuario.email = doctor.correo
+  end
+
+  def salva
+    
+  end
+
+
   # POST /doctors
   # POST /doctors.xml
   def create
-
     @doctor = Doctor.new(params[:doctor])
     @doctor.genera_rfc
     respond_to do |format|
       format.html do
         if @doctor.save
-          if params[:doctor][:especialidad_id] ==""
+          if !params[:doctor][:especialidad_id].nil?
             @doctor.especialidad_id = Especialidad.find(:last).id
             @doctor.save(false)
           end
           flash[:notice] = "El doctor #{@doctor.nombre_completo} fue creado."
-          redirect_to @doctor
+          redirect_to(@doctor)
         else
           render :action => "new"
         end
@@ -83,12 +95,18 @@ class DoctorsController < ApplicationController
     end
   end
   
+  def envia_registro(doc,pass)
+    email = NeuroMailer.create_registra_doctor(doc,pass) 
+    email.set_content_type("text/html")
+    NeuroMailer.deliver(email) 
+  end
 
 
   # DELETE /doctors/1
   # DELETE /doctors/1.xml
   def destroy
     @doctor = Doctor.find(params[:id])
+    @doctor.usuario.destroy unless @doctor.usuario.nil?
     @doctor.destroy
     
 
@@ -98,8 +116,5 @@ class DoctorsController < ApplicationController
     end
   end
   
-  protected 
-  def authorize 
-  end
   
 end

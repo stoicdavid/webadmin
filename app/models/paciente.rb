@@ -95,8 +95,14 @@ class Paciente < ActiveRecord::Base
     end
     nombre
   end
+
   def nombre_completo
-  	nombres + " " + self.app_pat + " " + self.app_mat
+    nom = nombres
+    nom += ' ' + self.app_pat
+    if self.app_mat.scan(/x/i).empty?
+      nom += ' ' + self.app_mat
+    end
+    nom
   end
   
   def codigo_fiscal

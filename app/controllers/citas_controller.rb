@@ -1,6 +1,7 @@
 class CitasController < ApplicationController
   # GET /citas
   # GET /citas.xml
+  before_filter :login_required
   def index
     @mes_actual = Time.now
     @mes_anterior = 1.month.ago(@mes_actual)
@@ -152,7 +153,5 @@ class CitasController < ApplicationController
       format.xml  { head :ok }
     end
   end
-  protected
-  def authorize_admin
-  end
+
 end

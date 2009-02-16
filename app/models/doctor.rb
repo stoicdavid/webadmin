@@ -35,10 +35,17 @@ class Doctor < ActiveRecord::Base
         build_especialidad(atributos)
      #end
     end
+
+    def nombre_completo
+      nom = self.nombre
+      nom += self.nombre_2
+      nom += ' ' + self.app_pat
+      if self.app_mat.scan(/x/i).empty?
+        nom += ' ' + self.app_mat
+      end
+      nom
+    end
   
-  def nombre_completo
-  	self.nombre + " " + self.nombre_2 + " " + self.app_pat + " " + self.app_mat
-  end
   
   def codigo
      cod = ""

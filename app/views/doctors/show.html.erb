@@ -41,11 +41,11 @@
 </p>
 
 <% if @doctor.usuario!=nil %>
-	<%= link_to 'Modifica Password', :controller => "usuarios", :action => "edit", :id_usuario => @doctor.usuario.id %>
+	<%= link_to 'Modifica Password', :controller => "usuarios", :action => "edit", :id => @doctor.usuario.id %>
 <% end %>
 
-<% if Usuario.find_by_id(session[:usuario_id]).nombre =="admin" && @doctor.usuario==nil %>
-<%= button_to 'Crea Usuario', {:controller => "usuarios", :action => "new", :id => @doctor.id } %>
-<%= link_to 'Edit', edit_doctor_path(@doctor) %> |
-<%= link_to 'Back', doctors_path %>
+<% if current_usuario.has_role?("admin") && @doctor.usuario==nil %>
+<%= button_to 'Crea Usuario', {:action => "crea_usuario", :id => @doctor.id } %>
+<%= link_to 'Editar', edit_doctor_path(@doctor) %> |
+<%= link_to 'Regresar', doctors_path %>
 <% end %>

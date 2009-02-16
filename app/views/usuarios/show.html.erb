@@ -1,18 +1,26 @@
 <p>
   <b>Nombre:</b>
-  <%=h @usuario.nombre %>
+  <%=h @usuario.name %>
 </p>
 
 <p>
-  <b>Hashed password:</b>
-  <%=h @usuario.hashed_password %>
+  <b>Login:</b>
+  <%=h @usuario.login %>
 </p>
+
 
 <p>
-  <b>Salt:</b>
-  <%=h @usuario.salt %>
+  <b>Rol:</b>
+  <% @usuario.roles.collect do |element| %>
+<%= element.name %> |
+<% end %>
 </p>
-
-
-<%= link_to 'Edit', edit_usuario_path(@usuario) %> |
-<%= link_to 'Back', usuarios_path %>
+<p>
+<% if @usuario.doctor %>
+<b>Doctor:</b><%= @usuario.doctor.nombre_completo %>
+<% end %>
+</p>
+<%= link_to 'Modificar', edit_usuario_path(@usuario) %> 
+<% if current_usuario.has_role?("admin") %>
+	<%= link_to 'Back', usuarios_path %>
+<% end %>

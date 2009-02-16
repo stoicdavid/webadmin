@@ -7,7 +7,7 @@
   		<%=h registro.doctor.nombre_completo %>
 	<% end %>
 </p>
-<% if usuario.nombre=="admin" %>
+<% if usuario.has_role?('admin') %>
 <p>
   <b>Fecha consulta:</b>
   <%=h registro.fecha_consulta %>
@@ -43,7 +43,7 @@
 <p>
 
 </p>
-<% if usuario.nombre=="admin" %>
+<% if usuario.has_role?('admin') %>
 <% if status == 'Sin Cita' %>
 <%= button_to 'Crea Cita', {:controller => "lab",:action => "crea_cita", :id => registro.cita.id } %> 
 <% end %>

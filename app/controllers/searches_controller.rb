@@ -1,4 +1,5 @@
 class SearchesController < ApplicationController
+  before_filter :login_required
   # GET /searches
   # GET /searches.xml
   def index

@@ -10,7 +10,8 @@ module ApplicationHelper
       menu+= link_to( "Pacientes", :controller => "pacientes")+ "<br /><br />"
     end
     
-    if usuario.nombre=='admin' 
+    if usuario.has_role?('admin')
+      menu+= link_to("Usuarios", :controller => "usuarios") + "<br /><br />"
       menu+= link_to("Doctores", :controller => "doctors") + "<br /><br />"
       menu+= link_to("Precios", :controller => "estudios") + "<br />"
       menu+= link_to("Cubículos",:controller => "lab", :action => 'show_horario')+"<br /><br />"
@@ -19,13 +20,13 @@ module ApplicationHelper
       menu+= link_to("Pagos", :controller => "pagos") +"<br /><br />"
     end
     
-    if usuario.doctor!=nil
+    if usuario.has_role?('doctor')
       menu+= link_to( "Mi Perfil", :controller => "doctors",:action => "show",:id => usuario.doctor_id)+ "<br />"
-      menu+= link_to( "Honorarios", :controller => "lab",:action => "lista_honorarios",:id => usuario.doctor_id)+ "<br />"
+      menu+= link_to( "Honorarios", :controller => "lab",:action => "lista_honorarios",:id => usuario.doctor_id)+ "<br /><br />"
     end
     
 
-    menu+=link_to 'Salir', :controller => :admin, :action => 'logout' 
+    menu+=link_to 'Salir', :controller => :sessions, :action => 'destroy' 
   end
 end
 

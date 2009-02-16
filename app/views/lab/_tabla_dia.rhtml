@@ -13,7 +13,7 @@
 		<% count_2=0 %>
 		<% celda="" %>
 		<% drag="" %>
-		<% inicial.step(final,60*60) {|x| %>
+		<% inicial.step(final,60*15) {|x| %>
 
 	<tr>
 		<td id="rowheadcell" >
@@ -21,7 +21,7 @@
 				<div class="rhead" id="rhead0" style="height:35px;top:0ex">
 					<div class="rheadtext">
 						<%= x.strftime('%H:%M - ') %>
-						<%  y=x + (60*60) %>
+						<%  y=x + (60*15) %>
 						<%= y.strftime('%H:%M') %>
 					</div>
 				</div>

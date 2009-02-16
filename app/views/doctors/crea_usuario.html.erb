@@ -1,0 +1,31 @@
+<% form_for(@usuario) do |f| %>
+
+<p><%= label_tag 'nombre' %><br/>
+<%= f.text_field :name %></p>
+
+<p><%= label_tag 'login' %><br/>
+<%= f.text_field :login %></p>
+
+
+<p><%= label_tag 'password' %><br/>
+<%= f.password_field :password %></p>
+
+<p><%= label_tag 'password_confirmation', 'Confirma Password' %><br/>
+<%= f.password_field :password_confirmation %></p>
+
+<p><%= label_tag 'email' %><br/>
+<%= f.text_field :email %></p>
+Rol
+<% for role in Role.find(:all) %>
+<div>
+	<%= check_box_tag "usuario[role_ids][]",role.id,@usuario.roles.include?(role) %>
+	<%= role.name %>
+</div>
+<% end %>
+	<%= f.hidden_field :doctor_id, :value => params[:id]  %>
+  <p>
+    <%= f.submit "Agrega Usuario", :class => "submit" %>
+  </p>
+
+  </fieldset>
+<% end %>

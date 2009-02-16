@@ -50,7 +50,7 @@
 </p>
 
 
-<% if Usuario.find_by_id(session[:usuario_id]).nombre=="admin" %>
+<% if Usuario.find_by_id(session[:usuario_id]).has_role?('admin')%>
 <%= link_to 'Editar', edit_paciente_path(@paciente) %> 
 <% end %>
 <% unless @paciente.consultas ==nil %>
@@ -66,7 +66,7 @@
 
 <% end %>
 
-<% if Usuario.find_by_id(session[:usuario_id]).nombre=="admin" %>
+<% if Usuario.find_by_id(session[:usuario_id]).has_role?('admin') %>
 <br />
 <div id="notice">
 	

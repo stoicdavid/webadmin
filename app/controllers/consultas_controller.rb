@@ -1,6 +1,7 @@
 class ConsultasController < ApplicationController
   # GET /consultas
   # GET /consultas.xml
+  before_filter :login_required
   def index
     
     if params[:search]
@@ -95,7 +96,5 @@ class ConsultasController < ApplicationController
       #format.xml  { head :ok }
     end
   end
-  protected 
-  def authorize 
-  end
+
 end

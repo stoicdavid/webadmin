@@ -22,11 +22,12 @@
     <td><%= link_to 'Show', referencia %></td>
     <td><%= link_to 'Edit', edit_referencia_path(referencia) %></td>
     <td><%= link_to 'Destroy', referencia, :confirm => 'Are you sure?', :method => :delete %></td>
+
   </tr>
 <% end %>
 </table>
 
 <br />
-<% if Usuario.find_by_id(session[:usuario_id]).nombre!="admin" %>
+<% if !Usuario.find_by_id(session[:usuario_id]).has_role?("admin") %>
 <%= link_to 'Agregar Referencia', new_referencia_path %>
 <% end %>

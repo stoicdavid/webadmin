@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090124222451) do
+ActiveRecord::Schema.define(:version => 20090208183655) do
 
   create_table "agendas", :id => false, :force => true do |t|
     t.integer  "paciente_id", :null => false
@@ -180,6 +180,18 @@ ActiveRecord::Schema.define(:version => 20090124222451) do
     t.integer  "doctor_id"
   end
 
+  create_table "roles", :force => true do |t|
+    t.string "name"
+  end
+
+  create_table "roles_usuarios", :id => false, :force => true do |t|
+    t.integer "role_id"
+    t.integer "usuario_id"
+  end
+
+  add_index "roles_usuarios", ["role_id"], :name => "index_roles_usuarios_on_role_id"
+  add_index "roles_usuarios", ["usuario_id"], :name => "index_roles_usuarios_on_usuario_id"
+
   create_table "searches", :force => true do |t|
     t.string   "nombre"
     t.string   "nombre_2"
@@ -218,12 +230,18 @@ ActiveRecord::Schema.define(:version => 20090124222451) do
   add_index "tipos", ["estudio_id", "operation_id"], :name => "index_tipos_on_estudio_id_and_operation_id"
 
   create_table "usuarios", :force => true do |t|
-    t.string   "nombre"
-    t.string   "hashed_password"
+    t.string   "name",                      :limit => 100, :default => ""
+    t.string   "crypted_password"
     t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "doctor_id"
+    t.string   "login",                     :limit => 40
+    t.string   "email",                     :limit => 100
+    t.string   "remember_token",            :limit => 40
+    t.datetime "remember_token_expires_at"
   end
+
+  add_index "usuarios", ["login"], :name => "index_usuarios_on_login", :unique => true
 
 end

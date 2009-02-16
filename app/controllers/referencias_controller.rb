@@ -1,6 +1,7 @@
 class ReferenciasController < ApplicationController
   # GET /referencias
   # GET /referencias.xml
+  before_filter :login_required
   def index
     usuario = usuario=Usuario.find_by_id(session[:usuario_id])
     if usuario.doctor_id.nil?

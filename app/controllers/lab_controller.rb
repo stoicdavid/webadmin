@@ -1,7 +1,7 @@
 
 
 class LabController < ApplicationController
-
+  before_filter :login_required
   
   def index
     #if @cons = Consulta.find_all_by_doctor_id(nil)

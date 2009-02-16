@@ -1,6 +1,7 @@
 class EstudiosController < ApplicationController
   # GET /estudios
   # GET /estudios.xml
+  before_filter :login_required
   def index
     @estudios = Estudio.find(:all)
 

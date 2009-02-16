@@ -1,6 +1,7 @@
 class HorariosController < ApplicationController
   # GET /horarios
   # GET /horarios.xml
+  before_filter :login_required
   def index
     @horarios = Horario.find(:all)
 

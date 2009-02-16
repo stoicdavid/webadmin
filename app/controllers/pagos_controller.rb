@@ -13,6 +13,7 @@ class BigDecimal
 end
 
 class PagosController < ApplicationController
+  before_filter :login_required
   # GET /pagos
   # GET /pagos.xml
   def index

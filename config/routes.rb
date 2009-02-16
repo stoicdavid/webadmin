@@ -1,4 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
+
+  map.logout '/logout', :controller => 'sessions', :action => 'destroy'
+  map.login '/login', :controller => 'sessions', :action => 'new'
+  map.register '/register', :controller => 'usuarios', :action => 'create'
+  map.signup '/signup', :controller => 'usuarios', :action => 'new'
+
+  map.resources :usuarios
+  
+  map.resource :session
+
   map.resources :referencias
 
   map.resources :horarios
@@ -14,16 +24,14 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :citas
   
   map.resources :estudios
-  
-  map.resources :usuarios
-
-  map.resources :consultas
 
   map.resources :consultas
 
   map.resources :doctors
 
   map.resources :pacientes
+
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -57,7 +65,7 @@ ActionController::Routing::Routes.draw do |map|
   #   end
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-  map.root :controller => 'admin', :action => 'login' 
+  map.root :controller => 'admin', :action => 'inicio' 
 
   # See how all your routes lay out with "rake routes"
 

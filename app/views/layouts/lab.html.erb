@@ -37,6 +37,17 @@
 <%= menu %>
 	</div>
     <div id="main">
+		<div class="super">
+		         <% if logged_in? %>
+		              <span>Has ingresado como: </span>
+		         <b><%= current_usuario.login %></b>
+		con perfil: <% current_usuario.roles.collect do |element| %>
+		<b><%= element.name %></b>
+		<% end %>
+		         <% else %>
+		         <span></span>
+		         <% end %>
+		       </div>
 		<p class="notice"><%= flash[:notice] %></p>
       <%= yield :layout %><!-- <label id="code.depot.e.include"/> -->
     </div>

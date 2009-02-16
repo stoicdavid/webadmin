@@ -3,7 +3,7 @@ class AdminController < ApplicationController
   def login 
     session[:usuario_id] = nil 
     if request.post? 
-      usuario = Usuario.authenticate(params[:nombre], params[:password]) 
+      usuario = Usuario.authenticate(params[:login], params[:password]) 
       if usuario 
         session[:usuario_id] = usuario.id 
         redirect_to :action => "index",:controller => 'lab'
@@ -21,13 +21,12 @@ class AdminController < ApplicationController
   end
 
   
-  def index
-
+  def inicio
+      respond_to do |format|
+        format.html 
+      end
   end
   
   
-  protected 
-  def authorize_admin
-  end
 
 end

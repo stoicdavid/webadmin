@@ -1,6 +1,7 @@
 class PacientesController < ApplicationController
   # GET /pacientes
   # GET /pacientes.xml
+  before_filter :login_required
   def index
     @usuario=Usuario.find_by_id(session[:usuario_id])
     if params[:search]
@@ -11,7 +12,7 @@ class PacientesController < ApplicationController
       :conditions => ['nombre LIKE :str or app_pat LIKE :str or app_mat LIKE :str',values])
     elsif doctor = @usuario.doctor
       @pacientes = doctor.pacientes
-    elsif @usuario.nombre=='admin'
+    elsif @usuario.has_role?('admin')
       consultas = Consulta.find_all_by_fecha_consulta(Time.now.beginning_of_day...Time.now.end_of_day)
       @pacientes = Array.new
       consultas.each { |paciente|
@@ -80,6 +81,7 @@ class PacientesController < ApplicationController
   # GET /pacientes/1/edit
   def edit
     @paciente = Paciente.find(params[:id])
+    @fecha_nac = @paciente.fecha_nac.strftime('%d-%m-%Y')
     @consulta = Consulta.find_by_paciente_id(@paciente.id)
   end
 
@@ -105,8 +107,9 @@ class PacientesController < ApplicationController
   # PUT /pacientes/1
   # PUT /pacientes/1.xml
   def update
-    @paciente = Paciente.find(params[:id])
+    @paciente = Paciente.find(params[:id])    
     @paciente.attributes = params[:paciente]
+    @paciente.fecha_nac=params[:fecha_nac]
     respond_to do |format|
       format.html do
       if @paciente.save
@@ -137,8 +140,6 @@ end
     end
   end
   
-  protected 
-  def authorize
-  end
+
 
 end

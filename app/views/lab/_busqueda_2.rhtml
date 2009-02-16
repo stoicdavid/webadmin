@@ -6,7 +6,7 @@
 	<%# calendar_date_select_tag "cita", @cita.fecha_hora %>
 	<% inicial=Time.now.beginning_of_year.strftime('%Y') %>
 	<% final=Time.now.beginning_of_year.years_since(3).strftime('%Y') %>
-	<%= select_time(Time.parse('07:00'),:time_separator => ':',:minute_step => 60 ) %> 
+	<%= select_time(Time.parse('07:00'),:time_separator => ':',:minute_step => 15 ) %> 
 	<%= hidden_field_tag :paciente, Paciente.find(params[:id]).id  %>	
 	<%= hidden_field_tag :consulta, params[:id_cons]  %>	
 	<%= hidden_field_tag :dia,  params[:dia]  %>	
