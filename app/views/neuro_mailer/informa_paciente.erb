@@ -38,7 +38,7 @@ Montecito 38 piso 15 oficina 23, Col. N&aacute;poles M&eacute;xico, D.F. 03810
 	cualquier estudio de neurofisiolog&iacute;a realizado con anterioridad.
 </p>
 <p>
-El costo del estudio es de <%= number_to_currency(@estudio.precio.to_f*1.15) %> y por ser paciente del Dr. <%= @doctor.app_pat %> 
+El costo del estudio es de <%= number_to_currency(@estudio.precio.to_f*1.15) %> y por ser paciente del Dr. <%= @doctor.app_pat unless @doctor.nil?%> 
 le otorgaremos un <%= @estudio.descuento_porcentaje %> de descuento, con un total a pagar de <%= number_to_currency(@estudio.precio.to_f*1.15-(@estudio.precio.to_f*1.15*0.1)) %><br>
 Su forma de pago puede ser mediante tarjeta de cr&eacute;dito visa o mastercard, d&eacute;bito, en efectivo o con cheque a nombre de 
 GRC Neurocl&iacute;nica, S.A. de C.V. <br>

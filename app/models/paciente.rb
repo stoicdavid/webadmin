@@ -98,7 +98,7 @@ class Paciente < ActiveRecord::Base
 
   def nombre_completo
     nom = nombres
-    nom += ' ' + self.app_pat
+    nom += self.app_pat
     if self.app_mat.scan(/x/i).empty?
       nom += ' ' + self.app_mat
     end
