@@ -108,20 +108,23 @@ class PacientesController < ApplicationController
   # PUT /pacientes/1.xml
   def update
     @paciente = Paciente.find(params[:id])    
-    @paciente.attributes = params[:paciente]
+    @paciente.attributes= params[:paciente]
     @paciente.fecha_nac=params[:fecha_nac]
     respond_to do |format|
-      format.html do
+
       if @paciente.save
         flash[:notice] = 'El paciente ha sido actualizado.'
-        redirect_to(@paciente) 
+        format.html {redirect_to(@paciente) }
+        format.json {render :json => @paciente}
       else
-        render :action => "edit" 
-        format.xml  { render :xml => @paciente.errors, :status => :unprocessable_entity }
+        format.html {render :action => "edit" }
+        format.json {render :json => @paciente,:status => 201}
       end
-    end
+
+
     format.js { render :action => 'validar'}
   end
+
 end
 
   def crea_consulta

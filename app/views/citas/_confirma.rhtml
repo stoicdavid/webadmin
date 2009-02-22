@@ -1,23 +1,26 @@
 <h1>Confirma cita</h1><br />
 <%paciente = Paciente.find(@cita.paciente_id) %>
 
-<h4><%= paciente.nombre_completo %></h4><br />
-
 Fecha y Hora de la cita:
 <%=l @cita.fecha_hora, :format => ('%d-%b-%y   a las %H:%M')  %><br /><br />
 
-Contacto: <%= paciente.contacto %><br />
+<%= editable_content_tag(:b, paciente, 'nombre', true, nil, {:style => 'border: 0px solid grey;'}, {:okText => 'Salvar'}) %>
+<%= editable_content_tag(:b, paciente, 'app_pat', true, nil, {:style => 'border: 0px solid grey;'}, {:okText => 'Salvar'}) %>
+<%= editable_content_tag(:b, paciente, 'app_mat', true, nil, {:style => 'border: 0px solid grey;'}, {:okText => 'Salvar'}) %>
+
+<br /><br />
+Contacto: <%= editable_content_tag(:b, paciente, 'nombre_contacto', true, nil, {:style => 'border: 0px solid grey;'}, {:okText => 'Salvar'}) %><br />
 <br />
-Correo: <%=paciente.correo %><br />
+Correo: <%= editable_content_tag(:b, paciente, 'correo', true, nil, {:style => 'border: 0px solid grey;'}, {:okText => 'Salvar'}) %><br />
 <br />
 
 Teléfonos<br />
 <p>
-Celular: <%= paciente.tel_cel %><br />
-Casa:<%= paciente.tel_casa %><br />
-Recados:<%= paciente.tel_rec %><br />
-Oficina:<%= paciente.tel_oficina %><br />
-Fax:<%= paciente.tel_fax %><br />
+Celular: <%= editable_content_tag(:b, paciente, 'celular', true, nil, {:style => 'border: 1px solid grey;'}, {:okText => 'Salvar'}) %><br /><br />
+Casa:<%= editable_content_tag(:b, paciente, 'casa', true, nil, {:style => 'border: 1px solid grey;'}, {:okText => 'Salvar'}) %><br /><br />
+Recados:<%= editable_content_tag(:b, paciente, 'recados', true, nil, {:style => 'border: 1px solid grey;'}, {:okText => 'Salvar'}) %><br /><br />
+Oficina:<%= editable_content_tag(:b, paciente, 'oficina', true, nil, {:style => 'border: 1px solid grey;'}, {:okText => 'Salvar'}) %><br /><br />
+Fax:<%= editable_content_tag(:b, paciente, 'fax', true, nil, {:style => 'border: 1px solid grey;'}, {:okText => 'Salvar'}) %><br /><br />
 </p>
 
 <% form_for(@cita) do |f| %>

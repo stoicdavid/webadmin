@@ -28,11 +28,14 @@
      Especialidad <br />
     <%= select :doctor,:especialidad_id, Especialidad.find_all, :prompt => "Selecciona la especialidad" %>
 <br />
-<% fields_for "doctor[especialidad_atributos]", @especialidad do |c_form| %>
-Otra: <br />
-	<%= c_form.text_field :especialidad  %>
-</p>
 
+<% if @doctor.new_record? %>
+	<% fields_for "doctor[especialidad_atributos]", @especialidad do |c_form| %>
+	Otra: <br />
+		<%= c_form.text_field :especialidad  %>
+	</p>
+
+	<% end %>
 <% end %>
 	
   <p>

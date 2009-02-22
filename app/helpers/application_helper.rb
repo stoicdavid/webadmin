@@ -1,7 +1,7 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
   def menu
-    if usuario=Usuario.find_by_id(session[:usuario_id])
+    if usuario=current_usuario
     
     menu= link_to("Home", :controller => "lab",:action => "index") + "<br /><br />"
     
@@ -17,7 +17,9 @@ module ApplicationHelper
       menu+= link_to("Cubículos",:controller => "lab", :action => 'show_horario')+"<br /><br />"
       menu+= link_to( "Citas", :controller => "citas")+ "<br />"
       menu+= link_to( "Estudios", :controller => "operations" )+"<br /><br />"
-      menu+= link_to("Pagos", :controller => "pagos") +"<br /><br />"
+      menu+= link_to("Pagos", :controller => "pagos") +"<br /><br /><br />"
+      menu+= link_to("Reasigna Cita", :controller => "lab",:action => 'busca_paciente') +"<br />"
+      menu+= link_to("Envía Correo", :controller => "lab",:action => 'busca_paciente') +"<br /><br /><br />"
     end
     
     if usuario.has_role?('doctor')
