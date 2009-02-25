@@ -4,7 +4,7 @@ class Paciente < ActiveRecord::Base
   has_many :citas, :dependent => :delete_all
   has_many :operations, :through => :citas
 
-  
+  @@per_page = 3
   GENERO = [ 
   # Displayed stored in db 
   [ "Masculino", "m" ], 
