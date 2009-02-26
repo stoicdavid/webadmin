@@ -2,11 +2,14 @@
 <%paciente = Paciente.find(@cita.paciente_id) %>
 
 Fecha y Hora de la cita:
-<%=l @cita.fecha_hora, :format => ('%d-%b-%y   a las %H:%M')  %><br /><br />
+<b><%=l @cita.fecha_hora, :format => ('%d-%b-%y   a las %H:%M')  %></b><br /><br />
 
 <%= editable_content_tag(:b, paciente, 'nombre', true, nil, {:style => 'border: 0px solid grey;'}, {:okText => 'Salvar'}) %>
 <%= editable_content_tag(:b, paciente, 'app_pat', true, nil, {:style => 'border: 0px solid grey;'}, {:okText => 'Salvar'}) %>
 <%= editable_content_tag(:b, paciente, 'app_mat', true, nil, {:style => 'border: 0px solid grey;'}, {:okText => 'Salvar'}) %>
+<br /><br />
+Fecha de nacimiento: <%= editable_content_tag(:b, paciente, 'fecha_nac', true, nil, {:style => 'border: 0px solid grey;'}, {:okText => 'Salvar'}) %><br /><br />
+<%= "#{paciente.edad(Time.now)} años #{paciente.edad_meses(Time.now)}  meses" %>
 
 <br /><br />
 Contacto: <%= editable_content_tag(:b, paciente, 'nombre_contacto', true, nil, {:style => 'border: 0px solid grey;'}, {:okText => 'Salvar'}) %><br />
@@ -32,7 +35,7 @@ Fax:<%= editable_content_tag(:b, paciente, 'fax', true, nil, {:style => 'border:
     <%= f.label 'Recibió documentación?' %><br />
     <%= f.check_box :confirma_doc %>
   </p>
-
+		<%= link_to "Envía Correo", :controller => "lab",:action => 'envia_info', :id => @cita.consulta.id %>
   <p>
     <%= f.label 'Persona que acompaña' %><br />
     <%= f.text_field :acompana %>

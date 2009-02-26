@@ -30,6 +30,7 @@ class Paciente < ActiveRecord::Base
   validates_presence_of :nombre_contacto, :on => :create, :message => 
   "^Debes agregar un contacto"
   validates_format_of :correo, :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i, :message => "^El formato del correo no es válido"
+
   
   
   validates_inclusion_of :genero, :in => GENERO.map {|disp, value| value},:message => "^Debes seleccionar un género."

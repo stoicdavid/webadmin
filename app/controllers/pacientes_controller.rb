@@ -116,7 +116,7 @@ class PacientesController < ApplicationController
   def update
     @paciente = Paciente.find(params[:id])    
     @paciente.attributes= params[:paciente]
-    @paciente.fecha_nac=params[:fecha_nac]
+    @paciente.fecha_nac=params[:fecha_nac] unless params[:fecha_nac].nil?
     respond_to do |format|
 
       if @paciente.save

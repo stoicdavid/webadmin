@@ -1,6 +1,6 @@
 <div class="avatar">
 	
-<%= image_tag url_for_file_column(@doctor, "imagen") if @doctor.imagen!=nil%>	
+<%= image_tag url_for_file_column(@doctor, "imagen") if !@doctor.imagen.nil?%>	
 </div>
 
 <p>
