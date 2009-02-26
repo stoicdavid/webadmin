@@ -19,11 +19,10 @@
 <% elsif current_usuario.has_role?("doctor") %>
 
 <h1>
-	Bienvenido a American Neurolab, 
 	<% if current_usuario.doctor.genero=="m" %>
-		<%= "Dr. #{current_usuario.doctor.app_pat}" %>
+		<%= "Bienvenido a American Neurolab,  Dr. #{current_usuario.doctor.app_pat}" %>
 	<% else %>
-		<%= "Dra. #{current_usuario.doctor.app_pat}" %>
+		<%= "Bienvenida a American Neurolab, Dra. #{current_usuario.doctor.app_pat}" %>
 	<% end %>
 </h1>
 <div class="avatar_2">
