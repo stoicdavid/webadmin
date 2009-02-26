@@ -1,7 +1,7 @@
 #require'mongrel_cluster/recipes' 
 
-set :domain, "deploy@172.16.90.100"
-#set :domain, "deploy@laboratorio.gotdns.com"
+#set :domain, "deploy@172.16.90.100"
+set :domain, "deploy@laboratorio.gotdns.com"
 set :application, "webadmin"
 set :repository,  "git://github.com/stoicdavid/webadmin.git"
 set :deploy_to, "/var/www/apps/#{application}"

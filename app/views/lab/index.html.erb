@@ -1,4 +1,4 @@
-
+<% if current_usuario.has_role?("admin") %>
 <div id="primario"> 
 
      <div id='principal'> 
@@ -16,4 +16,19 @@
 			<%= render :partial => 'recepcion_sin_conf', :collection => @sin_confirma   %>
     </div> 
 </div>
+<% elsif current_usuario.has_role?("doctor") %>
 
+<h1>
+	Bienvenido a American Neurolab, 
+	<% if current_usuario.doctor.genero=="m" %>
+		<%= "Dr. #{current_usuario.doctor.app_pat}" %>
+	<% else %>
+		<%= "Dra. #{current_usuario.doctor.app_pat}" %>
+	<% end %>
+</h1>
+<div class="avatar_2">
+	
+<%= image_tag url_for_file_column(current_usuario.doctor, "imagen") if !current_usuario.doctor.imagen.nil?%>	
+</div>
+
+<% end %>
