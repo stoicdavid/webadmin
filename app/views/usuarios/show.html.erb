@@ -1,18 +1,23 @@
+<div class="avatar">
+	
+<%= image_tag url_for_file_column(@usuario, "imagen","medium") unless @usuario.imagen.nil?%>	
+</div>
+
 <p>
-  <b>Nombre:</b>
+  <b><%= t 'show_usuarios.nombre' %></b>
   <%=h @usuario.name %>
 </p>
 
 <p>
-  <b>Login:</b>
+  <b><%= t 'show_usuarios.login' %></b>
   <%=h @usuario.login %>
 </p>
 
 
 <p>
-  <b>Rol:</b>
+  <b><%= t 'show_usuarios.rol' %></b>
   <% @usuario.roles.collect do |element| %>
-<%= element.name %> |
+<%= element.traduce_rol %> |
 <% end %>
 </p>
 <p>
@@ -20,7 +25,7 @@
 <b>Doctor:</b><%= @usuario.doctor.nombre_completo %>
 <% end %>
 </p>
-<%= link_to 'Modificar', edit_usuario_path(@usuario) %> 
+<%= link_to t('show_usuarios.modificar'), edit_usuario_path(@usuario) %> 
 <% if current_usuario.has_role?("admin") %>
-	<%= link_to 'Back', usuarios_path %>
+	<%= link_to 'Regresar', usuarios_path %>
 <% end %>

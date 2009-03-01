@@ -1,6 +1,6 @@
 <h1>Información del Doctor</h1>
 
-<% form_for(@doctor,:html => {:multipart => true,:id => "doctor_form" } ) do |f| %>
+<% form_for(@doctor,:html => {:multipart => true,:id => "doctor_form" },:url => (@doctor.new_record? ? doctors_path : @doctor) ) do |f| %>
 <%= f.error_messages %>  
 
   <p>
@@ -26,17 +26,11 @@
 
   <p>
      Especialidad <br />
-    <%= select :doctor,:especialidad_id, Especialidad.find_all, :prompt => "Selecciona la especialidad" %>
-<br />
+    <%= f.collection_select :especialidad_id, Especialidad.find(:all),:id, :especialidad,:prompt => "Selecciona la especialidad" %>
 
-<% if @doctor.new_record? %>
-	<% fields_for "doctor[especialidad_atributos]", @especialidad do |c_form| %>
-	Otra: <br />
-		<%= c_form.text_field :especialidad  %>
-	</p>
+o crear una: 
+<%= f.text_field :nueva_especialidad %>
 
-	<% end %>
-<% end %>
 	
   <p>
     <%= f.label 'Direccion' %><br />
@@ -106,4 +100,4 @@
     <%= f.submit "Enviar" %>
   </p>
 <% end %>
-<%= observe_form "doctor_form", :url => (@doctor.new_record? ? doctors_path : @doctor)  %>
+

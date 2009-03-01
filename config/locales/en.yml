@@ -1,0 +1,44 @@
+en:
+  
+  bienvenida: "Welcome"
+  
+  ingreso: "Logged in as: "
+  rol: "with role: "
+  
+  flash:
+    login: "Logged in succesfully."
+    mod: "User updated."
+    nuevo: "User created"
+
+  roles:
+    admin: "admin"
+    gerente: "gerente"
+    doctor: "doctor"
+    socio: "partner"
+    recepcion: "reception"
+    interpete: "interpreter"
+
+  menu:
+    home: "Home"
+    referencias: "References"
+    pacientes: "Patients"
+    usuarios: "Users"
+    doctores: "Doctors"
+    precios: "Prices"
+    cubiculos: "Cubicles"
+    citas: "Appointments"
+    estudios: "Studies"
+    pagos: "Payments"
+    reasigna_cita: "Reassign Appointments"
+    envia_correo: "Send Mail"
+    mi_perfil: "My profile"
+    honorarios: "Fees"
+    reportes: "Reports"
+    salir: "Logout"
+
+  show_usuarios:
+    nombre: "Name:"
+    login: "Login:"  
+    rol: "Role:"
+    modificar: "Edit"
+    back: "Back"

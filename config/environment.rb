@@ -16,6 +16,7 @@ Rails::Initializer.run do |config|
   # -- all .rb files in that directory are automatically loaded.
   # See Rails::Configuration for more options.
 config.gem "prawn"
+config.gem "gruff"
 config.i18n.default_locale = :es
   # Skip frameworks you're not going to use. To use Rails without a database
   # you must remove the Active Record framework.

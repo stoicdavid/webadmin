@@ -27,7 +27,17 @@
 </h1>
 <div class="avatar_2">
 	
-<%= image_tag url_for_file_column(current_usuario.doctor, "imagen") if !current_usuario.doctor.imagen.nil?%>	
+<%= image_tag url_for_file_column(current_usuario.doctor, "imagen") unless current_usuario.doctor.imagen.nil?%>	
 </div>
+
+<% else %>
+<h1>
+	 <%= t 'bienvenida' %> <%= current_usuario.name.split(' ').first %>
+	</h1>
+	<div class="avatar_2">
+		<%= image_tag url_for_file_column(current_usuario, "imagen","medium") unless current_usuario.imagen.nil?%>	
+	</div>
+
+
 
 <% end %>

@@ -1,5 +1,5 @@
 class Especialidad < ActiveRecord::Base
-  belongs_to :doctor
+  has_one :doctor
   
   validates_uniqueness_of :especialidad, :on => :create, :message => "^La especialidad ya existe"
 

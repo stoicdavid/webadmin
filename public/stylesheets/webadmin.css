@@ -134,8 +134,8 @@ td.cita{
 }
 
 div.super{
- position:relative;
-  left:750px;
+ position:absolute;
+  right:0px;
   font-size:    x-small;
 
 }

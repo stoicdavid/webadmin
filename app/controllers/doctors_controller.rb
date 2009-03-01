@@ -55,10 +55,6 @@ class DoctorsController < ApplicationController
     @usuario.email = doctor.correo
   end
 
-  def salva
-    
-  end
-
 
   # POST /doctors
   # POST /doctors.xml
@@ -68,10 +64,6 @@ class DoctorsController < ApplicationController
     respond_to do |format|
       format.html do
         if @doctor.save
-          if !params[:doctor][:especialidad_id].nil?
-            @doctor.especialidad_id = Especialidad.find(:last).id
-            @doctor.save(false)
-          end
           flash[:notice] = "El doctor #{@doctor.nombre_completo} fue creado."
           redirect_to(@doctor)
         else

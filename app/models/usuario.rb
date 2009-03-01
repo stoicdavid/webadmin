@@ -40,12 +40,16 @@ class Usuario < ActiveRecord::Base
   validates_uniqueness_of   :email,    :on => :create     
   validates_format_of       :email,    :with => Authentication.email_regex, :message => Authentication.bad_email_message,:on => :create
 
-  
+  file_column :imagen, :magick => { :versions => {
+                                    :thumb => {:size => "50x50"},
+                                    :medium => {:size => "100x100>"}
+                                  }}
+
 
   # HACK HACK HACK -- how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
-  attr_accessible :login, :email, :name, :password, :password_confirmation,:role_ids,:doctor_id
+  attr_accessible :login, :email, :name, :password, :password_confirmation,:role_ids,:doctor_id,:imagen,:imagen_temp,:idioma
 
 
 

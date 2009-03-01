@@ -1,9 +1,10 @@
 class Doctor < ActiveRecord::Base
   has_one :usuario
-  has_one :especialidad
+  belongs_to :especialidad
   has_many :consultas
   has_many :pacientes, :through => :consultas
-  
+  attr_accessor :nueva_especialidad
+  before_save :crear_especialidad
   file_column :imagen, :magick => { :geometry => "100x100" }
   
   validates_presence_of :nombre, :app_pat, :app_mat, :correo, :on => :create, :message => " no puede ser vacio"
@@ -15,7 +16,12 @@ class Doctor < ActiveRecord::Base
   [ "Femenino", "f" ]
   ]
   
+  def crear_especialidad
+    create_especialidad(:especialidad => nueva_especialidad) unless nueva_especialidad.blank?
+  end
+
   
+    
   #validates_numericality_of :cp
   def self.find_all
     find(:all).collect { |p| [p.nombre_completo, p.id] }
@@ -30,11 +36,7 @@ class Doctor < ActiveRecord::Base
 
   end
   
-    def especialidad_atributos=(atributos)
-      #atributos.each do |a|
-        build_especialidad(atributos)
-     #end
-    end
+
 
     def nombre_completo
       nom = self.nombre

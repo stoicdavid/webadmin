@@ -1,4 +1,49 @@
 es:
+    
+  bienvenida: "Bienvenido"
+  
+  ingreso: "Has ingresado como: "
+  rol: "con perfil: "
+  
+  flash:
+    login: "Ingreso exitoso"
+    mod: "El usuario fue actualizado."
+    nuevo: "Usuario creado"
+    
+  roles:
+    admin: "admin"
+    gerente: "gerente"
+    doctor: "doctor"
+    socio: "socio"
+    recepcion: "recepcion"
+    interpete: "interprete"
+    
+  menu:
+    home: "Inicio"
+    referencias: "Referencias"
+    pacientes: "Pacientes"
+    usuarios: "Usuarios"
+    doctores: "Doctores"
+    precios: "Precios"
+    cubiculos: "Cubiculos"
+    citas: "Citas"
+    estudios: "Estudios"
+    pagos: "Pagos"
+    reasigna_cita: "Reasigna Cita"
+    envia_correo: "Envía Correo"
+    mi_perfil: "Mi perfil"
+    honorarios: "Honorarios"
+    reportes: "Reportes"
+    salir: "Salir"
+
+  show_usuarios:
+    nombre: "Nombre:"
+    login: "Login:"  
+    rol: "Rol:"
+    modificar: "Modificar"
+    back: "Regresar"
+    
+    
   number:
     # Used in number_with_delimiter()
     # These are also the defaults for 'currency', 'percentage', 'precision', and 'human'

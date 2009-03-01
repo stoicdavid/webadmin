@@ -41,7 +41,7 @@ class UsuariosController < ApplicationController
       #reset session
       #self.current_usuario = @usuario # !! now logged in
       redirect_back_or_default('/lab/index')
-      flash[:notice] = "Gracias por registrarte"
+      flash[:notice] = t('flash.nuevo')
     else
       flash[:notice]  = "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."
       render :action => 'new'
@@ -52,7 +52,7 @@ class UsuariosController < ApplicationController
     @usuario = Usuario.find(params[:id])
     respond_to do |format|
       if @usuario.update_attributes(params[:usuario])
-        flash[:notice] = "El usuario #{@usuario.login} fue actualizado exitosamente"
+        flash[:notice] = t('flash.mod')
         format.html { redirect_to(:action => "show",:id => @usuario.id) }
         format.xml  { head :ok }
       else

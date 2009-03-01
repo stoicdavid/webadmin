@@ -36,18 +36,24 @@
 	<div id="side"> 
 <%= menu %>
 	</div>
-    <div id="main">
+
 		<div class="super">
 		         <% if logged_in? %>
-		              <span>Has ingresado como: </span>
+		              <span><%= t 'ingreso' %></span>
 		         <b><%= current_usuario.login %></b>
-		con perfil: <% current_usuario.roles.collect do |element| %>
-		<b><%= element.name %></b>
-		<% end %>
+		<%= t 'rol'%><% current_usuario.roles.collect do |element| %>
+							<b><%= element.traduce_rol %></b>
+							<% end %>
+				<% if current_usuario.has_role?("doctor") %>			
+					<%= image_tag url_for_file_column(current_usuario.doctor, "imagen") unless current_usuario.doctor.imagen.nil?%>		
+				<% else %>
+					<%= image_tag url_for_file_column(current_usuario, "imagen","thumb") unless current_usuario.imagen.nil?%>		
+				<% end %>
 		         <% else %>
 		         <span></span>
 		         <% end %>
 		       </div>
+		    <div id="main">
 		<p class="notice"><%= flash[:notice] %></p>
       <%= yield :layout %><!-- <label id="code.depot.e.include"/> -->
     </div>

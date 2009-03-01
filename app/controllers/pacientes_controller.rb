@@ -4,7 +4,7 @@ class PacientesController < ApplicationController
   before_filter :login_required
   def index
     @usuario=current_usuario
-    if params[:search] and @usuario.has_role?('admin')
+    if params[:search] and @usuario.has_role?('admin') or @usuario.has_role?("socio") or @usuario.has_role?("gerente")
       values={}
       nombre = "%#{params[:search]}%".split(/\s+/)
       nombre.each { |x| values[:str] = x}
@@ -19,7 +19,7 @@ class PacientesController < ApplicationController
       :conditions => ['nombre LIKE :str or app_pat LIKE :str or app_mat LIKE :str',values], :page => params[:page],:per_page => 5)
     elsif doctor = @usuario.doctor and @usuario.has_role?('doctor')
       @pacientes = doctor.pacientes.paginate(:all,:page => params[:page],:per_page => 5)
-    elsif @usuario.has_role?('admin')
+    elsif @usuario.has_role?('admin') or @usuario.has_role?("socio") or @usuario.has_role?("gerente")
       consultas = Consulta.find_all_by_fecha_consulta(Time.now.beginning_of_day...Time.now.end_of_day)
       @pacientes = Array.new
       consultas.each { |paciente|
