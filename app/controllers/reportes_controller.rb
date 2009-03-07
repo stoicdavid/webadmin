@@ -20,7 +20,7 @@ class ReportesController < ApplicationController
     confirmados = Cita.count(:all, :conditions => "status='Confirmada'", :group => agrupar, :order =>"fecha_hora ASC")
     realizado = Cita.count(:all, :conditions => "status='Estudio Realizado'", :group => agrupar, :order =>"fecha_hora ASC")
     meses = (estudios.keys).sort
-    claves = Hash[*meses.collect {|v| [meses.index(v),v.to_s]}.flatten]
+    claves = Hash[*meses.collect {|v| [meses.index(v),v.to_s]}.flatten].sort
     g.data("Pagados", claves.collect {|k,v|pagados[v].nil? ? 0: pagados[v]}) #Graph Data
     g.data("Activos", claves.collect {|k,v|activos[v].nil? ? 0: activos[v]}) #Graph Data
     g.data("Confirmados", claves.collect {|k,v|confirmados[v].nil? ? 0: confirmados[v]}) #Graph Data
