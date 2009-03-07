@@ -2,18 +2,24 @@ class ReportesController < ApplicationController
   
   def grafica
     
-    g = Gruff::Line.new
-    vera_font_path = File.expand_path('Vera.ttf', ENV['MAGICK_FONT_PATH'])
-    g.font = File.exists?(vera_font_path) ? vera_font_path : nil
-    g.title = "Scores for Bart" 
-    g.data("Homer", [75, 85, 83, 90, 85, 94]) 
-    g.data("Marge", [40, 65, 57, 49, 28, 59]) 
-    g.data("Bart", [90, 87, 83, 80, 75, 70]) 
-    g.labels = {0 => '2003', 2 => '2004', 4 => '2005'}
+    g = Gruff::Bar.new('580x210') #Define a New Graph
+    g.font = File.expand_path("/artwork/Vera.ttf", RAILS_ROOT)
+    g.title = "Estudios por mes" #Title for the Graph
+    g.theme = {
+       :colors => ['#ff6600', '#3bb000', '#1e90ff', '#efba00', '#0aaafd'],
+       :marker_color => '#aaa',
+       :background_colors => ['#eaeaea', '#fff']
+     }
+    estudio = Operation.count(:all, :group => "strftime('%Y-%m',created_at)", :order =>"created_at ASC")
+    meses = (estudio.keys).sort
+    claves = Hash[*meses.collect {|v| [meses.index(v),v.to_s]}.flatten]
+    g.data("Estudios", claves.collect {|k,v|estudio[v].nil? ? 0: estudio[v]}) #Graph Data
+    g.labels = claves #Labels for Each of the Graph
 
-    send_data(g.to_blob, 
+    
+    send_data(g.to_blob('JPG'), 
               :disposition => 'inline', 
-              :type => 'image/png', 
+              :type => 'image/jpg', 
               :filename => "prueba.jpg")
   end
   

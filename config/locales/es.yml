@@ -2,6 +2,11 @@ es:
     
   bienvenida: "Bienvenido"
   
+  index:
+    hoy: "Citas par hoy"
+    confirmar: "Citas para confirmar hoy"
+    confirmar: "Citas sin confirmar"
+    
   ingreso: "Has ingresado como: "
   rol: "con perfil: "
   

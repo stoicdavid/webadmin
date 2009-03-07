@@ -1,0 +1,36 @@
+Rupdf - Simple Ruby PDF Generator
+Author: Alastair Brunton
+Company: Iformis (http://www.iformis.com)
+Blog Post: http://scoop.cheerfactory.co.uk/2007/12/15/rupdf-simple-ruby-pdf-rails-plugin/
+=========================================
+
+Simple PDF reporting rails plugin built on top of ruport.
+
+Requires Ruport
+gem install ruport
+
+This plugin provides a simple method of generating pdfs. Please refer to 
+the API Documentation in rdoc/ to see the methods available.
+
+This is designed to render pdfs with a layout comprising of a header, body and a footer.
+
+If you need to perform more complicated pdf rendering operation 
+please refer to the API Documentation for pdf-writer. The API docs for 
+ruport will also be useful if you are involved in presenting tabular 
+data from activerecord.
+
+You can access the pdf_writer object through your class. You should 
+extend a class from the Rupdf:Base class and call the define_variables, 
+define_header, define_body and define_footer classes.
+
+Example programming code along with how to call it is supplied in the 
+examples directory. Have a look at test_controller for how to call it 
+from within the application flow.
+
+For more information please refer to the tutorial online at:
+http://scoop.cheerfactory.co.uk/2007/12/15/rupdf-simple-ruby-pdf-rails-plugin/
+
+Please not that at the moment this is compatible with Ruport 1.2.3 and not the newest version.
+gem install ruport -v1.2.3
+
+

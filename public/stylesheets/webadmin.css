@@ -27,6 +27,7 @@
 }
 
 #principal {
+	position:relative;
 	width:490px;
 	height:100px;	
   	color:#748999;

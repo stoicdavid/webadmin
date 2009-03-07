@@ -2,6 +2,11 @@ en:
   
   bienvenida: "Welcome"
   
+  index:
+    hoy: "Today appointments"
+    confirmar: "Confirm appointments"
+    pendientes: "Pending confirmation"
+  
   ingreso: "Logged in as: "
   rol: "with role: "
   
