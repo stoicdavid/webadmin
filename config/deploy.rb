@@ -8,7 +8,7 @@ set :deploy_to, "/var/www/apps/#{application}"
 set :ssh_options, {:port => 7777}
 set :mongrel_conf, "#{current_path}/config/mongrel_cluster.yml"
 set :monit_group, 'mongrel'
-set :copy_exclude, [".git","public/usuario","public/doctor"]
+set :copy_exclude, [".git","/public/usuario","/public/doctor"]
 role :app, domain
 role :web, domain
 role :db,  domain, :primary => true
