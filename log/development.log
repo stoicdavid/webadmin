@@ -20925,3 +20925,10 @@ Processing ReportesController#grafica (for 127.0.0.1 at 2009-03-07 13:10:12) [GE
   [4;35;1mSQL (1.3ms)[0m   [0mSELECT count(*) AS count_all, strftime('%Y-%m',created_at) AS strftime_y_m_created_at FROM "operations" GROUP BY strftime('%Y-%m',created_at) ORDER BY created_at ASC [0m
 Sending data prueba.jpg
 Completed in 66ms (View: 0, DB: 2) | 200 OK [http://localhost/reportes/show/grafica]
+
+
+Processing AdminController#inicio (for 127.0.0.1 at 2009-03-07 13:58:50) [GET]
+Rendering template within layouts/admin
+Rendering admin/inicio
+Rendered sessions/_login (1.2ms)
+Completed in 52ms (View: 49, DB: 0) | 200 OK [http://localhost/]
