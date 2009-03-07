@@ -10,7 +10,8 @@ class ReportesController < ApplicationController
        :marker_color => '#aaa',
        :background_colors => ['#eaeaea', '#fff']
      }
-    estudio = Operation.count(:all, :group => "strftime('%Y-%m',created_at)", :order =>"created_at ASC")
+    estudio = Cita.count(:all,:conditions => "status='Pagada'", :group => "DATE_FORMAT(fecha_hora,'%Y-%m')", :order =>"created_at ASC") 
+    #estudio = Operation.count(:all, :group => "DATE_FORMAT('%Y-%m',created_at)", :order =>"created_at ASC")
     meses = (estudio.keys).sort
     claves = Hash[*meses.collect {|v| [meses.index(v),v.to_s]}.flatten]
     g.data("Estudios", claves.collect {|k,v|estudio[v].nil? ? 0: estudio[v]}) #Graph Data
