@@ -2,7 +2,7 @@
 
 
 
-	pdf.bounding_box([23,655], :width=>600, :height=>100) do
+	pdf.bounding_box([28,660], :width=>600, :height=>100) do
 		pdf.font.size=8
 		pdf.text @paciente.razon,:spacing => 7
 		pdf.text "    " + @paciente.direccion_fiscal_completa,:spacing => 6
@@ -16,12 +16,12 @@
 		pdf.text '                 Paciente:  ' + @paciente.nombre_completo 
 	end
 	
-	pdf.bounding_box([415,550], :width=>600, :height=>100) do
+	pdf.bounding_box([419,550], :width=>600, :height=>100) do
 		pdf.font.size=8
 		pdf.text @pago.precio_f
 	end
 
-	pdf.bounding_box([489,550], :width=>600, :height=>100) do
+	pdf.bounding_box([493,550], :width=>600, :height=>100) do
 		pdf.font.size=8
 		pdf.text @pago.precio_f, :spacing => 15
 		pdf.text '  '+@importe_des
@@ -33,7 +33,7 @@
 		pdf.text @pago.total.to_f.to_currency
 	end
 	
-	pdf.bounding_box([489,467], :width=>600, :height=>100) do
+	pdf.bounding_box([493,467], :width=>600, :height=>100) do
 		pdf.font.size=8
 		pdf.text @pago.subtotal_f, :spacing => 10
 		pdf.text '   '+@pago.iva_f, :spacing => 10
@@ -42,7 +42,7 @@
 
 #other part
 alfa = 398
-pdf.bounding_box([23,655-alfa], :width=>600, :height=>100) do
+pdf.bounding_box([28,655-alfa], :width=>600, :height=>100) do
 	pdf.font.size=8
 	pdf.text @paciente.razon,:spacing => 7
 	pdf.text "    " + @paciente.direccion_fiscal_completa,:spacing => 8
@@ -56,12 +56,12 @@ pdf.bounding_box([5,550-alfa], :width=>600, :height=>100) do
 	pdf.text '                 Paciente:  ' + @paciente.nombre_completo 
 end
 
-pdf.bounding_box([415,550-alfa], :width=>600, :height=>100) do
+pdf.bounding_box([419,550-alfa], :width=>600, :height=>100) do
 	pdf.font.size=8
 	pdf.text @pago.precio_f
 end
 
-pdf.bounding_box([489,550-alfa], :width=>600, :height=>100) do
+pdf.bounding_box([493,550-alfa], :width=>600, :height=>100) do
 	pdf.font.size=8
 	pdf.text @pago.precio_f, :spacing => 15
 	pdf.text '  '+@importe_des
@@ -73,7 +73,7 @@ pdf.bounding_box([180,440-alfa], :width=>600, :height=>100) do
 	pdf.text @pago.total.to_f.to_currency
 end
 
-pdf.bounding_box([489,465-alfa], :width=>600, :height=>100) do
+pdf.bounding_box([493,465-alfa], :width=>600, :height=>100) do
 	pdf.font.size=8
 	pdf.text @pago.subtotal_f, :spacing => 10
 	pdf.text '   '+@pago.iva_f, :spacing => 10
