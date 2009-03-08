@@ -24690,3 +24690,38 @@ Processing PagosController#imprime (for 127.0.0.1 at 2009-03-07 18:55:02) [GET]
   [4;35;1mEstudio Load (0.3ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
 Rendering pagos/imprime
 Completed in 163ms (View: 112, DB: 2) | 200 OK [http://localhost/pagos/imprime/47?operation_id=87&paciente_id=55]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-03-07 19:36:57) [GET]
+  [4;36;1mUsuario Load (0.7ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to /
+Completed in 28ms (DB: 1) | 302 Found [http://localhost/logout]
+
+
+Processing AdminController#inicio (for 127.0.0.1 at 2009-03-07 19:36:57) [GET]
+Rendering template within layouts/admin
+Rendering admin/inicio
+Rendered sessions/_login (0.6ms)
+Completed in 20ms (View: 18, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-03-07 19:37:03) [POST]
+  Parameters: {"commit"=>"Iniciar", "authenticity_token"=>"7c0e4f84e7dce515fa8f0386cee4978f44baea97", "login"=>"ray", "password"=>"awmiller"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;35;1mUsuario Load (21.8ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."login" = 'ray') LIMIT 1[0m
+Cookie set: auth_token=; path=/
+Redirected to /lab/index
+Completed in 68ms (DB: 22) | 302 Found [http://localhost/session]
+
+
+Processing LabController#index (for 127.0.0.1 at 2009-03-07 19:37:03) [GET]
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 37) LIMIT 1[0m
+  [4;35;1mCita Load (1.9ms)[0m   [0mSELECT * FROM "citas" [0m
+  [4;36;1mCita Load (0.2ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."fecha_hora" BETWEEN '2009-03-07 00:00:00' AND '2009-03-07 23:59:59') [0m
+  [4;35;1mCita Load (0.2ms)[0m   [0mSELECT * FROM "citas" WHERE (status = 'Activa') AND ("citas"."fecha_hora" BETWEEN '2009-03-08 00:00:00' AND '2009-03-09 23:59:59') [0m
+  [4;36;1mCita Load (0.2ms)[0m   [0;1mSELECT * FROM "citas" WHERE (status = 'Activa') AND ("citas"."fecha_hora" BETWEEN '2009-03-02 00:00:00' AND '2009-03-08 23:59:59') [0m
+Rendering template within layouts/lab
+Rendering lab/index
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 37 ) [0m
+Completed in 148ms (View: 18, DB: 3) | 200 OK [http://localhost/lab/index]

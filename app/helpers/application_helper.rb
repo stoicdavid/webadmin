@@ -29,6 +29,10 @@ module ApplicationHelper
       menu+= link_to( t("menu.honorarios"), :controller => "lab",:action => "lista_honorarios",:id => usuario.doctor_id)+ "<br /><br />"
     end
     
+    if usuario.has_role?('socio')
+      menu+= link_to(t("menu.reportes"), :controller => "reportes",:action => "show") +"<br /><br /><br />"
+    end
+    
 unless usuario.has_role?('doctor')    
       menu+= link_to(t("menu.mi_perfil") , :controller => "usuarios",:action => "show",:id => usuario.id)+ "<br /><br />"
 end

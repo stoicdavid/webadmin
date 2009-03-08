@@ -3,9 +3,14 @@ class Pago < ActiveRecord::Base
     
     FORMAS = [ 
     # Displayed stored in db 
-    [ "Tarjeta", "t" ], 
+    [ "Tarjeta de Crédito", "tdc" ],    
+    [ "American Express", "amex" ],     
+    [ "Tarjeta de Débito", "deb" ],    
     [ "Efectivo", "e" ],
     [ "Cheque", "c" ],
+    [ "Transferencia", "trans" ],        
+    [ "Seguro", "s" ],            
+    [ "Pago Parcial", "ant" ],                
     ]
     
     def folio
