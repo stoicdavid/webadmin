@@ -24657,3 +24657,36 @@ Processing PagosController#imprime (for 127.0.0.1 at 2009-03-07 18:51:21) [GET]
   [4;36;1mEstudio Load (0.3ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
 Rendering pagos/imprime
 Completed in 247ms (View: 114, DB: 2) | 200 OK [http://localhost/pagos/imprime/47?operation_id=87&paciente_id=55]
+
+
+Processing PagosController#imprime (for 127.0.0.1 at 2009-03-07 18:53:57) [GET]
+  Parameters: {"paciente_id"=>"55", "id"=>"47", "operation_id"=>"87"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mPago Load (0.3ms)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 47) [0m
+  [4;35;1mPaciente Load (0.6ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 55) [0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."id" = 87) [0m
+  [4;35;1mEstudio Load (0.3ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+Rendering pagos/imprime
+Completed in 251ms (View: 116, DB: 2) | 200 OK [http://localhost/pagos/imprime/47?operation_id=87&paciente_id=55]
+
+
+Processing PagosController#imprime (for 127.0.0.1 at 2009-03-07 18:54:12) [GET]
+  Parameters: {"paciente_id"=>"55", "id"=>"47", "operation_id"=>"87"}
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mPago Load (0.3ms)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 47) [0m
+  [4;36;1mPaciente Load (0.6ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 55) [0m
+  [4;35;1mOperation Load (0.3ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."id" = 87) [0m
+  [4;36;1mEstudio Load (0.3ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+Rendering pagos/imprime
+Completed in 165ms (View: 113, DB: 2) | 200 OK [http://localhost/pagos/imprime/47?operation_id=87&paciente_id=55]
+
+
+Processing PagosController#imprime (for 127.0.0.1 at 2009-03-07 18:55:02) [GET]
+  Parameters: {"paciente_id"=>"55", "id"=>"47", "operation_id"=>"87"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mPago Load (0.3ms)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 47) [0m
+  [4;35;1mPaciente Load (0.6ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 55) [0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."id" = 87) [0m
+  [4;35;1mEstudio Load (0.3ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+Rendering pagos/imprime
+Completed in 163ms (View: 112, DB: 2) | 200 OK [http://localhost/pagos/imprime/47?operation_id=87&paciente_id=55]

@@ -33,7 +33,7 @@
 		pdf.text @pago.total.to_f.to_currency
 	end
 	
-	pdf.bounding_box([499,467], :width=>600, :height=>100) do
+	pdf.bounding_box([499,464], :width=>600, :height=>100) do
 		pdf.font.size=8
 		pdf.text @pago.subtotal_f, :spacing => 10
 		pdf.text '   '+@pago.iva_f, :spacing => 10
