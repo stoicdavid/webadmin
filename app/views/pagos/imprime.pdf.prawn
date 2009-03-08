@@ -5,7 +5,7 @@
 	pdf.bounding_box([32,662], :width=>600, :height=>100) do
 		pdf.font.size=8
 		pdf.text @paciente.razon,:spacing => 7
-		pdf.text "    " + @paciente.direccion_fiscal_completa,:spacing => 6
+		pdf.text "    " + @paciente.direccion_fiscal_completa,:spacing => 9
 		pdf.text 'México, D.F.                                              ' + @fecha +'                                      '+ @rfc
 	end
 	
@@ -42,10 +42,10 @@
 
 #other part
 alfa = 398
-pdf.bounding_box([32,650-alfa], :width=>600, :height=>100) do
+pdf.bounding_box([32,647-alfa], :width=>600, :height=>100) do
 	pdf.font.size=8
 	pdf.text @paciente.razon,:spacing => 7
-	pdf.text "    " + @paciente.direccion_fiscal_completa,:spacing => 8
+	pdf.text "    " + @paciente.direccion_fiscal_completa,:spacing => 9
 		pdf.text 'México, D.F.                                              ' + @fecha +'                                      '+ @rfc
 end
 
