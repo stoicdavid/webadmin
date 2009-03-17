@@ -4,7 +4,7 @@ class PacientesController < ApplicationController
   before_filter :login_required
   def index
     @usuario=current_usuario
-    if params[:search] and @usuario.has_role?('admin') or @usuario.has_role?("socio") or @usuario.has_role?("gerente")
+    if params[:search] and @usuario.has_role?('admin') or @usuario.has_role?("socio") or @usuario.has_role?("gerente") or @usuario.has_role?("interprete")
       values={}
       nombre = "%#{params[:search]}%".split(/\s+/)
       nombre.each { |x| values[:str] = x}

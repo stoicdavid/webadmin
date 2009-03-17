@@ -1,7 +1,7 @@
 #require'mongrel_cluster/recipes' 
 
-set :domain, "deploy@172.16.90.100"
-#set :domain, "deploy@laboratorio.gotdns.com"
+#set :domain, "deploy@172.16.90.100"
+set :domain, "deploy@laboratorio.gotdns.com"
 set :application, "webadmin"
 set :repository,  "git://github.com/stoicdavid/webadmin.git"
 set :deploy_via, :remote_cache
@@ -38,10 +38,4 @@ task :after_update_code, :roles => [:web, :db, :app] do
 end
 
 
-after 'deploy:update_code', 'deploy:link_images' 
-namespace(:deploy) do 
-  task :link_images do 
-    run "cd #{release_path} && ln -nfs #{shared_path}/usuario/imagen #{release_path}/public/usuario/imagen"
-    run "cd #{release_path} && ln -nfs #{shared_path}/doctor/imagen #{release_path}/public/doctor/imagen" 
-  end 
-end
+
