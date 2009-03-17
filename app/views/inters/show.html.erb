@@ -1,0 +1,19 @@
+<p>
+  <b>Principal:</b><br>
+  <%=h @inter.principal %>
+</p>
+
+<p>
+  <b>Activaciones:</b><br>
+  <%=h @inter.activaciones %>
+</p>
+
+<p>
+  <b>Conclusion:</b><br>
+  <%=h @inter.conclusion %>
+</p>
+
+
+<%= link_to 'Editar', edit_inter_path(@inter) %> |
+<%= link_to 'Interpretaciones pendientes...', inters_path %>|
+<%= link_to 'Paciente', @inter.consulta.paciente %>

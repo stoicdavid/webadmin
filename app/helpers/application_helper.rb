@@ -20,6 +20,7 @@ module ApplicationHelper
       menu+= link_to( t("menu.estudios"), :controller => "operations" )+"<br /><br />"
       menu+= link_to(t("menu.pagos"), :controller => "pagos") +"<br /><br /><br />"
       menu+= link_to(t("menu.reportes"), :controller => "reportes",:action => "show") +"<br /><br /><br />"
+      menu+= link_to(t("menu.interpretaciones"), :controller => "inters") +"<br /><br /><br />"
       menu+= link_to(t("menu.reasigna_cita"), :controller => "lab",:action => 'busca_paciente') +"<br />"
       menu+= link_to(t("menu.envia_correo"), :controller => "lab",:action => 'busca_paciente') +"<br /><br /><br />"
     end
@@ -31,6 +32,10 @@ module ApplicationHelper
     
     if usuario.has_role?('socio')
       menu+= link_to(t("menu.reportes"), :controller => "reportes",:action => "show") +"<br /><br /><br />"
+    end
+    
+    if usuario.has_role?('interprete')
+      menu+= link_to(t("menu.interpretaciones"), :controller => "inters") +"<br /><br /><br />"
     end
     
 unless usuario.has_role?('doctor')    

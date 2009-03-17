@@ -1,0 +1,13 @@
+<h1>Agregar interpretación</h1>
+<p>
+<b>Nombre:</b> <%= @consulta.paciente.nombre_completo %><br /><br />
+<b>Fecha Estudio:</b> <%= @consulta.cita.fecha_hora unless @consulta.cita.nil? %><br /><br />
+<b>Edad:</b> <%= @consulta.paciente.edad(Time.now) %> años <%= @consulta.paciente.edad_meses(Time.now) %> meses<br /><br />
+<b>Diagnóstico:</b> <%= @consulta.diagnostico %><br /><br />
+<b>Fámacos actuales:</b> <%= @consulta.medicina_actual %>
+</p>	
+
+<%= render :partial => 'inter' %>
+
+
+<%= link_to 'Regresar', inters_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  principal: MyText
+  activaciones: MyText
+  conclusion: MyText
+
+two:
+  principal: MyText
+  activaciones: MyText
+  conclusion: MyText

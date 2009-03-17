@@ -39,6 +39,7 @@ es:
     mi_perfil: "Mi perfil"
     honorarios: "Honorarios"
     reportes: "Reportes"
+    interpretaciones: "Interpretaciones"    
     salir: "Salir"
 
   show_usuarios:

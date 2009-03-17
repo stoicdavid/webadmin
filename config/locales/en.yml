@@ -39,6 +39,7 @@ en:
     mi_perfil: "My profile"
     honorarios: "Fees"
     reportes: "Reports"
+    interpretaciones: "Interpretations"
     salir: "Logout"
 
   show_usuarios:

@@ -40,7 +40,7 @@ class PacientesController < ApplicationController
      prawnto :prawn => {
                     :left_margin => 20,
                     :right_margin => 20,
-                    :top_margin => 20,
+                    :top_margin => 400,
                     :bottom_margin => 20 }
     @paciente = Paciente.find(params[:id])                
     @razon = ""

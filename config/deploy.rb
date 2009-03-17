@@ -37,12 +37,11 @@ task :after_update_code, :roles => [:web, :db, :app] do
   run "chmod 755 #{release_path}/public -R" 
 end
 
+
 after 'deploy:update_code', 'deploy:link_images' 
 namespace(:deploy) do 
   task :link_images do 
-  run <<- CMD 
-    cd #{release_path} && ln -nfs #{shared_path}/usuario/imagen #{release_path}/public/usuario/imagen
-    cd #{release_path} && ln -nfs #{shared_path}/doctor/imagen #{release_path}/public/doctor/imagen
-  CMD 
-    end 
-end 
+    run "cd #{release_path} && ln -nfs #{shared_path}/usuario/imagen #{release_path}/public/usuario/imagen"
+    run "cd #{release_path} && ln -nfs #{shared_path}/doctor/imagen #{release_path}/public/doctor/imagen" 
+  end 
+end

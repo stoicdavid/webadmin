@@ -59,13 +59,17 @@
 </div>
 <%= link_to 'Detalle', :controller => "consultas",:action => "show", :id => registro.id %>
 	<p>
-	<%= link_to_if status == "Activa" || !registro.cita.nil?, 'Imprimir ficha', {:action => 'imprime_ficha',:controller => 'pacientes',:id => registro.paciente_id, :consulta_id => registro.id}, :popup => true %>
+	<%= link_to_if status == "Activa" || !registro.cita.nil?, 'Imprimir ficha', {:action => 'imprime_ficha',:controller => 'pacientes',:id => registro.paciente_id, :consulta_id => registro.id}, :popup => true %>|
 
 
 <% if !registro.cita.nil? %>
-<%= link_to_if (status != 'Pagada'), 'Pago', {:controller => 'operations',:action => "genera_orden", :id => registro.cita.operation.id } %>
+<%= link_to_if (status != 'Pagada'), 'Pago', {:controller => 'operations',:action => "genera_orden", :id => registro.cita.operation.id } %>|
 
-<%= link_to_if (status == 'Pagada'),'Imprimir Factura',{:controller => 'pagos',  :action => 'imprime', :id => registro.cita.operation.pago_id,:paciente_id => registro.cita.paciente_id,:operation_id => registro.cita.operation.id}, :popup => true %> 
+<%= link_to_if (status == 'Pagada'),'Imprimir Factura',{:controller => 'pagos',  :action => 'imprime', :id => registro.cita.operation.pago_id,:paciente_id => registro.cita.paciente_id,:operation_id => registro.cita.operation.id}, :popup => true %> |
+<% end %>
+<% unless registro.inter.nil? %>
+	<%= link_to 'Imprimir Estudio',{:controller => 'inters',  :action => 'imprime', :id => registro.id,:paciente_id => registro.paciente_id,:operation_id => registro.cita.operation.id}, :popup => true %> |
+	<%= link_to 'Editar Estudio',:controller => 'inters',  :action => 'edit', :id => registro.inter.id%>
 <% end %>
 </p>
 
