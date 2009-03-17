@@ -38088,3 +38088,2020 @@ Rendering inters/index
   [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
   [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 59) [0m
 Completed in 163ms (View: 126, DB: 15) | 200 OK [http://localhost/inters]
+  [4;36;1mOperation Load (1.2ms)[0m   [0;1mSELECT * FROM "operations" LIMIT 1[0m
+
+
+Processing OperationsController#index (for 127.0.0.1 at 2009-03-17 01:40:12) [GET]
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mOperation Load (1.8ms)[0m   [0mSELECT * FROM "operations" ORDER BY indice_estudio ASC[0m
+Rendering template within layouts/lab
+Rendering operations/index
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;36;1mEstudio Load (0.6ms)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 90) LIMIT 1[0m
+  [4;36;1mDoctor Load (0.5ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+  [4;35;1mEstudio Load (0.2ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 91) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 91) [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 91) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 91) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 60) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 76) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 76) [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 76) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 76) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 40) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCita Load (0.2ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 78) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 78) [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 78) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 78) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 42) [0m
+  [4;35;1mEstudio Load (0.2ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 2) [0m
+  [4;36;1mCita Load (0.2ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 82) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 82) [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 82) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 82) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 46) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCita Load (0.2ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 85) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 85) [0m
+  [4;35;1mConsulta Load (0.2ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 85) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 85) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 36) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCita Load (0.2ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 86) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 86) [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 86) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 86) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 47) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 2) [0m
+  [4;35;1mCita Load (0.2ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 87) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 87) [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 87) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 87) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 48) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 88) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 37) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCita Load (0.2ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 89) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 89) [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 89) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 89) [0m
+  [4;36;1mPaciente Load (68.3ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 55) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 210ms (View: 107, DB: 82) | 200 OK [http://localhost/operations]
+
+
+Processing OperationsController#edit (for 127.0.0.1 at 2009-03-17 01:40:15) [GET]
+  Parameters: {"id"=>"88"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."id" = 88) [0m
+Rendering template within layouts/lab
+Rendering operations/edit
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 61ms (View: 42, DB: 1) | 200 OK [http://localhost/operations/88/edit]
+
+
+Processing OperationsController#index (for 127.0.0.1 at 2009-03-17 01:40:49) [GET]
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mOperation Load (1.6ms)[0m   [0mSELECT * FROM "operations" ORDER BY indice_estudio ASC[0m
+Rendering template within layouts/lab
+Rendering operations/index
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;36;1mEstudio Load (0.6ms)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 90) LIMIT 1[0m
+  [4;36;1mDoctor Load (0.5ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;36;1mPaciente Load (0.6ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+  [4;35;1mEstudio Load (0.3ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 91) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 91) [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 91) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 91) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 60) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCita Load (0.2ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 76) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 76) [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 76) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 76) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 40) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 78) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 78) [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 78) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 78) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 42) [0m
+  [4;35;1mEstudio Load (0.2ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 2) [0m
+  [4;36;1mCita Load (0.2ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 82) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 82) [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 82) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 82) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 46) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 85) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 85) [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 85) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 85) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 36) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCita Load (0.2ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 86) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 86) [0m
+  [4;36;1mConsulta Load (0.2ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 86) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 86) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 47) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 2) [0m
+  [4;35;1mCita Load (0.2ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 87) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 87) [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 87) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 87) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 48) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCita Load (0.2ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;36;1mConsulta Load (0.2ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 88) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 37) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCita Load (0.2ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 89) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 89) [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 89) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 89) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 55) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 192ms (View: 160, DB: 14) | 200 OK [http://localhost/operations]
+
+
+Processing OperationsController#edit (for 127.0.0.1 at 2009-03-17 01:40:51) [GET]
+  Parameters: {"id"=>"88"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."id" = 88) [0m
+Rendering template within layouts/lab
+Rendering operations/edit
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 144ms (View: 124, DB: 1) | 200 OK [http://localhost/operations/88/edit]
+
+
+Processing OperationsController#edit (for 127.0.0.1 at 2009-03-17 01:41:31) [GET]
+  Parameters: {"id"=>"88"}
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mOperation Load (0.3ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."id" = 88) [0m
+Rendering template within layouts/lab
+Rendering operations/edit
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 58ms (View: 39, DB: 1) | 200 OK [http://localhost/operations/88/edit]
+
+
+Processing OperationsController#index (for 127.0.0.1 at 2009-03-17 01:41:33) [GET]
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mOperation Load (1.6ms)[0m   [0;1mSELECT * FROM "operations" ORDER BY indice_estudio ASC[0m
+Rendering template within layouts/lab
+Rendering operations/index
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;35;1mEstudio Load (0.6ms)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 90) LIMIT 1[0m
+  [4;35;1mDoctor Load (0.5ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;35;1mPaciente Load (0.6ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+  [4;36;1mEstudio Load (0.3ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 91) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 91) [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 91) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 91) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 60) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 76) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 76) [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 76) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 76) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 40) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 78) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 78) [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 78) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 78) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 42) [0m
+  [4;36;1mEstudio Load (0.2ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 2) [0m
+  [4;35;1mCita Load (0.2ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 82) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 82) [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 82) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 82) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 46) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 85) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 85) [0m
+  [4;36;1mConsulta Load (0.2ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 85) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 85) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 36) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCita Load (0.2ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 86) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 86) [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 86) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 86) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 47) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 2) [0m
+  [4;36;1mCita Load (0.2ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 87) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 87) [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 87) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 87) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 48) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCita Load (0.2ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 88) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 37) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCita Load (0.2ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 89) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 89) [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 89) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 89) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 55) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 189ms (View: 157, DB: 14) | 200 OK [http://localhost/operations]
+
+
+Processing OperationsController#show (for 127.0.0.1 at 2009-03-17 01:41:34) [GET]
+  Parameters: {"id"=>"edita"}
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mOperation Load (0.1ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."id" = 0) [0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Operation with ID=edita):
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:1528:in `find_one'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:1511:in `find_from_ids'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:590:in `find'
+    /app/controllers/operations_controller.rb:17:in `show'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (110.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.0ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing OperationsController#show (for 127.0.0.1 at 2009-03-17 01:42:40) [GET]
+  Parameters: {"id"=>"edita"}
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mOperation Load (0.2ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."id" = 0) [0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Operation with ID=edita):
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:1528:in `find_one'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:1511:in `find_from_ids'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:590:in `find'
+    /app/controllers/operations_controller.rb:17:in `show'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (24.7ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (0.9ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing OperationsController#show (for 127.0.0.1 at 2009-03-17 01:42:44) [GET]
+  Parameters: {"id"=>"edita"}
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mOperation Load (0.2ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."id" = 0) [0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Operation with ID=edita):
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:1528:in `find_one'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:1511:in `find_from_ids'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:590:in `find'
+    /app/controllers/operations_controller.rb:17:in `show'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (23.7ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (0.9ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing OperationsController#show (for 127.0.0.1 at 2009-03-17 01:43:09) [GET]
+  Parameters: {"id"=>"edita"}
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mOperation Load (0.2ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."id" = 0) [0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Operation with ID=edita):
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:1528:in `find_one'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:1511:in `find_from_ids'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:590:in `find'
+    /app/controllers/operations_controller.rb:17:in `show'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (23.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing OperationsController#show (for 127.0.0.1 at 2009-03-17 01:43:12) [GET]
+  Parameters: {"id"=>"edita"}
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mOperation Load (0.2ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."id" = 0) [0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Operation with ID=edita):
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:1528:in `find_one'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:1511:in `find_from_ids'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:590:in `find'
+    /app/controllers/operations_controller.rb:17:in `show'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (25.4ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing OperationsController#index (for 127.0.0.1 at 2009-03-17 01:44:26) [GET]
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mOperation Load (1.6ms)[0m   [0mSELECT * FROM "operations" ORDER BY indice_estudio ASC[0m
+Rendering template within layouts/lab
+Rendering operations/index
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;36;1mEstudio Load (0.6ms)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.4ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 90) LIMIT 1[0m
+  [4;36;1mDoctor Load (0.6ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+  [4;35;1mEstudio Load (0.3ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 91) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 91) [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 91) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 91) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 60) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCita Load (0.2ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 76) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 76) [0m
+  [4;36;1mConsulta Load (0.2ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 76) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 76) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 40) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCita Load (0.2ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 78) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 78) [0m
+  [4;35;1mConsulta Load (0.2ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 78) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 78) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 42) [0m
+  [4;35;1mEstudio Load (0.2ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 2) [0m
+  [4;36;1mCita Load (0.2ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 82) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 82) [0m
+  [4;36;1mConsulta Load (0.2ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 82) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 82) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 46) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 85) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 85) [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 85) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 85) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 36) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCita Load (0.2ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 86) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 86) [0m
+  [4;36;1mConsulta Load (0.2ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 86) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 86) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 47) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 2) [0m
+  [4;35;1mCita Load (0.2ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 87) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 87) [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 87) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 87) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 48) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCita Load (0.2ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 88) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 37) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCita Load (0.2ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 89) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 89) [0m
+  [4;35;1mConsulta Load (0.2ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 89) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 89) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 55) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 202ms (View: 168, DB: 14) | 200 OK [http://localhost/operations]
+
+
+Processing OperationsController#edita (for 127.0.0.1 at 2009-03-17 01:44:27) [GET]
+  Parameters: {"id"=>"88"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."id" = 88) [0m
+Rendering template within layouts/lab
+Rendering operations/edita
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."id" = 88) [0m
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+
+
+ActionView::TemplateError (undefined local variable or method `cita_id' for #<ActionView::Base:0x39b276c>) on line #12 of app/views/operations/edita.html.erb:
+9:   </p>
+10: 
+11:   <p>
+12:     <% f.hidden_field cita_id,@operation.cita_id %>
+13:     <% f.hidden_field pago_id,@operation.pago_id %>
+14:     <% f.hidden_field pago_id,@operation.tipo_id %>
+15:   </p>
+
+    app/views/operations/edita.html.erb:12
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:313:in `fields_for'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/operations/edita.html.erb:3
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1248:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (107.5ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.0ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing OperationsController#edita (for 127.0.0.1 at 2009-03-17 01:44:34) [GET]
+  Parameters: {"id"=>"88"}
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mOperation Load (0.3ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."id" = 88) [0m
+Rendering template within layouts/lab
+Rendering operations/edita
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+
+
+ActionView::TemplateError (undefined local variable or method `cita_id' for #<ActionView::Base:0x389ea24>) on line #12 of app/views/operations/edita.html.erb:
+9:   </p>
+10: 
+11:   <p>
+12:     <% f.hidden_field cita_id,@operation.cita_id %>
+13:     <% f.hidden_field pago_id,@operation.pago_id %>
+14:     <% f.hidden_field pago_id,@operation.tipo_id %>
+15:   </p>
+
+    app/views/operations/edita.html.erb:12
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:313:in `fields_for'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/operations/edita.html.erb:3
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1248:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (30.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing OperationsController#edita (for 127.0.0.1 at 2009-03-17 01:45:10) [GET]
+  Parameters: {"id"=>"74"}
+  [4;36;1mUsuario Load (0.4ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mOperation Load (0.3ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."id" = 74) [0m
+Rendering template within layouts/lab
+Rendering operations/edita
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 76) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 40) [0m
+
+
+ActionView::TemplateError (undefined local variable or method `cita_id' for #<ActionView::Base:0x3782924>) on line #12 of app/views/operations/edita.html.erb:
+9:   </p>
+10: 
+11:   <p>
+12:     <% f.hidden_field cita_id,@operation.cita_id %>
+13:     <% f.hidden_field pago_id,@operation.pago_id %>
+14:     <% f.hidden_field pago_id,@operation.tipo_id %>
+15:   </p>
+
+    app/views/operations/edita.html.erb:12
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:313:in `fields_for'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/operations/edita.html.erb:3
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1248:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (29.7ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing OperationsController#index (for 127.0.0.1 at 2009-03-17 01:45:40) [GET]
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mOperation Load (1.6ms)[0m   [0mSELECT * FROM "operations" ORDER BY indice_estudio ASC[0m
+Rendering template within layouts/lab
+Rendering operations/index
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;36;1mEstudio Load (0.6ms)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 90) LIMIT 1[0m
+  [4;36;1mDoctor Load (0.4ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+  [4;35;1mEstudio Load (0.2ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 91) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 91) [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 91) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 91) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 60) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCita Load (0.2ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 76) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 76) [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 76) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 76) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 40) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCita Load (0.2ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 78) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 78) [0m
+  [4;35;1mConsulta Load (0.2ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 78) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 78) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 42) [0m
+  [4;35;1mEstudio Load (0.2ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 2) [0m
+  [4;36;1mCita Load (0.2ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 82) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 82) [0m
+  [4;36;1mConsulta Load (0.2ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 82) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 82) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 46) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCita Load (0.2ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 85) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 85) [0m
+  [4;35;1mConsulta Load (0.2ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 85) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 85) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 36) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCita Load (0.2ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 86) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 86) [0m
+  [4;36;1mConsulta Load (0.2ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 86) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 86) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 47) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 2) [0m
+  [4;35;1mCita Load (0.4ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 87) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 87) [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 87) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 87) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 48) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCita Load (0.2ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 88) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;35;1mPaciente Load (0.8ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 37) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 89) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 89) [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 89) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 89) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 55) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 192ms (View: 160, DB: 14) | 200 OK [http://localhost/operations]
+
+
+Processing OperationsController#edita (for 127.0.0.1 at 2009-03-17 01:45:42) [GET]
+  Parameters: {"id"=>"88"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."id" = 88) [0m
+Rendering template within layouts/lab
+Rendering operations/edita
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+
+
+ActionView::TemplateError (undefined local variable or method `cita_id' for #<ActionView::Base:0x3832220>) on line #12 of app/views/operations/edita.html.erb:
+9:   </p>
+10: 
+11:   <p>
+12:     <%= f.hidden_field cita_id, @operation.cita_id %>
+13:     <%= f.hidden_field pago_id, @operation.pago_id %>
+14:     <%= f.hidden_field pago_id, @operation.tipo_id %>
+15:   </p>
+
+    app/views/operations/edita.html.erb:12
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:313:in `fields_for'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/operations/edita.html.erb:3
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1248:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (30.2ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing OperationsController#edita (for 127.0.0.1 at 2009-03-17 01:46:51) [GET]
+  Parameters: {"id"=>"88"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."id" = 88) [0m
+Rendering template within layouts/lab
+Rendering operations/edita
+
+
+ActionView::TemplateError (undefined method `cita' for #<ActionView::Helpers::FormBuilder:0x3967294>) on line #8 of app/views/operations/edita.html.erb:
+5: 
+6:   <p>
+7: 	Paciente:<br />
+8:     <%= f.cita.paciente.nombre_completo %>
+9:   </p>
+10: 
+11:   <p>
+
+    app/views/operations/edita.html.erb:8
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:313:in `fields_for'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/operations/edita.html.erb:3
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1248:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (30.5ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (0.9ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing OperationsController#edita (for 127.0.0.1 at 2009-03-17 01:47:06) [GET]
+  Parameters: {"id"=>"88"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."id" = 88) [0m
+Rendering template within layouts/lab
+Rendering operations/edita
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+
+
+ActionView::TemplateError (undefined local variable or method `cita_id' for #<ActionView::Base:0x3913f54>) on line #12 of app/views/operations/edita.html.erb:
+9:   </p>
+10: 
+11:   <p>
+12:     <%= f.hidden_field cita_id, @operation.cita_id %>
+13:     <%= f.hidden_field pago_id, @operation.pago_id %>
+14:     <%= f.hidden_field pago_id, @operation.tipo_id %>
+15:   </p>
+
+    app/views/operations/edita.html.erb:12
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:313:in `fields_for'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/operations/edita.html.erb:3
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1248:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (31.7ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing OperationsController#edita (for 127.0.0.1 at 2009-03-17 01:47:16) [GET]
+  Parameters: {"id"=>"88"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."id" = 88) [0m
+Rendering template within layouts/lab
+Rendering operations/edita
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;36;1mPaciente Load (0.6ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+
+
+ActionView::TemplateError (undefined local variable or method `cita_id' for #<ActionView::Base:0x37e4fac>) on line #12 of app/views/operations/edita.html.erb:
+9:   </p>
+10: 
+11:   <p>
+12:     <% f.hidden_field cita_id, @operation.cita_id %>
+13:     <%= f.hidden_field pago_id, @operation.pago_id %>
+14:     <%= f.hidden_field pago_id, @operation.tipo_id %>
+15:   </p>
+
+    app/views/operations/edita.html.erb:12
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:313:in `fields_for'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/operations/edita.html.erb:3
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1248:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (30.1ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (0.9ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing OperationsController#edita (for 127.0.0.1 at 2009-03-17 01:47:20) [GET]
+  Parameters: {"id"=>"88"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."id" = 88) [0m
+Rendering template within layouts/lab
+Rendering operations/edita
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+
+
+ActionView::TemplateError (undefined local variable or method `pago_id' for #<ActionView::Base:0x395da28>) on line #13 of app/views/operations/edita.html.erb:
+10: 
+11:   <p>
+12:     
+13:     <%= f.hidden_field pago_id, @operation.pago_id %>
+14:     <%= f.hidden_field pago_id, @operation.tipo_id %>
+15:   </p>
+16:     <%= f.text_field ref_estudio %>
+
+    app/views/operations/edita.html.erb:13
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:313:in `fields_for'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/operations/edita.html.erb:3
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1248:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (107.6ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.0ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing OperationsController#edita (for 127.0.0.1 at 2009-03-17 01:48:04) [GET]
+  Parameters: {"id"=>"88"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."id" = 88) [0m
+Rendering template within layouts/lab
+Rendering operations/edita
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+
+
+ActionView::TemplateError (undefined local variable or method `cita_id' for #<ActionView::Base:0x3840bf4>) on line #12 of app/views/operations/edita.html.erb:
+9:   </p>
+10: 
+11:   <p>
+12:     <%= f.hidden_field cita_id, :value =>  @operation.cita_id %>
+13:     <%= f.hidden_field pago_id, :value => @operation.pago_id %>
+14:     <%= f.hidden_field pago_id, :value => @operation.tipo_id %>
+15:   </p>
+
+    app/views/operations/edita.html.erb:12
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:313:in `fields_for'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/operations/edita.html.erb:3
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1248:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (30.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing OperationsController#edita (for 127.0.0.1 at 2009-03-17 01:48:38) [GET]
+  Parameters: {"id"=>"88"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."id" = 88) [0m
+Rendering template within layouts/lab
+Rendering operations/edita
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+
+
+ActionView::TemplateError (undefined local variable or method `ref_estudio' for #<ActionView::Base:0x39af8dc>) on line #16 of app/views/operations/edita.html.erb:
+13:     <%= f.hidden_field :pago_id, :value => @operation.pago_id %>
+14:     <%= f.hidden_field :pago_id, :value => @operation.tipo_id %>
+15:   </p>
+16:     <%= f.text_field ref_estudio %>
+17:     <%= f.text_field indice_estudio %>
+18:   <p>
+19:     <% f.submit "Update" %>
+
+    app/views/operations/edita.html.erb:16
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:313:in `fields_for'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/operations/edita.html.erb:3
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1248:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (107.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (0.9ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing OperationsController#edita (for 127.0.0.1 at 2009-03-17 01:48:43) [GET]
+  Parameters: {"id"=>"88"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."id" = 88) [0m
+Rendering template within layouts/lab
+Rendering operations/edita
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;36;1mPaciente Load (0.6ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 56ms (View: 37, DB: 1) | 200 OK [http://localhost/operations/edita/88]
+
+
+Processing OperationsController#edita (for 127.0.0.1 at 2009-03-17 01:49:46) [GET]
+  Parameters: {"id"=>"88"}
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mOperation Load (0.3ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."id" = 88) [0m
+Rendering template within layouts/lab
+Rendering operations/edita
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;35;1mPaciente Load (0.6ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 57ms (View: 38, DB: 1) | 200 OK [http://localhost/operations/edita/88]
+
+
+Processing OperationsController#edita (for 127.0.0.1 at 2009-03-17 01:50:16) [GET]
+  Parameters: {"id"=>"88"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."id" = 88) [0m
+Rendering template within layouts/lab
+Rendering operations/edita
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 57ms (View: 37, DB: 1) | 200 OK [http://localhost/operations/edita/88]
+
+
+Processing OperationsController#edita (for 127.0.0.1 at 2009-03-17 01:50:23) [GET]
+  Parameters: {"id"=>"88"}
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mOperation Load (0.3ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."id" = 88) [0m
+Rendering template within layouts/lab
+Rendering operations/edita
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 59ms (View: 38, DB: 1) | 200 OK [http://localhost/operations/edita/88]
+
+
+Processing OperationsController#edita (for 127.0.0.1 at 2009-03-17 01:50:36) [GET]
+  Parameters: {"id"=>"88"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."id" = 88) [0m
+Rendering template within layouts/lab
+Rendering operations/edita
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 134ms (View: 39, DB: 1) | 200 OK [http://localhost/operations/edita/88]
+
+
+Processing OperationsController#edita (for 127.0.0.1 at 2009-03-17 01:50:38) [GET]
+  Parameters: {"id"=>"88"}
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mOperation Load (0.3ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."id" = 88) [0m
+Rendering template within layouts/lab
+Rendering operations/edita
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;35;1mPaciente Load (0.6ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 133ms (View: 114, DB: 1) | 200 OK [http://localhost/operations/edita/88]
+
+
+Processing OperationsController#edita (for 127.0.0.1 at 2009-03-17 01:50:40) [GET]
+  Parameters: {"id"=>"88"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."id" = 88) [0m
+Rendering template within layouts/lab
+Rendering operations/edita
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 131ms (View: 112, DB: 1) | 200 OK [http://localhost/operations/edita/88]
+
+
+Processing OperationsController#edita (for 127.0.0.1 at 2009-03-17 01:51:04) [GET]
+  Parameters: {"id"=>"88"}
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mOperation Load (0.3ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."id" = 88) [0m
+Rendering template within layouts/lab
+Rendering operations/edita
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 136ms (View: 116, DB: 1) | 200 OK [http://localhost/operations/edita/88]
+
+
+Processing OperationsController#edita (for 127.0.0.1 at 2009-03-17 01:51:13) [GET]
+  Parameters: {"id"=>"88"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."id" = 88) [0m
+Rendering template within layouts/lab
+Rendering operations/edita
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 56ms (View: 37, DB: 1) | 200 OK [http://localhost/operations/edita/88]
+
+
+Processing OperationsController#update (for 127.0.0.1 at 2009-03-17 01:51:38) [PUT]
+  Parameters: {"commit"=>"Actualizar", "authenticity_token"=>"c369741d5b15495ead3ad1291decfd72647155d3", "id"=>"88", "operation"=>{"cita_id"=>"90", "pago_id"=>"", "indice_estudio"=>"12", "ref_estudio"=>"10101"}}
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mOperation Load (0.3ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."id" = 88) [0m
+  [4;36;1mOperation Update (0.6ms)[0m   [0;1mUPDATE "operations" SET "indice_estudio" = 12, "updated_at" = '2009-03-17 07:51:38', "ref_estudio" = '10101' WHERE "id" = 88[0m
+Redirected to #<Operation:0x38de214>
+Completed in 29ms (DB: 1) | 302 Found [http://localhost/operations/88]
+
+
+Processing OperationsController#show (for 127.0.0.1 at 2009-03-17 01:51:38) [GET]
+  Parameters: {"id"=>"88"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."id" = 88) [0m
+Rendering template within layouts/lab
+Rendering operations/show
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 129ms (View: 109, DB: 1) | 200 OK [http://localhost/operations/88]
+
+
+Processing OperationsController#index (for 127.0.0.1 at 2009-03-17 01:51:42) [GET]
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mOperation Load (1.5ms)[0m   [0mSELECT * FROM "operations" ORDER BY indice_estudio ASC[0m
+Rendering template within layouts/lab
+Rendering operations/index
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 91) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 91) [0m
+  [4;36;1mEstudio Load (0.6ms)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 91) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 91) [0m
+  [4;35;1mPaciente Load (0.6ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 60) [0m
+  [4;36;1mEstudio Load (0.3ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 90) LIMIT 1[0m
+  [4;36;1mDoctor Load (0.5ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 76) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 76) [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 76) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 76) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 40) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCita Load (0.2ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 78) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 78) [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 78) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 78) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 42) [0m
+  [4;35;1mEstudio Load (0.2ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 2) [0m
+  [4;36;1mCita Load (0.2ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 82) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 82) [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 82) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 82) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 46) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCita Load (0.2ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 85) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 85) [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 85) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 85) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 36) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 86) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 86) [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 86) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 86) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 47) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 2) [0m
+  [4;35;1mCita Load (0.2ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 87) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 87) [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 87) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 87) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 48) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 88) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 37) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mCita Load (0.2ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 89) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 89) [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 89) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 89) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 55) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 195ms (View: 163, DB: 14) | 200 OK [http://localhost/operations]

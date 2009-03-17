@@ -116,6 +116,9 @@ class OperationsController < ApplicationController
     redirect_to :controller  => "operations", :id => params[:id], :action => "edit"
   end
   
+  def edita
+    @operation = Operation.find(params[:id])
+  end
 
 
   # DELETE /operations/1

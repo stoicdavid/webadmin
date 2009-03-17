@@ -1,0 +1,24 @@
+<h1>Estudio en Curso ...</h1>
+
+<% form_for(@operation) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+	Paciente:<br />
+    <%= @operation.cita.paciente.nombre_completo %>
+  </p>
+
+  <p>
+    <%= f.hidden_field :cita_id, :value =>  @operation.cita_id %>
+    <%= f.hidden_field :pago_id, :value => @operation.pago_id %>
+    <%= f.hidden_field :pago_id, :value => @operation.tipo_id %>
+  </p>
+ <b>Num Estudio</b><%= f.text_field :ref_estudio %><br />
+   <b>Indice Estudio</b> <%= f.text_field :indice_estudio %><br />
+
+    <%= f.submit "Actualizar" %>
+
+
+<% end %>
+<% link_to 'Show', @operation %> |
+<%= link_to 'Back', operations_path %>
