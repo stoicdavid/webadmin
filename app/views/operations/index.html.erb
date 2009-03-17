@@ -13,7 +13,7 @@
   <tr>
 	<% cita = Cita.find(operation.cita_id) %>
 	<td><%=h operation.ref_estudio%><br /></td>
-	<td><%=h operation.cita.consulta.doctor.nombre_completo unless operation.cita.consulta.doctor_id.nil? %><br /></td>
+	<td><%=h operation.cita.consulta.doctor.nombre_completo unless operation.cita.consulta.nil? %><br /></td>
 	<td><%=h Paciente.find(Cita.find(operation.cita_id).paciente_id).nombre_completo %><br /></td>
     <td><%=h Estudio.find(operation.tipo_id).tipo_estudio %></td>
     <td><%=h cita.status %></td>
