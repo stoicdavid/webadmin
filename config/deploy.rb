@@ -37,5 +37,20 @@ task :after_update_code, :roles => [:web, :db, :app] do
   run "chmod 755 #{release_path}/public -R" 
 end
 
+namespace(:customs) do
+  task :config, :roles => :app do
+    run <<-CMD
+      ln -nfs #{shared_path}/usuario/imagen/ #{release_path}/public/usuario
+    CMD
+  end
+  task :symlink, :roles => :app do
+    run <<-CMD
+      ln -nfs #{shared_path}/doctor/imagen #{release_path}/public/doctor
+    CMD
+  end
+end
 
+after "deploy:update_code", "customs:config"
+after "customs:config", "customs:symlink"
 
+#ln -nfsv /var/www/apps/webadmin/shared/usuario/imagen/ current/public/usuario/

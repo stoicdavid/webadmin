@@ -1,4 +1,4 @@
-
+firma = "#{RAILS_ROOT}/public/images/firma3.png"
 
 pdf.bounding_box([300,240], :width => 200, :height => 400) do
 	pdf.text "REPORTE ENCEFALOGRAFICO",:align => :right,:spacing => 15
@@ -33,5 +33,7 @@ pdf.bounding_box([32,90], :width=>600, :height=>100) do
 	pdf.font.size=10
 	pdf.text "Atentamente: ",:spacing => 25
 	pdf.text "AMERICAN NEUROLAB, INC."
+
 	pdf.text "SEMH Cédula Prof: 3340271",:spacing => 9
 end
+	pdf.image firma,:scale => 0.2, :at => [50,120]
