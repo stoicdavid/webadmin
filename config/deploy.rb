@@ -1,7 +1,7 @@
 #require'mongrel_cluster/recipes' 
 
-#set :domain, "deploy@172.16.90.100"
-set :domain, "deploy@laboratorio.gotdns.com"
+set :domain, "deploy@172.16.90.100"
+#set :domain, "deploy@laboratorio.gotdns.com"
 set :application, "webadmin"
 set :repository,  "git://github.com/stoicdavid/webadmin.git"
 set :deploy_via, :remote_cache
@@ -40,17 +40,17 @@ end
 namespace(:customs) do
   task :config, :roles => :app do
     run <<-CMD
-      ln -nfs #{shared_path}/usuario/imagen/ #{release_path}/public/usuario
+      ln -nfs #{shared_path}/usuario/imagen/ /var/www/apps/webadmin/current/public/usuario/
     CMD
   end
   task :symlink, :roles => :app do
     run <<-CMD
-      ln -nfs #{shared_path}/doctor/imagen #{release_path}/public/doctor
+      ln -nfs #{shared_path}/doctor/imagen/ /var/www/apps/webadmin/current/public/doctor/
     CMD
   end
 end
 
-after "deploy:update_code", "customs:config"
+after "deploy:symlink", "customs:config"
 after "customs:config", "customs:symlink"
-
+after "deploy", "deploy:cleanup"
 #ln -nfsv /var/www/apps/webadmin/shared/usuario/imagen/ current/public/usuario/

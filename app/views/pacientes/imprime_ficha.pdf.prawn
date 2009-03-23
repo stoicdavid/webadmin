@@ -87,13 +87,14 @@ pdf.bounding_box([20,115], :width=>500, :height=>120) do
 	pdf.text 'Forma de pago:'
 end
 pdf.bounding_box([130,115], :width=>500, :height=>120) do
-	pdf.text 'Tarjeta de crédito          Tarjeta de débito          Cheque          Efectivo'
+	pdf.text 'Tarjeta de crédito          American Express          Tarjeta de débito          Cheque          Efectivo'
 end
 pdf.bounding_box([113,135], :width=>500, :height=>120) do
   	pdf.stroke_rectangle [2,98], 10, 10 
   	pdf.stroke_rectangle [108,98], 10, 10 
-  	pdf.stroke_rectangle [210,98], 10, 10 
-  	pdf.stroke_rectangle [272.5,98], 10, 10 
+  	pdf.stroke_rectangle [216,98], 10, 10 
+  	pdf.stroke_rectangle [317,98], 10, 10 
+  	pdf.stroke_rectangle [382,98], 10, 10 
 end
 pdf.bounding_box([200,50], :width=>190, :height=>100) do
 	pdf.stroke_line [pdf.bounds.left,  pdf.bounds.top],

@@ -42223,3 +42223,256 @@ Rendering template within layouts/lab
 Rendering lab/index
   [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
 Completed in 42ms (View: 17, DB: 2) | 200 OK [http://localhost/lab]
+
+
+Processing PacientesController#index (for 127.0.0.1 at 2009-03-22 17:26:25) [GET]
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+  [4;35;1mEstudio Load (0.6ms)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.2ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."fecha_consulta" BETWEEN '2009-03-22 00:00:00' AND '2009-03-22 23:59:59') [0m
+Rendering template within layouts/lab
+Rendering pacientes/index
+Rendered pacientes/_lista_pacientes (0.5ms)
+Completed in 50ms (View: 13, DB: 1) | 200 OK [http://localhost/pacientes]
+
+
+Processing PacientesController#index (for 127.0.0.1 at 2009-03-22 17:26:28) [GET]
+  Parameters: {"search"=>"", "commit"=>"Buscar"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+  [4;35;1mPaciente Load (2.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE (nombre LIKE '%%' or app_pat LIKE '%%' or app_mat LIKE '%%') LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pacientes" WHERE (nombre LIKE '%%' or app_pat LIKE '%%' or app_mat LIKE '%%') [0m
+Rendering template within layouts/lab
+Rendering pacientes/index
+Rendered pacientes/_lista_pacientes (9.2ms)
+Completed in 54ms (View: 22, DB: 3) | 200 OK [http://localhost/pacientes?search=&commit=Buscar]
+
+
+Processing PacientesController#show (for 127.0.0.1 at 2009-03-22 17:26:51) [GET]
+  Parameters: {"id"=>"37"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 37) [0m
+Rendering template within layouts/lab
+Rendering pacientes/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+  [4;35;1mEstudio Load (0.6ms)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".paciente_id = 37) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mDoctor Load (0.5ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;35;1mEstudio Load (0.2ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 88) LIMIT 1[0m
+  [4;35;1mInter Load (0.3ms)[0m   [0mSELECT * FROM "inters" WHERE ("inters".consulta_id = 49) LIMIT 1[0m
+Rendered consultas/_registro (34.5ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+  [4;36;1mDoctor Load (0.7ms)[0m   [0;1mSELECT * FROM "doctors" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "estudios" [0m
+Rendered pacientes/_consul (5.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 107ms (View: 80, DB: 4) | 200 OK [http://localhost/pacientes/37]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2009-03-22 17:26:54) [GET]
+  Parameters: {"id"=>"37", "consulta_id"=>"49"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 37) [0m
+  [4;35;1mEstudio Load (0.6ms)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 49) [0m
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 88) LIMIT 1[0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mDoctor Load (0.6ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 402ms (View: 352, DB: 3) | 200 OK [http://localhost/pacientes/imprime_ficha/37?consulta_id=49]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2009-03-22 17:27:11) [GET]
+  Parameters: {"id"=>"37", "consulta_id"=>"49"}
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mPaciente Load (0.6ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 37) [0m
+  [4;36;1mEstudio Load (0.6ms)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 49) [0m
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;35;1mOperation Load (0.3ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 88) LIMIT 1[0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mDoctor Load (0.5ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 576ms (View: 186, DB: 3) | 200 OK [http://localhost/pacientes/imprime_ficha/37?consulta_id=49]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2009-03-22 17:27:20) [GET]
+  Parameters: {"id"=>"37", "consulta_id"=>"49"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 37) [0m
+  [4;35;1mEstudio Load (0.6ms)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 49) [0m
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;36;1mOperation Load (0.4ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 88) LIMIT 1[0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mDoctor Load (0.5ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 236ms (View: 185, DB: 3) | 200 OK [http://localhost/pacientes/imprime_ficha/37?consulta_id=49]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2009-03-22 17:27:29) [GET]
+  Parameters: {"id"=>"37", "consulta_id"=>"49"}
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 37) [0m
+  [4;36;1mEstudio Load (0.6ms)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 49) [0m
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;35;1mOperation Load (0.3ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 88) LIMIT 1[0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mDoctor Load (0.4ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 234ms (View: 185, DB: 3) | 200 OK [http://localhost/pacientes/imprime_ficha/37?consulta_id=49]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2009-03-22 17:27:37) [GET]
+  Parameters: {"id"=>"37", "consulta_id"=>"49"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 37) [0m
+  [4;35;1mEstudio Load (0.6ms)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 49) [0m
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 88) LIMIT 1[0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mDoctor Load (0.5ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 234ms (View: 185, DB: 3) | 200 OK [http://localhost/pacientes/imprime_ficha/37?consulta_id=49]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2009-03-22 17:27:55) [GET]
+  Parameters: {"id"=>"37", "consulta_id"=>"49"}
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 37) [0m
+  [4;36;1mEstudio Load (0.5ms)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 49) [0m
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;35;1mOperation Load (0.3ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 88) LIMIT 1[0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mDoctor Load (0.5ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 232ms (View: 183, DB: 3) | 200 OK [http://localhost/pacientes/imprime_ficha/37?consulta_id=49]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2009-03-22 17:28:03) [GET]
+  Parameters: {"id"=>"37", "consulta_id"=>"49"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 37) [0m
+  [4;35;1mEstudio Load (0.6ms)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 49) [0m
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 88) LIMIT 1[0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mDoctor Load (0.5ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 601ms (View: 551, DB: 3) | 200 OK [http://localhost/pacientes/imprime_ficha/37?consulta_id=49]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2009-03-22 17:28:11) [GET]
+  Parameters: {"id"=>"37", "consulta_id"=>"49"}
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 37) [0m
+  [4;36;1mEstudio Load (0.6ms)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 49) [0m
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;35;1mOperation Load (0.4ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 88) LIMIT 1[0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mDoctor Load (0.5ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 235ms (View: 185, DB: 3) | 200 OK [http://localhost/pacientes/imprime_ficha/37?consulta_id=49]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2009-03-22 17:28:39) [GET]
+  Parameters: {"id"=>"37", "consulta_id"=>"49"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mPaciente Load (0.6ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 37) [0m
+  [4;35;1mEstudio Load (0.5ms)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."id" = 49) [0m
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;36;1mOperation Load (0.4ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations".cita_id = 88) LIMIT 1[0m
+Rendering pacientes/imprime_ficha
+  [4;35;1mDoctor Load (0.5ms)[0m   [0mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 237ms (View: 185, DB: 3) | 200 OK [http://localhost/pacientes/imprime_ficha/37?consulta_id=49]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2009-03-22 17:28:46) [GET]
+  Parameters: {"id"=>"37", "consulta_id"=>"49"}
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 37) [0m
+  [4;36;1mEstudio Load (0.5ms)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 49) [0m
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 88) [0m
+  [4;35;1mOperation Load (0.3ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 88) LIMIT 1[0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mDoctor Load (0.5ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 235ms (View: 186, DB: 3) | 200 OK [http://localhost/pacientes/imprime_ficha/37?consulta_id=49]
+
+
+Processing PacientesController#index (for 127.0.0.1 at 2009-03-22 17:31:31) [GET]
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+  [4;35;1mEstudio Load (0.6ms)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.2ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."fecha_consulta" BETWEEN '2009-03-22 00:00:00' AND '2009-03-22 23:59:59') [0m
+Rendering template within layouts/lab
+Rendering pacientes/index
+Rendered pacientes/_lista_pacientes (0.4ms)
+Completed in 47ms (View: 13, DB: 1) | 200 OK [http://localhost/pacientes]
+
+
+Processing PacientesController#index (for 127.0.0.1 at 2009-03-22 17:31:34) [GET]
+  Parameters: {"search"=>"", "commit"=>"Buscar"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+  [4;35;1mPaciente Load (2.4ms)[0m   [0mSELECT * FROM "pacientes" WHERE (nombre LIKE '%%' or app_pat LIKE '%%' or app_mat LIKE '%%') LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pacientes" WHERE (nombre LIKE '%%' or app_pat LIKE '%%' or app_mat LIKE '%%') [0m
+Rendering template within layouts/lab
+Rendering pacientes/index
+Rendered pacientes/_lista_pacientes (8.9ms)
+Completed in 52ms (View: 22, DB: 3) | 200 OK [http://localhost/pacientes?search=&commit=Buscar]
+
+
+Processing PacientesController#show (for 127.0.0.1 at 2009-03-22 17:31:37) [GET]
+  Parameters: {"id"=>"55"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 55) [0m
+Rendering template within layouts/lab
+Rendering pacientes/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+  [4;35;1mEstudio Load (0.6ms)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".paciente_id = 55) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mDoctor Load (0.5ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 89) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 55) [0m
+  [4;36;1mEstudio Load (0.3ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 3) [0m
+  [4;35;1mOperation Load (0.3ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 89) LIMIT 1[0m
+  [4;36;1mInter Load (0.2ms)[0m   [0;1mSELECT * FROM "inters" WHERE ("inters".consulta_id = 68) LIMIT 1[0m
+Rendered consultas/_registro (37.3ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+  [4;35;1mDoctor Load (0.7ms)[0m   [0mSELECT * FROM "doctors" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" [0m
+Rendered pacientes/_consul (5.7ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 105ms (View: 79, DB: 4) | 200 OK [http://localhost/pacientes/55]
+
+
+Processing PagosController#imprime (for 127.0.0.1 at 2009-03-22 17:31:40) [GET]
+  Parameters: {"paciente_id"=>"55", "id"=>"47", "operation_id"=>"87"}
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mPago Load (0.6ms)[0m   [0mSELECT * FROM "pagos" WHERE ("pagos"."id" = 47) [0m
+  [4;36;1mPaciente Load (0.7ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 55) [0m
+  [4;35;1mOperation Load (0.3ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."id" = 87) [0m
+  [4;36;1mEstudio Load (0.3ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+Rendering pagos/imprime
+Completed in 177ms (View: 109, DB: 2) | 200 OK [http://localhost/pagos/imprime/47?operation_id=87&paciente_id=55]
+
+
+Processing PagosController#imprime (for 127.0.0.1 at 2009-03-22 17:36:11) [GET]
+  Parameters: {"paciente_id"=>"55", "id"=>"47", "operation_id"=>"87"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mPago Load (0.3ms)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 47) [0m
+  [4;35;1mPaciente Load (0.6ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 55) [0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."id" = 87) [0m
+  [4;35;1mEstudio Load (0.2ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+Rendering pagos/imprime
+Completed in 157ms (View: 108, DB: 2) | 200 OK [http://localhost/pagos/imprime/47?operation_id=87&paciente_id=55]
