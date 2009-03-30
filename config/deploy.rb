@@ -40,12 +40,12 @@ end
 namespace(:customs) do
   task :config, :roles => :app do
     run <<-CMD
-      rm -rf /var/www/apps/webadmin/current/public/usuario/imagen && ln -nfs #{shared_path}/imagenes/usuario/imagen /var/www/apps/webadmin/current/public/usuario/ 
+      ln -nfs #{shared_path}/imagenes/usuario/imagen /var/www/apps/webadmin/current/public/usuario/ 
     CMD
   end
   task :symlink, :roles => :app do
     run <<-CMD
-      rm -rf /var/www/apps/webadmin/current/public/doctor/imagen && ln -nfs #{shared_path}/imagenes/doctor/imagen  /var/www/apps/webadmin/current/public/doctor/ 
+      ln -nfs #{shared_path}/imagenes/doctor/imagen  /var/www/apps/webadmin/current/public/doctor/ 
     CMD
   end
 end
