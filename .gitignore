@@ -1,5 +1,5 @@
-/public/doctor
-/public/usuario
+/public/doctor/imagen
+/public/usuario/imagen
 db/*.sqlite3 
 log/*.log 
 tmp/**/*

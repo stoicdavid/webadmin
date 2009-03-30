@@ -40,17 +40,18 @@ end
 namespace(:customs) do
   task :config, :roles => :app do
     run <<-CMD
-      ln -nfs #{shared_path}/usuario/imagen/ /var/www/apps/webadmin/current/public/usuario/
+      rm -rf /var/www/apps/webadmin/current/public/usuario/imagen && ln -nfs #{shared_path}/imagenes/usuario/imagen /var/www/apps/webadmin/current/public/usuario/ 
     CMD
   end
   task :symlink, :roles => :app do
     run <<-CMD
-      ln -nfs #{shared_path}/doctor/imagen/ /var/www/apps/webadmin/current/public/doctor/
+      rm -rf /var/www/apps/webadmin/current/public/doctor/imagen && ln -nfs #{shared_path}/imagenes/doctor/imagen  /var/www/apps/webadmin/current/public/doctor/ 
     CMD
   end
 end
 
-after "deploy:after_update_code", "customs:config"
-after "customs:config", "customs:symlink"
 after "deploy", "deploy:cleanup"
+after "deploy:cleanup", "customs:config"
+after "customs:config", "customs:symlink"
+
 #ln -nfsv /var/www/apps/webadmin/shared/usuario/imagen/ current/public/usuario/
