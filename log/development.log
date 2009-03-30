@@ -42476,3 +42476,504 @@ Processing PagosController#imprime (for 127.0.0.1 at 2009-03-22 17:36:11) [GET]
   [4;35;1mEstudio Load (0.2ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
 Rendering pagos/imprime
 Completed in 157ms (View: 108, DB: 2) | 200 OK [http://localhost/pagos/imprime/47?operation_id=87&paciente_id=55]
+
+
+Processing AdminController#inicio (for 127.0.0.1 at 2009-03-30 11:03:58) [GET]
+Rendering template within layouts/admin
+Rendering admin/inicio
+Rendered sessions/_login (1.4ms)
+Completed in 80ms (View: 77, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-03-30 11:04:07) [POST]
+  Parameters: {"commit"=>"Iniciar", "authenticity_token"=>"c84caa13773c32f8dea6e1152d4688135f7e69c2", "login"=>"administrador", "password"=>"123456"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUsuario Load (1.4ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."login" = 'administrador') LIMIT 1[0m
+Cookie set: auth_token=; path=/
+Redirected to /lab/index
+Completed in 220ms (DB: 1) | 302 Found [http://localhost/session]
+
+
+Processing LabController#index (for 127.0.0.1 at 2009-03-30 11:04:08) [GET]
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mCita Load (1.9ms)[0m   [0;1mSELECT * FROM "citas" [0m
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."fecha_hora" BETWEEN '2009-03-30 00:00:00' AND '2009-03-30 23:59:59') [0m
+  [4;36;1mCita Load (0.1ms)[0m   [0;1mSELECT * FROM "citas" WHERE (status = 'Activa') AND ("citas"."fecha_hora" BETWEEN '2009-03-31 00:00:00' AND '2009-04-01 23:59:59') [0m
+  [4;35;1mCita Load (0.1ms)[0m   [0mSELECT * FROM "citas" WHERE (status = 'Activa') AND ("citas"."fecha_hora" BETWEEN '2009-03-30 00:00:00' AND '2009-04-05 23:59:59') [0m
+Rendering template within layouts/lab
+Rendering lab/index
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 262ms (View: 125, DB: 3) | 200 OK [http://localhost/lab/index]
+
+
+Processing PacientesController#index (for 127.0.0.1 at 2009-03-30 11:04:19) [GET]
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+  [4;35;1mEstudio Load (1.0ms)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (17.4ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas"."fecha_consulta" BETWEEN '2009-03-30 00:00:00' AND '2009-03-30 23:59:59') [0m
+Rendering template within layouts/lab
+Rendering pacientes/index
+Rendered pacientes/_lista_pacientes (0.9ms)
+Completed in 186ms (View: 53, DB: 19) | 200 OK [http://localhost/pacientes]
+
+
+Processing PacientesController#index (for 127.0.0.1 at 2009-03-30 11:04:22) [GET]
+  Parameters: {"search"=>"", "commit"=>"Buscar"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+  [4;35;1mPaciente Load (18.9ms)[0m   [0mSELECT * FROM "pacientes" WHERE (nombre LIKE '%%' or app_pat LIKE '%%' or app_mat LIKE '%%') LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pacientes" WHERE (nombre LIKE '%%' or app_pat LIKE '%%' or app_mat LIKE '%%') [0m
+Rendering template within layouts/lab
+Rendering pacientes/index
+Rendered pacientes/_lista_pacientes (9.6ms)
+Completed in 101ms (View: 23, DB: 20) | 200 OK [http://localhost/pacientes?search=&commit=Buscar]
+
+
+Processing PacientesController#show (for 127.0.0.1 at 2009-03-30 11:04:24) [GET]
+  Parameters: {"id"=>"55"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mPaciente Load (0.6ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 55) [0m
+Rendering template within layouts/lab
+Rendering pacientes/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+  [4;35;1mEstudio Load (0.6ms)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (0.3ms)[0m   [0;1mSELECT * FROM "consultas" WHERE ("consultas".paciente_id = 55) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mDoctor Load (0.5ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 89) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 55) [0m
+  [4;36;1mEstudio Load (0.3ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 3) [0m
+  [4;35;1mOperation Load (0.6ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 89) LIMIT 1[0m
+  [4;36;1mInter Load (19.3ms)[0m   [0;1mSELECT * FROM "inters" WHERE ("inters".consulta_id = 68) LIMIT 1[0m
+Rendered consultas/_registro (96.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+  [4;35;1mDoctor Load (1.1ms)[0m   [0mSELECT * FROM "doctors" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" [0m
+Rendered pacientes/_consul (9.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 323ms (View: 201, DB: 24) | 200 OK [http://localhost/pacientes/55]
+
+
+Processing PacientesController#imprime_ficha (for 127.0.0.1 at 2009-03-30 11:04:27) [GET]
+  Parameters: {"id"=>"55", "consulta_id"=>"68"}
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mPaciente Load (0.6ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 55) [0m
+  [4;36;1mEstudio Load (0.6ms)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."id" = 68) [0m
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 89) [0m
+  [4;35;1mOperation Load (0.3ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations".cita_id = 89) LIMIT 1[0m
+Rendering pacientes/imprime_ficha
+  [4;36;1mDoctor Load (0.5ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+Completed in 645ms (View: 592, DB: 3) | 200 OK [http://localhost/pacientes/imprime_ficha/55?consulta_id=68]
+
+
+Processing PagosController#imprime (for 127.0.0.1 at 2009-03-30 11:04:58) [GET]
+  Parameters: {"paciente_id"=>"55", "id"=>"47", "operation_id"=>"87"}
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mPago Load (0.5ms)[0m   [0;1mSELECT * FROM "pagos" WHERE ("pagos"."id" = 47) [0m
+  [4;35;1mPaciente Load (0.7ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 55) [0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."id" = 87) [0m
+  [4;35;1mEstudio Load (0.3ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+Rendering pagos/imprime
+Completed in 278ms (View: 212, DB: 2) | 200 OK [http://localhost/pagos/imprime/47?operation_id=87&paciente_id=55]
+
+
+Processing ReportesController#show (for 127.0.0.1 at 2009-03-30 11:05:05) [GET]
+  Parameters: {"id"=>"55"}
+  [4;36;1mUsuario Load (0.4ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+Rendering template within layouts/lab
+Rendering reportes/show
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 48ms (View: 20, DB: 0) | 200 OK [http://localhost/reportes/55]
+
+
+Processing ReportesController#grafica (for 127.0.0.1 at 2009-03-30 11:05:05) [GET]
+  Parameters: {"id"=>"55"}
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all, strftime('%Y-%m',fecha_hora) AS strftime_y_m_fecha_hora FROM "citas" GROUP BY strftime('%Y-%m',fecha_hora) ORDER BY fecha_hora ASC [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all, strftime('%Y-%m',fecha_hora) AS strftime_y_m_fecha_hora FROM "citas" WHERE (status='Pagada') GROUP BY strftime('%Y-%m',fecha_hora) ORDER BY fecha_hora ASC [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all, strftime('%Y-%m',fecha_hora) AS strftime_y_m_fecha_hora FROM "citas" WHERE (status='Activa') GROUP BY strftime('%Y-%m',fecha_hora) ORDER BY fecha_hora ASC [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all, strftime('%Y-%m',fecha_hora) AS strftime_y_m_fecha_hora FROM "citas" WHERE (status='Confirmada') GROUP BY strftime('%Y-%m',fecha_hora) ORDER BY fecha_hora ASC [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all, strftime('%Y-%m',fecha_hora) AS strftime_y_m_fecha_hora FROM "citas" WHERE (status='Estudio Realizado') GROUP BY strftime('%Y-%m',fecha_hora) ORDER BY fecha_hora ASC [0m
+Sending data prueba.jpg
+Completed in 19520ms (View: 0, DB: 4) | 200 OK [http://localhost/reportes/55/grafica]
+
+
+Processing ReportesController#grafica_2 (for 127.0.0.1 at 2009-03-30 11:05:25) [GET]
+  Parameters: {"id"=>"55"}
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSELECT count(*) AS count_all, tipo_id AS tipo_id FROM "operations" GROUP BY tipo_id ORDER BY tipo_id ASC [0m
+  [4;36;1mEstudio Load (0.3ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+  [4;35;1mEstudio Load (0.4ms)[0m   [0mSELECT * FROM "estudios" WHERE ("estudios"."id" = 2) [0m
+Sending data prueba_2.jpg
+Completed in 77ms (View: 0, DB: 2) | 200 OK [http://localhost/reportes/55/grafica_2]
+
+
+Processing IntersController#index (for 127.0.0.1 at 2009-03-30 11:05:27) [GET]
+  [4;36;1mUsuario Load (0.4ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mEstudio Load (0.7ms)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mConsulta Load (2.0ms)[0m   [0;1mSELECT * FROM "consultas" LIMIT 20 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "consultas" [0m
+  [4;36;1mInter Load (0.2ms)[0m   [0;1mSELECT * FROM "inters" WHERE ("inters".consulta_id = 48) LIMIT 1[0m
+  [4;35;1mInter Load (0.2ms)[0m   [0mSELECT * FROM "inters" WHERE ("inters".consulta_id = 49) LIMIT 1[0m
+  [4;36;1mInter Load (0.1ms)[0m   [0;1mSELECT * FROM "inters" WHERE ("inters".consulta_id = 51) LIMIT 1[0m
+  [4;35;1mInter Load (0.1ms)[0m   [0mSELECT * FROM "inters" WHERE ("inters".consulta_id = 52) LIMIT 1[0m
+  [4;36;1mInter Load (0.1ms)[0m   [0;1mSELECT * FROM "inters" WHERE ("inters".consulta_id = 54) LIMIT 1[0m
+  [4;35;1mInter Load (0.1ms)[0m   [0mSELECT * FROM "inters" WHERE ("inters".consulta_id = 58) LIMIT 1[0m
+  [4;36;1mInter Load (0.1ms)[0m   [0;1mSELECT * FROM "inters" WHERE ("inters".consulta_id = 60) LIMIT 1[0m
+  [4;35;1mInter Load (0.1ms)[0m   [0mSELECT * FROM "inters" WHERE ("inters".consulta_id = 61) LIMIT 1[0m
+  [4;36;1mInter Load (0.1ms)[0m   [0;1mSELECT * FROM "inters" WHERE ("inters".consulta_id = 63) LIMIT 1[0m
+  [4;35;1mInter Load (0.1ms)[0m   [0mSELECT * FROM "inters" WHERE ("inters".consulta_id = 68) LIMIT 1[0m
+  [4;36;1mInter Load (0.1ms)[0m   [0;1mSELECT * FROM "inters" WHERE ("inters".consulta_id = 71) LIMIT 1[0m
+  [4;35;1mInter Load (0.1ms)[0m   [0mSELECT * FROM "inters" WHERE ("inters".consulta_id = 74) LIMIT 1[0m
+  [4;36;1mInter Load (0.1ms)[0m   [0;1mSELECT * FROM "inters" WHERE ("inters".consulta_id = 75) LIMIT 1[0m
+  [4;35;1mInter Load (0.1ms)[0m   [0mSELECT * FROM "inters" WHERE ("inters".consulta_id = 76) LIMIT 1[0m
+  [4;36;1mInter Load (0.1ms)[0m   [0;1mSELECT * FROM "inters" WHERE ("inters".consulta_id = 77) LIMIT 1[0m
+  [4;35;1mInter Load (0.1ms)[0m   [0mSELECT * FROM "inters" WHERE ("inters".consulta_id = 78) LIMIT 1[0m
+  [4;36;1mInter Load (0.1ms)[0m   [0;1mSELECT * FROM "inters" WHERE ("inters".consulta_id = 79) LIMIT 1[0m
+  [4;35;1mInter Load (0.1ms)[0m   [0mSELECT * FROM "inters" WHERE ("inters".consulta_id = 80) LIMIT 1[0m
+  [4;36;1mInter Load (0.1ms)[0m   [0;1mSELECT * FROM "inters" WHERE ("inters".consulta_id = 81) LIMIT 1[0m
+  [4;35;1mInter Load (0.1ms)[0m   [0mSELECT * FROM "inters" WHERE ("inters".consulta_id = 82) LIMIT 1[0m
+Rendering template within layouts/lab
+Rendering inters/index
+  [4;36;1mCita Load (0.2ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 68) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 39) [0m
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 76) [0m
+  [4;35;1mOperation Load (0.3ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."cita_id" = 76) LIMIT 1[0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 40) [0m
+  [4;35;1mCita Load (0.3ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 78) [0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."cita_id" = 78) LIMIT 1[0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 42) [0m
+  [4;36;1mCita Load (0.2ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 82) [0m
+  [4;35;1mOperation Load (0.3ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."cita_id" = 82) LIMIT 1[0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 46) [0m
+  [4;35;1mCita Load (0.2ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 86) [0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."cita_id" = 86) LIMIT 1[0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 47) [0m
+  [4;36;1mCita Load (0.2ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 87) [0m
+  [4;35;1mOperation Load (0.3ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."cita_id" = 87) LIMIT 1[0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 48) [0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 50) [0m
+  [4;36;1mCita Load (0.2ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 89) [0m
+  [4;35;1mOperation Load (0.3ms)[0m   [0mSELECT * FROM "operations" WHERE ("operations"."cita_id" = 89) LIMIT 1[0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 55) [0m
+  [4;35;1mCita Load (0.2ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 90) [0m
+  [4;36;1mOperation Load (0.3ms)[0m   [0;1mSELECT * FROM "operations" WHERE ("operations"."cita_id" = 90) LIMIT 1[0m
+  [4;35;1mPaciente Load (0.5ms)[0m   [0mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 56) [0m
+  [4;36;1mPaciente Load (0.5ms)[0m   [0;1mSELECT * FROM "pacientes" WHERE ("pacientes"."id" = 59) [0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 130ms (View: 75, DB: 15) | 200 OK [http://localhost/inters]
+
+
+Processing LabController#busca_paciente (for 127.0.0.1 at 2009-03-30 11:05:34) [GET]
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+
+
+ActionController::UnknownAction (No action responded to busca_paciente. Actions: access_denied, actualiza_cita, add_regla, asigna_cita, borra_cita, cancela_cita, check_roles, confirma_cita, crea_cita, debug, delete_regla, edit_regla, envia_info, genera_id, index, list_horarios, lista_honorarios, muestra_tab, new_regla, pago_dia, pago_mes, pago_semana, realizar_busqueda, reasigna_cita, role_requirements, role_requirements=, show_celda, show_horario, update_calendario, update_regla, vista_mes y vista_semana):
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing CitasController#index (for 127.0.0.1 at 2009-03-30 11:05:39) [GET]
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mCita Load (0.2ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."fecha_hora" BETWEEN '2009-03-01 00:00:00' AND '2009-03-31 23:59:59') [0m
+Rendering template within layouts/lab
+Rendering citas/index
+Rendered citas/_link (1.9ms)
+Rendered citas/_link (0.5ms)
+Rendered citas/_link (0.4ms)
+Rendered citas/_link (0.5ms)
+Rendered citas/_link (0.4ms)
+Rendered citas/_link (0.4ms)
+Rendered citas/_link (0.3ms)
+Rendered citas/_link (0.3ms)
+Rendered citas/_link (0.3ms)
+Rendered citas/_link (0.3ms)
+Rendered citas/_link (0.3ms)
+Rendered citas/_link (0.3ms)
+Rendered citas/_link (0.2ms)
+Rendered citas/_link (0.3ms)
+Rendered citas/_link (0.3ms)
+Rendered citas/_link (0.2ms)
+Rendered citas/_link (0.2ms)
+Rendered citas/_link (0.2ms)
+Rendered citas/_link (0.2ms)
+Rendered citas/_link (0.3ms)
+Rendered citas/_link (0.2ms)
+Rendered citas/_link (0.3ms)
+Rendered citas/_link (0.2ms)
+Rendered citas/_link (0.2ms)
+Rendered citas/_link (0.2ms)
+Rendered citas/_link (0.2ms)
+Rendered citas/_link (0.2ms)
+Rendered citas/_link (0.3ms)
+Rendered citas/_link (0.2ms)
+Rendered citas/_link (0.2ms)
+Rendered citas/_link (0.2ms)
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 193ms (View: 95, DB: 1) | 200 OK [http://localhost/citas]
+
+
+Processing OperationsController#index (for 127.0.0.1 at 2009-03-30 11:05:40) [GET]
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mOperation Load (1.5ms)[0m   [0mSELECT * FROM "operations" ORDER BY indice_estudio ASC[0m
+Rendering template within layouts/lab
+Rendering operations/index
+  [4;36;1mCita Load (0.3ms)[0m   [0;1mSELECT * FROM "citas" WHERE ("citas"."id" = 91) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."id" = 91) [0m
+  [4;36;1mEstudio Load (0.6ms)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.3ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas".cita_id = 91) LIMIT 1[0m
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.nombre_completo) on line #16 of app/views/operations/index.html.erb:
+13:   <tr>
+14: 	<% cita = Cita.find(operation.cita_id) %>
+15: 	<td><%=h operation.ref_estudio%><br /></td>
+16: 	<td><%=h operation.cita.consulta.doctor.nombre_completo unless operation.cita.nil? %><br /></td>
+17: 	<td><%=h Paciente.find(Cita.find(operation.cita_id).paciente_id).nombre_completo %><br /></td>
+18:     <td><%=h Estudio.find(operation.tipo_id).tipo_estudio %></td>
+19:     <td><%=h cita.status %></td>
+
+    app/views/operations/index.html.erb:16
+    app/views/operations/index.html.erb:12:in `each'
+    app/views/operations/index.html.erb:12
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:135:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:135:in `custom'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:164:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:164:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:158:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/operations_controller.rb:8:in `index'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (38.4ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.0ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ReferenciasController#index (for 127.0.0.1 at 2009-03-30 11:05:46) [GET]
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mEstudio Load (0.7ms)[0m   [0;1mSELECT * FROM "estudios" WHERE (id <= 3) [0m
+  [4;35;1mReferencia Load (0.5ms)[0m   [0mSELECT * FROM "referencias" [0m
+Rendering template within layouts/lab
+Rendering referencias/index
+  [4;36;1mDoctor Load (0.5ms)[0m   [0;1mSELECT * FROM "doctors" WHERE ("doctors"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 115ms (View: 58, DB: 2) | 200 OK [http://localhost/referencias]
+
+
+Processing PacientesController#index (for 127.0.0.1 at 2009-03-30 11:05:48) [GET]
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+  [4;36;1mEstudio Load (0.6ms)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.2ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."fecha_consulta" BETWEEN '2009-03-30 00:00:00' AND '2009-03-30 23:59:59') [0m
+Rendering template within layouts/lab
+Rendering pacientes/index
+Rendered pacientes/_lista_pacientes (0.5ms)
+Completed in 51ms (View: 14, DB: 1) | 200 OK [http://localhost/pacientes]
+
+
+Processing UsuariosController#index (for 127.0.0.1 at 2009-03-30 11:05:49) [GET]
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+  [4;36;1mUsuario Load (0.9ms)[0m   [0;1mSELECT * FROM "usuarios" ORDER BY login[0m
+Rendering template within layouts/lab
+Rendering usuarios/index
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 36 ) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 4 ) [0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 24 ) [0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 37 ) [0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 25 ) [0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 35 ) [0m
+Completed in 140ms (View: 36, DB: 3) | 200 OK [http://localhost/usuarios]
+
+
+Processing PacientesController#index (for 127.0.0.1 at 2009-03-30 11:05:50) [GET]
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+  [4;36;1mEstudio Load (0.6ms)[0m   [0;1mSELECT * FROM "estudios" [0m
+  [4;35;1mConsulta Load (0.2ms)[0m   [0mSELECT * FROM "consultas" WHERE ("consultas"."fecha_consulta" BETWEEN '2009-03-30 00:00:00' AND '2009-03-30 23:59:59') [0m
+Rendering template within layouts/lab
+Rendering pacientes/index
+Rendered pacientes/_lista_pacientes (0.5ms)
+Completed in 49ms (View: 13, DB: 1) | 200 OK [http://localhost/pacientes]
+
+
+Processing PacientesController#new (for 127.0.0.1 at 2009-03-30 11:05:51) [GET]
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mEstudio Load (0.6ms)[0m   [0mSELECT * FROM "estudios" [0m
+  [4;36;1mEstudio Load (0.3ms)[0m   [0;1mSELECT * FROM "estudios" WHERE ("estudios"."id" = 1) [0m
+Rendering template within layouts/lab
+Rendering pacientes/new
+  [4;35;1mDoctor Load (0.7ms)[0m   [0mSELECT * FROM "doctors" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "estudios" [0m
+Rendered pacientes/_consulta (24.2ms)
+Rendered pacientes/_form (51.9ms)
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 160ms (View: 123, DB: 2) | 200 OK [http://localhost/pacientes/new]
+
+
+Processing PacientesController#create (for 127.0.0.1 at 2009-03-30 11:05:57) [POST]
+  Parameters: {"dom_fis"=>"1", "commit"=>"Enviar", "fecha_nac"=>"", "authenticity_token"=>"c84caa13773c32f8dea6e1152d4688135f7e69c2", "paciente"=>{"del_mun"=>"", "celular"=>"", "genero"=>"", "cp_fis"=>"", "estado_fis"=>"", "colonia_fis"=>"", "recados"=>"", "casa"=>"", "calle_fis"=>"", "correo_2"=>"", "app_mat"=>"", "nombre"=>"", "del_mun_dom"=>"", "num_int_dom"=>"", "fecha_nac"=>"", "rfc"=>"", "num_ext_dom"=>"", "correo"=>"", "oficina"=>"", "parentezco"=>"", "app_pat"=>"", "rfc_pac"=>"", "nombre_2"=>"w", "num_int_fis"=>"", "num_ext_fis"=>"", "fax"=>"", "colonia_dom"=>"", "cp_dom"=>"", "nombre_contacto"=>"", "consulta_atributos"=>{"medicina_actual"=>"", "diagnostico"=>"", "medicina_anterior"=>"", "doctor_id"=>"", "fecha_in_sintomas"=>"", "estudio_id"=>"1"}, "razon"=>"", "calle_dom"=>""}, "estado_dom"=>"", "consulta"=>{"fecha_consulta"=>"", "fecha_envio"=>""}}
+  [4;36;1mUsuario Load (0.3ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;35;1mEstudio Load (0.6ms)[0m   [0mSELECT * FROM "estudios" [0m
+Rendering pacientes/validar
+  [4;36;1mPaciente Exists (0.2ms)[0m   [0;1mSELECT "pacientes".id FROM "pacientes" WHERE ("pacientes"."rfc_pac" = '') LIMIT 1[0m
+Completed in 71ms (View: 29, DB: 1) | 200 OK [http://localhost/pacientes]
+
+
+Processing LabController#index (for 127.0.0.1 at 2009-03-30 11:06:07) [GET]
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+  [4;36;1mCita Load (1.2ms)[0m   [0;1mSELECT * FROM "citas" [0m
+  [4;35;1mCita Load (0.2ms)[0m   [0mSELECT * FROM "citas" WHERE ("citas"."fecha_hora" BETWEEN '2009-03-30 00:00:00' AND '2009-03-30 23:59:59') [0m
+  [4;36;1mCita Load (0.1ms)[0m   [0;1mSELECT * FROM "citas" WHERE (status = 'Activa') AND ("citas"."fecha_hora" BETWEEN '2009-03-31 00:00:00' AND '2009-04-01 23:59:59') [0m
+  [4;35;1mCita Load (0.1ms)[0m   [0mSELECT * FROM "citas" WHERE (status = 'Activa') AND ("citas"."fecha_hora" BETWEEN '2009-03-30 00:00:00' AND '2009-04-05 23:59:59') [0m
+Rendering template within layouts/lab
+Rendering lab/index
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_usuarios" ON "roles".id = "roles_usuarios".role_id WHERE ("roles_usuarios".usuario_id = 12 ) [0m
+Completed in 45ms (View: 18, DB: 2) | 200 OK [http://localhost/lab]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-03-30 11:06:11) [GET]
+  [4;35;1mUsuario Load (0.3ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 12) LIMIT 1[0m
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to /
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing AdminController#inicio (for 127.0.0.1 at 2009-03-30 11:06:11) [GET]
+Rendering template within layouts/admin
+Rendering admin/inicio
+Rendered sessions/_login (0.6ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
