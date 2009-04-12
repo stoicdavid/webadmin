@@ -59,11 +59,11 @@ pdf.bounding_box([32,647-alfa], :width=>600, :height=>100) do
 end
 
 
-pdf.bounding_box([199,630-alfa], :width=>600, :height=>100) do
+pdf.bounding_box([199,616-alfa], :width=>600, :height=>100) do
 	pdf.text @fecha
 end
 
-pdf.bounding_box([340,630-alfa], :width=>600, :height=>100) do
+pdf.bounding_box([340,616-alfa], :width=>600, :height=>100) do
 	pdf.text @rfc
 end
 
