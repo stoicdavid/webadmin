@@ -55,8 +55,19 @@ pdf.bounding_box([32,647-alfa], :width=>600, :height=>100) do
 	pdf.font.size=8
 	pdf.text @paciente.razon,:spacing => 7
 	pdf.text "    " + @paciente.direccion_fiscal_completa,:spacing => 9
-	pdf.text "#{@paciente.estado_fis}                                              " + @fecha +'                                      '+ @rfc
+	pdf.text "#{@paciente.estado_fis}"
 end
+
+
+pdf.bounding_box([199,630-alfa], :width=>600, :height=>100) do
+	pdf.text @fecha
+end
+
+pdf.bounding_box([340,630-alfa], :width=>600, :height=>100) do
+	pdf.text @rfc
+end
+
+
 
 pdf.bounding_box([5,550-alfa], :width=>600, :height=>100) do
 	pdf.font.size=9
