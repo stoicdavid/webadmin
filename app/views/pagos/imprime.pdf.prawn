@@ -67,6 +67,8 @@ pdf.bounding_box([340,616-alfa], :width=>600, :height=>100) do
 	pdf.text @rfc
 end
 
+
+
 pdf.bounding_box([5,550-alfa], :width=>600, :height=>100) do
 	pdf.font.size=9
 	pdf.text '1' + '               '+@estudio.tipo_estudio , :spacing => 10
