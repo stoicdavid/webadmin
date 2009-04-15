@@ -1,0 +1,4 @@
+cit = Consulta.find(params[:id_cons],:include => :cita).cita
+cit.compilar_estudio_print!
+page.replace_html :impresion, "Estudio compilado"
+page[:impresion].visual_effect :highlight, :duration => 2

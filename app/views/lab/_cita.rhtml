@@ -4,5 +4,5 @@
 <% else %>
 	<%= render :partial => 'busqueda_2', :id => params[:id],:locals => {:id_cons => params[:id_cons]}%>
 <%# button_to 'Actualza Horario', {:controller => "lab", :action => "actualiza_cita", :id => params[:id],:id_cons => params[:id_cons] } %>
-<%= button_to 'Cancela Cita', {:controller => "lab", :action => "cancela_cita", :id => params[:id],:id_cons => params[:id_cons] } %>
+
 <% end %>

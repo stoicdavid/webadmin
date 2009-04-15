@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090317041544) do
+ActiveRecord::Schema.define(:version => 20090413033309) do
 
   create_table "agendas", :id => false, :force => true do |t|
     t.integer  "paciente_id", :null => false
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(:version => 20090317041544) do
     t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "state"
+    t.string   "status_pago"
   end
 
   create_table "consultas", :force => true do |t|
@@ -169,32 +171,17 @@ ActiveRecord::Schema.define(:version => 20090317041544) do
     t.string   "nombre_contacto"
     t.string   "parentezco"
     t.string   "correo_2"
+    t.integer  "referencia_id"
   end
 
 # Could not dump table "pagos" because of following StandardError
 #   Unknown type 'precision8default0scale2' for column 'precio'
 
   create_table "referencias", :force => true do |t|
-    t.string   "nombre"
-    t.string   "apellidos"
-    t.string   "nombre_contacto"
-    t.string   "diagnostico"
     t.date     "fecha_referencia"
-    t.string   "telefono_casa"
-    t.string   "telefono_celular"
-    t.string   "e_mail"
-    t.integer  "ref_id",           :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "estudio_id"
     t.integer  "doctor_id"
-    t.string   "ap_paterno"
-    t.string   "ap_materno"
-    t.date     "fecha_nac"
-    t.string   "t_recados"
-    t.string   "t_oficina"
-    t.string   "t_fax"
-    t.string   "email_2"
   end
 
   create_table "roles", :force => true do |t|

@@ -64,25 +64,15 @@ class CitasController < ApplicationController
   # PUT /citas/1.xml
   def update
     @cita = Cita.find(params[:id])
-
-    if @cita.status == 'Activa'
-      @cita.status = 'Confirmada'
-      @cita.save
-    else
       
-    end
-
+    
     respond_to do |format|
       if @cita.update_attributes(params[:cita])
-        if @cita.status == 'Sin Cita'
-          @cita.status = 'Activa'
-          @cita.save
-        elsif @cita.status == 'Activa'
-          @cita.status = 'Confirmada'
-          @cita.save
+        if @cita.status=='activa' or @cita.status == 'reprogramada'
+          @cita.confirmar!
         end
         flash[:notice] = 'La cita fue actualizada.'
-        format.html { redirect_to :controller => 'admin',:action => 'index' }
+        format.html { redirect_to :controller => 'pacientes',:action => 'show',:id => @cita.paciente_id }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

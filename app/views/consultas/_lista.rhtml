@@ -2,7 +2,7 @@
 
 <p>
   <b>Doctor:</b>
-	<% if @consulta.doctor_id!=nil %>
+	<% unless @consulta.doctor_id.nil? %>
   		<%=h @consulta.doctor.nombre_completo %>
 	<% end %>
 </p>

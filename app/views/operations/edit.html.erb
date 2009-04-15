@@ -4,75 +4,37 @@
   <%= f.error_messages %>
 
   <p>
-	Paciente:<br />
+	<b>Paciente:</b><br />
     <%= @operation.cita.paciente.nombre_completo %>
   </p>
 
   <p>
+	Hora de llegada<br />
+	<%= f.datetime_select :hora_llegada %>
+  </p>
 	
-	<% if @operation.hora_llegada == nil %>
-	Haz clic en la liga para capturar la hora de llegada:
-	<%= link_to "Hora de Llegada", :controller => "operations", :action => "h_llegada", :id => params[:id]    %>
-	<%else %>
-	<%= @operation.hora_llegada.strftime('%H:%M, %d %b') %>
-
+  <p>
+	Hora de inicio de conexión<br />
+	<%= f.datetime_select :ini_conexion %>
   </p>
 
   <p>
-	
-	<% if @operation.ini_conexion == nil %>
-	Haz clic en la liga para capturar la hora de Inicio de Conexión:
-	<%= link_to "Inicio de Conexión", :controller => "operations", :action => "ini_con", :id => params[:id]    %>
-	<%else %>
-	<%= @operation.ini_conexion.strftime('%H:%M, %d %b') %>
+	Hora de fin de conexión<br />
+	<%= f.datetime_select :fin_conexion %>
+</p>
 
+  <p>
+	Hora de inicio de estudio<br />
+	<%= f.datetime_select :ini_estudio %>
   </p>
 
   <p>
-	<% if @operation.fin_conexion == nil %>
-	Haz clic en la liga para capturar la hora de Fin de Conexión:
-	<%= link_to "Fin de Conexión", :controller => "operations", :action => "fin_con", :id => params[:id]    %>
-	<%else %>
-	<%= @operation.fin_conexion.strftime('%H:%M, %d %b') %>
-
+	Hora de fin de estudio<br />
+	<%= f.datetime_select :fin_estudio %>
   </p>
 
-  <p>
-	<% if @operation.ini_estudio == nil %>
-	Haz clic en la liga para capturar la hora de Inicio del Estudio:
-	<%= link_to "Inicio de Estudio", :controller => "operations", :action => "ini_est", :id => params[:id]    %>
-	<%else %>
-	<%= @operation.ini_estudio.strftime('%H:%M, %d %b') %>
-
+    <%= f.submit "Actualizar" %>
   </p>
-
-  <p>
-	<% if @operation.fin_estudio == nil %>
-	Haz clic en la liga para capturar la hora de Fin del Estudio:
-	<%= link_to "Fin de Estudio", :controller => "operations", :action => "fin_est", :id => params[:id]    %>
-	<%else %>
-	<%= @operation.fin_estudio.strftime('%H:%M, %d %b') %>
-	<% end %>
-		<% end %>
-			<% end %>
-				<% end %>
-					<% end %>
-  </p>
-
-	<% if @operation.fin_estudio !=nil %>
-		  <p>
-		    <%= f.label :fecha_interpretacion %><br />
-		    <%= f.date_select :fecha_interpretacion %>
-		  </p>
-		  <p>
-		    <%= f.label 'Fecha de Entrega al Cliente' %><br />
-		    <%= f.date_select :fecha_entrega %>
-		  </p>
-		  <p>
-		    <% f.submit "Update" %>
-		  </p>
-	<% end %>
 
 <% end %>
-<% link_to 'Show', @operation %> |
-<%= link_to 'Back', operations_path %>
+<%= link_to 'Regresar a Paciente', :controller => 'pacientes',:action => 'show',:id => Cita.find(@operation.cita_id).paciente_id  %>

@@ -35,7 +35,7 @@
 		</div>
 	<div id="box_citas">
 			<h4>Citas:</h4>
-			<% if !@cita.nil? %>
+			<% unless @cita.nil? %>
 			<%= render :partial => 'single_cita',:object => @cita %>
 			<% end %>
 		<div id ="citas"></div>

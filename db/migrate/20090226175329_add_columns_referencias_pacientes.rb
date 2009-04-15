@@ -18,7 +18,7 @@ class AddColumnsReferenciasPacientes < ActiveRecord::Migration
     remove_column :referencias, :t_oficina
     remove_column :referencias, :t_fax
     remove_column :referencias, :email_2
-    remove_column :pacientes, :correo_2
+    remove_column :pacientes, :correo_2 
     
   end
 end

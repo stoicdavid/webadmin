@@ -1,0 +1,4 @@
+cit = Consulta.find(params[:id_cons],:include => :cita).cita
+cit.imprimir_estudio_print!
+page.replace_html :impresion, "Estudio impreso"
+page[:impresion].visual_effect :highlight

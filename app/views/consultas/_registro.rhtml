@@ -14,15 +14,15 @@
 </p>
 <% end %>
 <p>
-<% unless registro.cita==nil %>
-<% if registro.cita.status == 'Pagada' %>	
-  <b>Edad (al realizar el estudio):</b>
-  <%=h registro.paciente.edad(registro.cita.fecha_hora) %> años
-  <%=h registro.paciente.edad_meses(registro.cita.fecha_hora) %> meses <br /><br />
-  <b>Fecha de estudio:</b>
-  <%=h l registro.cita.fecha_hora, :format => '%d-%B-%Y' %>
-</p>
-<% end %>
+<% unless registro.cita.nil? %>
+	<% if registro.cita.status == 'pagada' %>	
+	  <b>Edad (al realizar el estudio):</b>
+	  <%=h registro.paciente.edad(registro.cita.fecha_hora) %> años
+	  <%=h registro.paciente.edad_meses(registro.cita.fecha_hora) %> meses <br /><br />
+	  <b>Fecha de estudio:</b>
+	  <%=h l registro.cita.fecha_hora, :format => '%d-%B-%Y' %>
+	</p>
+	<% end %>
 <% end %>
 <p>
   <b>Diagnostico:</b>
@@ -33,47 +33,39 @@
   <b>Estudio:</b>
   <%= Estudio.find(registro.estudio_id).tipo_estudio %>
 </p>
-
+<% if registro.cita.nil?%>
+	<%= button_to 'Crea Cita', {:controller => "lab", :action => "crea_cita", :id => registro.paciente_id,:id_cons => registro.id } %>
+<% end %>
 <p>
-<% unless registro.cita==nil %>
+<% unless registro.cita.nil? %>
   <b>Status:</b>
-  <%=h status =registro.cita.status %>
-<% end %>
+  <% status = registro.cita.status %>
+  <%= status.humanize %>
 </p>
 <p>
 
 </p>
-<% if usuario.has_role?('admin') %>
-<% if status == 'Sin Cita' %>
-<%= button_to 'Crea Cita', {:controller => "lab",:action => "crea_cita", :id => registro.cita.id } %> 
+<% if usuario.has_role?('admin') and usuario.has_role?('gerente') and registro.cita.nil? %>
+	<%= button_to 'Crea Cita', {:controller => "lab",:action => "crea_cita", :id => registro.cita.id } %> 
 <% end %>
 </p>
-<p>
+
 <div id="ref_est">
-<% if !registro.cita.nil? %>
-<% if registro.cita.operation.ref_estudio.nil? and registro.cita.status = 'Confirmada'%>
-	<%= link_to_remote 'Genera ID Estudio', :url => {:controller => "lab",:action => "genera_id", :id => registro.cita_id}  %> 
-<% end %>
-<% end %>
+<p>
+	<%# if registro.cita.operation.ref_estudio.nil? and registro.cita.status == 'confirmada' %>
+		<%# link_to_remote 'Genera ID Estudio', :url => {:controller => "lab",:action => "genera_id", :id => registro.cita_id}  %> 
+	<%# end %>
+	<% unless registro.cita.operation.ref_estudio.nil?  %>
+		<b>ID Estudio</b>: <%= registro.cita.operation.ref_estudio %>
+	<% end %>
 </p>
 </div>
-<%= link_to 'Detalle', :controller => "consultas",:action => "show", :id => registro.id %>
-	<p>
-	<%= link_to_if status == "Activa" || !registro.cita.nil?, 'Imprimir ficha', {:action => 'imprime_ficha',:controller => 'pacientes',:id => registro.paciente_id, :consulta_id => registro.id}, :popup => true %>|
+
+<%= link_to 'Detalle de la cita', :controller => "consultas",:action => "show", :id => registro.id %> <br><br>
+<%= link_to_if !registro.cita.nil?, 'Imprimir ficha', {:action => 'imprime_ficha',:controller => 'pacientes',:id => registro.paciente_id, :consulta_id => registro.id}, :popup => true %><br><br>
 
 
-<% if !registro.cita.nil? %>
-<%= link_to_if (status != 'Pagada'), 'Pago', {:controller => 'operations',:action => "genera_orden", :id => registro.cita.operation.id } %>|
-
-<%= link_to_if (status == 'Pagada'),'Imprimir Factura',{:controller => 'pagos',  :action => 'imprime', :id => registro.cita.operation.pago_id,:paciente_id => registro.cita.paciente_id,:operation_id => registro.cita.operation.id}, :popup => true %> |
-<% end %>
-<% unless registro.inter.nil? %>
-	<%= link_to 'Imprimir Estudio',{:controller => 'inters',  :action => 'imprime', :id => registro.id,:paciente_id => registro.paciente_id,:operation_id => registro.cita.operation.id}, :popup => true %> |
-	<%= link_to 'Editar Estudio',:controller => 'inters',  :action => 'edit', :id => registro.inter.id%>
-<% end %>
-</p>
-
-
+<%= link_to 'Editar', edit_consulta_path(registro) %> | 
 <%= link_to 'Eliminar', registro, :confirm => 'Are you sure?', :method => :delete, :paciente_id => registro.paciente_id %>
 
 <% end %>

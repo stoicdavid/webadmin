@@ -14,10 +14,8 @@
     <td><%=h cons.paciente.nombre_completo unless cons.paciente.nil? %></td>
     <td><%=h cons.diagnostico %></td>
     <td><%= link_to 'Agregar', :controller => 'inters',:action => 'new', :id => cons.id  %></td>
-
   </tr>
 <% end %>
 </table>
 <%= will_paginate @consultas,:class => "apple_pagination",:previous_label => "&laquo; Previo",:next_label => "Siguiente &raquo;"%>
 <br />
-

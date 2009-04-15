@@ -9,4 +9,4 @@ La cita fue creada exitosamente para <br />
 <% end %>
 </div>
 <br />
-<br /><%= link_to("Home", :controller => "lab") %>
+<br /><%= link_to("Paciente", :controller => "pacientes",:action => 'show',:id => params[:paciente] ) %> | <%= link_to("Home", :controller => "lab") %>

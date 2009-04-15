@@ -124,8 +124,7 @@ class PagosController < ApplicationController
         operation = Operation.find(params[:pago][:operation_id])
         operation.update_attributes(:pago_id => @pago.id)
         cita = Cita.find_by_operation_id(params[:pago][:operation_id])
-        cita.status = 'Pagada'
-        cita.save
+        cita.pagar_estudio_pago!
         flash[:notice] = 'Pago was successfully created.'
         format.html { redirect_to(:action => 'show', :id => @pago.id ,:paciente_id => params[:pago][:paciente_id],
           :operation_id => params[:pago][:operation_id]) }

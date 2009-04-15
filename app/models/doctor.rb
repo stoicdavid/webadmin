@@ -3,6 +3,8 @@ class Doctor < ActiveRecord::Base
   belongs_to :especialidad
   has_many :consultas
   has_many :pacientes, :through => :consultas
+  has_many :referencias
+  
   attr_accessor :nueva_especialidad
   before_save :crear_especialidad
   file_column :imagen, :magick => { :geometry => "100x100" }

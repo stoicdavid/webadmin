@@ -3,6 +3,7 @@ class Paciente < ActiveRecord::Base
   has_many :doctors, :through => :consultas
   has_many :citas, :dependent => :delete_all
   has_many :operations, :through => :citas
+  belongs_to :referencias
 
   @@per_page = 3
   GENERO = [ 

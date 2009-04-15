@@ -59,11 +59,14 @@ class OperationsController < ApplicationController
   # PUT /operations/1.xml
   def update
     @operation = Operation.find(params[:id])
-
+    cita = Cita.find(@operation.cita_id)
     respond_to do |format|
       if @operation.update_attributes(params[:operation])
-        flash[:notice] = 'Operation was successfully updated.'
-        format.html { redirect_to(@operation) }
+        if cita.status == 'estudio_en_proceso'
+          cita.concluir_estudio!
+        end
+        flash[:notice] = 'El estudio ha sido actualizado'
+        format.html { redirect_to :controller => 'pacientes',:action => 'show',:id => cita.paciente_id  }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

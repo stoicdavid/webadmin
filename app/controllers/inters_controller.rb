@@ -65,9 +65,11 @@ class IntersController < ApplicationController
   # POST /inters.xml
   def create
     @inter = Inter.new(params[:inter])
-
+    
     respond_to do |format|
       if @inter.save
+        cit = Consulta.find(params[:inter][:consulta_id],:include => :cita).cita
+        cit.interpretar!        
         flash[:notice] = 'La interpretación se agregó exitosamente'
         format.html { redirect_to(@inter) }
         format.xml  { render :xml => @inter, :status => :created, :location => @inter }
@@ -85,6 +87,7 @@ class IntersController < ApplicationController
 
     respond_to do |format|
       if @inter.update_attributes(params[:inter])
+
         flash[:notice] = 'La interpretación se actualizó correctamente.'
         format.html { redirect_to(@inter) }
         format.xml  { head :ok }

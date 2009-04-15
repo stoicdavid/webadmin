@@ -10,37 +10,62 @@
 <% unless @consulta.cita.nil? %>
 
 <% cita = @consulta.cita %>
+<br>
+
+	<h3>Acciones a realizar (WorkFlow)</h3><br>
+		<b>	Status estudio:</b> <%= cita.status.humanize %><br / >
+	<br>
+			<b>Fecha de la Cita:</b> 
+			<%= l cita.fecha_hora, :format => ('%d -%B- %y Hora: %H:%M')  %><br>
 
 
-	<% if cita.fecha_hora.nil?%>
-	  <b>Cita:</b><br/ >
-		<b>Fecha</b> 
-	<%= cita.fecha_hora.strftime('%d -%B- %y Hora: %H:%M')  %><br / >
-	<% end %>
-	<br / >
-	<% if cita.status == 'Confirmada' || cita.status == 'Pagada' %>
-		<b>Estudio a Realizar:</b> <%= Estudio.find(cita.operation.tipo_id).tipo_estudio  %><br / >
-		<br / >
-	<b>	Estatus Cita:</b> <%= cita.status %><br / >
-	<br / >
-		<%= link_to 'Estudio', :controller  => "operations",:action => "edit",:id  => cita.operation.id %> |
-	<% elsif cita.operation.ref_estudio.nil? %>		
+		<% if cita.status == 'activa' %>
+			<b>Estudio a Realizar:</b> <%= Estudio.find(cita.operation.tipo_id).tipo_estudio  %><br / >
+			<br / >
+		<% end %>
+			
 
-		<td><%= button_to 'Reasigna Cita', {:controller => "lab", :action => "reasigna_cita", :id => cita.paciente_id,:id_cons =>@consulta.id  } %></td>
-		<td><%= button_to 'Confirma Cita', {:controller => "citas",:action => "confirma", :id => cita.id } %></td>
-		<td><%= button_to 'Cancela', {:controller => "lab",:action => "cancela_cita", :id => cita.paciente_id,:id_cons => @consulta.id } %></td>
+		<% if cita.status == 'estudio_interpretado'%>
+			<br>
+			<%= link_to 'Imprimir Interpretación',{:controller => 'inters',  :action => 'imprime', :id => @consulta.id,:paciente_id => @consulta.paciente_id,:operation_id => @consulta.cita.operation.id}, :popup => true %> |
+			<%= link_to 'Editar Interpretación',:controller => 'inters',  :action => 'edit', :id => @consulta.inter.id%>
+			<br>
 		<% end %>
 		<br>
-		<% if @consulta.cita.confirma_valet.nil? %>
-		<%= link_to "Envía Correo", :controller => "lab",:action => 'envia_info', :id => @consulta.id %>
+	<% for evento in cita.status_events.reverse do %>
+		<%= link_to evento.to_s.capitalize, :controller => 'lab',:action => evento,:id => @consulta.paciente_id,:id_cons => params[:id] %><br><br>
+		<% if cita.status.to_s=='cancelada'%>
+			<%= link_to 'Reprogramar en horario anterior', :controller => 'lab',:action => evento,:id => 'anterior',:id_cons => params[:id] %><br><br>
 		<% end %>
-
+	<% end %>
+	<%= link_to_if (cita.status == 'confirmada'),"Enviar Correo", :controller => "lab",:action => 'envia_info', :id => @consulta.id %>
+	<br><br><br>
+	
+	<% if cita.status?(:estudio_exitoso) or cita.status?(:estudio_interpretado) %>
+	<h3>Impresión del estudio</h3><br>
+	<b>	Status:</b> <%= cita.state.humanize %><br / ><br / >
+	<div id="impresion">
+		<% for evento in cita.state_events do %>
+			<%= link_to_remote evento.to_s.humanize, :url => {:action => evento,:id_cons => params[:id]} %><br><br>
+		<% end %>
+	</div>	
+	<% end %>
+	<br>
+	<% if cita.status?(:estudio_exitoso) or cita.status?(:estudio_interpretado) %>
+	<h3>Pago del estudio</h3><br>
+	<b>	Status:</b> <%= cita.status_pago.humanize %><br><br>
+		<% for evento in cita.status_pago_events do %>
+			<%= link_to evento.to_s.humanize, :controller => 'lab',:action => evento,:id => @consulta.paciente_id,:id_cons => params[:id] %><br><br>
+		<% end %>
+	<% end %>
+	<% if cita.status_pago=="estudio_pagado"%>
+		<%= link_to  'Imprimir Factura',{:controller => 'pagos',  :action => 'imprime', :id => @consulta.cita.operation.pago_id,:paciente_id => @consulta.cita.paciente_id,:operation_id => @consulta.cita.operation.id}, :popup => true %> 
+	<% end %>
 </p>
+
 <hr>
 <% end %>
 
-<% if @consulta.cita == nil %>
+<% if @consulta.cita.nil? %>
 	<%= button_to 'Crea Cita', {:controller => "lab", :action => "crea_cita", :id => @consulta.paciente_id,:id_cons => @consulta.id } %>
 <% end %>
-
-<%= link_to 'Edit', edit_consulta_path(@consulta) %>

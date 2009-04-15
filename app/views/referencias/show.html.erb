@@ -1,23 +1,4 @@
-<p>
-  <b>Nombre paciente:</b>
-  <%=h @referencia.nombre %>
-  <%=h @referencia.apellidos %>
-</p>
 
-<p>
-  <b>Telefono:</b>
-  <%=h @referencia.telefono_casa %>
-</p>
-
-<p>
-  <b>Celular:</b>
-  <%=h @referencia.telefono_celular %>
-</p>
-
-<p>
-  <b>E - Mail:</b>
-  <%=h @referencia.e_mail %>
-</p>
 
 <%= link_to 'Edit', edit_referencia_path(@referencia) %> |
 <%= link_to 'Back', referencias_path %>

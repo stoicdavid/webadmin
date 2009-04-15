@@ -37,14 +37,7 @@ class LabController < ApplicationController
     redirect_to :action => 'show', :controller => 'pacientes'
   end
   
-  def genera_id
-    @operacion = Operation.find_by_cita_id(params[:id])
-    @operacion.genera_id
-    render :update do |page|
-      page.replace_html 'ref_est', "La clave del estudio es #{@operacion.ref_estudio}"
-    end
-    
-  end
+
   
   def borra_cita
     cita=Cita.find(params[:id])
@@ -187,7 +180,7 @@ class LabController < ApplicationController
     else
       consulta=Consulta.find(params[:consulta])
       operation=Operation.create(:cita_id => 0,:tipo_id => consulta.estudio_id)
-      @cita=Cita.create(:paciente_id => params[:paciente],:fecha_hora => fecha_cita,:status => 'Activa',
+      @cita=Cita.create(:paciente_id => params[:paciente],:fecha_hora => fecha_cita,
       :cubiculo => params[:cita][:cubiculo],:operation_id => operation.id)
       @cita.save
       operation.save
@@ -210,16 +203,17 @@ class LabController < ApplicationController
   email = NeuroMailer.create_informa_paciente(@paciente,@estudio,@fecha_cita,@doctor) 
   #email.set_content_type("text/html")
   NeuroMailer.deliver(email) 
-  consulta.cita.confirma_valet=true
+  consulta.cita.confirmar
   consulta.cita.save
   flash[:notice] = "Se ha enviado el correo a #{@paciente.correo}"
   redirect_to @paciente
 end
 
-  def cancela_cita
+  def cancelar
     cita=Consulta.find(params[:id_cons]).cita
-    cita.destroy
-    redirect_to :action => 'crea_cita', :id => params[:id],:id_cons => params[:id_cons]
+    cita.cancelar!
+    flash[:notice] = "La cita ha sido cancelada"
+    redirect_to :controller => 'pacientes',:action => 'show', :id => params[:id]
 
   end
   
@@ -249,17 +243,23 @@ end
     end
   end
 
-  def reasigna_cita
-    @mes_actual = Time.now
-    @mes_anterior = 1.month.ago(@mes_actual)
-    @mes_sig = 1.month.since(@mes_actual)
+  def reprogramar
     
-    
-    @paciente = Paciente.find(params[:id])
-    @cita = Consulta.find(params[:id_cons],:include => :cita).cita
-    @citas = Cita.find_all_by_fecha_hora(@mes_actual.beginning_of_month...@mes_actual.end_of_month)
-    @dates = @citas.collect { |p| p.fecha_hora.strftime('%d-%m-%Y') }
-    render :partial => 'crea_cita', :id => @paciente.id, :layout => "lab",:object => @citas
+    if params[:id] == 'anterior'
+      cita = Consulta.find(params[:id_cons],:include => :cita).cita
+      cita.reprogramar!
+      flash[:notice] = "La cita ha sido reprogramada en el horario antes establecido"
+      redirect_to :controller => 'pacientes',:action => 'show', :id => cita.paciente_id      
+    else    
+      @mes_actual = Time.now
+      @mes_anterior = 1.month.ago(@mes_actual)
+      @mes_sig = 1.month.since(@mes_actual)
+      @cita = Consulta.find(params[:id_cons],:include => :cita).cita
+      @paciente = Paciente.find(@cita.paciente_id)
+      @citas = Cita.find_all_by_fecha_hora(@mes_actual.beginning_of_month...@mes_actual.end_of_month)
+      @dates = @citas.collect { |p| p.fecha_hora.strftime('%d-%m-%Y') }
+      render :partial => 'crea_cita', :id => @paciente.id, :layout => "lab",:object => @citas
+    end
   end
   
   def actualiza_cita
@@ -271,8 +271,9 @@ end
       end
     else
       consulta=Consulta.find(params[:consulta])
-      @cita=Cita.update(params[:cita_id],:paciente_id => params[:paciente],:fecha_hora => fecha_cita,:status => 'Activa',
+      @cita=Cita.update(params[:cita_id],:paciente_id => params[:paciente],:fecha_hora => fecha_cita,
       :cubiculo => params[:cita][:cubiculo])
+      @cita.reprogramar!
       #flash[:notice] = 'La cita fue actualizada exitosamente'
       #redirect_to :action => 'index',:controller => "admin"
       render :update do |page|
@@ -300,12 +301,35 @@ end
     render :partial => 'crea_cita', :id => @paciente.id, :layout => "lab"
   end
   
-  def confirma_cita
-    cit = Cita.find params[:id]
-    cit.status = 'Confirmada'
-    cit.save
+  def confirmar
+    cit = Consulta.find(params[:id_cons],:include => :cita).cita
     redirect_to :controller => "citas", :id => cit.id, :action  => 'confirma'
   end
+  
+  def concluir_estudio
+    cit = Consulta.find(params[:id_cons],:include => :cita).cita
+    operacion = Operation.find_by_cita_id(cit.id)
+    redirect_to :controller => "operations", :id => operacion.id, :action  => 'edit'
+  end
+  
+  def interpretar
+    cit = Consulta.find(params[:id_cons],:include => :cita).cita
+    redirect_to :controller => "inters", :action  => 'new',:id => params[:id_cons]
+  end
+  
+  def generar_id
+    cit = Consulta.find(params[:id_cons],:include => :cita).cita
+    @operacion = Operation.find_by_cita_id(cit.id)
+    @operacion.genera_id
+    cit.generar_id! 
+    flash[:notice] = "El ID ha sido generado"   
+    redirect_to :controller => "pacientes", :id => params[:id], :action  => 'show'
+  end
+  
+  def pagar_estudio
+    redirect_to :controller => 'operations',:action => "genera_orden", :id => Consulta.find(params[:id_cons],:include => :cita).cita.operation.id
+  end
+  
   
   #def vista_dia
   #  @citas = Cita.find_all_by_fecha_hora(Time.now.beginning_of_day...Time.now.end_of_day)
