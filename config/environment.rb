@@ -18,6 +18,7 @@ Rails::Initializer.run do |config|
 config.gem "prawn"
 config.gem "gruff"
 config.gem "rubyist-aasm", :lib => "aasm" 
+config.gem 'mislav-will_paginate', :version => '~> 2.3.8', :lib => 'will_paginate'
 config.i18n.default_locale = :es
   # Skip frameworks you're not going to use. To use Rails without a database
   # you must remove the Active Record framework.
@@ -73,3 +74,4 @@ config.i18n.default_locale = :es
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default_charset = "utf-8"
 end
+require "will_paginate" 

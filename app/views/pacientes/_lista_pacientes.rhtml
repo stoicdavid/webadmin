@@ -12,7 +12,7 @@
 <% unless @pacientes.empty?%>
 	<% for paciente in @pacientes %>
 	  <tr>
-		<td><%= link_to "#{h paciente.nombre_completo}" %></td> 
+		<td><%= link_to "#{h paciente.nombre_completo}",paciente %></td> 
 	    <%if @usuario.has_role?('admin') %>
 		    <td><%= link_to 'Edit', edit_paciente_path(paciente)    %></td>
 		    <td><%= link_to 'Destroy', paciente, :confirm => 'Are you sure?', :method => :delete %></td><br /><br />
