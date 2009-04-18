@@ -1,4 +1,6 @@
 <ul id="todo-list"> 
-     <li><%= link_to recepcion.paciente.nombre_completo, :controller => 'pacientes',:action => 'show',:id => recepcion.paciente_id %></li> 
+     <li><%= link_to recepcion.paciente.nombre_completo, :controller => 'pacientes',:action => 'show',:id => recepcion.paciente_id %>
+	 <%= Estudio.find(recepcion.consulta.estudio_id).tipo_estudio %>
+	a las <%= l recepcion.fecha_hora, :format => ('%H:%M') %> hrs.</li> 
 
 </ul>		

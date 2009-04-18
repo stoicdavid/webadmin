@@ -63,7 +63,11 @@ class Cita < ActiveRecord::Base
   CUBICULO = [ 
   # Displayed stored in db 
   [ "1", 1 ], 
-  [ "2", 2 ]
+  [ "2", 2 ],
+  [ "Dormitorio", 3 ],
+  [ "Hotel", 4 ],
+  [ "A domicilio", 5 ],
+  [ "Labor Social", 6 ]
   ]
     
 end
