@@ -9,10 +9,10 @@
 
 <% end %>
     <br />
-<% unless @pacientes.empty?%>
-	<% for paciente in @pacientes %>
+<% unless @pacientes.empty? %>
+	<% for paciente in @pacientes.to_a %>
 	  <tr>
-		<td><%= link_to "#{h paciente[0].nombre_completo}",paciente %></td> 
+		<td><%= link_to "#{h paciente.nombre_completo}",paciente %></td> 
 	    <%if @usuario.has_role?('admin') %>
 		    <td><%= link_to 'Edit', edit_paciente_path(paciente)    %></td>
 		    <td><%= link_to 'Destroy', paciente, :confirm => 'Are you sure?', :method => :delete %></td><br /><br />
@@ -21,7 +21,6 @@
 	  </tr>
 	<% end %>
 	<%= will_paginate @pacientes,:class => "apple_pagination",:previous_label => "&laquo; Previo",:next_label => "Siguiente &raquo;"%>
-
 </table>
 <% else %>
 

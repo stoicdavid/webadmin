@@ -19,18 +19,19 @@ class PacientesController < ApplicationController
       :conditions => ['nombre LIKE :str or app_pat LIKE :str or app_mat LIKE :str',values], :page => params[:page],:per_page => 5)
     elsif doctor = @usuario.doctor and @usuario.has_role?('doctor')
       @pacientes = doctor.pacientes.paginate(:all,:page => params[:page],:per_page => 5)
-    elsif @usuario.has_role?('admin') or @usuario.has_role?("socio") or @usuario.has_role?("gerente")
+    elsif @usuario.has_role?('admin') or @usuario.has_role?("socio") or @usuario.has_role?("gerente") or @usuario.has_role?("interprete")
+      
       consultas = Cita.find_all_by_fecha_hora(Time.now.beginning_of_day + 5.hour...Time.now.end_of_day + 5.hour,:order => "fecha_hora ASC",:conditions => ['status <> ?','cancelada'])
       @pacientes = WillPaginate::Collection.create(1,10) do |pager|
       consultas.each { |paciente|
       result = Paciente.paginate_by_id(paciente.paciente_id, :page => params[:page],:per_page => 10,:offset => pager.offset)
-      pager << result
-      
+      pager.concat result
       }
       unless pager.total_entries
         pager.total_entries = consultas.size
       end
     end
+    
   end
     
     respond_to do |format|
