@@ -26,7 +26,7 @@ class LabController < ApplicationController
     #end
     @citas = Cita.find(:all)
     @dates = @citas.collect { |p| p.fecha_hora.strftime('%d-%m-%Y') }
-    @consultas_hoy = Cita.find_all_by_fecha_hora(Time.now.beginning_of_day...1.day.since(Time.now))
+    @consultas_hoy = Cita.find_all_by_fecha_hora(Time.now.beginning_of_day...1.day.since(Time.now),:order => "fecha_hora ASC")
     @confirma_hoy = Cita.find_all_by_fecha_hora(1.day.since(Time.now.beginning_of_day)...2.day.since(Time.now.end_of_day), :conditions => ['status = ?','Activa'])
     @sin_confirma = Cita.find_all_by_fecha_hora(Time.now.beginning_of_week...Time.now.end_of_week, 
     :conditions => ['status = ?','activa'])
