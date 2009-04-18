@@ -20,7 +20,7 @@ class IntersController < ApplicationController
   
   
   def index
-    @consultas = Consulta.paginate(:all,:page => params[:page],:per_page => 20 )
+    @consultas = Consulta.paginate(:all,:page => params[:page],:per_page => 20)
     @inters = Array.new
     @consultas.each {|consulta| 
       @inters << consulta if consulta.inter.nil?

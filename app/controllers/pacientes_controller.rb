@@ -20,10 +20,10 @@ class PacientesController < ApplicationController
     elsif doctor = @usuario.doctor and @usuario.has_role?('doctor')
       @pacientes = doctor.pacientes.paginate(:all,:page => params[:page],:per_page => 5)
     elsif @usuario.has_role?('admin') or @usuario.has_role?("socio") or @usuario.has_role?("gerente")
-      consultas = Consulta.find_all_by_fecha_consulta(Time.now.beginning_of_day...1.day.since(Time.now))
+      consultas = Consulta.find_all_by_fecha_consulta(Time.now.beginning_of_day...1.day.since(Time.now.beginning_of_day))
       @pacientes = Array.new
       consultas.each { |paciente|
-      @pacientes << Paciente.paginate_by_paciente_id(paciente.paciente_id, :page => params[:page],:per_page => 10)
+      @pacientes << Paciente.paginate_by_id(paciente.paciente_id, :page => params[:page],:per_page => 10)
       }
     end
     
