@@ -20,7 +20,7 @@ class PacientesController < ApplicationController
     elsif doctor = @usuario.doctor and @usuario.has_role?('doctor')
       @pacientes = doctor.pacientes.paginate(:all,:page => params[:page],:per_page => 5)
     elsif @usuario.has_role?('admin') or @usuario.has_role?("socio") or @usuario.has_role?("gerente")
-      consultas = Cita.find_all_by_fecha_hora(Time.now.beginning_of_day...1.day.since(Time.parse('23:00')),:order => "fecha_hora ASC",:conditions => ['status <> ?','cancelada'])
+      consultas = Cita.find_all_by_fecha_hora(Time.now.beginning_of_day + 5.hour...Time.now.end_of_day + 5.hour,:order => "fecha_hora ASC",:conditions => ['status <> ?','cancelada'])
       @pacientes = WillPaginate::Collection.create(1,10) do |pager|
       consultas.each { |paciente|
       result = Paciente.paginate_by_id(paciente.paciente_id, :page => params[:page],:per_page => 10,:offset => pager.offset)
