@@ -1,4 +1,4 @@
-<% if current_usuario.has_role?("admin") or current_usuario.has_role?("socio") %>
+<% if current_usuario.has_role?("admin") or current_usuario.has_role?("socio") or current_usuario.has_role?("interprete")%>
 <% if current_usuario.has_role?("socio") %>
 <h1>
 	 <%= t 'bienvenida' %> <%= current_usuario.name.split(' ').first %>

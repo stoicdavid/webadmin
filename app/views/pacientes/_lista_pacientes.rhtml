@@ -10,7 +10,7 @@
 <% end %>
     <br />
 <% unless @pacientes.empty? %>
-	<% for paciente in @pacientes.to_a %>
+	<% for paciente in @pacientes %>
 	  <tr>
 		<td><%= link_to "#{h paciente.nombre_completo}",paciente %></td> 
 	    <%if @usuario.has_role?('admin') %>
