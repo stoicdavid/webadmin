@@ -123,7 +123,6 @@ class Paciente < ActiveRecord::Base
       d += ' ' + self.num_int_fis unless self.num_int_fis.nil?
       d += ' ' + self.colonia_fis unless self.colonia_fis.nil?
       d += ' ' + self.del_mun unless self.del_mun.nil?
-      d += ' ' + self.estado_fis unless self.estado_fis.nil?
       d += ' '+ self.codigo_fiscal
       d
   end

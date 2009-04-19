@@ -51,6 +51,7 @@ pdf.bounding_box([20,510], :width=>500, :height=>250) do
 	pdf.text 'Teléfonos del contacto', :size => 12,:spacing => 7,:style => :bold
 	pdf.text 'Nombre del contacto: ' + @paciente.contacto
 end
+
 pdf.bounding_box([300,485], :width=>200, :height=>100) do	
 	pdf.text 'Inicio de síntomas: '
 	pdf.text  @consulta.fecha_in_sintomas
