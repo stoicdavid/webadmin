@@ -5,3 +5,7 @@
 	<p >
 	    <img src="<%= url_for :controller => "reportes", :action=> "grafica_2" %>" style="border:1px solid #aabcca;" />
 	</p>
+	
+	<p>
+		<%= link_to "Excel", :controller => "reportes",:action => "reporte_xls" %>
+	</p>

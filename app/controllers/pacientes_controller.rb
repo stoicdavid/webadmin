@@ -4,12 +4,13 @@ class PacientesController < ApplicationController
   before_filter :login_required
   def index
     @usuario=current_usuario
-    if params[:search] and @usuario.has_role?('admin') or @usuario.has_role?("socio") or @usuario.has_role?("gerente") or @usuario.has_role?("interprete")
+    if params[:search].nil? && !@usuario.has_role?('doctor')
       values={}
       nombre = "%#{params[:search]}%".split(/\s+/)
       nombre.each { |x| values[:str] = x}
       @pacientes = Paciente.paginate(:all,
       :conditions => ['nombre LIKE :str or app_pat LIKE :str or app_mat LIKE :str',values], :page => params[:page],:per_page => 10)
+      
 
     elsif params[:search] and @usuario.has_role?('doctor') and doctor = @usuario.doctor
       values={}
@@ -43,17 +44,20 @@ class PacientesController < ApplicationController
   # GET /pacientes/1.xml
   
   def imprime_ficha
+    
      prawnto :prawn => {
                     :left_margin => 20,
                     :right_margin => 20,
                     :top_margin => 400,
                     :bottom_margin => 20 }
+                    
     @paciente = Paciente.find(params[:id])                
     @razon = ""
     @razon = @paciente.razon unless @paciente.razon.nil?
     @rfc = ""
     @rfc = @paciente.rfc unless @paciente.rfc.nil?
     @consulta = Consulta.find(params[:consulta_id])
+    
     if !@consulta.cita.nil?
       @ref_estudio = @consulta.cita.operation.ref_estudio unless @consulta.cita.operation.ref_estudio.nil?
       @fecha_hora = @consulta.cita.fecha_hora unless @consulta.cita.fecha_hora.nil?
@@ -61,6 +65,9 @@ class PacientesController < ApplicationController
       @ref_estudio = ""
       @fecha_hora = ""
     end
+    
+    
+    
      respond_to do |format|
         #format.html # show.html.erb
         #format.xml  { render :xml => @pago }
@@ -87,7 +94,6 @@ class PacientesController < ApplicationController
     @consulta.estudio_id = Estudio.find(1)
     respond_to do |format|
       format.html # new.html.erb
-      #format.xml  { render :xml => @paciente }
     end
   end
 

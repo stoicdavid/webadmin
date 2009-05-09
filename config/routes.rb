@@ -33,7 +33,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :pacientes
 
-  map.resources :reportes, :member => {:grafica => :get,:grafica_2 => :get}
+  map.resources :reportes, :member => {:grafica => :get,:grafica_2 => :get,:reporte_xls => :get}
     
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,7 +1,8 @@
 class ReportesController < ApplicationController
+  require 'spreadsheet'
   
   def grafica
-    
+  
     g = Gruff::Bar.new('600x210') #Define a New Graph
     g.font = File.expand_path("/artwork/Vera.ttf", RAILS_ROOT)
     g.title = "Estudios por mes" #Title for the Graph
@@ -60,6 +61,33 @@ class ReportesController < ApplicationController
 
     
   end
+  
+  def reporte_xls
+    book = Spreadsheet::Workbook.new
+    sheet1 = book.create_worksheet
+    sheet2 = book.create_worksheet :name => 'hoja2'
+    sheet1.name = 'hoja1'
+    sheet1.row(0).concat %w{Mes Estudios Ingreso Comisión_Doctor Comisión_Bancaria Impuesto Total}
+    agrupar = RAILS_ENV=="production" ? "DATE_FORMAT(citas.created_at,'%Y-%m')": "strftime('%Y-%m',citas.created_at)"    
+    estudios = Cita.count(:all, :conditions => "status_pago='estudio_pagado'", :group => agrupar)
+    importes = Cita.sum(:total,:conditions => "status_pago='estudio_pagado'",
+    :include => [:operation,{:operation => :pago}],:group => agrupar)
+    meses = estudios.keys.sort
+    meses.each_with_index do |mes,index|
+       sheet1[index+1,0]=mes
+     end
+    estudios.values.each_with_index do |num,idx|
+       sheet1[idx+1,1]=num
+    end
+    importes.values.each_with_index do |total,idx|
+       sheet1[idx+1,2]=total.to_f
+    end
+    book.write "#{RAILS_ROOT}/public/prueba.xls"
+    
+    send_file "#{RAILS_ROOT}/public/prueba.xls"
+  end
+  
+  
   
   
 end

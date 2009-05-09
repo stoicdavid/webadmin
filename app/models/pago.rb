@@ -1,5 +1,5 @@
 class Pago < ActiveRecord::Base
-    belongs_to :operation
+    has_one :operation
     
     FORMAS = [ 
     # Displayed stored in db 

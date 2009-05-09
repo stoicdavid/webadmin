@@ -391,16 +391,19 @@ end
 
 def pago_mes
   @pagos = Array.new
-  @consultas = Consulta.find_all_by_doctor_id(params[:id])
+  n=0
+  n=1 if params[:flag]
+  @consultas = Consulta.find_all_by_created_at(n.month.ago(Time.now.beginning_of_month)...n.month.ago(Time.now.end_of_month),:conditions => ['doctor_id = ?',params[:id]])
+  
   @consultas.each {|x|
       unless x.cita.operation.nil? 
-        if x.cita.operation.pago_id != nil
-          pago_id=x.cita.operation.pago_id
+        if !x.cita.operation.pago_id.nil?
+          pago_id = x.cita.operation.pago_id
           pago = Pago.find(pago_id) 
               @pagos << pago
         end                 
     end}
-  @cons_pagos = @pagos.group_by { |t| t.created_at.beginning_of_day}    
+  @cons_pagos = @pagos.group_by { |t| t.created_at.beginning_of_month}    
   render :partial => "pago_mes" , :layout =>  "lab"
   #render :update do |page|
   #  page['honorarios'].replace_html :partial => "pago_mes", :object => @pagos

@@ -1,7 +1,7 @@
 class Operation < ActiveRecord::Base
   belongs_to :cita
   #has_one :tipo, :dependent => :destroy
-  has_one :pago
+  belongs_to :pago
   
   def genera_id
     l = Operation.find(:last,:conditions => ['ref_estudio IS NOT ?',nil],:order => "indice_estudio ASC")

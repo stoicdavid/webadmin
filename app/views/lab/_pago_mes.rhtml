@@ -1,21 +1,23 @@
-<h1>Consultas en el mes</h1>
+<h1>Consulta de Honorarios</h1>
 <% honorarios=0.0 %> 
 <% honorarios_isr=0.0 %> 
+
 <div>
-	<% @cons_pagos.each do |dia,consultas| %>
-		<h3><%= dia.strftime('%A') %></h3>	
-		<% for consulta in consultas %>
-		<% o=Operation.find_by_pago_id(consulta.id) %>
-			<tr>
-				<td><h4><%=h o.cita.paciente.nombre_completo %></h3></td><br/>
-				<td>Honorarios :<%= h number_to_currency(Estudio.find(o.tipo_id).comision_doctor.to_f) %></td><br/>
-				<td>ISR: <%= h number_to_currency(Estudio.find(o.tipo_id).comision_isr.to_f) %></td><br/>
-				<% honorarios+=Estudio.find(o.tipo_id).comision_doctor.to_f %></td>
-				<% honorarios_isr+=Estudio.find(o.tipo_id).comision_isr.to_f %>
-				<td><%=h consulta.created_at.to_s(:short) %></td><br/><br/>
-			</tr>
-			<hr>	
-		<% end %>
+	<% @cons_pagos.each do |meses,consultas| %>
+	<% s = l meses, :format => ('%B')%><br>
+		<h2><%= s.capitalize %></h2><br>
+			<% for consulta in consultas %>
+			<% o=Operation.find_by_pago_id(consulta.id) %>
+				<tr>
+					<td><h4><%=h o.cita.paciente.nombre_completo %></h3></td><br/>
+					<td>Honorarios :<%= h number_to_currency(Estudio.find(o.tipo_id).comision_doctor.to_f) %></td><br/>
+					<td>ISR: <%= h number_to_currency(Estudio.find(o.tipo_id).comision_doctor.to_f*-0.1) %></td><br/>
+					<% honorarios+=Estudio.find(o.tipo_id).comision_doctor.to_f %></td>
+					<% honorarios_isr+=Estudio.find(o.tipo_id).comision_doctor.to_f*-0.1 %>
+					<td><%=h consulta.created_at.to_s(:short) %></td><br/><br/>
+				</tr>
+				<hr>				
+			<% end %>
 	<% end %>
 </div>
 

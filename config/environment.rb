@@ -17,6 +17,7 @@ Rails::Initializer.run do |config|
   # See Rails::Configuration for more options.
 config.gem "prawn"
 config.gem "gruff"
+config.gem "spreadsheet"
 config.gem "rubyist-aasm", :lib => "aasm" 
 config.gem 'mislav-will_paginate', :version => '~> 2.3.8', :lib => 'will_paginate'
 config.i18n.default_locale = :es
