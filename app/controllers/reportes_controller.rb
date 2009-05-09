@@ -64,9 +64,7 @@ class ReportesController < ApplicationController
   
   def reporte_xls
     book = Spreadsheet::Workbook.new
-    sheet1 = book.create_worksheet
-    sheet2 = book.create_worksheet :name => 'hoja2'
-    sheet1.name = 'hoja1'
+    sheet1 = book.create_worksheet :name => 'hoja1'
     sheet1.row(0).concat %w{Mes Estudios Ingreso Comisión_Doctor Comisión_Bancaria Impuesto Total}
     agrupar = RAILS_ENV=="production" ? "DATE_FORMAT(fecha_hora,'%Y-%m')": "strftime('%Y-%m',fecha_hora)"    
     estudios = Cita.count(:all, :conditions => "status_pago='estudio_pagado'", :group => agrupar)
@@ -83,11 +81,16 @@ class ReportesController < ApplicationController
        sheet1[idx+1,2]=total.to_f
     end
     book.write "#{RAILS_ROOT}/public/prueba.xls"
-    
     send_file "#{RAILS_ROOT}/public/prueba.xls"
   end
   
-  
+  def reporte_2_xls
+    book = Spreadsheet::Workbook.new
+    sheet1 = book.create_worksheet :name => 'hoja1'
+    sheet1.row(0).concat %w{Fecha Nombre Tipo_estudio Consecutivo No_Estudio Doctor No_Factura Comision Cheque Efectivo Transferencia Tarjeta_debito Tarjeta_credito Amex Banco}
+    estudios = Cita.find(:all, :conditions => {:status => ['estudio_exitoso','estudio_interpretado']},:order => "fecha_hora ASC")
+    
+  end  
   
   
 end
