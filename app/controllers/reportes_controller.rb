@@ -68,7 +68,7 @@ class ReportesController < ApplicationController
     sheet2 = book.create_worksheet :name => 'hoja2'
     sheet1.name = 'hoja1'
     sheet1.row(0).concat %w{Mes Estudios Ingreso Comisión_Doctor Comisión_Bancaria Impuesto Total}
-    agrupar = RAILS_ENV=="production" ? "DATE_FORMAT(citas.created_at,'%Y-%m')": "strftime('%Y-%m',citas.created_at)"    
+    agrupar = RAILS_ENV=="production" ? "DATE_FORMAT(fecha_hora,'%Y-%m')": "strftime('%Y-%m',fecha_hora)"    
     estudios = Cita.count(:all, :conditions => "status_pago='estudio_pagado'", :group => agrupar)
     importes = Cita.sum(:total,:conditions => "status_pago='estudio_pagado'",
     :include => [:operation,{:operation => :pago}],:group => agrupar)
