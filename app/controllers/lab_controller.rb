@@ -395,11 +395,13 @@ def pago_mes
   n=1 if params[:flag]
   @consultas = Consulta.find(:all,:conditions => ['doctor_id = ?',params[:id]])  
   @consultas.each {|x|
+    if !x.cita_id.nil?
       if x.cita.status_pago == 'estudio_pagado'
           pago_id = x.cita.operation.pago_id
           pago = Pago.find(pago_id) 
           @pagos << pago
       end
+    end
       }
   @cons_pagos = @pagos.group_by { |t| t.created_at.beginning_of_month}    
   render :partial => "pago_mes" , :layout =>  "lab"
