@@ -44,7 +44,9 @@ class UsuariosController < ApplicationController
       flash[:notice] = t('flash.nuevo')
     else
       flash[:notice]  = "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."
-      render :action => 'new'
+
+        render :action => 'new',:id => params[:usuario][:doctor_id]
+      
     end
   end
   

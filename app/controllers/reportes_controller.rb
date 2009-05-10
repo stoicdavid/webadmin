@@ -89,7 +89,6 @@ class ReportesController < ApplicationController
     sheet1 = book.create_worksheet :name => 'hoja1'
     sheet1.row(0).concat %w{Fecha Nombre Tipo_estudio Consecutivo No_Estudio Doctor No_Factura Comision Cheque Efectivo Transferencia Tarjeta_debito Tarjeta_credito Amex Banco}
     estudios = Cita.find(:all, :conditions => {:status => ['estudio_exitoso','estudio_interpretado']},:order => "fecha_hora ASC")
-    
   end  
   
   
