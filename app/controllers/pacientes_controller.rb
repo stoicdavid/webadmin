@@ -10,16 +10,14 @@ class PacientesController < ApplicationController
       nombre.each { |x| values[:str] = x}
       @pacientes = Paciente.paginate(:all,
       :conditions => ['nombre LIKE :str or app_pat LIKE :str or app_mat LIKE :str',values], :page => params[:page],:per_page => 10)
-      
-
     elsif params[:search] and @usuario.has_role?('doctor') and doctor = @usuario.doctor
       values={}
       nombre = "%#{params[:search]}%".split(/\s+/)
       nombre.each { |x| values[:str] = x}
       @pacientes = doctor.pacientes.paginate(:all,
-      :conditions => ['nombre LIKE :str or app_pat LIKE :str or app_mat LIKE :str',values], :page => params[:page],:per_page => 5)
+      :conditions => ['nombre LIKE :str or app_pat LIKE :str or app_mat LIKE :str',values], :page => params[:page],:per_page => 5,:group => "pacientes.id")
     elsif doctor = @usuario.doctor and @usuario.has_role?('doctor')
-      @pacientes = doctor.pacientes.paginate(:all,:page => params[:page],:per_page => 5)
+      @pacientes = doctor.pacientes.paginate(:all,:page => params[:page],:per_page => 5,:group => "pacientes.id")
     elsif @usuario.has_role?('admin') or @usuario.has_role?("socio") or @usuario.has_role?("gerente") or @usuario.has_role?("interprete")  
       consultas = Cita.find_all_by_fecha_hora(Time.now.beginning_of_day + 5.hour...Time.now.end_of_day + 5.hour,
       :order => "fecha_hora ASC",:conditions => ['status <> ?','cancelada'])
