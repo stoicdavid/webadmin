@@ -88,7 +88,20 @@ class ReportesController < ApplicationController
     book = Spreadsheet::Workbook.new
     sheet1 = book.create_worksheet :name => 'hoja1'
     sheet1.row(0).concat %w{Fecha Nombre Tipo_estudio Consecutivo No_Estudio Doctor No_Factura Comision Cheque Efectivo Transferencia Tarjeta_debito Tarjeta_credito Amex Banco}
-    estudios = Cita.find(:all, :conditions => {:status => ['estudio_exitoso','estudio_interpretado']},:order => "fecha_hora ASC")
+    estudios = Cita.find(:all, :conditions => {:status => ['estudio_exitoso','estudio_interpretado']},:order => "fecha_hora ASC",:include => [:paciente,:operation,:consulta])
+    estudios.each_with_index  do |estudio, idx|
+      sheet1[idx+1,0]=estudio.fecha_hora
+      sheet1[idx+1,1]=estudio.paciente.nombre_completo
+      sheet1[idx+1,2]=Estudio.find(estudio.consulta.estudio_id).tipo_estudio
+      sheet1[idx+1,3]=idx
+      sheet1[idx+1,4]=estudio.operation.ref_estudio
+      sheet1[idx+1,5]=estudio.consulta.doctor.nombre_completo unless estudio.consulta.doctor.nil?
+      sheet1[idx+1,6]=estudio.operation.pago.folio_factura unless estudio.operation.pago.nil?
+      sheet1[idx+1,7]=estudio.operation.pago.total unless estudio.operation.pago.nil?
+      sheet1[idx+1,8]=estudio.operation.pago.forma_pago unless estudio.operation.pago.nil?
+    end
+    book.write "#{RAILS_ROOT}/public/reporte_detalle.xls"
+    send_file "#{RAILS_ROOT}/public/reporte_detalle.xls"
   end  
   
   
