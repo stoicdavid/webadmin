@@ -1,7 +1,3 @@
-
-
-
-
 	pdf.bounding_box([32,662], :width=>600, :height=>100) do
 		pdf.font.size=8
 		pdf.text @paciente.razon,:spacing => 7
@@ -39,7 +35,7 @@
 	
 	pdf.bounding_box([180,440], :width=>600, :height=>100) do
 		pdf.font.size=8
-		pdf.text @pago.total.to_f.to_currency
+		pdf.text @pago.total_l.to_f.to_currency
 	end
 	
 	pdf.bounding_box([499,464], :width=>600, :height=>100) do

@@ -2,8 +2,8 @@ class Cita < ActiveRecord::Base
 
 
   belongs_to :paciente
-  has_one :operation,:dependent => :destroy 
-  has_one :consulta
+  has_one :operation, :dependent => :destroy 
+  has_one :consulta,  :dependent => :destroy
   has_one :horario
   
   validates_uniqueness_of :fecha_hora, :on => :update, :message => "ya existe con esa fecha" 
@@ -54,9 +54,14 @@ class Cita < ActiveRecord::Base
   
   state_machine :status_pago, :initial => :pago_pendiente, :namespace => 'pago' do
     event :pagar_estudio do
-      transition :pago_pendiente => :estudio_pagado
+      transition [:pago_pendiente,:pago_cancelado] => :estudio_pagado
     end
-
+    
+    event :cancelar_pago do
+      transition :estudio_pagado  => :pago_cancelado
+    end
+    
+    
   end
   
   

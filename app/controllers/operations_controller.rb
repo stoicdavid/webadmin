@@ -64,6 +64,8 @@ class OperationsController < ApplicationController
       if @operation.update_attributes(params[:operation])
         if cita.status == 'estudio_en_proceso'
           cita.concluir_estudio!
+        elsif cita.status =="estudio_exitoso"
+          cita.interpretar!
         end
         flash[:notice] = 'El estudio ha sido actualizado'
         format.html { redirect_to :controller => 'pacientes',:action => 'show',:id => cita.paciente_id  }

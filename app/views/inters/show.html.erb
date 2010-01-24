@@ -16,4 +16,4 @@
 
 <%= link_to 'Editar', edit_inter_path(@inter) %> |
 <%= link_to 'Interpretaciones pendientes...', inters_path %>|
-<%= link_to 'Paciente', @inter.consulta.paciente %>
+<%= link_to 'Paciente', @inter.operation.cita.paciente %>

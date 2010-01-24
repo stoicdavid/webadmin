@@ -1,6 +1,6 @@
-<h1>Estudio en Curso ...</h1>
+<h1>Agregar Interpretacion</h1>
 
-<% form_for(@operation) do |f| %>
+<% form_for(@operation,:html => {:multipart => true}) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -9,13 +9,18 @@
   </p>
 
   <p>
-    <%= f.hidden_field :cita_id, :value =>  @operation.cita_id %>
+    <%= f.hidden_field :cita_id, :value => @operation.cita_id %>
     <%= f.hidden_field :pago_id, :value => @operation.pago_id %>
     <%= f.hidden_field :pago_id, :value => @operation.tipo_id %>
   </p>
  <b>Num Estudio</b><%= f.text_field :ref_estudio %><br />
    <b>Indice Estudio</b> <%= f.text_field :indice_estudio %><br />
 
+	<% f.fields_for :inter_attributes do |interpretacion| %>
+     <%= interpretacion.file_field(:uploaded_data) %><br />
+   	<% end %>
+<br />
+<br />
     <%= f.submit "Actualizar" %>
 
 

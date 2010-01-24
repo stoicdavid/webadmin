@@ -204,8 +204,8 @@ class LabController < ApplicationController
   email = NeuroMailer.create_informa_paciente(@paciente,@estudio,@fecha_cita,@doctor) 
   #email.set_content_type("text/html")
   NeuroMailer.deliver(email) 
-  consulta.cita.confirmar
-  consulta.cita.save
+  #consulta.cita.confirmar
+  #consulta.cita.save
   flash[:notice] = "Se ha enviado el correo a #{@paciente.correo}"
   redirect_to @paciente
 end
@@ -286,6 +286,8 @@ end
     
   end
 
+
+
   def crea_cita
     @mes_actual = Time.now
     @mes_anterior = 1.month.ago(@mes_actual)
@@ -315,7 +317,7 @@ end
   
   def interpretar
     cit = Consulta.find(params[:id_cons],:include => :cita).cita
-    redirect_to :controller => "inters", :action  => 'new',:id => params[:id_cons]
+    redirect_to :controller => "operations", :action  => 'edita',:id => cit.operation.id
   end
   
   def generar_id
@@ -330,7 +332,14 @@ end
   def pagar_estudio
     redirect_to :controller => 'operations',:action => "genera_orden", :id => Consulta.find(params[:id_cons],:include => :cita).cita.operation.id
   end
-  
+
+  def cancelar_pago
+    pago = Pago.find(Consulta.find(params[:id_cons]).cita.operation.pago_id)
+    pago.destroy
+    Consulta.find(params[:id_cons]).cita.cancelar_pago_pago!
+    flash[:notice] = "El pago ha sido cancelado"   
+    redirect_to :controller => "pacientes", :id => params[:id], :action  => 'show'
+  end
   
   #def vista_dia
   #  @citas = Cita.find_all_by_fecha_hora(Time.now.beginning_of_day...Time.now.end_of_day)

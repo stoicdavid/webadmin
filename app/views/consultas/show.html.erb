@@ -27,8 +27,8 @@
 
 		<% if cita.status == 'estudio_interpretado'%>
 			<br>
-			<%= link_to 'Imprimir Interpretación',{:controller => 'inters',  :action => 'imprime', :id => @consulta.id,:paciente_id => @consulta.paciente_id,:operation_id => @consulta.cita.operation.id}, :popup => true %> |
-			<%= link_to 'Editar Interpretación',:controller => 'inters',  :action => 'edit', :id => @consulta.inter.id%>
+			<%= link_to 'Imprimir Interpretación',{:controller => 'inters',  :action => 'imprime_2', :id => @consulta.id,:paciente_id => @consulta.paciente_id,:operation_id => @consulta.cita.operation.id}, :popup => true %> |
+			<%= link_to 'Editar Interpretación',:controller => 'inters',  :action => 'edit', :id => @consulta.cita.operation.inter.id%>
 			<br>
 		<% end %>
 		<br>
@@ -59,7 +59,8 @@
 		<% end %>
 	<% end %>
 	<% if cita.status_pago=="estudio_pagado"%>
-		<%= link_to  'Imprimir Factura',{:controller => 'pagos',  :action => 'imprime', :id => @consulta.cita.operation.pago_id,:paciente_id => @consulta.cita.paciente_id,:operation_id => @consulta.cita.operation.id}, :popup => true %> 
+		<%= link_to  'Imprimir Factura',{:controller => 'pagos',  :action => 'imprime', :id => @consulta.cita.operation.pago_id,:paciente_id => @consulta.cita.paciente_id,:operation_id => @consulta.cita.operation.id}, :popup => true %> <br><br>
+		<%= link_to  'Consultar Pagos',{:controller => 'pagos',  :action => 'show', :id => @consulta.cita.operation.pago_id,:paciente_id => @consulta.cita.paciente_id,:operation_id => @consulta.cita.operation.id}%> 
 	<% end %>
 </p>
 

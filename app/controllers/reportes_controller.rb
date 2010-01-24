@@ -93,7 +93,7 @@ class ReportesController < ApplicationController
       sheet1[idx+1,0]=estudio.fecha_hora
       sheet1[idx+1,1]=estudio.paciente.nombre_completo
       sheet1[idx+1,2]=Estudio.find(estudio.consulta.estudio_id).tipo_estudio
-      sheet1[idx+1,3]=idx
+      sheet1[idx+1,3]=idx + 1
       sheet1[idx+1,4]=estudio.operation.ref_estudio
       sheet1[idx+1,5]=estudio.consulta.doctor.nombre_completo unless estudio.consulta.doctor.nil?
       sheet1[idx+1,6]=estudio.operation.pago.folio_factura unless estudio.operation.pago.nil?

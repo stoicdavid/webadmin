@@ -1,3 +1,5 @@
+
+
 <p>
   <b>Paciente:</b>
   <%=h Operation.find_by_pago_id(@pago.id).cita.consulta.paciente.nombre_completo %>
@@ -10,17 +12,22 @@
 
 <p>
   <b>Precio:</b>
-  <%=h @pago.precio %>
+  <%=h @pago.precio_f %>
 </p>
 
 <p>
   <b>Descuento:</b>
-  <%=h @pago.descuento %>
+  <%=h @pago.descuento_neg_f %>
+</p>
+
+<p>
+  <b>IVA:</b>
+  <%=h @pago.iva_f %>
 </p>
 
 <p>
   <b>Total a pagar:</b>
-  <%=h @pago.total %>
+  <%=h @pago.total_f %>
 </p>
 
 

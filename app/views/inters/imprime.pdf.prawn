@@ -1,18 +1,19 @@
 firma = "#{RAILS_ROOT}/public/images/firma3.png"
 
 pdf.bounding_box([300,240], :width => 200, :height => 400) do
-	pdf.text "REPORTE ENCEFALOGRAFICO",:align => :right,:spacing => 15
+	pdf.text "REPORTE VIDEO ENCEFALOGRAFICO",:align => :right,:spacing => 15
 	pdf.font.size = 10
 	pdf.text "Nombre: #{@paciente.nombre_completo}",:spacing => 15,:align => :right
 	pdf.text "Fecha Estudio: #{l @consulta.cita.fecha_hora,:format=>'%d %b %Y'}",:spacing => 15,:align => :right
 	pdf.text "Edad: #{@paciente.edad(@consulta.cita.fecha_hora)} años #{@paciente.edad_meses(@consulta.cita.fecha_hora)} meses",:spacing => 15,:align => :right
 	pdf.text "No. Estudio: #{@estudio}",:align => :right
+	pdf.text "Dr. ",:align => :right
 end
 pdf.start_new_page
 
 pdf.bounding_box([32,660], :width => 400, :height => 400) do
 	pdf.font.size=12
-	pdf.text "REPORTE ENCEFALOGRÁFICO",:spacing => 12
+	pdf.text "REPORTE VIDEO ENCEFALOGRÁFICO",:spacing => 12
 	pdf.font.size=8
 	pdf.text "Nombre: #{@paciente.nombre_completo}",:spacing => 4
 	pdf.text "Fecha Estudio: #{l @consulta.cita.fecha_hora,:format=>'%d %b %Y'}",:spacing => 4

@@ -58,27 +58,14 @@ class PagosController < ApplicationController
 
       @pago = Pago.find(params[:id])
       @paciente=Paciente.find(params[:paciente_id])
-      if !@paciente.rfc.nil?
-        @rfc = @paciente.rfc
-      else
-        @rfc=""
-      end
+      @paciente.rfc.nil? ? @rfc="" : @rfc = @paciente.rfc
       @operation = Operation.find(params[:operation_id])
       @estudio = Estudio.find(@operation.tipo_id)
-      @fecha = l Time.now, :format => '%d - %B - %Y'
-      if @pago.descuento != "0"
-        @descuento = "Descuento #{@estudio.descuento_porcentaje}"
-        @importe_des = "-" + @pago.descuento_f
-      else
-        @descuento = ''
-        @importe_des = ''
-      end
-      if @descuento == ""
-        @subtotal = @pago.precio.to_f - @pago.descuento.to_f
-      else
-        @subtotal = @pago.precio.to_f - @pago.descuento.to_f
-      end
-      @iva = @subtotal* 0.15
+      @fecha = l @operation.created_at, :format => '%d - %B - %Y'
+      @pago.descuento != '0' ? @descuento = "Descuento #{@estudio.descuento_porcentaje}" :@descuento = ''  
+      @pago.descuento != '0' ? @importe_des = @pago.descuento_neg_f : @importe_des = ''
+      @descuento == "" ? @subtotal = @pago.subtotal_f : @subtotal = @pago.precio.to_f
+      @iva = @pago.iva_f
 
     respond_to do |format|
       #format.html # show.html.erb
@@ -112,11 +99,9 @@ class PagosController < ApplicationController
     params[:descuento_b] == "1" ? @descuento = params[:pago][:precio].to_f*Estudio.find(params[:pago][:tipo_id]).descuento : @descuento = 0
     
     subtotal = params[:pago][:precio].to_f - @descuento
-    iva = subtotal * 0.15
-    total = subtotal + iva
     @pago = Pago.create(
       :forma_pago => params[:pago][:forma_pago],:factura => params[:pago][:factura],
-      :folio_factura => params[:pago][:folio_factura],:total => total ,:precio => params[:pago][:precio],
+      :folio_factura => params[:pago][:folio_factura],:total => subtotal ,:precio => params[:pago][:precio],
       :descuento => @descuento)
     
     respond_to do |format|

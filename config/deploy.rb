@@ -45,7 +45,12 @@ namespace(:customs) do
   end
   task :symlink, :roles => :app do
     run <<-CMD
-      rm -rf #{release_path}/public/doctor /imagen && ln -nfs #{shared_path}/imagenes/doctor/imagen  #{release_path}/public/doctor
+      rm -rf #{release_path}/public/doctor/imagen && ln -nfs #{shared_path}/imagenes/doctor/imagen  #{release_path}/public/doctor
+    CMD
+  end
+  task :symlink_2, :roles => :app do
+    run <<-CMD
+      rm -rf #{release_path}/public/diagnosticos && ln -nfs #{shared_path}/diagnosticos  #{release_path}/public/diagnosticos
     CMD
   end
 end

@@ -11,11 +11,11 @@
 <% for cons in @inters %>
   <tr>
     <td><%=h Operation.find_by_cita_id(cons.cita.id).ref_estudio unless cons.cita.nil? %></td>
-    <td><%=h cons.paciente.nombre_completo unless cons.paciente.nil? %></td>
-    <td><%=h cons.diagnostico %></td>
+    <td><%=h cons.cita.paciente.nombre_completo unless cons.cita.paciente.nil? %></td>
+    <td><%=h cons.cita.consulta.diagnostico %></td>
     <td><%= link_to 'Agregar', :controller => 'inters',:action => 'new', :id => cons.id  %></td>
   </tr>
 <% end %>
 </table>
-<%= will_paginate @consultas,:class => "apple_pagination",:previous_label => "&laquo; Previo",:next_label => "Siguiente &raquo;"%>
+<%= will_paginate @estudios,:class => "apple_pagination",:previous_label => "&laquo; Previo",:next_label => "Siguiente &raquo;"%>
 <br />

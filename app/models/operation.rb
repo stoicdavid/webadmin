@@ -1,7 +1,10 @@
 class Operation < ActiveRecord::Base
   belongs_to :cita
   #has_one :tipo, :dependent => :destroy
-  belongs_to :pago
+  #belongs_to :pago
+  has_many :pagos
+  has_one :inter, :dependent => :destroy
+  accepts_nested_attributes_for :inter, :allow_destroy => true
   
   def genera_id
     l = Operation.find(:last,:conditions => ['ref_estudio IS NOT ?',nil],:order => "indice_estudio ASC")

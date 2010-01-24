@@ -18,12 +18,17 @@ class IntersController < ApplicationController
     
   end
   
+  def imprime_2
+    ruta = "/public" + Operation.find(params[:operation_id]).inter.public_filename
+    ruta_2 = RAILS_ROOT + ruta
+    send_file "#{ruta_2}", :type => 'application/msword', :disposition => 'inline'
+  end
   
   def index
-    @consultas = Consulta.paginate(:all,:page => params[:page],:per_page => 20)
+    @estudios = Operation.paginate(:all,:page => params[:page],:per_page => 20)
     @inters = Array.new
-    @consultas.each {|consulta| 
-      @inters << consulta if consulta.inter.nil?
+    @estudios.each {|estudio| 
+      @inters << estudio if estudio.inter.nil?
       }
 
     respond_to do |format|
@@ -58,7 +63,6 @@ class IntersController < ApplicationController
   # GET /inters/1/edit
   def edit
     @inter = Inter.find(params[:id])
-    @consulta = @inter.consulta
   end
 
   # POST /inters

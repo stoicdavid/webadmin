@@ -89,6 +89,7 @@ class ConsultasController < ApplicationController
   def destroy
     @consulta = Consulta.find(params[:id])
     paciente_id=@consulta.paciente_id
+    @consulta.cita.destroy
     @consulta.destroy
 
     respond_to do |format|

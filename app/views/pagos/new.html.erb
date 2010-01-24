@@ -1,5 +1,6 @@
 <h1>Genera Pago</h1>
 
+
 <% form_for(@pago) do |f| %>
   	<%= f.error_messages %>	
 	<%= f.hidden_field :paciente_id,:value => @operation.cita.paciente.id  %>

@@ -74,6 +74,8 @@ class Paciente < ActiveRecord::Base
     @paciente = self.find(:all)
   end
   
+  
+  
   def edad(edad_p)
       now = edad_p
       now.year - self.fecha_nac.year - (self.fecha_nac.to_time.change(:year => now.year) > now ? 1 : 0)
