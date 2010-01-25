@@ -1,7 +1,7 @@
 #require'mongrel_cluster/recipes' 
-
-set :domain, "deploy@172.16.90.100"
-#set :domain, "deploy@laboratorio.gotdns.com"
+#default_run_options[:pty] = true
+#set :domain, "deploy@172.16.90.100"
+set :domain, "deploy@laboratorio.gotdns.com"
 set :application, "webadmin"
 set :repository,  "git://github.com/stoicdavid/webadmin.git"
 set :deploy_via, :remote_cache
@@ -10,7 +10,7 @@ set :copy_exclude, [".git","/public/usuario","/public/doctor"]
 set :ssh_options, {:port => 7777}
 set :mongrel_conf, "#{current_path}/config/mongrel_cluster.yml"
 set :monit_group, 'mongrel'
-
+set :branch, "master"
 role :app, domain
 role :web, domain
 role :db,  domain, :primary => true
@@ -33,9 +33,12 @@ namespace :deploy do
   end
 end
 
-task :after_update_code, :roles => [:web, :db, :app] do
+
+task :permisos, :roles => [:web, :db, :app] do
   run "chmod 755 #{release_path}/public -R" 
 end
+
+
 
 namespace(:customs) do
   task :config, :roles => :app do
@@ -56,7 +59,8 @@ namespace(:customs) do
 end
 
 after "deploy", "deploy:cleanup"
-after "deploy:cleanup", "customs:config"
-after "customs:config", "customs:symlink"
+#after "deploy:cleanup", "customs:config"
+#after "customs:config", "customs:symlink"
+#after "customs:symlink", "customs:symlink_2"
 
 #ln -nfsv /var/www/apps/webadmin/shared/usuario/imagen/ current/public/usuario/
