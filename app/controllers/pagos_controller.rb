@@ -61,7 +61,7 @@ class PagosController < ApplicationController
       @paciente.rfc.nil? ? @rfc="" : @rfc = @paciente.rfc
       @operation = Operation.find(params[:operation_id])
       @estudio = Estudio.find(@operation.tipo_id)
-      @fecha = l @operation.created_at, :format => '%d - %B - %Y'
+      @fecha = l @operation.cita.fecha_hora, :format => '%d - %B - %Y'
       @pago.descuento != '0' ? @descuento = "Descuento #{@estudio.descuento_porcentaje}" :@descuento = ''  
       @pago.descuento != '0' ? @importe_des = @pago.descuento_neg_f : @importe_des = ''
       @descuento == "" ? @subtotal = @pago.subtotal_f : @subtotal = @pago.precio.to_f

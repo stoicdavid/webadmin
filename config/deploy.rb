@@ -11,10 +11,7 @@ set :ssh_options, {:port => 7777}
 set :mongrel_conf, "#{current_path}/config/mongrel_cluster.yml"
 set :monit_group, 'mongrel'
 set :branch, "master"
-role :app, domain
-role :web, domain
-role :db,  domain, :primary => true
-
+server domain, :app, :web, :db, :primary => true 
 
 # If you aren't deploying to /u/apps/#{application} on the target
 # servers (which is the default), you can specify the actual location
@@ -31,13 +28,11 @@ namespace :deploy do
       sudo "/usr/sbin/monit #{command} all -g #{monit_group}"
     end
   end
+
+  task :permisos, :roles => [:web, :db, :app] do
+    run "chmod 755 #{release_path}/public -R" 
+  end
 end
-
-
-task :permisos, :roles => [:web, :db, :app] do
-  run "chmod 755 #{release_path}/public -R" 
-end
-
 
 
 namespace(:customs) do
@@ -58,9 +53,10 @@ namespace(:customs) do
   end
 end
 
+after "deploy:update_code", "deploy:permisos"
+after "deploy:cleanup", "customs:config"
+after "customs:config", "customs:symlink"
+after "customs:symlink", "customs:symlink_2"
 after "deploy", "deploy:cleanup"
-#after "deploy:cleanup", "customs:config"
-#after "customs:config", "customs:symlink"
-#after "customs:symlink", "customs:symlink_2"
 
 #ln -nfsv /var/www/apps/webadmin/shared/usuario/imagen/ current/public/usuario/

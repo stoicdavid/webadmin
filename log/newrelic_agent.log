@@ -1,0 +1,9 @@
+# Logfile created on Mon Jan 25 00:03:22 -0600 2010 by /
+[01/25/10 00:03:22 -0600 david-rodriguezs-macbook.local (968)] INFO : Web container: mongrel
+[01/25/10 00:03:22 -0600 david-rodriguezs-macbook.local (968)] INFO : Transaction tracing threshold is 2.0 seconds.
+[01/25/10 00:03:22 -0600 david-rodriguezs-macbook.local (968)] INFO : New Relic RPM Agent 2.9.9 Initialized: pid = 968
+[01/25/10 00:03:22 -0600 david-rodriguezs-macbook.local (968)] INFO : Agent Log found in /Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/log/newrelic_agent.log
+[02/01/10 22:55:35 -0600 david-rodriguezs-macbook.local (11668)] INFO : Web container: mongrel
+[02/01/10 22:55:35 -0600 david-rodriguezs-macbook.local (11668)] INFO : Transaction tracing threshold is 2.0 seconds.
+[02/01/10 22:55:35 -0600 david-rodriguezs-macbook.local (11668)] INFO : New Relic RPM Agent 2.9.9 Initialized: pid = 11668
+[02/01/10 22:55:35 -0600 david-rodriguezs-macbook.local (11668)] INFO : Agent Log found in /Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/log/newrelic_agent.log
