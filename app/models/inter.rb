@@ -1,11 +1,12 @@
 class Inter < ActiveRecord::Base
   
   belongs_to :operation
+  belongs_to :consulta
 
   has_attachment :content_type => 'application/msword', 
                   :storage => :file_system, :path_prefix => 'public/diagnosticos'
 
-  validate :attachment_valid? 
+  #validate :attachment_valid? 
   
   def attachment_valid? 
     unless self.filename 

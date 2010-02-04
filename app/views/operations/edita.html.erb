@@ -25,5 +25,9 @@
 
 
 <% end %>
-<% link_to 'Show', @operation %> |
-<%= link_to 'Back', operations_path %>
+<br/>
+<%= link_to 'Si deseas realizar la interpretacion automática haz clic aqui', {:controller => "inters", :action  => 'new',:id => @operation.cita.consulta.id} %>
+<br/>
+<br/>
+<%# link_to 'Show', @operation %> 
+<%# link_to 'Back', operations_path %>

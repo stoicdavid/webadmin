@@ -52,6 +52,7 @@ class IntersController < ApplicationController
   # GET /inters/new.xml
   def new
     @consulta = Consulta.find(params[:id])
+    @operacion_id = @consulta.cita.operation_id
     @inter = @consulta.build_inter
 
     respond_to do |format|
@@ -69,7 +70,7 @@ class IntersController < ApplicationController
   # POST /inters.xml
   def create
     @inter = Inter.new(params[:inter])
-    
+    params[:id] = params[:inter][:consulta_id]
     respond_to do |format|
       if @inter.save
         cit = Consulta.find(params[:inter][:consulta_id],:include => :cita).cita
@@ -78,7 +79,8 @@ class IntersController < ApplicationController
         format.html { redirect_to(@inter) }
         format.xml  { render :xml => @inter, :status => :created, :location => @inter }
       else
-        format.html { render :action => "new" }
+        flash[:notice] = 'La interpretación no se agregó'
+        format.html { redirect_to :action  => "new" , :id => params[:id] }
         format.xml  { render :xml => @inter.errors, :status => :unprocessable_entity }
       end
     end

@@ -7,3 +7,102 @@
 [02/01/10 22:55:35 -0600 david-rodriguezs-macbook.local (11668)] INFO : Transaction tracing threshold is 2.0 seconds.
 [02/01/10 22:55:35 -0600 david-rodriguezs-macbook.local (11668)] INFO : New Relic RPM Agent 2.9.9 Initialized: pid = 11668
 [02/01/10 22:55:35 -0600 david-rodriguezs-macbook.local (11668)] INFO : Agent Log found in /Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/log/newrelic_agent.log
+[02/02/10 01:05:25 -0600 david-rodriguezs-macbook.local (12790)] INFO : Web container: mongrel
+[02/02/10 01:05:25 -0600 david-rodriguezs-macbook.local (12790)] INFO : Transaction tracing threshold is 2.0 seconds.
+[02/02/10 01:05:25 -0600 david-rodriguezs-macbook.local (12790)] INFO : New Relic RPM Agent 2.9.9 Initialized: pid = 12790
+[02/02/10 01:05:25 -0600 david-rodriguezs-macbook.local (12790)] INFO : Agent Log found in /Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/log/newrelic_agent.log
+[02/02/10 01:42:32 -0600 david-rodriguezs-macbook.local (13074)] INFO : Web container: mongrel
+[02/02/10 01:42:32 -0600 david-rodriguezs-macbook.local (13074)] INFO : Transaction tracing threshold is 2.0 seconds.
+[02/02/10 01:42:32 -0600 david-rodriguezs-macbook.local (13074)] INFO : New Relic RPM Agent 2.9.9 Initialized: pid = 13074
+[02/02/10 01:42:32 -0600 david-rodriguezs-macbook.local (13074)] INFO : Agent Log found in /Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/log/newrelic_agent.log
+[02/03/10 22:49:26 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: /Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:82: syntax error, unexpected '}', expecting tASSOC
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:84: syntax error, unexpected kEND, expecting '}'
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:117: syntax error, unexpected kEND, expecting '}'
+[02/03/10 22:49:31 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: /Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:82: syntax error, unexpected '}', expecting tASSOC
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:84: syntax error, unexpected kEND, expecting '}'
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:117: syntax error, unexpected kEND, expecting '}'
+[02/03/10 22:49:35 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: /Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:82: syntax error, unexpected '}', expecting tASSOC
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:84: syntax error, unexpected kEND, expecting '}'
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:117: syntax error, unexpected kEND, expecting '}'
+[02/03/10 22:51:00 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: /Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:82: odd number list for Hash
+... params[:inter][:consulta_id]} }
+                              ^
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:82: syntax error, unexpected '}', expecting tASSOC
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:84: syntax error, unexpected kEND, expecting '}'
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:117: syntax error, unexpected kEND, expecting '}'
+[02/03/10 22:51:12 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: /Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:82: syntax error, unexpected '}', expecting tASSOC
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:84: syntax error, unexpected kEND, expecting '}'
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:117: syntax error, unexpected kEND, expecting '}'
+[02/03/10 22:52:03 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: /Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:82: syntax error, unexpected '}', expecting tASSOC
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:84: syntax error, unexpected kEND, expecting '}'
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:117: syntax error, unexpected kEND, expecting '}'
+[02/03/10 22:52:21 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: /Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:82: syntax error, unexpected '}', expecting tASSOC
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:84: syntax error, unexpected kEND, expecting '}'
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:117: syntax error, unexpected kEND, expecting '}'
+[02/03/10 22:52:22 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: /Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:82: syntax error, unexpected '}', expecting tASSOC
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:84: syntax error, unexpected kEND, expecting '}'
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:117: syntax error, unexpected kEND, expecting '}'
+[02/03/10 22:52:47 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: /Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:82: syntax error, unexpected '=', expecting tASSOC
+...ender :action  => "new", :id = params[:inter][:consulta_id] ...
+                              ^
+[02/03/10 22:53:36 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.paciente
+[02/03/10 22:54:38 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.paciente
+[02/03/10 22:55:20 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.paciente
+[02/03/10 23:00:33 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: compile error
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/views/inters/_inter2.html.erb:1: syntax error, unexpected ','
+...ter.new_record? ? inters_path,:id => @consulta.id : @inter,:...
+                              ^
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/views/inters/_inter2.html.erb:1: syntax error, unexpected ':', expecting ')'
+...ers_path,:id => @consulta.id : @inter,:id => @consulta.id)) ...
+                              ^
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/views/inters/_inter2.html.erb:1: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+...> @consulta.id : @inter,:id => @consulta.id)) do |f| ; @outp...
+                              ^
+[02/03/10 23:01:03 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.paciente
+[02/03/10 23:14:06 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.paciente
+[02/03/10 23:14:13 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.paciente
+[02/03/10 23:15:24 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.consulta
+[02/03/10 23:15:39 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.paciente
+[02/03/10 23:16:25 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.paciente
+[02/03/10 23:16:53 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: /Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:82: syntax error, unexpected '}', expecting tASSOC
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:84: syntax error, unexpected kEND, expecting '}'
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:117: syntax error, unexpected kEND, expecting '}'
+[02/03/10 23:16:55 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: /Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:82: syntax error, unexpected '}', expecting tASSOC
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:84: syntax error, unexpected kEND, expecting '}'
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:117: syntax error, unexpected kEND, expecting '}'
+[02/03/10 23:16:57 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: /Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:82: syntax error, unexpected '}', expecting tASSOC
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:84: syntax error, unexpected kEND, expecting '}'
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:117: syntax error, unexpected kEND, expecting '}'
+[02/03/10 23:17:22 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.paciente
+[02/03/10 23:18:04 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.paciente
+[02/03/10 23:18:11 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.paciente
+[02/03/10 23:18:37 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id
+[02/03/10 23:20:40 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: /Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:82: syntax error, unexpected '}'
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:84: syntax error, unexpected kEND, expecting '}'
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:117: syntax error, unexpected kEND, expecting '}'
+[02/03/10 23:20:52 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: /Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:73: syntax error, unexpected tASSOC, expecting kEND
+    params[:id]  =>  params[:inter][:consulta_id]
+                   ^
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:82: syntax error, unexpected '}'
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:84: syntax error, unexpected kEND, expecting '}'
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:117: syntax error, unexpected kEND, expecting '}'
+[02/03/10 23:27:23 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: /Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:82: syntax error, unexpected '}'
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:84: syntax error, unexpected kEND, expecting '}'
+/Users/davidrodriguez/Documents/Proyecto Neurolab/neurolab-webadmin/webadmin/app/controllers/inters_controller.rb:117: syntax error, unexpected kEND, expecting '}'
+[02/03/10 23:27:41 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.paciente
+[02/03/10 23:29:00 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: Couldn't find Consulta without an ID
+[02/03/10 23:29:06 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: Couldn't find Consulta without an ID
+[02/03/10 23:29:19 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: Couldn't find Consulta without an ID
