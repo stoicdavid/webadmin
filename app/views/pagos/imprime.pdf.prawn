@@ -86,7 +86,7 @@ end
 
 pdf.bounding_box([180,440-alfa], :width=>600, :height=>100) do
 	pdf.font.size=8
-	pdf.text @pago.total.to_f.to_currency
+	pdf.text @pago.total_l.to_f.to_currency
 end
 
 pdf.bounding_box([499,450-alfa], :width=>600, :height=>100) do

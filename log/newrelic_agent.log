@@ -106,3 +106,4 @@ The error occurred while evaluating nil.paciente
 [02/03/10 23:29:00 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: Couldn't find Consulta without an ID
 [02/03/10 23:29:06 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: Couldn't find Consulta without an ID
 [02/03/10 23:29:19 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: Couldn't find Consulta without an ID
+[02/05/10 21:48:40 -0600 david-rodriguezs-macbook.local (13074)] INFO : The error reporting queue has reached 20. This error will not be reported to RPM: can't convert nil into String
